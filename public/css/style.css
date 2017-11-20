@@ -1,0 +1,87 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  
+
+ 
+ 
+}
+
+#home{
+ 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#loader{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+canvas {
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+  position: absolute;
+}
+.loadpath {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 0;
+  animation: dash 5s linear  infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  90% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.path2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash2 5s linear  infinite;
+}
+
+@keyframes dash2 {
+  60% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+
+ 
