@@ -1,22 +1,11 @@
 
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html{
-  
-
  
- 
-}
-
 #home{
- 
+   
   width: 100%;
   height: 100%;
   position: absolute;
+  visibility: hidden;
 }
 
 #loader{
@@ -25,20 +14,14 @@ html{
   height: 100%;
   position: absolute;
 }
+
+
 #wrapper{
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-}
-canvas {
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin:auto;
-  position: absolute;
-}
+} 
 .loadpath {
   stroke-dasharray: 2000;
   stroke-dashoffset: 0;
@@ -69,19 +52,77 @@ canvas {
   }
 }
 
+  
  
+ #centerText {
+  position: relative;
+  
+ display: block;
+ max-width: 30%;
+  z-index: 1000;
+  text-align: center;
+}
+.sometext{
+  margin-top: 10%;
+font-size: 5rem;
+color: white ;
+}
+
+
+#text {
+  margin-top: 10%;
+}
+
+#date{
+align-content: right;
+}
 
  
 
+ 
+ 
+ 
 
 
+@media only screen and (max-width: 1023px) {
  
+}
 
+@media only screen and (max-width: 767px) {
  
+}
 
+@media only screen and (max-width: 480px) {
+  
+  #centerText {
+    position: relative;
+   display: block;
+   max-width: 100%;
+   
+    z-index: 1000;
+    text-align: center;
+  }
  
+   
+
+  .sometext{
+    margin-top: 10%;
+  font-size: 1.2rem;
+  color: white ;
+  }
  
+}
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 640px) 
+                   and (orientation: landscape) {
  
- 
+                    .sometext{
+                      margin-top: 10%;
+                    font-size: 1rem;
+                    color: white ;
+                    }
+
+}
 
  

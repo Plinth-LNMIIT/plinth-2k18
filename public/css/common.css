@@ -1,0 +1,195 @@
+
+
+* {
+    font-family: 'Righteous', cursive;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+  }
+  *, :after, :before {
+    box-sizing: inherit;
+  }
+  html{
+    width:  100%;
+    height: 100%;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow:hidden;
+    
+   
+  }
+  body {
+    width:  100%;
+    height: 100%;
+    margin: 0px;
+    overflow:hidden
+  }
+  a{
+    color: white !important;
+  }
+  
+  li{
+    color: white !important;
+  }
+   
+  .uk-active > a{
+    color:grey !important;
+  }
+  
+  a:hover{
+    color: grey !important;
+  }
+   
+   
+  
+  .fontset > li > a{
+    font-family: 'Righteous', cursive !important;
+    font-size: 1.2rem !important;
+  }
+  
+  .fontset1 > li > a{
+    font-family: 'Righteous', cursive !important;
+    font-size: 1rem !important;
+  }
+  
+  #home{
+     
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   
+  }
+  
+   .main-content{
+  
+    background: white;
+    opacity: 0.7;
+    width: 90%;
+    height: 80%; 
+     
+    float:left;
+    overflow-y: scroll;
+   
+    
+   }
+  
+   .scroll-content{
+       max-height: 100%;
+     
+      overflow-y: scroll;
+     }
+  
+    .inner-content{
+      padding: 16px;
+    }
+  
+   
+  canvas {
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+   
+  }
+   
+  
+   .less-padding{
+     
+     padding: 0px !important;
+   }
+   
+
+  
+  
+  @media only screen and (max-width: 1023px) {
+   
+  }
+  
+  @media only screen and (max-width: 767px) {
+   
+  }
+  
+  @media only screen and (max-width: 480px) {
+    
+  
+    .offtext{
+     font-size: 1.2rem !important;
+     padding-top: 20px !important;
+     padding-bottom: 20px !important;
+    }
+    .offtext > li {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+  
+    .fontset1 > li > a{
+      font-family: 'Righteous', cursive !important;
+      font-size: 0.6rem !important;
+      height: 20px !important;
+    }
+  
+    .main-content{  
+       top: 52% !important;
+       width: 100%;
+       height: 75%;
+       }
+  
+  
+       .text-padding{
+       padding: 0px !important;
+        font-size: 16px !important;
+       }
+      
+     
+      .heading-text{
+        font-size: 24px;
+        text-align: center;
+      }
+  .icon-pack{
+    display: inline-flex !important;
+  }
+  }
+  
+  @media only screen and (min-device-width: 480px) 
+                     and (max-device-width: 640px) 
+                     and (orientation: landscape) {
+   
+                      
+  
+  }
+  
+  
+   /**
+  
+  scroll bar custom
+   */
+   
+    
+    
+   
+  #style-7::-webkit-scrollbar-track
+  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #F5F5F5;
+      border-radius: 10px;
+  }
+  
+  #style-7::-webkit-scrollbar
+  {
+      width: 10px;
+      background-color: #F5F5F5;
+  }
+  
+  #style-7::-webkit-scrollbar-thumb
+  {
+      border-radius: 10px;
+      background-image: -webkit-gradient(linear,
+                                         left bottom,
+                                         left top,
+                                         color-stop(0.44, rgb(122,153,217)),
+                                         color-stop(0.72, rgb(73,125,189)),
+                                         color-stop(0.86, rgb(28,58,148)));
+  }
+   
+ 

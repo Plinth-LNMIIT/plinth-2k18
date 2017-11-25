@@ -1,0 +1,45 @@
+
+ .text-padding{
+  padding-left: 72px;
+  font-size: 20px;
+  padding-right: 72px;
+}
+
+.video-res{
+  width:854px;
+  height:480px;
+}
+
+
+@media only screen and (max-width: 1023px) {
+ 
+}
+
+@media only screen and (max-width: 767px) {
+ 
+}
+
+@media only screen and (max-width: 480px) {
+  
+
+ 
+    
+    .video-res{
+      width:unset !important;
+      height:unset !important;
+    }
+
+  
+}
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 640px) 
+                   and (orientation: landscape) {
+ 
+                 
+
+}
+
+ 
+ 
+

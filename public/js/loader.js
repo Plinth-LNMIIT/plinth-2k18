@@ -13,7 +13,7 @@ var Space = (function() {
       this.loop();
     };
     Space.prototype.createElement = function() {
-      var scale = this.ratio;
+      var scale =  window.innerHeight < 400 ? 0.5 : 1;
       this.canvas.width = window.innerWidth;
       this.canvas.height = window.innerHeight;
       this.canvas.style.width = "100%";
