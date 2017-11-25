@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plinth 2k18</title>
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/team.css">
     <link rel="favicon icon" href="favicon.ico" />
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css" />
@@ -30,7 +30,29 @@
 </head>
 
 <body>
+    <div id="loader">
 
+        <svg class="svg-load">
+            <defs>
+                <filter id="goo-filter">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div class="container goo5">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+
+    </div>
 
     <div id="home">
         <canvas id="canvas"></canvas>
@@ -114,7 +136,7 @@
                         <div class="uk-panel">
                             <div class=" text-padding">
                                 <p> Plinth is the annual inter college Techno-Management-Literary Festival of the LNMIIT, Jaipur.
-                                    </p>
+                                </p>
 
                                 <p> A bud when comes out of its cover, strives for the glow which could make it an attractive
                                     flower. So, here in Plinth as we celebrate the third year of its successful organization,
@@ -195,172 +217,163 @@
         </div>
 
 
-    </div>
-    <div class=" uk-position-center-right uk-visible@m uk-padding-small">
-        <ul class="uk-iconnav uk-iconnav-vertical">
-            <li>
-                <a href="https://twitter.com/plinthlnmiit?lang=en" uk-icon="icon: twitter; ratio: 1.5"></a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/Plinth.LNMIIT/" uk-icon="icon: facebook; ratio: 1.5"></a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/plinth.lnmiit/" uk-icon="icon: instagram; ratio: 1.5"></a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/user/PlinthLNMIITJaipur" uk-icon="icon: youtube; ratio: 1.5"></a>
-            </li>
-        </ul>
-    </div>
 
-    <div class="uk-position-bottom less-padding ">
-
-        <nav class="uk-navbar-container uk-navbar-transparent uk-light uk-visible@m" uk-navbar>
-
-
-            <div class="uk-navbar-center ">
-
-                <div>
-                    <ul class="uk-navbar-nav fontset1">
-                        <li>
-                            <a href="/about.html">About Us</a>
-                        </li>
-                        <li>
-                            <a href="/sponsors.html">Sponsors</a>
-                        </li>
-                        <li class="uk-active">
-                            <a href="#">Our Team</a>
-                        </li>
-                        <li>
-                            <a href="/faqs.html">FAQs</a>
-                        </li>
-                        <li>
-                            <a href="/gallery.html">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="/contact.html">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="/terms.html">Terms and Condition</a>
-                        </li>
-                        <li>
-                            <a href="/archive.html">Archive</a>
-                        </li>
-                    </ul>
-
-                </div>
-
-            </div>
-        </nav>
-
-        <nav class="uk-navbar-container uk-navbar-transparent uk-light uk-hidden@m" uk-navbar>
-
-
-            <div>
-
-                <div  >
-                    <ul class="uk-navbar-nav fontset1">
-                        <li>
-                            <a href="/gallery.html">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="/about.html">About Us</a>
-                        </li>
-                        <li>
-                            <a href="/contact.html">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="/sponsors.html">Sponsors</a>
-                        </li>
-
-
-
-                    </ul>
-                    <ul class="uk-navbar-nav fontset1">
-                        <li>
-                            <a href="/faqs.html">FAQs</a>
-                        </li>
-                        <li class="uk-active">
-                            <a href="#">Our Team</a>
-                        </li>
-
-                        <li>
-                            <a href="/terms.html">Terms and Condition</a>
-                        </li>
-                        <li>
-                            <a href="/archive.html">Archive</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-        </nav>
-
-
-    </div>
-
-    <div>
-
-    </div>
-
-    </div>
-    <div class="uk-offcanvas-content">
-
-        <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
-            <div class="uk-offcanvas-bar">
-
-                <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-                <ul class="uk-nav uk-nav-default offtext uk-text-center">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/competitions.html">Competitions</a>
-                    </li>
-                    <li>
-                        <a href="/workshops.html">Workshops</a>
-                    </li>
-                    <li>
-                        <a href="/talk.html">Talks</a>
-                    </li>
-                    <li>
-                        <a href="/mun.html">LNMIIT MUN</a>
-                    </li>
-                    <li>
-                        <a href="/sop.html">SOP</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Register/Login</a>
-                    </li>
-                    <li>
-                            <ul class="uk-iconnav icon-pack">
-                                    <li>
-                                        <a href="https://twitter.com/plinthlnmiit?lang=en" uk-icon="icon: twitter; ratio: 1.5"></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.facebook.com/Plinth.LNMIIT/" uk-icon="icon: facebook; ratio: 1.5"></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/plinth.lnmiit/" uk-icon="icon: instagram; ratio: 1.5"></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/user/PlinthLNMIITJaipur" uk-icon="icon: youtube; ratio: 1.5"></a>
-                                    </li>
-                                </ul>
-                    </li>
-
-                </ul>
-               
-              
-            </div>
+        <div class=" uk-position-center-right uk-visible@m uk-padding-small">
+            <ul class="uk-iconnav uk-iconnav-vertical">
+                <li>
+                    <a href="https://twitter.com/plinthlnmiit?lang=en" uk-icon="icon: twitter; ratio: 1.5"></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/Plinth.LNMIIT/" uk-icon="icon: facebook; ratio: 1.5"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/plinth.lnmiit/" uk-icon="icon: instagram; ratio: 1.5"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/PlinthLNMIITJaipur" uk-icon="icon: youtube; ratio: 1.5"></a>
+                </li>
+            </ul>
         </div>
 
-    </div>
+        <div class="uk-position-bottom less-padding ">
 
+            <nav class="uk-navbar-container uk-navbar-transparent uk-light uk-visible@m" uk-navbar>
+
+
+                <div class="uk-navbar-center ">
+
+                    <div>
+                        <ul class="uk-navbar-nav fontset1">
+                            <li>
+                                <a href="/about.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="/sponsors.html">Sponsors</a>
+                            </li>
+                            <li class="uk-active">
+                                <a href="#">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="/faqs.html">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="/gallery.html">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/contact.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="/terms.html">Terms and Condition</a>
+                            </li>
+                            <li>
+                                <a href="/archive.html">Archive</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </nav>
+
+            <nav class="uk-navbar-container uk-navbar-transparent uk-light uk-hidden@m" uk-navbar>
+                <div class="uk-navbar-center ">
+                    <ul class="uk-navbar-nav fontset1">
+                        <li>
+                            <a href="/gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="/about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/contact.html">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="/sponsors.html">Sponsors</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="uk-navbar-container uk-navbar-transparent uk-light uk-hidden@m " uk-navbar>
+
+                <div class="uk-navbar-center ">
+                    <ul class="uk-navbar-nav fontset1">
+                        <li>
+                            <a href="/faqs.html">FAQs</a>
+                        </li>
+                        <li class="uk-active">
+                            <a href="#">Our Team</a>
+                        </li>
+
+                        <li>
+                            <a href="/terms.html">Terms and Condition</a>
+                        </li>
+                        <li>
+                            <a href="/archive.html">Archive</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+
+        </div>
+
+
+        <div class="uk-offcanvas-content">
+
+            <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+                <div class="uk-offcanvas-bar">
+
+                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+                    <ul class="uk-nav uk-nav-default offtext uk-text-center">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/competitions.html">Competitions</a>
+                        </li>
+                        <li>
+                            <a href="/workshops.html">Workshops</a>
+                        </li>
+                        <li>
+                            <a href="/talk.html">Talks</a>
+                        </li>
+                        <li>
+                            <a href="/mun.html">LNMIIT MUN</a>
+                        </li>
+                        <li>
+                            <a href="/sop.html">SOP</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Register/Login</a>
+                        </li>
+                        <li>
+                            <ul class="uk-iconnav icon-pack">
+                                <li>
+                                    <a href="https://twitter.com/plinthlnmiit?lang=en" uk-icon="icon: twitter; ratio: 1.5"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/Plinth.LNMIIT/" uk-icon="icon: facebook; ratio: 1.5"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/plinth.lnmiit/" uk-icon="icon: instagram; ratio: 1.5"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/user/PlinthLNMIITJaipur" uk-icon="icon: youtube; ratio: 1.5"></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- UIkit JS -->

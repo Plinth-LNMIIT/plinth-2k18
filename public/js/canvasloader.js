@@ -1,9 +1,11 @@
 window.onload = function() {
-    
-     
-       Stars();
-       
-         window.addEventListener("orientationchange",function(){
+  var loader = document.getElementById('loader');
+  
+  Stars();
+  setTimeout(function(){
+    loader.parentElement.removeChild(loader);
+    $('#home').css("visibility",'visible')   
+          window.addEventListener("orientationchange",function(){
            
          Stars();
         });
@@ -11,9 +13,20 @@ window.onload = function() {
           
          Stars();
         }); 
-   
+      },100);
    };
    
+function fadeOut(el){
+  el.style.opacity = 1;
+
+  (function fade() {
+    if ((el.style.opacity -= .1) < 0) {
+      el.style.display = "none";
+    } else {
+      requestAnimationFrame(fade);
+    }
+  })();
+}
  
     
    
