@@ -77,11 +77,17 @@ align-content: right;
 
 
 @media only screen and (max-width: 1023px) {
- 
+  #countdown{
+    margin-top: 10%;
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
- 
+  #countdown{
+    margin-top: 10%;
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -89,7 +95,7 @@ align-content: right;
   #centerText {
     position: relative;
     display: inline;
-    
+    top: 40%;
      z-index: 1000;
      width: 80%;
      height: 40%; 
@@ -105,6 +111,11 @@ align-content: right;
   font-size: 1.2em;
   color: white ;
   }
+
+  #countdown{
+    margin-top: 10%;
+    width: 50%;
+  }
  
 }
 
@@ -118,6 +129,60 @@ align-content: right;
                     color: white ;
                     }
 
+                    #countdown{
+                      margin-top: 10% !important;
+                      width: 60% !important;
+                    }
+
 }
 
+ 
+/**
+
+countdown
+
+*/
+#countdown{
+  margin-top: 30%;
+  width: 50%;
+}
+/* Change this setting above to change the size of the whole countdown including the font */
+
+#countdowndays p{
+  opacity:1;
+}
+#countdownhours p{
+  opacity: 0.8;
+}
+#countdownmins p{
+  opacity: 0.6;
+}
+#countdownsecs p{
+  opacity: 0.4;
+}
+
+#countdown {
+	text-transform: uppercase;
+  display:block;
+  border:10px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 10px 0px 10px;
+  margin-left:auto;
+  margin-right:auto;
+  transition:.1s ease-in-out;
+}
+
+.box{
+  white-space:nowrap;
+  line-height:0.8;
+   
+}
+ 
+
+.box p{
+	font-size: 1em;
+	font-weight: 900;
+  display:inline-block;
+  margin-bottom: 10px;
+  color: #c1cbda;
+}
  
