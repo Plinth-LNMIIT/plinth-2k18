@@ -45,15 +45,18 @@
  
  #centerText {
   position: relative;
-  
- display: block;
- max-width: 30%;
+ display: inline;
+ vertical-align: middle;
   z-index: 1000;
+  width: 50%;
+  height: 80%; 
+   
+ 
   text-align: center;
 }
 .sometext{
   margin-top: 10%;
-font-size: 5rem;
+font-size: 5em;
 color: white ;
 }
 
@@ -85,30 +88,33 @@ align-content: right;
   
   #centerText {
     position: relative;
-   display: block;
-   max-width: 100%;
-   
-    z-index: 1000;
-    text-align: center;
+    display: inline;
+    
+     z-index: 1000;
+     width: 80%;
+     height: 40%; 
+     vertical-align: middle;
+    
+     text-align: center;
   }
  
    
 
   .sometext{
     margin-top: 10%;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: white ;
   }
  
 }
 
-@media only screen and (min-device-width: 480px) 
-                   and (max-device-width: 640px) 
+@media only screen 
+                   and (max-device-width: 680px) 
                    and (orientation: landscape) {
  
                     .sometext{
                       margin-top: 10%;
-                    font-size: 1rem;
+                    font-size: 1em;
                     color: white ;
                     }
 
