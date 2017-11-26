@@ -111,11 +111,13 @@ align-content: right;
   font-size: 1.2em;
   color: white ;
   }
-
-  #countdown{
-    margin-top: 10%;
-    width: 50%;
-  }
+  .styled{
+     
+   
+    top:80% !important;    
+  
+    }
+  
  
 }
 
@@ -128,11 +130,7 @@ align-content: right;
                     font-size: 1em;
                     color: white ;
                     }
-
-                    #countdown{
-                      margin-top: 10% !important;
-                      width: 60% !important;
-                    }
+ 
 
 }
 
@@ -142,47 +140,54 @@ align-content: right;
 countdown
 
 */
-#countdown{
-  margin-top: 30%;
-  width: 50%;
-}
-/* Change this setting above to change the size of the whole countdown including the font */
 
-#countdowndays p{
-  opacity:1;
-}
-#countdownhours p{
-  opacity: 0.8;
-}
-#countdownmins p{
-  opacity: 0.6;
-}
-#countdownsecs p{
-  opacity: 0.4;
-}
-
-#countdown {
-	text-transform: uppercase;
-  display:block;
-  border:10px solid rgba(255, 255, 255, 0.1);
-  padding: 10px 10px 0px 10px;
-  margin-left:auto;
-  margin-right:auto;
-  transition:.1s ease-in-out;
-}
-
-.box{
-  white-space:nowrap;
-  line-height:0.8;
-   
-}
- 
-
-.box p{
-	font-size: 1em;
-	font-weight: 900;
+.styled{
+  position:absolute;
+  left:50%;
+  top:50%;    /*left position of the clock*/
   display:inline-block;
-  margin-bottom: 10px;
-  color: #c1cbda;
-}
- 
+  transform: translate(-50%,-60%);
+  width: 100%;  
+  color:#ffffff;
+    z-index: 1;
+    /*margin-bottom: 50px;*/
+  }
+   @media screen and (max-width: 1080px) {
+     .styled{
+  position:absolute;
+  left:50%;
+  top:72%;    /*left position of the clock*/
+  display:inline-block;
+  transform: translate(-50%,-72%);
+  color:#ffffff;
+    z-index: 1;
+    /*margin-bottom: 50px;*/
+  }
+  }
+  .styled div {
+    display: inline-block;
+    margin-left: 0.6944444444444444vw;
+    font-size: 4vmin;
+    font-weight: 100;
+    line-height: 1;
+    text-align: right;
+  }
+  /* IE7 inline-block hack */
+  *+html .styled div{
+    display: inline;
+    zoom: 1;
+  }
+  .styled div:first-child {
+  /*margin-left:70%;*/  /*left position of clock*/
+  }
+  .styled div span {
+    display: block;
+    border-top: 0.1vw solid #cecece;
+    padding-top:  0.30833333333333331vw;
+    font-size: 2vmin;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+   
