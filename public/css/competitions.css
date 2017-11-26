@@ -1,25 +1,131 @@
+.boxing-left{
+    padding-left: 20% !important;
+}
+.boxing-right{
+    padding-right: 20% !important;
+}
+.boxing-center{
+    padding-top: 5% !important; 
+    padding-left: 37% !important;
+    
+}
+.astro-image{
+    background: url(/media/astronomy.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
 
-   
+.coding-image{
+    background: url(/media/coding.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.competition-image{
+    background: url(/media/competition.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.robotics-image{
+    background: url(/media/robotics.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.quizzing-image{
+    background: url(/media/quizzing.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.literature-image{
+    background: url(/media/literature.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.management-image{
+    background: url(/media/management.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.my-rotate{
+   margin-left: 15%; 
+   margin-right: 10%; 
+    
+}
+
+#astronomy-list{
+    display: none;
+}
+#coding-list{
+    display: none;
+}
+#robotics-list{
+    display: none;
+}
+#quizzing-list{
+    display: none;
+}
+#literature-list{
+    display: none;
+}
+#management-list{
+    display: none;
+}
 
 @media only screen and (max-width: 1023px) {
-  
+    .my-rotate{
+        margin-left: 10%; 
+        margin-right: 10%; 
+         
+     }
  }
  
  @media only screen and (max-width: 767px) {
-  
+    .my-rotate{
+        margin-left: 10%; 
+        margin-right: 10%; 
+         
+     }
  }
  
  @media only screen and (max-width: 480px) {
    
+    .my-rotate{
+        margin-left: 0px  ; 
+        margin-right: 0px ; 
+        
+     }
+
+     .boxing{
+         padding: 0 0 0 0  !important;
+     }
    
+      
+      
  }
  
  @media only screen and (min-device-width: 480px) 
                     and (max-device-width: 640px) 
                     and (orientation: landscape) {
   
-                  
- 
+                        .my-rotate{
+                            margin-left: 0px ; 
+                            margin-right: 0px ; 
+                             
+                         }
+
+                         .boxing{
+                            padding: 0 12% 0 30%  !important;
+                        }
  } 
  
   

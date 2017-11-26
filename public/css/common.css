@@ -83,7 +83,7 @@
   
    .scroll-content{
        max-height: 100%;
-     
+        min-height: 100%;
       overflow-y: scroll;
      }
   
@@ -101,14 +101,35 @@
    
   }
    
-  
+  h1{
+    padding: 0px !important;
+    text-align: center;
+  }
+  .uk-grid {
+    margin-left: 0px !important; 
+  }
    .less-padding{
      
      padding: 0px !important;
    }
-   
+   .heading-text{
+    
+    text-align: center;
+    margin-top: 0% !important;
+  }
 
+   .box-text{
+    
+      padding: 16px !important;
+  }
   
+  .border-text{
+      border: 1px dashed black;
+  }
+
+  .link-text > a{
+    color: #333 !important;
+  }
   
   @media only screen and (max-width: 960px) {
 
@@ -143,6 +164,7 @@
      .heading-text{
        font-size: 32px;
        text-align: center;
+       margin-top: 0% !important;
      }
 
      
@@ -185,6 +207,7 @@
      .heading-text{
        font-size: 24px;
        text-align: center;
+       margin-top: 0% !important;
      }
 
     .icon-pack{
@@ -217,6 +240,7 @@
        top: 52% !important;
        width: 100%;
        height: 75%;
+      
        }
   
   
@@ -230,14 +254,22 @@
       .heading-text{
         font-size: 24px;
         text-align: center;
+        margin-top: 0% !important;
       }
   .icon-pack{
     display: inline-flex !important;
   }
+
+  .hexagon {
+    
+        margin-top: 30% !important;
+        margin-bottom: 30% !important;
+        
+      }
   }
   
   @media only screen and (min-device-width: 480px) 
-                     and (max-device-width: 640px) 
+                     and (max-device-width: 680px) 
                      and (orientation: landscape) {
    
                       .offtext{
@@ -257,9 +289,9 @@
                        }
                      
                        .main-content{  
-                          top: 54% !important;
+                          top: 55% !important;
                           width: 100%;
-                          height: 70%;
+                          height: 65%;
                           }
                      
                      
@@ -273,11 +305,20 @@
                          .heading-text{
                            font-size: 24px;
                            text-align: center;
+                           margin-top: 0% !important;
                          }
                      .icon-pack{
                        display: inline-flex !important;
                      }                
   
+
+                     .hexagon {
+                  
+                      margin-top: 20% !important;
+                      margin-bottom: 20% !important;
+                      
+                    }
+
   }
   
   
@@ -412,4 +453,187 @@
   100% {
       transform: rotate(360deg);
   }
+}
+
+
+
+/**
+
+Hexagon Shape
+
+*/
+
+
+.hexagon {
+  position: relative;
+  width: 300px; 
+  height: 173.21px;
+  background-image: url(http://www.extremetech.com/wp-content/uploads/2013/07/Andromeda-Galaxy-640x353.jpg);
+  background-size: auto 346.4102px;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 10px rgba(0,0,0,1);
+  margin-top: 25%;
+  margin-bottom: 25%;
+  float: left;
+}
+.title {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 12.5%;
+  margin-left: 0%;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  font-family: 'Raleway', Arial, sans-serif;
+  z-index: 1;
+  line-height: 1.7;
+}
+.statement {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 0%;
+  position: absolute;
+  width: 100%;
+  height: 51px;
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', Arial, sans-serif;
+  z-index: 1;
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+.statement1 {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 27.5%;
+  margin-left: 0%;
+  position: absolute;
+  width: 100%;
+  height: 51px;
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', Arial, sans-serif;
+  z-index: 1;
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+  
+
+.hexagon:hover .hexagon-hidden {
+  display: none;
+}
+.hexagon-hidden {
+  position: absolute;
+  width: 300px; 
+  height: 173.21px;
+  margin: 86.60px 0;
+  background-color: #DDDDDD;
+  animation: fadein 1s;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  float: left;
+  z-index: 99;
+  transform: scale(.85);
+  font-family: 'Raleway', Arial, sans-serif;
+  display: block;
+}
+
+.hexagon-hidden2 {
+  position: absolute;
+  width: 300px; 
+  height: 173.21px;
+  margin: 86.60px 0;
+  background-color: #DDDDDD;
+  animation: fadein 1s;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  float: left;
+  z-index: 99;
+  transform: scale(.85);
+  font-family: 'Raleway', Arial, sans-serif;
+  display: block;
+}
+
+.hover {
+  display: block;
+}
+#hiddenArea {
+  box-shadow: none;
+}
+.hexagon-hidden:hover {
+  background-image: none;
+ 
+}
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 212.13px;
+  height: 212.13px;
+  overflow: hidden;
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 43.93px;
+  box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 300.0000px;
+  height: 173.20508075688775px;
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  transform-origin: 0 0;
+  background: inherit;
+}
+.hexTop {
+  top: -106.0660px;
+}
+.hexTop:after {
+  background-position: center top;
+}
+.hexBottom {
+  bottom: -106.0660px;
+}
+.hexBottom:after {
+  background-position: center bottom;
+}
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 300.0000px;
+  height: 173.2051px;
+  z-index: 2;
+  background: inherit;
+}
+
+
+
+@keyframes AnimatedGradient { 
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }

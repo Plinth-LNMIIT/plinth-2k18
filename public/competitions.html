@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plinth 2k18</title>
@@ -127,93 +127,452 @@
 
             <div class="scroll-content" id="style-7">
                 <div class="inner-content">
-                    <div uk-grid>
-                        <h1 class="heading-text  uk-align-center ">
-                            <span>Competitions</span>
-                        </h1>
-                    </div>
-                    <div class="uk-child-width-1-3@m"   uk-grid style="margin:auto;">
-                        
-                            <div>
-                                <div class="uk-card uk-card-default">
-                                    <div class="uk-card-media-top ">
-                                        <img src="media/sample.jpg"  alt="" class="uk-align-center ">
-                                    </div>
-                                    <div class="uk-card-body">
-                                        <h3 class="uk-card-title">Media Top</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                    <div class="uk-card uk-card-default" >
-                                        <div class="uk-card-media-top">
-                                            <img src="media/sample.jpg" alt="" class="uk-align-center ">
-                                        </div>
-                                        <div class="uk-card-body">
-                                            <h3 class="uk-card-title">Media Top</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                        <div class="uk-card uk-card-default">
-                                            <div class="uk-card-media-top">
-                                                <img src="media/sample.jpg" alt="" class="uk-align-center ">
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <h3 class="uk-card-title">Media Top</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div id="main-list">
+                        <div uk-grid>
+                            <h1 class="heading-text  uk-align-center ">
+                                <span>Competitions</span>
+                            </h1>
                         </div>
-                        <br>
-                        <div class="uk-child-width-1-3@m" uk-grid style="margin:auto;">
-                                <div>
-                                    <div class="uk-card uk-card-default">
-                                        <div class="uk-card-media-top">
-                                            <img src="media/sample.jpg" alt="" class="uk-align-center ">
-                                        </div>
-                                        <div class="uk-card-body">
-                                            <h3 class="uk-card-title">Media Top</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <div class="my-rotate">
+                            <div class="uk-child-width-1-2@m " uk-grid>
+
+                                <div class="boxing-left boxing">
+                                    <div class="hexagon astro-image">
+                                        <div class="hexTop"></div>
+                                        <div class="hexBottom"></div>
+                                        <div class="hexagon-hidden hover">
+                                            <div class="hexTop" id="hiddenArea"></div>
+                                            <div class="hexBottom" id="hiddenArea"></div>
+
+                                            <div class="statement">Astronomy</div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="boxing-right boxing">
+                                    <div class="hexagon coding-image">
+                                        <div class="hexTop"></div>
+                                        <div class="hexBottom"></div>
+                                        <div class="hexagon-hidden hover">
+                                            <div class="hexTop" id="hiddenArea"></div>
+                                            <div class="hexBottom" id="hiddenArea"></div>
+
+                                            <div class="statement">Coding</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-child-width-1-3@m uk-visible@m" uk-grid>
                                 <div>
-                                        <div class="uk-card uk-card-default">
-                                            <div class="uk-card-media-top">
-                                                <img src="media/sample.jpg" alt="" class="uk-align-center ">
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <h3 class="uk-card-title">Media Top</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                    <div class="hexagon robotics-image">
+                                        <div class="hexTop"></div>
+                                        <div class="hexBottom"></div>
+                                        <div class="hexagon-hidden hover">
+                                            <div class="hexTop" id="hiddenArea"></div>
+                                            <div class="hexBottom" id="hiddenArea"></div>
+
+                                            <div class="statement">Robotics</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="hexagon competition-image">
+                                        <div class="hexTop"></div>
+                                        <div class="hexBottom"></div>
+                                        <div class="hexagon-hidden2 hover ">
+                                            <div class="hexTop" id="hiddenArea"></div>
+                                            <div class="hexBottom" id="hiddenArea"></div>
+
+                                            <div class="statement">Competition</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="hexagon quizzing-image">
+                                        <div class="hexTop"></div>
+                                        <div class="hexBottom"></div>
+                                        <div class="hexagon-hidden hover">
+                                            <div class="hexTop" id="hiddenArea"></div>
+                                            <div class="hexBottom" id="hiddenArea"></div>
+
+                                            <div class="statement">Quizzing</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="uk-child-width-1-2@m uk-hidden@m" uk-grid>
+                                <div class="boxing">
+                                    <div class="hexagon robotics-image">
+                                        <div class="hexTop"></div>
+                                        <div class="hexBottom"></div>
+                                        <div class="hexagon-hidden hover">
+                                            <div class="hexTop" id="hiddenArea"></div>
+                                            <div class="hexBottom" id="hiddenArea"></div>
+
+                                            <div class="statement">Robotics</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="boxing">
+                                    <div class="hexagon quizzing-image">
+                                        <div class="hexTop"></div>
+                                        <div class="hexBottom"></div>
+                                        <div class="hexagon-hidden hover">
+                                            <div class="hexTop" id="hiddenArea"></div>
+                                            <div class="hexBottom" id="hiddenArea"></div>
+
+                                            <div class="statement">Quizzing</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="uk-child-width-1-2@m" uk-grid>
+
+
+                                <div class="boxing-left boxing">
+                                    <div class="hexagon literature-image">
+                                        <div class="hexTop"></div>
+                                        <div class="hexBottom"></div>
+                                        <div class="hexagon-hidden hover">
+                                            <div class="hexTop" id="hiddenArea"></div>
+                                            <div class="hexBottom" id="hiddenArea"></div>
+
+                                            <div class="statement">Literature</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="boxing-right boxing">
+                                    <div class="hexagon management-image">
+                                        <div class="hexTop"></div>
+                                        <div class="hexBottom"></div>
+                                        <div class="hexagon-hidden hover">
+                                            <div class="hexTop" id="hiddenArea"></div>
+                                            <div class="hexBottom" id="hiddenArea"></div>
+                                            <div class="statement">Management</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="astronomy-list">
+                        <div>
+                            <div uk-grid>
+                                <span class="back-icon">
+                                    <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                </span>
+                                <h1 class="heading-text  uk-align-center ">
+                                    <span>Astronomy</span>
+                                </h1>
+                            </div>
+                            <div class="my-rotate">
+                                <div class="uk-child-width-1-2@m " uk-grid>
+
+                                    <div class="boxing-left boxing">
+                                        <div class="hexagon into-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">Into The Universe</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                            <div class="uk-card uk-card-default uk-align-center">
-                                                <div class="uk-card-media-top">
-                                                    <img src="media/sample.jpg" alt="" class="uk-align-center ">
-                                                </div>
-                                                <div class="uk-card-body uk-align-center">
-                                                    <h3 class="uk-card-title">Media Top</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                                </div>
+
+                                    <div class="boxing-right boxing">
+                                        <div class="hexagon astro-hunt-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">Astro Hunt</div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="uk-child-width-1-2@m" uk-grid>
+                                    <div class="boxing-center boxing">
+                                        <div class="hexagon astro-quiz-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">Astro Quiz</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+
                             </div>
-                        
-    
+                        </div>
+
                     </div>
+                    <div id="coding-list">
+                        <div>
+                            <div uk-grid>
+                                <span class="back-icon">
+                                    <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                </span>
+                                <h1 class="heading-text  uk-align-center ">
+                                    <span>Coding</span>
+                                </h1>
+                            </div>
+                            <div class="my-rotate">
+                                <div class="uk-child-width-1-2@m " uk-grid>
+
+                                    <div class="boxing-left boxing">
+                                        <div class="hexagon codeswap-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">CodeSwap</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="boxing-right boxing">
+                                        <div class="hexagon morecode-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">More Coming Soon</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="robotics-list">
+                        <div>
+                            <div uk-grid>
+                                <span class="back-icon">
+                                    <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                </span>
+                                <h1 class="heading-text  uk-align-center ">
+                                    <span>Robotics</span>
+                                </h1>
+                            </div>
+                            <div class="my-rotate">
+                                <div class="uk-child-width-1-2@m " uk-grid>
+
+                                    <div class="boxing-left boxing">
+                                        <div class="hexagon game-play-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">Game Play</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="boxing-right boxing">
+                                        <div class="hexagon morerobo-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">More Coming Soon</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="quizzing-list">
+                        <div>
+                            <div uk-grid>
+                                <span class="back-icon">
+                                    <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                </span>
+                                <h1 class="heading-text  uk-align-center ">
+                                    <span>Quizzing</span>
+                                </h1>
+                            </div>
+                            <div class="my-rotate">
+                                <div class="uk-child-width-1-2@m " uk-grid>
+
+                                    <div class="boxing-left boxing">
+                                        <div class="hexagon business-quiz-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">Business Quiz</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="boxing-right boxing">
+                                        <div class="hexagon general-quiz-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">General Quiz</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="literature-list">
+                        <div>
+                            <div uk-grid>
+                                <span class="back-icon">
+                                    <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                </span>
+                                <h1 class="heading-text  uk-align-center ">
+                                    <span>Literature</span>
+                                </h1>
+                            </div>
+                            <div class="my-rotate">
+                                <div class="uk-child-width-1-2@m " uk-grid>
+
+                                    <div class="boxing-center boxing">
+                                        <div class="hexagon more-litertaure-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">Coming Soon</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--   <div class="boxing-right boxing">
+                                                <div class="hexagon coding-image">
+                                                    <div class="hexTop"></div>
+                                                    <div class="hexBottom"></div>
+                                                    <div class="hexagon-hidden hover">
+                                                        <div class="hexTop" id="hiddenArea"></div>
+                                                        <div class="hexBottom" id="hiddenArea"></div>
+        
+                                                        <div class="statement">Astro Hunt</div>
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="management-list">
+                        <div>
+                            <div uk-grid>
+                                <span class="back-icon ">
+                                    <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                </span>
+                                <h1 class="heading-text  uk-align-center ">
+                                    <span>Management</span>
+                                </h1>
+                            </div>
+                            <div class="my-rotate">
+                                <div class="uk-child-width-1-2@m " uk-grid>
+
+                                    <div class="boxing-left boxing">
+                                        <div class="hexagon startup-fair-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">StartUp Intern Fair</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="boxing-right boxing">
+                                        <div class="hexagon more-management-image">
+                                            <div class="hexTop"></div>
+                                            <div class="hexBottom"></div>
+                                            <div class="hexagon-hidden hover">
+                                                <div class="hexTop" id="hiddenArea"></div>
+                                                <div class="hexBottom" id="hiddenArea"></div>
+
+                                                <div class="statement">Coming Soon</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
 
                 </div>
 
             </div>
 
-
         </div>
+
+
+
 
 
 
@@ -402,10 +761,10 @@
     <!-- UIkit JS -->
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
-
+    <script src="js/competitions.js"></script>
     <script src="js/canvasloader.js"></script>
     <script src="js/star.js"></script>
-    
+
 
 </body>
 

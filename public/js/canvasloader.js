@@ -13,7 +13,7 @@ window.onload = function() {
           
          Stars();
         }); 
-      },100);
+      },1000);
    };
    
 function fadeOut(el){
@@ -29,5 +29,16 @@ function fadeOut(el){
 }
  
     
+$(".hexagon-hidden").mouseenter (
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+
+$(".hexagon-hidden").mouseleave (
+  function () {
+    $(this).addClass("hover");
+  }
+);
    
    
