@@ -74,11 +74,9 @@
     opacity: 0.7;
     width: 90% !important;
     height: 80% !important; 
-    display: block !important;
+    display: -moz-inline-stack !important;
     float:left;
     overflow-y: scroll;
-   
-    
    }
   
    .scroll-content{
