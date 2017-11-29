@@ -482,6 +482,7 @@ Hexagon Shape
   margin-top: 25%;
   margin-bottom: 25%;
   float: left;
+  
 }
 .title {
   font-size: 1.5em;
@@ -510,27 +511,11 @@ Hexagon Shape
   line-height: 1.7;
   font-weight: bold;
 }
-
-.statement1 {
-  font-size: 2em;
-  text-align: center;
-  margin-top: 27.5%;
-  margin-left: 0%;
-  position: absolute;
-  width: 100%;
-  height: 51px;
-  background-color: black;
-  color: white;
-  font-family: 'Raleway', Arial, sans-serif;
-  z-index: 1;
-  line-height: 1.7;
-  font-weight: bold;
-}
-
+ 
   
 
 .hexagon:hover .hexagon-hidden {
-  display: none;
+  background: transparent;
 }
 .hexagon-hidden {
   position: absolute;
@@ -549,6 +534,7 @@ Hexagon Shape
   transform: scale(.85);
   font-family: 'Raleway', Arial, sans-serif;
   display: block;
+  cursor: pointer;
 }
 
 .hexagon-hidden2 {
@@ -568,6 +554,7 @@ Hexagon Shape
   transform: scale(.85);
   font-family: 'Raleway', Arial, sans-serif;
   display: block;
+ 
 }
 
 .hover {
