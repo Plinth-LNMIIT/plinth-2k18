@@ -1,13 +1,8 @@
 
-html { 
-        
-          }
-
-
 body{
   width: 100%;
    
-  font-family: 'Bree Serif', serif;
+  font-family: 'Righteous', cursive;
 	 
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/mun/image.jpg) no-repeat center center fixed;
   background: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/mun/image.jpg) no-repeat center center fixed;
@@ -20,7 +15,7 @@ body{
  
 }	
 .nav-link{
-  color: white !important;
+  color: white ;
 }
 .nav-item a:hover { border-bottom:3px solid #fff;}
 
@@ -211,67 +206,6 @@ canvas {
      
 }
 
-@media only screen and (max-width: 780px) {
-    #home{
-      height: 120vh;
-      width: 100%;
-        
-    }
-    
-    .logo{
-      top: 10%;
-    }
-    .logo img{
-      max-width: 320px;
-    }
-    .mail{
-      text-align: center!important;
-    
-    }
-    .add{
-      text-align: center!important;
-    }
-     .mun-logo{
-
-          text-align: center;
-          padding-left: 0px;
-     }
-
-
-     .heading{
-
-          text-align: center;
-          padding-left: 0px;
-     }     
-
-      #Committees{
-          background-color:#303030;
-          text-align: left;
-      }
-
-      .card {
-        margin: 0 auto;
-        float: none;
-        margin-bottom: 10px; 
-      }
-
-      .mail,.add{
-        text-align: center;
-        padding-bottom: 15px;
-      }
-
-      
-
-    canvas {
-      width: auto;
-      height: 200px;
-      display: block;
-      position: relative;
-      background: transparent;
-      margin: 10px auto;
-    }
-}
-
 #carouel{
   padding-bottom: 80px;
 }
@@ -289,6 +223,98 @@ canvas {
   text-align: left;
 
 }
+
+@media only screen and (max-width: 1023px) {
+  
+}
+
+@media only screen and (max-width: 780px) {
+  #home{
+    height: 120vh;
+    width: 100%;
+      
+  }
+  
+  .logo{
+    top: 10%;
+  }
+  .logo img{
+    max-width: 320px;
+  }
+  .mail{
+    text-align: center;
+  
+  }
+  .add{
+    text-align: center;
+  }
+   .mun-logo{
+
+        text-align: center;
+        padding-left: 0px;
+   }
+
+
+   .heading{
+
+        text-align: center;
+        padding-left: 0px;
+   }     
+
+    #Committees{
+        background-color:#303030;
+        text-align: left;
+    }
+
+    .card {
+      margin: 0 auto;
+      float: none;
+      margin-bottom: 10px; 
+    }
+
+    .mail,.add{
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    
+
+  canvas {
+    width: auto;
+    height: 200px;
+    display: block;
+    position: relative;
+    background: transparent;
+    margin: 10px auto;
+  }
+  
+}
+@media only screen and (max-width: 480px) {
+ 
+  #home{
+    height: 120vh;
+    width: 100%;
+    padding-top: 0vh;
+      
+  }
+  .mail,.add{
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .hidee{
+    display: none;
+  }  
+}
+
+@media only screen and (min-device-width: 480px) 
+                  and (max-device-width: 640px) 
+                  and (orientation: landscape) {
+
+                 
+} 
+
+
+
 /*################## carousel ##################*/
 
       .example-desc {

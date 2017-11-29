@@ -44,12 +44,12 @@
   
  
  #centerText {
-  position: relative;
+  position: absolute;
  display: inline;
  vertical-align: middle;
   z-index: 1000;
   width: 30%;
-  height: 80%; 
+  
    
  
   text-align: center;
@@ -93,14 +93,9 @@ align-content: right;
 @media only screen and (max-width: 480px) {
   
   #centerText {
-    position: relative;
-    display: inline;
-    top: 40%;
-     z-index: 1000;
+    position: absolute;
+    display: inline;   
      width: 80%;
-     height: 40%; 
-     vertical-align: middle;
-    
      text-align: center;
   }
  
@@ -114,7 +109,7 @@ align-content: right;
   .styled{
      
    
-    top:80% !important;    
+    margin-top: 20%;  
   
     }
   
@@ -130,7 +125,12 @@ align-content: right;
                     font-size: 1em;
                     color: white ;
                     }
- 
+                    .styled{
+                      
+                    
+                     margin-top: 20%;  
+                   
+                     }
 
 }
 
@@ -144,26 +144,14 @@ countdown
 .styled{
   position:absolute;
   left:50%;
-  top:50%;    /*left position of the clock*/
   display:inline-block;
   transform: translate(-50%,-60%);
   width: 100%;  
   color:#ffffff;
     z-index: 1;
-    /*margin-bottom: 50px;*/
+ margin-top: 20%;
   }
-   @media screen and (max-width: 1080px) {
-     .styled{
-  position:absolute;
-  left:50%;
-  top:72%;    /*left position of the clock*/
-  display:inline-block;
-  transform: translate(-50%,-72%);
-  color:#ffffff;
-    z-index: 1;
-    /*margin-bottom: 50px;*/
-  }
-  }
+ 
   .styled div {
     display: inline-block;
     margin-left: 0.6944444444444444vw;

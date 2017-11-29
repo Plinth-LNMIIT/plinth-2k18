@@ -1,9 +1,4 @@
 
- .text-padding{
-  padding-left: 72px;
-  font-size: 20px;
-  padding-right: 72px;
-}
 
 .video-res{
   width:854px;
@@ -16,6 +11,8 @@
     width:640px;
     height:360px;
   }
+
+  
 }
 
 @media only screen and (max-width: 767px) {
@@ -31,8 +28,8 @@
  
     
     .video-res{
-      width:unset !important;
-      height:unset !important;
+      width:unset ;
+      height:unset ;
     }
 
   

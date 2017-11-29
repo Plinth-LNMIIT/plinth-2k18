@@ -1,12 +1,12 @@
 .boxing-left{
-    padding-left: 20% !important;
+   
 }
 .boxing-right{
-    padding-right: 20% !important;
+  
 }
 .boxing-center{
-    padding-top: 5% !important; 
-    padding-left: 37% !important;
+    
+ 
     
 }
 .astro-image{
@@ -56,9 +56,19 @@
     background-repeat: no-repeat;
 }
 
-.my-rotate{
-   margin-left: 15%; 
-   margin-right: 10%; 
+.my-rotate  {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    vertical-align: middle;
+    
+}
+
+.my-rotate > div  {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -80,7 +90,9 @@
 #management-list{
     display: none;
 }
-
+.back-icon{
+    padding-left: 0%; 
+}
 @media only screen and (max-width: 1023px) {
     .my-rotate{
         margin-left: 10%; 
@@ -106,7 +118,7 @@
      }
 
      .boxing{
-         padding: 0 0 0 0  !important;
+         padding: 0 0 0 0  ;
      }
    
       
@@ -124,7 +136,7 @@
                          }
 
                          .boxing{
-                            padding: 0 12% 0 30%  !important;
+                            padding: 0 12% 0 30%  ;
                         }
  } 
  

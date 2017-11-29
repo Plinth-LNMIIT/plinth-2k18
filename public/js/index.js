@@ -30,7 +30,7 @@ window.onload = function() {
    
    
 
-   }, 3000);
+   }, 4000);
 
 };
 
