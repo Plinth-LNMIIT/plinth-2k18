@@ -25,8 +25,11 @@
     margin: 0px;
     overflow:hidden;
   }
-  a{
+  li > a{
     color: white !important;
+  }
+  .uk-icon{
+    color: white;
   }
   
   
@@ -152,7 +155,7 @@
     }
     .main-content{  
       top: 50% ;
-      width: 100%;
+      width: 90%;
       height: 75%;
       }
  

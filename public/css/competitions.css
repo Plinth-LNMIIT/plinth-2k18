@@ -93,32 +93,25 @@
 .back-icon{
     padding-left: 0%; 
 }
-@media only screen and (max-width: 1023px) {
-    .my-rotate{
-        margin-left: 10%; 
-        margin-right: 10%; 
-         
+@media only screen and (max-width: 960px) {
+     
+     .boxing{
+        padding: 5% 0% 5% 0%  ;
      }
  }
  
  @media only screen and (max-width: 767px) {
-    .my-rotate{
-        margin-left: 10%; 
-        margin-right: 10%; 
-         
+     
+     .boxing{
+        padding: 10% 0 10% 0  ;
      }
  }
  
  @media only screen and (max-width: 480px) {
-   
-    .my-rotate{
-        margin-left: 0px  ; 
-        margin-right: 0px ; 
-        
-     }
+    
 
      .boxing{
-         padding: 0 0 0 0  ;
+        padding: 15% 0 15% 0  ;
      }
    
       
@@ -129,15 +122,11 @@
                     and (max-device-width: 640px) 
                     and (orientation: landscape) {
   
-                        .my-rotate{
-                            margin-left: 0px ; 
-                            margin-right: 0px ; 
-                             
-                         }
+                       
 
                          .boxing{
-                            padding: 0 12% 0 30%  ;
-                        }
+                            padding: 10% 0 10% 0  ;
+                         }
  } 
  
   
