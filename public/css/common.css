@@ -16,7 +16,7 @@
     margin: 0px;
     box-sizing: border-box;
     overflow:hidden;
-    
+    color: white;
    
   }
   body {
@@ -79,8 +79,7 @@
 
    .main-content{
   
-    background:white;
-    opacity: 0.8;
+  
     width: 90% ;
     height: 80%;  
     float:left; 
@@ -108,6 +107,7 @@
   }
    
   h1{
+    color: white;
     padding: 0px;
     text-align: center;
   }
@@ -130,19 +130,43 @@
   }
   
   .border-text{
-      border: 1px dashed black;
+      border: 1px dashed white;
   }
 
   .link-text > a{
-    color: #333 ;
+    color: white ;
   }
 
   
  .text-padding{
+
   padding-left: 72px;
   font-size: 20px;
   padding-right: 72px;
 }
+
+.text-padding * {
+  font-family: 'Oxygen', sans-serif;
+}
+
+.heading{
+ 
+  font-size: 26px;
+  margin-top:2% !important;
+   
+   
+  }
+  
+  .bolder{
+      font-size: 22px;
+      margin-top:.2% !important;
+    
+  }
+  .text{
+      font-size: 20px;
+      margin-top:1% !important;
+      
+  }
   
   @media only screen and (max-width: 960px) {
 
@@ -172,7 +196,8 @@
       padding-right: 4% ;
        font-size: 20px ;
       }
-     
+
+      
     
      .heading-text{
        font-size: 32px;
@@ -216,7 +241,24 @@
        font-size: 18px ;
       }
      
-    
+      .heading{
+        
+           font-size: 24px;
+          
+            
+            
+           }
+           
+           .bolder{
+               font-size: 20px;
+            
+            
+           }
+           .text{
+               font-size: 18px;
+             
+               
+           }
      .heading-text{
        font-size: 24px;
        text-align: center;
@@ -262,10 +304,27 @@
         padding-right: 8px ;
         font-size: 16px ;
        }
-      
+       .heading{
+        
+           font-size: 22px;
+          
+            
+            
+           }
+           
+           .bolder{
+               font-size: 18px;
+            
+            
+           }
+           .text{
+               font-size: 16px;
+             
+               
+           }
      
       .heading-text{
-        font-size: 24px;
+        font-size: 28px;
         text-align: center;
         margin-top: 0% ;
       }
@@ -331,6 +390,24 @@
                            font-size: 16px ;
                           }
                          
+                          .heading{
+                            
+                               font-size: 22px;
+                              
+                                
+                                
+                               }
+                               
+                               .bolder{
+                                   font-size: 18px;
+                                
+                                
+                               }
+                               .text{
+                                   font-size: 16px;
+                                 
+                                   
+                               }
                         
                          .heading-text{
                            font-size: 24px;
@@ -363,19 +440,19 @@
   #style-7::-webkit-scrollbar-track
   {
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
-      background-color: #F5F5F5;
+      
       border-radius: 10px;
   }
   
   #style-7::-webkit-scrollbar
   {
       width: 10px;
-      background-color: #F5F5F5;
+     
   }
   
   #style-7::-webkit-scrollbar-thumb
   {
-      border-radius: 10px;
+      border-radius: 20px;
       background-image: -webkit-gradient(linear,
                                          left bottom,
                                          left top,

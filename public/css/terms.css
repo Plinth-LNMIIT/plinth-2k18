@@ -1,42 +1,22 @@
-.headin{
-    color: black;
-    font-size: 1.5em;
-    margin-top:2% !important;
-     
-     
-    }
+ 
     
-    .bolder{
-        font-size: 1.1em;
-        margin-top:.2% !important;
-        color: black;
-    }
-    .text{
-        font-size: 1.1em;
-        margin-top:1% !important;
-        
-    }
-    
-    
-    .terms-padding{
-        padding-left: 4% ;
-        padding-right: 4% ;
-        justify-content: center;
-    }
+  
 
 
 
 
 @media only screen and (max-width: 1023px) {
-  
+    
+    
  }
  
  @media only screen and (max-width: 767px) {
-  
+    
  }
  
  @media only screen and (max-width: 480px) {
-   
+    
+    
    
  }
  
@@ -44,7 +24,8 @@
                     and (max-device-width: 640px) 
                     and (orientation: landscape) {
   
-                  
+                   
+                                 
  
  }
  
