@@ -128,7 +128,7 @@ canvas {
 
 .scrolldown-container {
   width: 100%;
-  bottom: -1%;
+  top: 85vh;
   height: 150px;
   position: absolute;
 }
@@ -164,7 +164,7 @@ canvas {
 
 
 #home{
-  padding-top: 20vh;
+  margin-top: 20vh;
  padding-bottom: 30vh;
   width: 100%;
     
@@ -225,16 +225,18 @@ canvas {
 }
 
 @media only screen and (max-width: 1023px) {
-  
+
+   #home{
+    height: 120vh;
+    width: 100%;
+      margin-top: 0vh;
+ padding-bottom: 30vh;  
+  }
 }
 
 @media only screen and (max-width: 780px) {
-  #home{
-    height: 120vh;
-    width: 100%;
-      
-  }
-  
+ 
+
   .logo{
     top: 10%;
   }
