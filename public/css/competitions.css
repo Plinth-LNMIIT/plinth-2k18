@@ -105,6 +105,41 @@
     background-repeat: no-repeat;
 }
 
+.robosoccer-image{
+    background: url(/media/robosoccer.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.drone-image{
+    background: url(/media/drone2.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.lfr-image{
+    background: url(/media/LFR.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.maze-solver-image{
+    background: url(/media/mazesolver.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rc-plane-image{
+    background: url(/media/rcplane5.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #astronomy-list{
     display: none;
 }

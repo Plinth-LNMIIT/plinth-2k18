@@ -3,8 +3,8 @@
 
 <head>
     <% include partials/head %>
-    <link rel="stylesheet" href="css/contact.css">
-    
+        <link rel="stylesheet" href="css/contact.css">
+
 
 
 
@@ -12,108 +12,120 @@
 
 <body>
     <% include partials/loader %>
-    <div id="home">
-        <canvas id="canvas"></canvas>
+        <div id="home">
+            <canvas id="canvas"></canvas>
 
-        <%- include('partials/header', {page: 'contact'}) -%>
+            <%- include('partials/header', {page: 'contact'}) -%>
 
 
-        <div class="uk-position-center main-content ">
+                <div class="uk-position-center main-content ">
 
-            <div class="scroll-content" id="style-7">
-                <div class="inner-content">
-                        <div uk-grid>
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div uk-grid>
                                 <h1 class="uk-align-center heading-text">
                                     <span>Contact Us</span>
                                 </h1>
                             </div>
-        
-                            
 
-                            <div class="uk-child-width-1-2@m" uk-grid>
+
+                            <div class="my-rotate">
+                                <div class="uk-child-width-1-2@m form-padding" uk-grid>
                                     <div>
-                                            <form id="contact-form">
-                                                    <fieldset class="uk-fieldset">
-                                                
-                                                        <div class="uk-margin">
-                                                            <input class="uk-input" name="name" type="text" placeholder="Name">
-                                                        </div>
-                                                        <div class="uk-margin">
-                                                                <input class="uk-input" name="email" type="email" placeholder="Email">
-                                                        </div>
+                                        <form id="contact-form">
+                                            <fieldset class="uk-fieldset">
 
-                                                        <div class="uk-margin">
-                                                                <input class="uk-input" name="contact_number" type="number" placeholder="Contact Number">
-                                                        </div>
-                                                                                        
-                                                        <div class="uk-margin">
-                                                            <textarea class="uk-textarea" name="query" rows="5" placeholder="Query"></textarea>
-                                                        </div>
-                                                        <button type="submit"id="submit-form" class="uk-button uk-align-center uk-button-primary">Submit</button>
-                                                        
-                                                    </fieldset>
-                                                </form>
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="name" type="text" placeholder="Name">
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="email" type="email" placeholder="Email">
+                                                </div>
+
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="contact_number" type="number" placeholder="Contact Number">
+                                                </div>
+
+                                                <div class="uk-margin">
+                                                    <textarea class="uk-textarea" name="query" rows="5" placeholder="Query"></textarea>
+                                                </div>
+                                                <button type="submit" id="submit-form" class="uk-button uk-align-center uk-button-primary">Submit</button>
+
+                                            </fieldset>
+                                        </form>
                                     </div>
-                                    <div class="left-padding">
-                                           
-                                            <div>
-                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Satyam Kumar</span> 
-                                                    <br>
-                                                    <span> <i class="fa fa-phone" aria-hidden="true"></i> 7727082396</span>
-                                            </div>
+                                    <div class="left-padding uk-align-center">
+
+                                        <div class="text">
+                                            <span>
+                                                <i class="fa fa-user" aria-hidden="true"></i> Satyam Kumar</span>
                                             <br>
+                                            <span>
+                                                <i class="fa fa-phone" aria-hidden="true"></i> 7727082396</span>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="text">
+                                            <span>
+                                                <i class="fa fa-user" aria-hidden="true"></i> Swetank Bhardwaj</span>
                                             <br>
-                                            <div>
-                                                    <span><i class="fa fa-user" aria-hidden="true"></i> Swetank Bhardwaj</span>
-                                                    <br> 
-                                                    <span> <i class="fa fa-phone" aria-hidden="true"></i> 9799772457</span>
-                                            </div>
-                                           <br>
-                                            <br>
-                                            <div class="link-text">
-                                                    Contact us at <a href="mailto:query.plinth.in">query@plinth.in</a> 
-                                            </div>
-                                             
+                                            <span>
+                                                <i class="fa fa-phone" aria-hidden="true"></i> 9799772457</span>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="link-text text">
+                                            Contact us at
+                                            <a href="mailto:query.plinth.in">query@plinth.in</a>
+                                        </div>
+
                                     </div>
-                                    
+
                                 </div>
-                      
-                              
-                                
-                                   
+                                <div class="uk-grid-medium bottom-padding" uk-grid>
+
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5982.2610265912335!2d75.9236411295232!3d26.93287830752644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ab565cce4d44c2b!2sLNMIIT!5e0!3m2!1sen!2s!4v1475754696769"
+                                        width="1200" height="450" frameborder="0" allowfullscreen="">
+                                    </iframe>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
                 </div>
 
-            </div>
 
 
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        <%- include('partials/footer', {page: 'contact'}) -%>
+
+
+
+                            <%- include('partials/offcanvas', {page: 'contact'}) -%>
         </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
 
-
-
-
-        <% include partials/leftbar %>
-        
-        
-        
-                            <% include partials/rightbar %>
-        
-                                 <%- include('partials/footer', {page: 'contact'}) -%>
-        
-        
-        
-                                   <%- include('partials/offcanvas', {page: 'contact'}) -%>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- UIkit JS -->
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
-
-    <script src="js/canvasloader.js"></script>
-    <script src="js/slowStar.js"></script>
-    <script src="js/jquery.serialize-object.min.js"></script>
-    <script src="js/contact.js"></script>
+        <script src="js/canvasloader.js"></script>
+        <script src="js/slowStar.js"></script>
+        <script src="js/jquery.serialize-object.min.js"></script>
+        <script src="js/contact.js"></script>
 
 </body>
 
