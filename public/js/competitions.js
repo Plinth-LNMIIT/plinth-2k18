@@ -34,3 +34,16 @@ $(".back-icon").click(function(){
    var some =  $(".back-icon").parent().parent().parent().hide();
    $("#main-list").show();
 });
+
+$(".into-image").click(function(){
+    $("#astronomy-list").hide();
+    $("#astronomy-details").show();
+});
+
+
+$(".astro-back-icon").click(function(){
+    var some =  $(".astro-back-icon").parent().parent().parent().hide();
+    $("#astronomy-list").show();
+ });
+
+ 

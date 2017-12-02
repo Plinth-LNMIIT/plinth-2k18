@@ -152,6 +152,10 @@
 .back-icon{
     padding-left: 0%; 
 }
+
+.backy{
+    padding-left: 0%; 
+}
 @media only screen and (max-width: 960px) {
      
      .boxing{
