@@ -32,27 +32,25 @@
 
                             <div class="uk-child-width-1-2@m" uk-grid>
                                     <div>
-                                            <form action="mailto:query@plinth.in"  method="post" enctype="text/plain">
+                                            <form id="contact-form">
                                                     <fieldset class="uk-fieldset">
                                                 
-                                                         
-                                                
                                                         <div class="uk-margin">
-                                                            <input class="uk-input" type="text" placeholder="Name">
+                                                            <input class="uk-input" name="name" type="text" placeholder="Name">
                                                         </div>
                                                         <div class="uk-margin">
-                                                                <input class="uk-input" type="email" placeholder="Email">
+                                                                <input class="uk-input" name="email" type="email" placeholder="Email">
                                                         </div>
 
                                                         <div class="uk-margin">
-                                                                <input class="uk-input" type="number" placeholder="Contact Number">
+                                                                <input class="uk-input" name="contact_number" type="number" placeholder="Contact Number">
                                                         </div>
                                                                                         
                                                         <div class="uk-margin">
-                                                            <textarea class="uk-textarea" rows="5" placeholder="Query"></textarea>
+                                                            <textarea class="uk-textarea" name="query" rows="5" placeholder="Query"></textarea>
                                                         </div>
-                                                
-                                                        <input class="uk-button uk-align-center uk-button-primary" type="submit"> </button>
+                                                        <button type="submit"id="submit-form" class="uk-button uk-align-center uk-button-primary">Submit</button>
+                                                        
                                                     </fieldset>
                                                 </form>
                                     </div>
@@ -114,7 +112,8 @@
 
     <script src="js/canvasloader.js"></script>
     <script src="js/star.js"></script>
-    
+    <script src="js/jquery.serialize-object.min.js"></script>
+    <script src="js/contact.js"></script>
 
 </body>
 
