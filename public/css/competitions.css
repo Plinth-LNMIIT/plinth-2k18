@@ -55,8 +55,55 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.into-image{
+    background: url(/media/intouni.jpeg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.astro-hunt-image{
+    background: url(/media/astrohunt.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+.astro-quiz-image{
+    background: url(/media/astroquiz.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+.coming-soon-image{
+    background: url(/media/coming.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.codeswap-image{
+    background: url(/media/codeswap.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
- 
+.startup-fair-image{
+    background: url(/media/intern.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.business-quiz-image{
+    background: url(/media/bquiz.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.general-quiz-image{
+    background: url(/media/quiz.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 #astronomy-list{
     display: none;
@@ -76,6 +123,32 @@
 #management-list{
     display: none;
 }
+
+#astronomy-details{
+    display: none;
+}
+
+#coding-details{
+    display: none;
+}
+
+#robotics-details{
+    display: none;
+}
+
+#quizzing-details{
+    display: none;
+}
+
+#literature-details{
+    display: none;
+}
+
+#management-details{
+    display: none;
+}
+
+
 .back-icon{
     padding-left: 0%; 
 }
