@@ -379,9 +379,9 @@
       background-image: -webkit-gradient(linear,
                                          left bottom,
                                          left top,
-                                         color-stop(0.44, rgb(122,153,217)),
-                                         color-stop(0.72, rgb(73,125,189)),
-                                         color-stop(0.86, rgb(28,58,148)));
+                                         color-stop(0.44, rgb(81, 123, 206)),
+                                         color-stop(0.72, rgb(37, 86, 146)),
+                                         color-stop(0.86, rgb(5, 23, 77)));
   }
    
  
