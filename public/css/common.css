@@ -151,7 +151,7 @@
 
 .heading{
  
-  font-size: 26px;
+  font-size: 24px;
   margin-top:2% !important;
    
    
@@ -165,6 +165,7 @@
   .text{
       font-size: 20px;
       margin-top:1% !important;
+      padding-left: 5%;
       
   }
   
@@ -243,7 +244,7 @@
      
       .heading{
         
-           font-size: 24px;
+           font-size: 22px;
           
             
             
@@ -306,7 +307,7 @@
        }
        .heading{
         
-           font-size: 22px;
+           font-size: 20px;
           
             
             
