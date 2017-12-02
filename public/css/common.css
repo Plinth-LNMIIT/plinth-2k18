@@ -27,9 +27,7 @@
   }
  
 
-  li{
-    color: white !important;
-  }
+   
 
   li > a{
     color: white !important;
@@ -39,7 +37,9 @@
     color: white;
   }
   
-  
+  .sidee{
+    color: white;
+  }
    
   .uk-active > a{
     color:grey !important;
