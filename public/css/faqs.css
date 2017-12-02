@@ -1,5 +1,28 @@
+.ques{
+color: black;
+font-size: 1.5em;
+margin-top:2% !important;
+ 
+ 
+}
 
+.ans{
+    font-size: 1.1em;
+    margin-top:1% !important;
+ 
+}
+.head{
+    color: black;
+    font-size: 1.2;
+    margin-top:.5% !important;
+ 
+}
 
+.faqs-padding{
+    padding-left: 4% ;
+    padding-right: 4% ;
+    justify-content: center;
+}
 
 @media only screen and (max-width: 1023px) {
   
