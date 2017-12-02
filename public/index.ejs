@@ -43,7 +43,7 @@
     <div id="home">
         <canvas id="canvas"></canvas>
 
-        <% include partials/header %>
+        <%- include('partials/header', {page: 'home'}) -%>
 
         <div id="centerText" class="uk-position-center">
             <div>
@@ -72,9 +72,9 @@
         </div>
         <% include partials/rightbar %>
 
-        <% include partials/footer %>
+         <%- include('partials/footer', {page: 'home'}) -%>
 
-        <% include partials/offcanvas %>
+       <%- include('partials/offcanvas', {page: 'home'}) -%>
 
         
 

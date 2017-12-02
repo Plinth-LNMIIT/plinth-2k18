@@ -11,7 +11,8 @@
     <div id="home">
         <canvas id="canvas"></canvas>
 
-        <% include partials/header %>
+      
+        <%- include('partials/header', {page: 'archive'}) -%>
 
 
         <div class="uk-position-center main-content ">
@@ -51,11 +52,11 @@
         
                             <% include partials/rightbar %>
         
-                                <% include partials/footer %>
+                            <%- include('partials/footer', {page: 'archive'}) -%>
         
         
         
-                                    <% include partials/offcanvas %>
+                            <%- include('partials/offcanvas', {page: 'archive'}) -%>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -15,7 +15,7 @@
     <div id="home">
         <canvas id="canvas"></canvas>
 
-        <% include partials/header %>
+        <%- include('partials/header', {page: 'gallery'}) -%>
 
 
         <div class="uk-position-center main-content">
@@ -53,11 +53,11 @@
         
                             <% include partials/rightbar %>
         
-                                <% include partials/footer %>
+                                 <%- include('partials/footer', {page: 'gallery'}) -%>
         
         
         
-                                    <% include partials/offcanvas %>
+                                   <%- include('partials/offcanvas', {page: 'gallery'}) -%>
     </div>
 
 

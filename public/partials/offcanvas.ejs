@@ -8,22 +8,22 @@
                         <button class="uk-offcanvas-close" type="button" uk-close></button>
     
                         <ul class="uk-nav uk-nav-default offtext uk-text-center">
-                            <li >
+                                <li <%if(page=="home"){%>class="uk-active"<%}%> > 
                                 <a href="/">Home</a>
                             </li>
-                            <li>
+                            <li <%if(page=="competitions"){%>class="uk-active"<%}%> > 
                                 <a href="/competitions">Competitions</a>
                             </li>
-                            <li>
+                            <li <%if(page=="workshops"){%>class="uk-active"<%}%> > 
                                 <a href="/workshops">Workshops</a>
                             </li>
-                            <li>
-                                <a href="/talk">Talks</a>
+                            <li <%if(page=="talks"){%>class="uk-active"<%}%> > 
+                                <a href="/talks">Talks</a>
                             </li>
-                            <li>
+                            <li <%if(page=="mun"){%>class="uk-active"<%}%> > 
                                 <a href="/mun">LNMIIT MUN</a>
                             </li>
-                            <li>
+                            <li <%if(page=="sop"){%>class="uk-active"<%}%> > 
                                 <a href="/sop">SOP</a>
                             </li>
     

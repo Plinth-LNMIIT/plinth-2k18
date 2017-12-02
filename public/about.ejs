@@ -2,8 +2,8 @@
 <html>
 
 <head>
-
-    <% include partials/head %>
+        <% include partials/head %>
+ 
         <link rel="stylesheet" href="css/about.css">
 
 </head>
@@ -14,7 +14,7 @@
         <div id="home">
             <canvas id="canvas"></canvas>
 
-            <% include partials/header %>
+            <%- include('partials/header', {page: 'about'}) -%>
 
                 <div class="uk-position-center main-content ">
 
@@ -103,11 +103,13 @@
 
                     <% include partials/rightbar %>
 
-                        <% include partials/footer %>
+                        
+                        <%- include('partials/footer', {page: 'about'}) -%>
 
 
 
-                            <% include partials/offcanvas %>
+                            
+                            <%- include('partials/offcanvas', {page: 'about'}) -%>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

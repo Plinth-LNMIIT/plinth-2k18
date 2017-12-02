@@ -12,7 +12,7 @@
     <div id="home">
         <canvas id="canvas"></canvas>
 
-        <% include partials/header %>
+        <%- include('partials/header', {page: 'sponsors'}) -%>
 
 
         <div class="uk-position-center main-content ">
@@ -237,11 +237,11 @@
         
                             <% include partials/rightbar %>
         
-                                <% include partials/footer %>
+                                 <%- include('partials/footer', {page: 'sponsors'}) -%>
         
         
         
-                                    <% include partials/offcanvas %>
+                                   <%- include('partials/offcanvas', {page: 'sponsors'}) -%>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
