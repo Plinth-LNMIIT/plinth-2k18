@@ -140,6 +140,27 @@
     background-repeat: no-repeat;
 }
 
+.robowar-image{
+    background: url(/media/robowars.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.roborace-image{
+    background: url(/media/Roborace.JPG);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.transporter-image{
+    background: url(/media/Transporter.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #astronomy-list{
     display: none;
 }
