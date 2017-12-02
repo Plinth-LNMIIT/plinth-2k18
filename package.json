@@ -23,9 +23,7 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "nodemailer": "^4.4.0",
-    "serve-favicon": "^2.4.5"
-  },
-  "devDependencies": {
+    "serve-favicon": "^2.4.5",
     "nodemon": "^1.12.1"
   },
   "engines": {
