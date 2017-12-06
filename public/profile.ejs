@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <% include partials/head %>
+ 
+        <link rel="stylesheet" href="css/profile.css">
+
+</head>
+
+<body>
+
+    <% include partials/loader %>
+        <div id="home">
+            <canvas id="canvas"></canvas>
+
+            <%- include('partials/header', {page: 'profile'}) -%>
+
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div uk-grid>
+                                <h1 class="uk-align-center heading-text">
+                                    <span>Profile</span>
+                                </h1>
+                            </div>
+                            <div class="my-rotate">
+                                    
+                                            <div uk-grid>
+                                                    <h1 class="uk-align-center sub-heading ">
+                                                            <span>About</span>
+                                                        </h1>
+                                                    <ul>
+                                                        <li>
+
+
+                                                        </li>
+                                                    </ul>
+                                            </div>
+                                            <div class="uk-overflow-auto table-margin" uk-grid>
+                                                    <h1 class="uk-align-center sub-heading">
+                                                            <span>Registered Events</span>
+                                                        </h1>
+
+                                                    <table class="uk-table uk-table-divider ">
+                                                            <thead>
+                                                                <tr class="th-font">
+                                                                  
+                                                                    <th>Event Name</th>
+                                                                    <th>Team Size</th>
+                                                                    <th>Payment Status</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="tr-font">
+                                                                    
+                                                                    <td>Table Data</td>
+                                                                    <td>Table Data</td>
+                                                                    <td>Table Data</td>
+                                                                    <td>Table Data</td>
+                                                                </tr>
+                                                                <tr>
+                                                                   
+                                                                    <td>Table Data</td>
+                                                                    <td>Table Data</td>
+                                                                    <td>Table Data</td>
+                                                                    <td>Table Data</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    
+                                                                    <td>Table Data</td>
+                                                                    <td>Table Data</td>
+                                                                    <td>Table Data</td>
+                                                                    <td>Table Data</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                            </div>
+                                            
+                                        
+                            </div>
+                           
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        
+                        <%- include('partials/footer', {page: 'profile'}) -%>
+
+
+
+                            
+                            
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/canvasloader.js"></script>
+        <script src="js/slowStar.js"></script>
+
+
+</body>
+
+</html>

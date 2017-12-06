@@ -2,7 +2,8 @@
   "name": "plinth-2k18",
   "version": "1.0.0",
   "description": "Website for Plinth, The Techno-Management Literary Fest, The LNM Institute of Information Technology, Jaipur.",
-  "main": "index.js",
+  "private": true,
+  "main": "app.js",
   "scripts": {
     "start": "nodemon ./bin/www"
   },
@@ -19,11 +20,23 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "google-auth-library": "^0.12.0",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.6",
+    "mongoose-csv": "^1.1.0",
+    "morgan": "^1.9.0",
+    "njwt": "^0.4.0",
     "nodemailer": "^4.4.0",
     "nodemon": "^1.12.1",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-facebook-token": "^3.3.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-google-token": "^0.1.2",
     "serve-favicon": "^2.4.5"
   },
   "engines": {

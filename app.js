@@ -1,13 +1,37 @@
+require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
+var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var authenticate = require('./authenticate');
+
+
+
+// database connect
+var DBconfig = require('./config/dbconfig')
+mongoose.Promise = global.Promise;
+mongoose.connect(DBconfig.url, { useMongoClient: true });
+var db = mongoose.connection;
+db.on('error',console.error.bind(console, 'connection error:'));
+db.once('open', function(){
+  console.log('connected to db server successfully');
+});
+// done
+
+
 var routes = require('./routes/index');
-var forms = require('./routes/form');
+var user = require('./routes/user');
+var payment = require('./routes/payment');
 
 var app = express();
  
+//passport
+
+app.use(passport.initialize());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public'));
@@ -18,7 +42,7 @@ app.use('*/css', express.static(path.join(__dirname, 'public/css')))
 app.use('*/media', express.static(path.join(__dirname, 'public/media')))
 app.use('*/font', express.static(path.join(__dirname, 'public/font')))
 
-
+app.use(logger('dev'));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,7 +50,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/forms', forms);
+app.use('/user', user);
+app.use('/payment', payment);
+
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
