@@ -435,7 +435,6 @@ router.get('/profile', Verify.verifyOrdinaryUser ,function(req, res, next) {
     }
     else {
         User.findOne({'email' : req.decoded.sub }, function(err, user) {
-            console.log(user);
             isLoggedIn = user.valid;
             // if there are any errors, return the error
             if (err)
@@ -444,10 +443,7 @@ router.get('/profile', Verify.verifyOrdinaryUser ,function(req, res, next) {
             if (user){
                 res.render('profile',{
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });

@@ -4,7 +4,7 @@
 <head>
     <% include partials/head %>
 
-<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -43,40 +43,44 @@
     <div id="home">
         <canvas id="canvas"></canvas>
 
-        <%- include('partials/header', {page: 'home'}) -%>
+        <% if(isLoggedIn){ %>
+            <%- include('partials/header', {page: 'home', status: isLoggedIn, user: user }) -%>
+                <% } else { %>
+                    <%- include('partials/header', {page: 'home', status: isLoggedIn }) -%>
+                        <% } %>
 
-        <div id="centerText" class="uk-position-center">
-            <div>
-                <img id="text" src="media/plinthtext.png" width="100%" />
-                <img id="date" src="media/date.png" width="35%" align="right" />
-            </div>
-        
-                  <div>
-                        <div class="countdown styled"  >
-                                <div>00
-                                    <span>days</span>
+                            <div id="centerText" class="uk-position-center">
+                                <div>
+                                    <img id="text" src="media/plinthtext.png" width="100%" />
+                                    <img id="date" src="media/date.png" width="35%" align="right" />
                                 </div>
-                                <div>00
-                                    <span>hrs</span>
+
+                                <div>
+                                    <div class="countdown styled">
+                                        <div>00
+                                            <span>days</span>
+                                        </div>
+                                        <div>00
+                                            <span>hrs</span>
+                                        </div>
+                                        <div>00
+                                            <span>min</span>
+                                        </div>
+                                        <div>00
+                                            <span>sec</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>00
-                                    <span>min</span>
-                                </div>
-                                <div>00
-                                    <span>sec</span>
-                                </div>
+
+
                             </div>
-                  </div>
-          
+                            <% include partials/rightbar %>
 
-        </div>
-        <% include partials/rightbar %>
+                                <%- include('partials/footer', {page: 'home'}) -%>
 
-         <%- include('partials/footer', {page: 'home'}) -%>
 
-      
 
-        
+
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

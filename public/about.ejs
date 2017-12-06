@@ -14,7 +14,13 @@
         <div id="home">
             <canvas id="canvas"></canvas>
 
-            <%- include('partials/header', {page: 'about'}) -%>
+            <% if(isLoggedIn){ %>
+                <%- include('partials/header', {page: 'about', status: isLoggedIn, user: user }) -%>
+            <% } else { %>
+                <%- include('partials/header', {page: 'about', status: isLoggedIn }) -%>
+                <% } %>
+
+          
 
                 <div class="uk-position-center main-content ">
 

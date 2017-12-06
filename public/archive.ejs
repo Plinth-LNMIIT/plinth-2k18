@@ -12,7 +12,11 @@
         <canvas id="canvas"></canvas>
 
       
-        <%- include('partials/header', {page: 'archive' }) -%>
+        <% if(isLoggedIn){ %>
+            <%- include('partials/header', {page: 'archive', status: isLoggedIn, user: user }) -%>
+        <% } else { %>
+            <%- include('partials/header', {page: 'archive', status: isLoggedIn }) -%>
+            <% } %>
 
 
         <div class="uk-position-center main-content ">

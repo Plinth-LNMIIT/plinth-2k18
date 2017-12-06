@@ -3,70 +3,74 @@
 
 <head>
     <% include partials/head %>
-    <link rel="stylesheet" href="css/talks.css">
-    
+        <link rel="stylesheet" href="css/talks.css">
+
 
 </head>
 
 <body>
 
     <% include partials/loader %>
-    <div id="home">
-        <canvas id="canvas"></canvas>
+        <div id="home">
+            <canvas id="canvas"></canvas>
 
-        <%- include('partials/header', {page: 'talks'}) -%>
+            <% if(isLoggedIn){ %>
+                <%- include('partials/header', {page: 'talks', status: isLoggedIn, user: user }) -%>
+                    <% } else { %>
+                        <%- include('partials/header', {page: 'talks', status: isLoggedIn }) -%>
+                            <% } %> 
 
 
-        <div class="uk-position-center main-content ">
+                                <div class="uk-position-center main-content ">
 
-            <div class="scroll-content" id="style-7">
-                <div class="inner-content">
-                        <div uk-grid>
-                                <h1 class="uk-align-center heading-text">
-                                    <span>Talks</span>
-                                </h1>
-                            </div>
-        
-                            <div class="uk-text-center" uk-grid>
-                                <h1 class="uk-align-center   box-text border-text">
-                                    <span>Releasing Soon</span>
-                                </h1>
-                            </div>
+                                    <div class="scroll-content" id="style-7">
+                                        <div class="inner-content">
+                                            <div uk-grid>
+                                                <h1 class="uk-align-center heading-text">
+                                                    <span>Talks</span>
+                                                </h1>
+                                            </div>
 
-                </div>
+                                            <div class="uk-text-center" uk-grid>
+                                                <h1 class="uk-align-center   box-text border-text">
+                                                    <span>Releasing Soon</span>
+                                                </h1>
+                                            </div>
 
-            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+
+
+                                <% include partials/leftbar %>
+
+
+
+                                    <% include partials/rightbar %>
+
+                                        <%- include('partials/footer', {page: 'talks'}) -%>
+
+
 
 
         </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
 
+        <script src="js/canvasloader.js"></script>
+        <script src="js/slowStar.js"></script>
 
-
-
-
-
-        <% include partials/leftbar %>
-        
-        
-        
-                            <% include partials/rightbar %>
-        
-                                 <%- include('partials/footer', {page: 'talks'}) -%>
-        
-        
-        
-                                  
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- UIkit JS -->
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
-
-    <script src="js/canvasloader.js"></script>
-    <script src="js/slowStar.js"></script>
-    
 
 </body>
 

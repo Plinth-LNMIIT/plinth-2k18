@@ -13,29 +13,59 @@
 
             <div>
                 <ul class="uk-navbar-nav fontset">
-                        <li <%if(page=="home"){%>class="uk-active"<%}%> > 
-                      
-                        <a href="/">Home</a>
+                    <li <%if(page=="home" ){%>class="uk-active"
+                        <%}%> >
+
+                            <a href="/">Home</a>
                     </li>
-                    <li <%if(page=="competitions"){%>class="uk-active"<%}%> > 
-                        <a href="/competitions">Competitions</a>
+                    <li <%if(page=="competitions" ){%>class="uk-active"
+                        <%}%> >
+                            <a href="/competitions">Competitions</a>
                     </li>
-                    <li <%if(page=="workshops"){%>class="uk-active"<%}%> > 
-                        <a href="/workshops">Workshops</a>
+                    <li <%if(page=="workshops" ){%>class="uk-active"
+                        <%}%> >
+                            <a href="/workshops">Workshops</a>
                     </li>
-                    <li <%if(page=="talks"){%>class="uk-active"<%}%> > 
-                        <a href="/talks">Talks</a>
+                    <li <%if(page=="talks" ){%>class="uk-active"
+                        <%}%> >
+                            <a href="/talks">Talks</a>
                     </li>
-                    <li <%if(page=="mun"){%>class="uk-active"<%}%> > 
-                        <a href="/mun">LNMIIT MUN</a>
+                    <li <%if(page=="mun" ){%>class="uk-active"
+                        <%}%> >
+                            <a href="/mun">LNMIIT MUN</a>
                     </li>
-                    <li <%if(page=="sop"){%>class="uk-active"<%}%> > 
-                        <a href="/sop">SOP</a>
+                    <li <%if(page=="sop" ){%>class="uk-active"
+                        <%}%> >
+                            <a href="/sop">SOP</a>
                     </li>
 
-                    <li>
-                        <a href="#">Register/Login</a>
-                    </li>
+                    <% if(isLoggedIn){ %>
+                        <li>
+                            <a href="#"> Hi,
+                                <%- user.name %>
+                            </a>
+                            <div class="uk-margin-small uk-padding-small hover-class" uk-dropdown>
+                                <ul class="uk-nav fontset uk-text-center uk-dropdown-nav">
+                                    <li <%if(page=="profile" ){%>class="uk-active"
+                                        <%}%> >
+                                            <a href="/profile">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/logout">LogOut</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <% } else { %>
+
+                            <li>
+                                <a href="#register-center" uk-toggle>Register/Login</a>
+                            </li>
+                            <% } %>
+
+
                 </ul>
 
             </div>
@@ -65,57 +95,103 @@
 
 </div>
 
+<div id="register-center" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default black-fill" type="button" uk-close></button>
+
+        <h2 class="uk-text-center">
+            <span>Register Yourself</span>
+        </h2>
+
+        <div class=" uk-text-center medium">Register yourself for different competitions through this portal to know further details and proceedings of PLINTH'18.
+            Morever if you register through this platform , you would be able to get exclusive coupons and offers.</div>
+
+        <div class="uk-text-center">
+            <a class="uk-button uk-button-default btn-register" href='/user/auth/google'>
+                <i class="fa fa-google-plus" aria-hidden="true"></i> Register with Google</a>
+            <a class="uk-button uk-button-default btn-register" href='/user/auth/facebook'>
+                <i class="fa fa-facebook" aria-hidden="true"></i> Register with Facebook</a>
+        </div>
+    </div>
+</div>
+
+
 <div class="uk-offcanvas-content">
-        
-        
-        
-                    <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
-                        <div class="uk-offcanvas-bar">
-        
-                            <button class="uk-offcanvas-close" type="button" uk-close></button>
-        
-                            <ul class="uk-nav uk-nav-default offtext uk-text-center">
-                                    <li <%if(page=="home"){%>class="uk-active"<%}%> > 
+
+
+
+    <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+        <div class="uk-offcanvas-bar">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <ul class="uk-nav uk-nav-default offtext uk-text-center">
+
+                <% if(isLoggedIn){ %>
+
+                    <li>
+                        <a href="/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="/user/logout">LogOut</a>
+
+                    </li>
+
+
+
+                    <% } else { %>
+
+                        <li>
+                            <a href="#register-center" uk-toggle>Register/Login</a>
+                        </li>
+                        <% } %>
+
+                            <li <%if(page=="home" ){%>class="uk-active"
+                                <%}%> >
                                     <a href="/">Home</a>
-                                </li>
-                                <li <%if(page=="competitions"){%>class="uk-active"<%}%> > 
+                            </li>
+                            <li <%if(page=="competitions" ){%>class="uk-active"
+                                <%}%> >
                                     <a href="/competitions">Competitions</a>
-                                </li>
-                                <li <%if(page=="workshops"){%>class="uk-active"<%}%> > 
+                            </li>
+                            <li <%if(page=="workshops" ){%>class="uk-active"
+                                <%}%> >
                                     <a href="/workshops">Workshops</a>
-                                </li>
-                                <li <%if(page=="talks"){%>class="uk-active"<%}%> > 
+                            </li>
+                            <li <%if(page=="talks" ){%>class="uk-active"
+                                <%}%> >
                                     <a href="/talks">Talks</a>
-                                </li>
-                                <li <%if(page=="mun"){%>class="uk-active"<%}%> > 
+                            </li>
+                            <li <%if(page=="mun" ){%>class="uk-active"
+                                <%}%> >
                                     <a href="/mun">LNMIIT MUN</a>
-                                </li>
-                                <li <%if(page=="sop"){%>class="uk-active"<%}%> > 
+                            </li>
+                            <li <%if(page=="sop" ){%>class="uk-active"
+                                <%}%> >
                                     <a href="/sop">SOP</a>
-                                </li>
-        
-                                <li>
-                                    <a href="#">Register/Login</a>
-                                </li>
-        
-                                <li>
-                                    <ul class="uk-iconnav icon-pack">
-                                        <li>
-                                            <a href="https://twitter.com/plinthlnmiit?lang=en" uk-icon="icon: twitter; ratio: 1.5"></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.facebook.com/Plinth.LNMIIT/" uk-icon="icon: facebook; ratio: 1.5"></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/plinth.lnmiit/" uk-icon="icon: instagram; ratio: 1.5"></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.youtube.com/user/PlinthLNMIITJaipur" uk-icon="icon: youtube; ratio: 1.5"></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-        
-                </div>
+                            </li>
+
+
+
+                            <li>
+                                <ul class="uk-iconnav icon-pack">
+                                    <li>
+                                        <a href="https://twitter.com/plinthlnmiit?lang=en" uk-icon="icon: twitter; ratio: 1.5"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/Plinth.LNMIIT/" uk-icon="icon: facebook; ratio: 1.5"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/plinth.lnmiit/" uk-icon="icon: instagram; ratio: 1.5"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/user/PlinthLNMIITJaipur" uk-icon="icon: youtube; ratio: 1.5"></a>
+                                    </li>
+                                </ul>
+                            </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

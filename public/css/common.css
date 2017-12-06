@@ -172,7 +172,7 @@
   }
 
 
-  #register-modal{
+  #register-center{
     color: black;
   }
 
@@ -193,6 +193,12 @@
     display: inline-block;
     margin-bottom: 20px;
   }
+
+  .uk-dropdown{
+    background: transparent;
+  }
+
+
   @media only screen and (max-width: 960px) {
 
     .offtext{

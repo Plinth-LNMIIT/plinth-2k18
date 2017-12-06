@@ -167,9 +167,9 @@ router.post('/user_register_complete', Verify.verifyOrdinaryUser ,function(req, 
 });
 
 
-router.post('/logout', Verify.verifyOrdinaryUser ,function(req, res) {
+router.get('/logout', Verify.verifyOrdinaryUser ,function(req, res) {
     res.clearCookie("access-token");
-    res.json({"response": true})
+    res.redirect('/');
 });
 
 

@@ -14,51 +14,61 @@
         <div id="home">
             <canvas id="canvas"></canvas>
 
-            <%- include('partials/header', {page: 'redirect'}) -%>
+            <% if(isLoggedIn){ %>
+                <%- include('partials/header', {page: 'redirect', status: isLoggedIn, user: user }) -%>
+                    <% } else { %>
+                        <%- include('partials/header', {page: 'redirect', status: isLoggedIn }) -%>
+                            <% } %> {page: 'redirect'}) -%>
 
-                <div class="uk-position-center main-content ">
+                                <div class="uk-position-center main-content ">
 
-                    <div class="scroll-content" id="style-7">
-                        <div class="inner-content">
-                            <% if(valid){ %>
-                                <div uk-grid>
-                                    <h1 class="uk-align-center uk-position-center">
-                                        <span> Redirecting, Please Wait...</span>
-                                    </h1>
-                                </div>
-
-
-                                <% }else{ %>
+                                    <div class="scroll-content" id="style-7">
+                                        <div class="inner-content">
+                                            <% if(valid){ %>
+                                                <div uk-grid>
+                                                    <h1 class="uk-align-center uk-position-center">
+                                                        <span> Redirecting, Please Wait...</span>
+                                                    </h1>
+                                                </div>
 
 
+                                                <% }else{ %>
 
-                                    <div class="my-rotate">
 
-                                        <div uk-grid>
-                                            <h1 class="uk-align-center">
-                                                <span>Registration Form</span>
-                                            </h1>
-                                        </div>
-                                        <div uk-grid>
-                                            <form class="uk-form-horizontal uk-margin-large" action="/user/user_register_complete" method="post">
 
-                                                <div class="uk-margin">
-                                                    <label class="uk-form-label" for="form-horizontal-text">Name</label>
-                                                    <div class="uk-form-controls">
-                                                        <input class="uk-input" id="form-horizontal-text" name="name" type="text" placeholder="Harry Potter" value="<%- user.name %>" disabled required>
+                                                    <div class="my-rotate">
+
+                                                        <div uk-grid>
+                                                            <h1 class="uk-align-center">
+                                                                <span>Registration Form</span>
+                                                            </h1>
+                                                        </div>
+                                                        <div uk-grid>
+                                                            <form class="uk-form-horizontal uk-margin-large" action="/user/user_register_complete" method="post">
+
+                                                                <div class="uk-margin">
+                                                                    <label class="uk-form-label" for="form-horizontal-text">Name</label>
+                                                                    <div class="uk-form-controls">
+                                                                        <input class="uk-input" id="form-horizontal-text" name="name" type="text" placeholder="Harry Potter" value="<%- user.name %>"
+                                                                            disabled required>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        
-                                                        
-                                                            <div class="uk-margin ">
-                                                                <div class="uk-form-label ">Gender</div>
-                                                                <div class="uk-form-controls uk-form-controls-text ">
-                                                                    <label><input class="uk-radio" type="radio" name="gender" value="male" checked> Male</label><br>
-                                                                    <label><input class="uk-radio" type="radio" name="gender" value="female"> Female</label>
-                                                                </div>
-                                                            </div>
 
-                                                            <div class="uk-margin ">
+
+                                                                <div class="uk-margin ">
+                                                                    <div class="uk-form-label ">Gender</div>
+                                                                    <div class="uk-form-controls uk-form-controls-text ">
+                                                                        <label>
+                                                                            <input class="uk-radio" type="radio" name="gender"
+                                                                                value="male" checked> Male</label>
+                                                                        <br>
+                                                                        <label>
+                                                                            <input class="uk-radio" type="radio" name="gender"
+                                                                                value="female"> Female</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="uk-margin ">
                                                                     <label class="uk-form-label " for="form-horizontal-text ">Contact Number</label>
                                                                     <div class="uk-form-controls ">
                                                                         <input class="uk-input " id="form-horizontal-text" name="phone" type="number " placeholder="9876543210 " required>
@@ -66,20 +76,21 @@
                                                                 </div>
 
                                                                 <div class="uk-margin ">
-                                                                        <label class="uk-form-label " for="form-horizontal-text ">Email</label>
-                                                                        <div class="uk-form-controls ">
-                                                                            <input class="uk-input " id="form-horizontal-text" name="email" type="text " placeholder="harry.potter@gmail.com " value="<%- user.email %>" disabled required>
-                                                                        </div>
+                                                                    <label class="uk-form-label " for="form-horizontal-text ">Email</label>
+                                                                    <div class="uk-form-controls ">
+                                                                        <input class="uk-input " id="form-horizontal-text" name="email" type="text " placeholder="harry.potter@gmail.com " value="<%- user.email %>"
+                                                                            disabled required>
                                                                     </div>
+                                                                </div>
 
-                                                                    <div class="uk-margin ">
-                                                                            <label class="uk-form-label " for="form-horizontal-text ">Institute Name</label>
-                                                                            <div class="uk-form-controls ">
-                                                                                <input class="uk-input " id="form-horizontal-text" name="institute" type="text " placeholder="Hogwards " required>
-                                                                            </div>
+                                                                <div class="uk-margin ">
+                                                                    <label class="uk-form-label " for="form-horizontal-text ">Institute Name</label>
+                                                                    <div class="uk-form-controls ">
+                                                                        <input class="uk-input " id="form-horizontal-text" name="institute" type="text " placeholder="Hogwards " required>
                                                                     </div>
+                                                                </div>
 
-                                                            <div class="uk-margin ">
+                                                                <div class="uk-margin ">
                                                                     <label class="uk-form-label " for="form-horizontal-select ">Year</label>
                                                                     <div class="uk-form-controls ">
                                                                         <select class="uk-select " name="year" id="form-horizontal-select " required>
@@ -89,66 +100,66 @@
                                                                             <option>4</option>
                                                                             <option>5</option>
                                                                             <option selected="selected ">NA</option>
-                                                                           </select>
+                                                                        </select>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="uk-margin ">
-                                                                        <label class="uk-form-label " for="form-horizontal-text ">City</label>
-                                                                        <div class="uk-form-controls ">
-                                                                            <input class="uk-input " id="form-horizontal-text" name="city" type="text " placeholder="Jaipur " required>
-                                                                        </div>
+                                                                    <label class="uk-form-label " for="form-horizontal-text ">City</label>
+                                                                    <div class="uk-form-controls ">
+                                                                        <input class="uk-input " id="form-horizontal-text" name="city" type="text " placeholder="Jaipur " required>
+                                                                    </div>
                                                                 </div>
 
 
                                                                 <div class="uk-margin ">
-                                                                        <label class="uk-form-label " for="form-horizontal-text ">Resume URL</label>
-                                                                        <div class="uk-form-controls ">
-                                                                            <input class="uk-input " id="form-horizontal-text" name="resume" type="text " placeholder="https://drive.google.vom/xyz.pdf ">
-                                                                        </div>
+                                                                    <label class="uk-form-label " for="form-horizontal-text ">Resume URL</label>
+                                                                    <div class="uk-form-controls ">
+                                                                        <input class="uk-input " id="form-horizontal-text" name="resume" type="text " placeholder="https://drive.google.vom/xyz.pdf ">
+                                                                    </div>
                                                                 </div>
 
                                                                 <div class="uk-margin uk-text-center ">
-                                                                       <button type="submit " class="uk-button uk-button-default
-                                                            button-text ">Submit</button>   
+                                                                    <button type="submit " class="uk-button uk-button-default
+                                                            button-text ">Submit</button>
                                                                 </div>
 
 
-                                                        
-                                                        </form>
- 
+
+                                                            </form>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                    <% } %>
+
+
                                         </div>
 
-
                                     </div>
-                                    <% } %>
 
 
-                        </div>
-
-                    </div>
-
-
-                </div>
+                                </div>
 
 
 
 
 
 
-                <% include partials/leftbar %>
+                                <% include partials/leftbar %>
 
 
 
-                    <% include partials/rightbar %>
+                                    <% include partials/rightbar %>
 
 
-                        <%- include('partials/footer', {page: 'redirect'}) -%>
+                                        <%- include('partials/footer', {page: 'redirect'}) -%>
 
 
 
 
-                          
+
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
@@ -158,7 +169,7 @@
         <script src="js/canvasloader.js "></script>
         <script src="js/slowStar.js "></script>
         <script>
-            var obj = { Title: 'Register', Url: 'http://localhost:3000/user/redirect' };  
+            var obj = { Title: 'Register', Url: 'http://localhost:3000/user/redirect' };
             history.pushState(obj, obj.Title, obj.Url);
         </script>
 
