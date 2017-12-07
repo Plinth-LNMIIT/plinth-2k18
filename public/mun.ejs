@@ -62,7 +62,16 @@
 					<a class="nav-link" href="/">Plinth</a>
 				</li>
 
-				
+				<% if(isLoggedIn){ %>
+					<li>
+						<a class="nav-link" href="/profile"> Hi,
+							<%- user.name %>
+						</a>
+					</li>
+
+
+					<% } %>
+
 			</ul>
 
 		</div>

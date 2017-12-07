@@ -208,6 +208,9 @@
 .back-icon{
     padding-left: 0%; 
 }
+.back-back-icon{
+    padding-left: 0%; 
+}
 
 .backy{
     padding-left: 0%; 
@@ -224,6 +227,10 @@
 
  .inner-content2{
    padding: 16px;
+ }
+ #tabs > li > a{
+     border-color: white;
+     font-size: 2rem;
  }
 
 @media only screen and (max-width: 960px) {

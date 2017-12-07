@@ -35,15 +35,15 @@ $(".back-icon").click(function(){
    $("#main-list").show();
 });
 
-/* $(".into-image").click(function(){
+$(".into-image").click(function(){
     $("#astronomy-list").hide();
-    $("#astronomy-details").show();
+    $("#details").show();
 });
 
 
-$(".astro-back-icon").click(function(){
-    var some =  $(".astro-back-icon").parent().parent().parent().hide();
+$(".back-back-icon").click(function(){
+    var some =  $(".back-back-icon").parent().parent().parent().hide();
     $("#astronomy-list").show();
- }); */
+ });
 
  

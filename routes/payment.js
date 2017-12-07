@@ -236,7 +236,7 @@ router.get('/mun/initiatepayment', function(req, res) {
             // Create an array having all required parameters for creating checksum.
             checksum.genchecksum(paramaters, paytm.key, function (err, result) {
                 result['PAYTM_URL'] = paytmURL;
-                res.render('pgredirect2.ejs',{ 'restdata' : result});
+                res.render('pgredirect.ejs',{ 'restdata' : result});
             });
         });
 });
