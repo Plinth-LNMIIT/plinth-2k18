@@ -23,6 +23,7 @@ exports.google = passport.use(new GoogleStrategy({
 	callbackURL: configAuth.googleAuth.callbackURL,
 },
 	function (accessToken, refreshToken, profile, done) {
+		console.log(profile);
 		process.nextTick(function() {
 			User.findOne({ 'email': profile.emails[0].value }, function (err, user) {
 				if (err) {
@@ -77,6 +78,7 @@ exports.facebook = passport.use(new FacebookStrategy({
 	profileFields: ['id', 'emails', 'name'],
 },
 	function (accessToken, refreshToken, profile, done) {
+		console.log(profile);
 		process.nextTick(function() {
 			User.findOne({ 'email': profile.emails[0].value }, function (err, user) {
 				if (err) {

@@ -11,6 +11,7 @@ router.get('/', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('index', {
+            "page" : 'home',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -42,6 +43,7 @@ router.get('/about', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('about', {
+            "page" : 'about',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -72,6 +74,7 @@ router.get('/archive', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('archive', {
+            "page" : 'archive',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -103,6 +106,7 @@ router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) 
     {
         isLoggedIn = false;
         res.render('competitions', {
+            "page" : 'competitions',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -134,6 +138,7 @@ router.get('/contact', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('contact', {
+            "page" : 'contact',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -165,6 +170,7 @@ router.get('/faqs', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('faqs', {
+            "page" : 'faqs',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -196,6 +202,7 @@ router.get('/gallery', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('gallery', {
+            "page" : 'gallery',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -226,6 +233,7 @@ router.get('/mun', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('about', {
+            "page" : 'mun',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -258,6 +266,7 @@ router.get('/sop', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('sop', {
+            "page" : 'sop',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -289,6 +298,7 @@ router.get('/sponsors', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('sponsors', {
+            "page" : 'sponsors',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -320,6 +330,7 @@ router.get('/talks', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('talks', {
+            "page" : 'talks',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -351,6 +362,7 @@ router.get('/team', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('team', {
+            "page" : 'team',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -382,6 +394,7 @@ router.get('/terms', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('terms', {
+            "page" : 'terms',
             "isLoggedIn" : isLoggedIn,
         });
     }
@@ -413,6 +426,7 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
     {
         isLoggedIn = false;
         res.render('workshops', {
+            "page" : 'workshops',
             "isLoggedIn" : isLoggedIn,
         });
     }

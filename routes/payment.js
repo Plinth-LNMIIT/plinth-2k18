@@ -25,7 +25,7 @@ var poc = require('../config/authuser').poc;
 
 
 
-var hostURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://plinth.mukuljain.me'
+var hostURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://plinth.in'
 var paytmURL = 'https://pguat.paytm.com/oltp-web/processTransaction';
 
 router.post('/fetchData', Verify.verifyOrdinaryUser, function(req, res) {
@@ -512,6 +512,108 @@ router.post('/sif/response', Verify.verifyOrdinaryUser,function(req,res){
                     res.render('payment_failed', {
                         clubName : "",
                         backURL : "/competitions/management/sif",
+                    });
+                }
+            }
+        });
+    }
+    else{
+        res.render('payment_failed', {
+            clubName : "",
+        });
+    };
+});
+
+
+router.get('/mypay', function(req, res) {
+    var paymentsif = new PaymentSIF()
+    var id = req.query.id;
+    Sif.findOne({'_id' : id}, function(err,doc){
+        PaymentSIF.count({}, function(err, count){
+            var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2017'
+            order_id = 'Plinth-' + (count + 1) + "-SIF-" + id_tag;
+            paymentsif.order_id = order_id;
+            paymentsif.amount = 0.01 ;
+            paymentsif.email = '15ucs138@lnmiit.ac.in';
+            paymentsif.name =  'Shubham Mangal';
+            paymentsif.number =  '9571620779';
+            paymentsif.status  = 'TXN_FAILURE';
+
+                paramaters ={
+                    REQUEST_TYPE     : "DEFAULT",
+                    ORDER_ID         : order_id,
+                    CUST_ID          : "plinth-" + '15ucs138@lnmiit.ac.in',
+                    TXN_AMOUNT       : 0.01,
+                    CHANNEL_ID       :'WEB',
+                    INDUSTRY_TYPE_ID : paytm.industryID,
+                    MID              : paytm.mid,
+                    WEBSITE          : paytm.website,
+                    // MOBILE_NO        : result.phoneNumber,
+                    // EMAIL            : result.email,
+                    CALLBACK_URL     : hostURL + '/payment/myres',
+                }
+               // if(poc.indexOf(doc.teamEmail) !== -1) paramaters.TXN_AMOUNT = 0.01;
+
+                // Create an array having all required parameters for creating checksum.
+                checksum.genchecksum(paramaters, paytm.key, function (err, result) {
+                    paymentsif.save(function(err) {
+                        if (err){
+                            console.log(err);
+                            res.end('something went wrong');
+                            return;
+                        }
+                        else{
+                            result['PAYTM_URL'] = paytmURL;
+                            res.render('pgredirect.ejs',{ 'restdata' : result});
+                        }
+                    })
+                });
+            });
+        })
+});
+
+router.post('/myres', Verify.verifyOrdinaryUser,function(req,res){
+    var paramlist = req.body;
+    console.log(paramlist);
+    if(checksum.verifychecksum(paramlist, paytm.key)){
+        PaymentSIF.findOneAndUpdate({'order_id' : paramlist.ORDERID}, {$set : {'status' : paramlist.STATUS }},{new: true}, function(err, result){
+            if(err){
+                console.log(err)
+                return;
+            }
+            else{
+                if(paramlist.STATUS === "OPEN"){
+                    res.render('payment_open',{
+                        amount   : doc.payment.amount,
+                        order_id : doc.payment.order_id,
+                        eventName : "sif"
+                    })
+                }
+                else if(paramlist.STATUS === 'TXN_SUCCESS'){
+                    doc ={
+                        team : [
+                            {
+                                name : result.name,
+                                email : result.email,
+                                phoneNumber : result.phoneNumber,
+                            }
+                        ],
+                        payment :{
+                            order_id : result.order_id,
+                            date : paramlist.TXNDATE,
+                            amount : paramlist.TXNAMOUNT,
+                        },
+                        eventName : "Plinth SIF 2018"
+                    }
+                    res.render('payment_succeed',{
+                        details : doc,
+                        backURL : "/profile"
+                    })
+                }
+                else{
+                    res.render('payment_failed', {
+                        clubName : "",
+                        backURL : "/profile",
                     });
                 }
             }

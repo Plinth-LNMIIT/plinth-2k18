@@ -40,6 +40,7 @@ router.get('/auth/google/callback', function(req,res,next){
         res.redirect('/profile');
       } else {
         res.render('redirect',{
+            "page":'redirect',
             isLoggedIn : false,
             valid : user.valid,
             user: user
@@ -85,6 +86,7 @@ router.get('/auth/facebook/callback', function(req,res,next){
             res.redirect('/profile');
           } else {
             res.render('redirect',{
+                "page":'redirect',
                 isLoggedIn : false,
                 valid : user.valid,
                 user: user
