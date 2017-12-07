@@ -15,11 +15,25 @@ font-size: 1.2rem;
   font-size: 1.8rem;
 }
 
+#prof{
+  margin-bottom: 5px;
+  }
+  
+  #userp{
+    margin-top: 20px;
+  }
+  
+ .about-margin{
+  margin-left: 35%;
+  margin-right:15%;
+ } 
+
 @media only screen and (max-width: 1023px) {
   .table-margin{
     margin-left: 15%;
     margin-right:15%;
   } 
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -36,8 +50,19 @@ font-size: 1.2rem;
     margin-left: 5%;
     margin-right:5%;
   } 
-  
+  .tr-font{
+    font-size: 1rem;
+  }
+  .sub-heading{
+    font-size: 1.5rem;
+  }
+
+  .about-margin{
+    margin-left: 10%;
+    margin-right:10%;
+   }
 }
+
 
 @media only screen and (min-device-width: 480px) 
                    and (max-device-width: 640px) 
@@ -46,6 +71,9 @@ font-size: 1.2rem;
                       margin-left: 10%;
                       margin-right:10%;
                     } 
+                    .sub-heading{
+                      font-size: 1.5rem;
+                    }
 }
 
  
