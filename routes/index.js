@@ -23,6 +23,7 @@ router.get('/', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('index',{
+                    "page" : 'home',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -53,6 +54,7 @@ router.get('/about', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('about',{
+                    "page" : 'about',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -82,6 +84,7 @@ router.get('/archive', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('archive',{
+                    "page" : 'archive',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -112,6 +115,7 @@ router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) 
             // check to see if theres already a user with that email
             if (user){
                 res.render('competitions',{
+                    "page" : 'competitions',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -142,6 +146,7 @@ router.get('/contact', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('contact',{
+                    "page" : 'contact',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -172,6 +177,7 @@ router.get('/faqs', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('faqs',{
+                    "page" : 'faqs',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -202,6 +208,7 @@ router.get('/gallery', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('gallery',{
+                    "page" : 'gallery',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -232,6 +239,7 @@ router.get('/mun', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('mun',{
+                    "page" : 'mun',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -262,6 +270,7 @@ router.get('/sop', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('sop',{
+                    "page" : 'sop',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -292,6 +301,7 @@ router.get('/sponsors', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('sponsors',{
+                    "page" : 'sponsors',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -322,6 +332,7 @@ router.get('/talks', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('talks',{
+                    "page" : 'talks',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -352,6 +363,7 @@ router.get('/team', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('team',{
+                    "page" : 'team',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -382,6 +394,7 @@ router.get('/terms', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('terms',{
+                    "page" : 'terms',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -413,6 +426,7 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('workshops',{
+                    "page" : 'workshops',
                     "isLoggedIn" : isLoggedIn,
                     "user" : {
                         name : user.name,
@@ -442,6 +456,7 @@ router.get('/profile', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('profile',{
+                    "page" : 'profile',
                     "isLoggedIn" : isLoggedIn,
                     "user" : user
                 });

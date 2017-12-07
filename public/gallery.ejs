@@ -15,12 +15,7 @@
         <div id="home">
             <canvas id="canvas"></canvas>
 
-            <% if(isLoggedIn){ %>
-                <%- include('partials/header', {page: 'gallery', status: isLoggedIn, user: user }) -%>
-                    <% } else { %>
-                        <%- include('partials/header', {page: 'gallery', status: isLoggedIn }) -%>
-                            <% } %> 
-
+            <% include partials/header %>
 
                                 <div class="uk-position-center main-content">
 
@@ -57,7 +52,7 @@
 
                                     <% include partials/rightbar %>
 
-                                        <%- include('partials/footer', {page: 'gallery'}) -%>
+                                    <% include partials/footer %>
 
 
 

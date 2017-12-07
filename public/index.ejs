@@ -43,12 +43,7 @@
     <div id="home">
         <canvas id="canvas"></canvas>
 
-        <% if(isLoggedIn){ %>
-            <%- include('partials/header', {page: 'home', status: isLoggedIn, user: user }) -%>
-                <% } else { %>
-                    <%- include('partials/header', {page: 'home', status: isLoggedIn }) -%>
-                        <% } %>
-
+        <% include partials/header %>
                             <div id="centerText" class="uk-position-center">
                                 <div>
                                     <img id="text" src="media/plinthtext.png" width="100%" />
@@ -76,7 +71,7 @@
                             </div>
                             <% include partials/rightbar %>
 
-                                <%- include('partials/footer', {page: 'home'}) -%>
+                            <% include partials/footer %>
 
 
 
