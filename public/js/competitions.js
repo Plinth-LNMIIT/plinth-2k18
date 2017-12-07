@@ -35,7 +35,7 @@ $(".back-icon").click(function(){
    $("#main-list").show();
 });
 
-$(".into-image").click(function(){
+/* $(".into-image").click(function(){
     $("#astronomy-list").hide();
     $("#details").show();
 });
@@ -45,5 +45,5 @@ $(".back-back-icon").click(function(){
     var some =  $(".back-back-icon").parent().parent().parent().hide();
     $("#astronomy-list").show();
  });
-
+ */
  
