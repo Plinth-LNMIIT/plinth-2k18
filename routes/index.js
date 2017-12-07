@@ -232,7 +232,7 @@ router.get('/mun', Verify.verifyOrdinaryUser ,function(req, res, next) {
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;
-        res.render('about', {
+        res.render('mun', {
             "page" : 'mun',
             "isLoggedIn" : isLoggedIn,
         });
