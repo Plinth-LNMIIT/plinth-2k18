@@ -683,7 +683,8 @@ Hexagon Shape
   width: 300px; 
   height: 173.21px;
   margin: 86.60px 0;
-  background-color: #DDDDDD;
+  background-color: #DDDDDD22;
+  
   animation: fadein 1s;
   top: 0;
   bottom: 0;

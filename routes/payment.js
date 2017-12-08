@@ -78,7 +78,7 @@ router.post('/fetchData', Verify.verifyOrdinaryUser, function(req, res) {
 
 });
 
-router.get('/initiatepayment', function(req, res) {
+router.get('/payment', function(req, res) {
     paymentdb = new PaymentDB();
     var totalAmount = 0.01;
     var id = req.query.id;
@@ -177,69 +177,6 @@ router.get('/initiatepayment', function(req, res) {
 });
 
 
-router.post('/mun/initiatepayment', function(req, res) {
-    var paymentmun = new PaymentMUN();
-    var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2018'
-    if((req.body.type !== "delegate" && req.body.type !== "ip" && req.body.type !== "accommodation") || req.body.accommodation < 0){
-        res.json({status : false, message : "Data Tempered"});
-    }
-    else{
-        var accommodation = req.body.user.accommodation;
-        if(req.body.type !== "accommodation") var amount = req.body.type === "delegate" ? 0.01 : 0.01;
-        else var amount = 0;
-        amount = amount + (0.01 * accommodation)
-
-        PaymentMUN.count({}, function(err, count){
-            var order_id = "MUN-" + req.body.type + "-" + (count + 1) + "-" + id_tag;
-            paymentmun.order_id       = order_id;
-            paymentmun.type           = req.body.type;
-            paymentmun.name           = req.body.user.name;
-            paymentmun.email          = req.body.user.email;
-            paymentmun.phoneNumber    = req.body.user.phoneNumber;
-            paymentmun.institute      = req.body.user.institute;
-            paymentmun.accommodation  = accommodation;
-            paymentmun.amount         = amount;
-            paymentmun.status         = "";
-
-
-            paymentmun.save(function(err) {
-                if (err){
-                    console.log(err);
-                    return;
-                }
-                else{
-                    res.json({ order_id : order_id, status : true})
-                }
-            });
-        });
-    }
-});
-
-router.get('/mun/initiatepayment', function(req, res) {
-    var paymentmun = new PaymentMUN()
-    var order_id = req.query.order_id;
-    PaymentMUN.findOne({'order_id' : order_id },function (err, result) {
-            paramaters ={
-                REQUEST_TYPE     : "DEFAULT",
-                ORDER_ID         : order_id,
-                CUST_ID          : "plinth-" + result.email,
-                TXN_AMOUNT       : result.amount,
-                CHANNEL_ID       :'WEB',
-                INDUSTRY_TYPE_ID : paytm.industryID,
-                MID              : paytm.mid,
-                WEBSITE          : paytm.website,
-                // MOBILE_NO        : result.phoneNumber,
-                // EMAIL            : result.email,
-                CALLBACK_URL     : hostURL + '/payment/mun/response',
-            }
-
-            // Create an array having all required parameters for creating checksum.
-            checksum.genchecksum(paramaters, paytm.key, function (err, result) {
-                result['PAYTM_URL'] = paytmURL;
-                res.render('pgredirect.ejs',{ 'restdata' : result});
-            });
-        });
-});
 
 router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
     var paramlist = req.body;
@@ -344,6 +281,73 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
         });
     };
 });
+
+
+router.post('/mun/initiatepayment', function(req, res) {
+    var paymentmun = new PaymentMUN();
+    var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2018'
+    if((req.body.type !== "delegate" && req.body.type !== "ip" && req.body.type !== "accommodation") || req.body.accommodation < 0){
+        res.json({status : false, message : "Data Tempered"});
+    }
+    else{
+        var accommodation = req.body.user.accommodation;
+        if(req.body.type !== "accommodation") var amount = req.body.type === "delegate" ? 0.01 : 0.01;
+        else var amount = 0;
+        amount = amount + (0.01 * accommodation)
+
+        PaymentMUN.count({}, function(err, count){
+            var order_id = "MUN-" + req.body.type + "-" + (count + 1) + "-" + id_tag;
+            paymentmun.order_id       = order_id;
+            paymentmun.type           = req.body.type;
+            paymentmun.name           = req.body.user.name;
+            paymentmun.email          = req.body.user.email;
+            paymentmun.phoneNumber    = req.body.user.phoneNumber;
+            paymentmun.institute      = req.body.user.institute;
+            paymentmun.accommodation  = accommodation;
+            paymentmun.amount         = amount;
+            paymentmun.status         = "";
+
+
+            paymentmun.save(function(err) {
+                if (err){
+                    console.log(err);
+                    return;
+                }
+                else{
+                    res.json({ order_id : order_id, status : true})
+                }
+            });
+        });
+    }
+});
+
+router.get('/mun/initiatepayment', function(req, res) {
+    var paymentmun = new PaymentMUN()
+    var order_id = req.query.order_id;
+    PaymentMUN.findOne({'order_id' : order_id },function (err, result) {
+            paramaters ={
+                REQUEST_TYPE     : "DEFAULT",
+                ORDER_ID         : order_id,
+                CUST_ID          : "plinth-" + result.email,
+                TXN_AMOUNT       : result.amount,
+                CHANNEL_ID       :'WEB',
+                INDUSTRY_TYPE_ID : paytm.industryID,
+                MID              : paytm.mid,
+                WEBSITE          : paytm.website,
+                // MOBILE_NO        : result.phoneNumber,
+                // EMAIL            : result.email,
+                CALLBACK_URL     : hostURL + '/payment/mun/response',
+            }
+
+            // Create an array having all required parameters for creating checksum.
+            checksum.genchecksum(paramaters, paytm.key, function (err, result) {
+                result['PAYTM_URL'] = paytmURL;
+                res.render('pgredirect.ejs',{ 'restdata' : result});
+            });
+        });
+});
+
+
 
 router.post('/mun/response', Verify.verifyOrdinaryUser,function(req,res){
     var paramlist = req.body;

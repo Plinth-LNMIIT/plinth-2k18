@@ -180,30 +180,9 @@
     display: none;
 }
 
-#astronomy-details{
+#details{
     display: none;
 }
-
-#coding-details{
-    display: none;
-}
-
-#robotics-details{
-    display: none;
-}
-
-#quizzing-details{
-    display: none;
-}
-
-#literature-details{
-    display: none;
-}
-
-#management-details{
-    display: none;
-}
-
 
 .back-icon{
     padding-left: 0%; 
