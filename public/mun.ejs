@@ -28,12 +28,12 @@
 
 </head>
 
-<body data-spy="scroll" data-target="#navbar-example" data-offset="200">
-
+<body data-spy="scroll" data-target="#navbar-example" data-offset="200" id="style-7">
+ 
 	<nav class="navbar navbar-toggleable-md navbar-inverse nav hidden" id="nb">
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon " ></span>
+			<span class="navbar-toggler-icon "></span>
 		</button>
 
 		<img class="mun-logo" src="media/mun/logo.png" height="64px" width="64px" style="border-radius: 50%">
@@ -63,19 +63,51 @@
 				</li>
 
 				<% if(isLoggedIn){ %>
-					<li>
+					<li class="nav-item">
 						<a class="nav-link" href="/profile"> Hi,
 							<%- user.name %>
 						</a>
 					</li>
 
 
-					<% } %>
+					<% } else { %>
+						<li class="nav-item">
+							<a class="nav-link" data-target="#registerModel" data-toggle="modal" href="#">
+								Register/Login
+							</a>
+
+						</li>
+						<% } %>
 
 			</ul>
 
 		</div>
 	</nav>
+
+	<div class="modal fade" id="registerModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Register Yourself</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="medium">Register yourself for different competitions through this portal to know further details and proceedings of PLINTH'18.
+						Morever if you register through this platform , you would be able to get exclusive coupons and offers.</div>
+
+					<div class="register-button">
+						<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/google")'>
+							<i class="fa fa-google-plus" aria-hidden="true"></i> Register with Google</a>
+						<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/facebook")'>
+							<i class="fa fa-facebook" aria-hidden="true"></i> Register with Facebook</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div id="home">
 		<div class="logo container">
@@ -88,13 +120,13 @@
 					<div class="col-md-6 heading">
 						<div class="heading2">The LNM Institute of Information Technology</div>
 						<div>
-								<div class="heading1">Model United Nations</div>
-								<div class="heading3">January 6th-7th</div>
+							<div class="heading1">Model United Nations</div>
+							<div class="heading3">January 6th-7th</div>
 						</div>
-						
+
 					</div>
 				</div>
- 
+
 
 				<canvas id="timer"></canvas>
 
@@ -106,18 +138,18 @@
 			<button type="button" class="btn btn-outline-secondary">Register Now</button>
 		</div>
 		<a href="#about" class="page_scroll hidee">
-				<div class="scrolldown-container page_scroll">
-					<div class="scrolldown-btn">
-						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 width="50px" height="80px" viewbox="0 0 50 80" enable-background="new 0 0 50 80" xml:space="preserve">
-							<path class="first-path" fill="#FFFFFF" d="M24.752,79.182c-0.397,0-0.752-0.154-1.06-0.463L2.207,57.234c-0.306-0.305-0.458-0.656-0.458-1.057                  s0.152-0.752,0.458-1.059l2.305-2.305c0.309-0.309,0.663-0.461,1.06-0.461c0.398,0,0.752,0.152,1.061,0.461l18.119,18.119                  l18.122-18.119c0.306-0.309,0.657-0.461,1.057-0.461c0.402,0,0.753,0.152,1.059,0.461l2.306,2.305                  c0.308,0.307,0.461,0.658,0.461,1.059s-0.153,0.752-0.461,1.057L25.813,78.719C25.504,79.027,25.15,79.182,24.752,79.182z"></path>
-							<path class="second-path" fill="#FFFFFF" d="M24.752,58.25c-0.397,0-0.752-0.154-1.06-0.463L2.207,36.303c-0.306-0.304-0.458-0.655-0.458-1.057                  c0-0.4,0.152-0.752,0.458-1.058l2.305-2.305c0.309-0.308,0.663-0.461,1.06-0.461c0.398,0,0.752,0.153,1.061,0.461l18.119,18.12                  l18.122-18.12c0.306-0.308,0.657-0.461,1.057-0.461c0.402,0,0.753,0.153,1.059,0.461l2.306,2.305                  c0.308,0.306,0.461,0.657,0.461,1.058c0,0.401-0.153,0.753-0.461,1.057L25.813,57.787C25.504,58.096,25.15,58.25,24.752,58.25z"></path>
-						</svg>
-					</div>
+			<div class="scrolldown-container page_scroll">
+				<div class="scrolldown-btn">
+					<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 width="50px" height="80px" viewbox="0 0 50 80" enable-background="new 0 0 50 80" xml:space="preserve">
+						<path class="first-path" fill="#FFFFFF" d="M24.752,79.182c-0.397,0-0.752-0.154-1.06-0.463L2.207,57.234c-0.306-0.305-0.458-0.656-0.458-1.057                  s0.152-0.752,0.458-1.059l2.305-2.305c0.309-0.309,0.663-0.461,1.06-0.461c0.398,0,0.752,0.152,1.061,0.461l18.119,18.119                  l18.122-18.119c0.306-0.309,0.657-0.461,1.057-0.461c0.402,0,0.753,0.152,1.059,0.461l2.306,2.305                  c0.308,0.307,0.461,0.658,0.461,1.059s-0.153,0.752-0.461,1.057L25.813,78.719C25.504,79.027,25.15,79.182,24.752,79.182z"></path>
+						<path class="second-path" fill="#FFFFFF" d="M24.752,58.25c-0.397,0-0.752-0.154-1.06-0.463L2.207,36.303c-0.306-0.304-0.458-0.655-0.458-1.057                  c0-0.4,0.152-0.752,0.458-1.058l2.305-2.305c0.309-0.308,0.663-0.461,1.06-0.461c0.398,0,0.752,0.153,1.061,0.461l18.119,18.12                  l18.122-18.12c0.306-0.308,0.657-0.461,1.057-0.461c0.402,0,0.753,0.153,1.059,0.461l2.306,2.305                  c0.308,0.306,0.461,0.657,0.461,1.058c0,0.401-0.153,0.753-0.461,1.057L25.813,57.787C25.504,58.096,25.15,58.25,24.752,58.25z"></path>
+					</svg>
 				</div>
-			</a>
+			</div>
+		</a>
 	</div>
-	
+
 	<!-- ######### HOME END ######### -->
 	<!-- ###### ABOUT SECTION ######## -->
 	<div class="about">
@@ -160,18 +192,17 @@
 				<hr class="underline-1">
 				<hr class="underline-2">
 				<div class="row ">
-						<div class="col-md-12 text-center">
-								<img src="media/mun/img3.png" alt="SecGen">
-							</div>
-							<div class="col-md-12 text-center">
-								<div>Anirudh Saini</div>	
-								<div>Secretary General</div>
-								
-								</div>
+					<div class="col-md-12 text-center">
+						<img src="media/mun/img3.png" alt="SecGen">
+					</div>
+					<div class="col-md-12 text-center">
+						<div>Anirudh Saini</div>
+						<div>Secretary General</div>
+
+					</div>
 					<div class="col-md-12 abouttext">
 						<p>
-							Dear friends, 
-							It gives me immense pleasure to bring you the 4th edition of LNMIIT Model United Nations, to be held on 6th-7th
+							Dear friends, It gives me immense pleasure to bring you the 4th edition of LNMIIT Model United Nations, to be held on 6th-7th
 							of January, 2018 at LNMIIT, Jaipur. It is my privilege to lead the team which will be your host for this conference.
 							Every MUN that I have been a part of, has strengthened the belief, that an MUN is the most complete form of debate.
 							It is a great opportunity to enhance skills in research, writing, public speaking, problem solving, consensus building
@@ -182,9 +213,9 @@
 							landmark MUN and aspire for your support in doing so. I welcome you again and look forward to see you all here at
 							LNMIIT MUN 2018.
 						</p>
-					 
+
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -203,7 +234,7 @@
 			<ul class="flip-items">
 				<li id="Gadisec">
 					<div class="card" style="width: 20rem;">
-						<img class="card-img-top" src="media/mun/disec.png"  alt="Card image cap">
+						<img class="card-img-top" src="media/mun/disec.png" alt="Card image cap">
 						<div class="card-block">
 							<h4 class="card-title">GA(DISEC)</h4>
 							<p class="card-text">DISEC deals with topics that center around disarmament, global issues, and threats to peace that jeopardize international
@@ -258,7 +289,7 @@
 			</ul>
 		</div>
 
-		<div tabindex="-1" class="modal fade" id="myModal11" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+		<!-- <div tabindex="-1" class="modal fade" id="myModal11" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -273,22 +304,22 @@
 
 					</div>
 				</div>
-				<!-- /.modal-content -->
+			 
 			</div>
-			<!-- /.modal-dialog -->
-		</div>
+			 
+		</div> -->
 		<!-- /.modal -->
 
 		<!-- ##################### END ########################### -->
+	</div>
+	<!-- ######## Executive Board ######## -->
 
-		<!-- ######## Executive Board ######## -->
-
-		<div id="board">
-			<h1 class="text-center heading-2">Executive Board</h1>
-			<hr class="underline-1">
-			<hr class="underline-2">
-			<div class="container">
-				<!-- 		<div id="UNGA" class="hide text-center">
+	<div id="board">
+		<h1 class="text-center heading-2">Executive Board</h1>
+		<hr class="underline-1">
+		<hr class="underline-2">
+		<div class="container">
+			<!-- 	<div id="UNGA" class="hide text-center">
 					<div class="row">
 						<div class="card offset-md-2 col-md-3 col-sm-6" style="width: 20rem;">
 							<img class="card-img-top" src="media/mun/img3.png" alt="Card image cap">
@@ -306,102 +337,111 @@
 
 							</div>
 						</div>
-					</div>
-				</div>
- -->
-				<div class="coming">
-					COMING SOON
-				</div>
+					</div>  
+				</div> -->
+
+			<div class="coming">
+				COMING SOON
+			</div>
 
 
+
+		</div>
+	</div>
+
+	<!-- ############## END ################## -->
+
+	<!-- ######## Executive Board ######## -->
+	<div id="register">
+		<h1 class="text-center heading-2">Register</h1>
+		<hr class="underline-1">
+		<hr class="underline-2">
+		<div style=" text-align: center;">
+			<button type="button" class="btn btn-outline-secondary">Delegate</button>
+			<button type="button" class="btn btn-outline-secondary">International Press</button>
+		</div>
+	</div>
+
+	<!-- ############## END ################## -->
+
+	<footer id="contant">
+		<h1 class="text-center heading-2">Contact Us</h1>
+		<hr class="underline-1">
+		<hr class="underline-2">
+		<div class="address container">
+			<div class="row">
+				<div class="mail col-md-6">
+					<i class="fa fa-phone" aria-hidden="true">&nbsp;&nbsp;+91-9082081504</i>
+					<br>
+					<i class="fa fa-envelope-o" aria-hidden="true">&nbsp;&nbsp;mun@plinth.in</i>
+				</div>
+				<div class="add col-md-6">
+					<p> The LNM Institute of Information Technology
+						<br> Rupa ki Nangal, Post-Sumel, Via-Jamdoli
+						<br> Jaipur-302031,
+						<br> (Rajasthan) INDIA
+					</p>
+				</div>
 
 			</div>
 		</div>
 
-		<!-- ############## END ################## -->
-
-		<!-- ######## Executive Board ######## -->
-		<div id="register">
-			<h1 class="text-center heading-2">Register</h1>
-			<hr class="underline-1">
-			<hr class="underline-2">
-			<div style=" text-align: center;">
-				<button type="button" class="btn btn-outline-secondary">Delegate</button>
-				<button type="button" class="btn btn-outline-secondary">International Press</button>
+		<div class="links">
+			<div>
+				<a href="https://www.facebook.com/LNMIITMUNSociety/">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+				<a href="https://twitter.com/PlinthLNMIIT">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="https://plus.google.com/+PLINTHLNMIIT/posts">
+					<i class="fa fa-google-plus" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.youtube.com/user/PlinthLNMIITJaipur">
+					<i class="fa fa-youtube" aria-hidden="true"></i>
+				</a>
 			</div>
+			<div>
+				<a href="#">About Plinth</a>
+				<a href="#">Sponsors</a>
+				<a href="#">FAQs</a>
+				<a href="#">Contact Us</a>
+			</div>
+
 		</div>
 
-		<!-- ############## END ################## -->
+	</footer>
 
-		<footer id="contant">
-			<h1 class="text-center heading-2">Contact Us</h1>
-			<hr class="underline-1">
-			<hr class="underline-2">
-			<div class="address container">
-				<div class="row">
-					<div class="mail col-md-6">
-						<i class="fa fa-phone" aria-hidden="true">&nbsp;&nbsp;+91-9082081504</i>
-						<br>
-						<i class="fa fa-envelope-o" aria-hidden="true">&nbsp;&nbsp;mun@plinth.in</i>
-					</div>
-					<div class="add col-md-6">
-						<p> The LNM Institute of Information Technology
-							<br> Rupa ki Nangal, Post-Sumel, Via-Jamdoli
-							<br> Jaipur-302031,
-							<br> (Rajasthan) INDIA
-						</p>
-					</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+	 crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="js/jquery.flipster.min.js"></script>
+	<script src="js/timer-mun.js"></script>
 
-				</div>
-			</div>
+	<script type="text/javascript">
+		$("#carouel").flipster({
+			style: 'carousel',
+			spacing: -0.5,
+			buttons: true,
+			autoplay: 4000,
+			pauseOnHover: true,
+			scrollwheel: false,
+			click: true,
+			keyboard: true,
+			touch: true,
+			loop: true,
+			fadeIn: 400,
+			onItemSwitch: function () {
 
-			<div class="links">
-				<div>
-					<a href="https://www.facebook.com/LNMIITMUNSociety/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a href="https://twitter.com/PlinthLNMIIT"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-					<a href="https://plus.google.com/+PLINTHLNMIIT/posts"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-					<a href="https://www.youtube.com/user/PlinthLNMIITJaipur"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-				</div>
-				<div>
-					<a href="#">About Plinth</a>
-					<a href="#">Sponsors</a>
-					<a href="#">FAQs</a>
-					<a href="#">Contact Us</a>
-				</div>
+			},
+		});
 
-			</div>
-
-		</footer>
-
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-		 crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-		 crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-		 crossorigin="anonymous"></script>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
-		<script src="js/jquery.flipster.min.js"></script>
-		<script src="js/timer-mun.js"></script>
-		<script type="text/javascript">
-			$("#carouel").flipster({
-				style: 'carousel',
-				spacing: -0.5,
-				buttons: true,
-				autoplay: 4000,
-				pauseOnHover: true,
-				scrollwheel: false,
-				click: true,
-				keyboard: true,
-				touch: true,
-				loop: true,
-				fadeIn: 400,
-				onItemSwitch: function () {
-
-				},
-			});
-
-		</script>
+	</script>
 
 
 </body>

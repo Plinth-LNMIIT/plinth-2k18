@@ -14,7 +14,7 @@ var userSchema = mongoose.Schema({
         city           : String,
         valid          : Boolean,
         gender         : String,
-        events         : Array,
+        events         : [],
 });
 userSchema.plugin(mongoose_csv);
 // create the model for users and expose it to our app

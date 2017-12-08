@@ -16,6 +16,7 @@ router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 
 
 router.get('/auth/google/callback', function (req, res, next) {
     passport.authenticate('google', function (err, user, info) {
+      
         if (err) {
             return next(err);
         }
@@ -36,7 +37,12 @@ router.get('/auth/google/callback', function (req, res, next) {
 
             res.cookie('access-token', token, { httpOnly: true, secure: false });
             if (user.valid) {
-                res.redirect('/profile');
+                res.render('redirect', {
+                    "page": 'redirect',
+                    isLoggedIn: true,
+                    valid: user.valid,
+                    user: user
+                });
             } else {
                 res.render('redirect', {
                     "page": 'redirect',
@@ -65,6 +71,7 @@ router.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email'
 
 router.get('/auth/facebook/callback', function (req, res, next) {
     passport.authenticate('facebook', function (err, user, info) {
+       
         if (err) {
             return next(err);
         }
@@ -82,7 +89,12 @@ router.get('/auth/facebook/callback', function (req, res, next) {
             var token = Verify.getToken(user);
             res.cookie('access-token', token, { httpOnly: true, secure: false });
             if (user.valid) {
-                res.redirect('/profile');
+                res.render('redirect', {
+                    "page": 'redirect',
+                    isLoggedIn: true,
+                    valid: user.valid,
+                    user: user
+                });
             } else {
                 res.render('redirect', {
                     "page": 'redirect',
@@ -138,6 +150,7 @@ router.post('/user_register_complete', Verify.verifyOrdinaryUser, function (req,
     }
     if (user) {
         res.cookie('access-token', Verify.getToken(user), { httpOnly: true, secure: false });
+
         res.redirect('/profile');
     }
 });

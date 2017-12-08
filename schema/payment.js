@@ -14,7 +14,7 @@ var paymentSchema = mongoose.Schema({
                 paidAt: String,
         },
         teamSize        : Number,
-        team : [
+        team : [], /* [
                 {
                     email          : String,
                     name           : String,
@@ -26,7 +26,7 @@ var paymentSchema = mongoose.Schema({
                     accommodation  : String,
                     resume         : String,
                 }
-            ]
+            ] */
 });
 
 paymentSchema.plugin(mongoose_csv);

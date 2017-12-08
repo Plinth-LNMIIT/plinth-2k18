@@ -16,9 +16,7 @@ body{
 }	
 .nav-link{
   color: white !important;
-}
-.nav-item a:hover { border-bottom:3px solid #fff;}
-
+} 
 a,i{
   transition: .3s;
 }
@@ -121,10 +119,30 @@ canvas {
      background:rgba(0,0,0,0.6);
 
 }
+
+.btn-outline-primary{
+  
+  
+  color: black;
+  background:white;
+  margin: 8px;
+
+}
+
+
 .btn-outline-secondary:hover{
   color: black;
 }
 
+.modal{
+  top: 20%;
+}
+.medium{
+  text-align: center;
+}
+.register-button{
+  text-align: center
+}
 
 .scrolldown-container {
   width: 100%;
@@ -232,6 +250,11 @@ canvas {
       margin-top: 0vh;
  padding-bottom: 30vh;  
   }
+
+  .heading1{
+    font-size:  3rem;
+    text-align: center;
+    }
 }
 
 @media only screen and (max-width: 780px) {
@@ -267,6 +290,10 @@ canvas {
         background-color:#303030;
         text-align: left;
     }
+    .heading1{
+      font-size:  2rem;
+      text-align: center;
+      }
 
     .card {
       margin: 0 auto;
@@ -454,6 +481,8 @@ footer{
   color: #7c7c7c;
 }
 
+
+
 @-webkit-keyframes scrollanim {
   0% {
     -webkit-transform: translate(0, -40px);
@@ -530,3 +559,37 @@ footer{
     opacity: 0.6;
   }
 }
+
+   /**
+  
+  scroll bar custom
+   */
+   
+    
+    
+   
+   #style-7::-webkit-scrollbar-track
+   {
+       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+       
+       border-radius: 10px;
+   }
+   
+   #style-7::-webkit-scrollbar
+   {
+       width: 10px;
+      
+   }
+   
+   #style-7::-webkit-scrollbar-thumb
+   {
+       border-radius: 20px;
+       background-image: -webkit-gradient(linear,
+                                          left bottom,
+                                          left top,
+                                          color-stop(0.44, rgb(137, 140, 145)),
+                                          color-stop(0.72, rgb(91, 95, 99)),
+                                          color-stop(0.86, rgb(50, 51, 54)));
+   }
+    
+  

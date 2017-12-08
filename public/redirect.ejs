@@ -25,7 +25,11 @@
                                                         <span> Redirecting, Please Wait...</span>
                                                     </h1>
                                                 </div>
-
+                                                <script>
+                                                                setTimeout(function () {
+                                                                    window.location = localStorage.getItem('tempURL');  
+                                                                    }, 2000);
+                                                </script>    
 
                                                 <% }else{ %>
 
@@ -66,14 +70,14 @@
                                                                 <div class="uk-margin ">
                                                                     <label class="uk-form-label " for="form-horizontal-text ">Contact Number</label>
                                                                     <div class="uk-form-controls ">
-                                                                        <input class="uk-input " id="form-horizontal-text" name="phone" type="number " placeholder="9876543210 " required>
+                                                                        <input class="uk-input " id="form-horizontal-text" name="phone" type="number" placeholder="9876543210 " required>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="uk-margin ">
                                                                     <label class="uk-form-label " for="form-horizontal-text ">Email</label>
                                                                     <div class="uk-form-controls ">
-                                                                        <input class="uk-input " id="form-horizontal-text" name="email" type="text " placeholder="harry.potter@gmail.com " value="<%- user.email %>"
+                                                                        <input class="uk-input " id="form-horizontal-text" name="email" type="text" placeholder="harry.potter@gmail.com " value="<%- user.email %>"
                                                                             disabled required>
                                                                     </div>
                                                                 </div>
@@ -81,14 +85,14 @@
                                                                 <div class="uk-margin ">
                                                                     <label class="uk-form-label " for="form-horizontal-text ">Institute Name</label>
                                                                     <div class="uk-form-controls ">
-                                                                        <input class="uk-input " id="form-horizontal-text" name="institute" type="text " placeholder="Hogwards " required>
+                                                                        <input class="uk-input " id="form-horizontal-text" name="institute" type="text" placeholder="Hogwards " required>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="uk-margin ">
                                                                     <label class="uk-form-label " for="form-horizontal-select ">Year</label>
                                                                     <div class="uk-form-controls ">
-                                                                        <select class="uk-select " name="year" id="form-horizontal-select " required>
+                                                                        <select class="uk-select " name="year" id="form-horizontal-select" required>
                                                                             <option>1</option>
                                                                             <option>2</option>
                                                                             <option>3</option>
@@ -102,7 +106,7 @@
                                                                 <div class="uk-margin ">
                                                                     <label class="uk-form-label " for="form-horizontal-text ">City</label>
                                                                     <div class="uk-form-controls ">
-                                                                        <input class="uk-input " id="form-horizontal-text" name="city" type="text " placeholder="Jaipur " required>
+                                                                        <input class="uk-input " id="form-horizontal-text" name="city" type="text" placeholder="Jaipur " required>
                                                                     </div>
                                                                 </div>
 
@@ -159,8 +163,11 @@
         <script src="js/canvasloader.js "></script>
         <script src="js/slowStar.js "></script>
         <script>
+            console.log(valid);
             var obj = { Title: 'Register', Url: 'https://plinth.in/user/redirect' };
             history.pushState(obj, obj.Title, obj.Url);
+
+            
         </script>
 
 </body>
