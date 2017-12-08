@@ -135,8 +135,36 @@
 			</div>
 
 
-			<button type="button" class="btn btn-outline-secondary">Register Now</button>
+			<a  class="btn btn-outline-secondary" href="#contant">Register Now</a>
+			
+			<a  class="btn btn-outline-secondary" data-target="#payModel" data-toggle="modal" href="#">Pay Now</a>
 		</div>
+
+		<div class="modal fade" id="payModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Register Yourself</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="medium">Register yourself for different competitions through this portal to know further details and proceedings of PLINTH'18.
+								Morever if you register through this platform , you would be able to get exclusive coupons and offers.</div>
+		
+							<div class="register-button">
+								<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/google")'>
+									<i class="fa fa-google-plus" aria-hidden="true"></i> Register with Google</a>
+								<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/facebook")'>
+									<i class="fa fa-facebook" aria-hidden="true"></i> Register with Facebook</a>
+		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		<a href="#about" class="page_scroll hidee">
 			<div class="scrolldown-container page_scroll">
 				<div class="scrolldown-btn">

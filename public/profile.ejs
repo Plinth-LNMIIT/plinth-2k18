@@ -95,17 +95,17 @@
                                                                     <td colspan="4" class="uk-text-center">No registered events to display.</td>
                                                                 </tr>
                                                                 <% } else { %>
-                                                                    <% for(var i=1; i<user.events.length; i++) { %>
+                                                                    <% if(user.events.length > 0 ){  for(var i=1; i<user.events.length; i++) { %>
                                                                         <tr class="tr-font">
 
                                                                             <td>
-                                                                                <%= user.events[i].eventName %>
+                                                                                <%= user.events[i].event.eventName %>
                                                                             </td>
                                                                             <td>
                                                                                 <%= user.events[i].team.length %>
                                                                             </td>
                                                                             <td>
-                                                                                <%= user.events[i].payment.status %>
+                                                                                <%= user.events[i].status %>
                                                                             </td>
                                                                             <td>
                                                                                 <i class="fa fa-eye" aria-hidden="true"></i>
@@ -114,7 +114,7 @@
                                                                             </td>
                                                                         </tr>
                                                                         <% } %>
-                                                                            <% } %>
+                                                                            <% } } %>
                                                         </tbody>
                                                     </table>
                                                 </div>

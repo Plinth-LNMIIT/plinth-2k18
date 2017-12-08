@@ -481,12 +481,5 @@ router.get('/profile', Verify.verifyOrdinaryUser ,function(req, res, next) {
   
 });
 
-router.get('/redirect',function(req, res, next) {
-
-    res.render('redirect',{
-        isLoggedIn : false,
-        valid : false,
-    });
-});
 
 module.exports = router;

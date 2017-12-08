@@ -3,6 +3,7 @@ var mongoose_csv = require('mongoose-csv');
 
 var paymentSchema = mongoose.Schema({
         orderId        : String,
+        tranId         : String,
         status         : String,
         amount         : Number,
         event          : {

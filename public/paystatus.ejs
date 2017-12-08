@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+
+        <link rel="stylesheet" href="css/paystatus.css">
+
+</head>
+
+<body>
+
+    <% include partials/loader %>
+        <div id="home">
+            <canvas id="canvas"></canvas>
+
+            <% include partials/header %>
+                                <div class="uk-position-center main-content ">
+
+                                    <div class="scroll-content" id="style-7">
+                                        <div class="inner-content">
+                                            
+
+
+
+                                                    <div class="my-rotate">
+
+                                                        <div uk-grid>
+                                                            <h1 class="uk-align-center">
+                                                                <span>Registration Form</span>
+                                                            </h1>
+                                                        </div>
+                                                        
+
+
+                                                    </div>
+                                                  
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+
+                                <% include partials/leftbar %>
+
+
+
+                                    <% include partials/rightbar %>
+
+
+                                    <% include partials/footer %>
+
+
+
+
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js "></script>
+        <script src="js/uikit-icons.min.js "></script>
+        <script src="js/canvasloader.js "></script>
+        <script src="js/slowStar.js "></script>
+        <script>
+             
+            var obj = { Title: 'Status', Url: 'https://plinth.in/payment/paystatus' };
+            history.pushState(obj, obj.Title, obj.Url);
+
+            
+        </script>
+
+</body>
+
+</html>
