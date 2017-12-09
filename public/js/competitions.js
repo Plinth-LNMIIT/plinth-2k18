@@ -58,7 +58,8 @@ $(".more-details").click(function(){
         current.hide();
         $("#details").show();
     } 
-   
+    document.body.getElementsByClassName('.scroll-content').scrollTop = 0; // For Safari
+    document.documentElement.getElementsByClassName('.scroll-content').scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
 
 $("#synopsis").click(function(){

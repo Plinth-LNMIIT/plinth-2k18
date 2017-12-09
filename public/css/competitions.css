@@ -213,7 +213,27 @@
      font-size: 1.5rem;
    
  }
-
+#tabs{
+    background: rgba(109, 121, 231, 0.603);
+    width: 90%;
+    padding: 0px;
+}
+#tab{
+    width: 90%;
+}
+.dropp{
+    padding:8px;
+    background: rgba(122, 101, 243, 0.836);
+}
+.above-drop {
+    margin-top: 0px;
+    padding:0px;
+     
+}
+.uk-tab::before{
+    left:0;
+}
+ 
  .heading-li{
      font-size: 2.2rem;
      padding-left: 3%;
