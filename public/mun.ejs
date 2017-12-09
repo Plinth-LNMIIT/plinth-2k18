@@ -64,9 +64,13 @@
 
 				<% if(isLoggedIn){ %>
 					<li class="nav-item">
-						<a class="nav-link" href="/profile"> Hi,
+						<a class="nav-link dropdown-toggle" href="https://plinth.in" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Hi,
 							<%- user.name %>
 						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background:transparent;right: 0; left: auto;top:unset">
+								<a class="nav-link" href="/profile">Profile</a>
+								<a class="nav-link"  href="/user/logout">Logout</a>
+							  </div>
 					</li>
 
 
