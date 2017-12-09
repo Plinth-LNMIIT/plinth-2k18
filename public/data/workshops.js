@@ -1,51 +1,24 @@
 module.exports = {
-    eventName : "3dPrinting",
-    displayName : "3D Printing Workshop",
-    eventDate : "19<sup>th</sup> Jan 2017 (9 AM)",
-    eventCompany : "Proxbotics Creation",
-    memberUpperLimit : 1,
-    memberLowerLimit : 1,
-    clubName : "workshop",
-    data : [
+    events : [
         {
-            title : 'Highlights',
-            content : `<br><ol>
-            <li>Learn about the materials, designing of CAD models, working of a 3D Printer.</li>
-            <li>Understand how to build and calibrate a 3D printer.</li>
-            <li>Understand the basics of G code generation.</li>
-            <li>The participants will get 30 printed models that they design.</li>
-            <li>Certificate of Completion with Distinction (for top performers) & Certificate of Completion</li>
-            </ol>`
+            
+            clubName : "Robotics",
+            eventName : "Roborace",
+            eventDate : "18th - 19th Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 4,
+            memberLowerLimit : 1,
+            prizeWorth :  '₹ 30,000',
+            synopsis : " <p>This event consists of 2 rounds: Spacewalk and Messier marathon. Detailed description of the event are as follows.</p><p><b>1st Round: Spacewalk</b></p><p>It will be an audio-visual quiz related to astronomy.Pictures and videos would be projected in front and participants have to answer the questions that follow.</p><p><b>2nd Round: Messier Marathon</b></p><p>So are you one of those who sneak out of your rooms during night hours and wander long gazing at the sky, trying to build up your imagination. Well folks then this is a perfect game for you to play, a hunt for the stars. Participants need to set themselves on a voyage of different celestial bodies and conquer to best of their capabilities. So, are you ready for this mission to get kicked off? See you at the battle field . A basic tutorial session would be held on handling of telescope and any further enhancements of the skills would be student’s personal interest.</p>",
+            eventDescription : " <p><b>Spacewalk</b><ol><li>Participants will have 1 minute to answer each question by writing it down on the given sheet.</li><li>These questions will be objective or one word.</li><li>Each question will carry 2 points.</li><li>Marks will be allotted to each question individually.</li><li>Only top 50% teams will go to the next round.</li></ol></p><p><b>Spacewalk</b><ol><li>Teams will be provided with certain token numbers and called upon on its basis.</li><li>A star map, a laser pointer and telescope shall be provided to the team</li><li>The teams which had qualified in the quiz would be required to point at certain celestial objects through pointer and telescope</li><li>Minimum time shall be provided, based on which points are to be rewarded.</li><li>Team with maximum score would be declared winner.</li><li>Teams are suppose to restrain themselves from using any android application such as Google Sky Map or any other lectronic media.</li><li>Points will be given for locating the objects precisely only on first attempt.</li></ol></p>",
+            rules : "<p><b>General Rules </b><ol><li>Participants can form team of up to three.</li><li>Individual participants are also allowed.</li><li>Using mobile phones is not allowed.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>",
+            mentors : "<p>Details will be Updated soon</p>",
+            query : "Smriti Jha: +91-7742603667 | smritijha369@gmail.com<br>Kushagra Garg: +91-8561801305 | kushrulesu@gmail.com<br>astronomy.lnmiit@gmail.com<br>",
+            sponsors : "<p>Details will be Updated soon</p>"
+           
+         
+
         },
-        {
-            title : "Course Structure",
-            content :  `<br><ol>
-                    <li>Introductory lecture on 3D printer and Rapid Prototyping
-                        <ol>
-                            <li>Introduction to Rapid prototype</li>
-                            <li>Introduction to different types of 3D printers</li>
-                            <li>Introduction to RepRap and Arduino electronic controller</li>
-                            <li>Materials used for printing</li>
-                        </ol>
-                    </li>
-                    <li>
-                    STL files
-                        <ol>
-                            <li>Concepts of solidworks software</li>
-                            <li>Design of Assembly</li>
-                        </ol>
-                    <li>Introduction to G Code</li>
-                    <li>Presentation of 3D Printer assembly</li>
-                    <li>Demonstration of 30 Printing</li>
-                    </ol>`
-        },
-        {
-            title : "Kit Content",
-            content : `<br>* Printer would be provided during the workshop but would be taken back after the workshop. This is  being done to reduce the
-            cost of the workshop and make it affordable for students. For purchase the printer kit. you can contact us personally.`
-        }
     ],
-    eventDesc : `<p>3D Printing is an Additive Manufacturing technique that creates a physical object from a virtual 3D CAD model by depositing successive layers of material. They work like the traditional inkjet printers, but instead of ink, a 3D printer deposits desired material to manufacture an object from its digital format. 3D printing and rapid prototyping, in general, are widely claimed to have revolutionized not only the manufacturing industry but also many other walks of life like medicine, aerospace and autom -otive industry. This program on 3D Printing helps the participants understand the design, functioning and operation of a basic 3D Printer.</p>`,
-    imageLink : "media/icons/workshop/w5.svg",
-    fee : 250,
 };

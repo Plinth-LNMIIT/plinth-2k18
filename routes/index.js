@@ -427,7 +427,7 @@ router.get('/terms', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
 router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
-    var workshopDetail = require('../public/data/workshop');
+    var workshopDetail = require('../public/data/workshops');
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;
