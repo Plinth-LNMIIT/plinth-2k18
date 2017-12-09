@@ -102,6 +102,7 @@ router.get('/archive', Verify.verifyOrdinaryUser ,function(req, res, next) {
 });
 
 router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) {
+    var eventDetail = require('../public/data/events');
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;
@@ -124,7 +125,8 @@ router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) 
                     "user" : {
                         name : user.name,
                         gender : user.gender,
-                    }
+                    },
+                    eventDetail : eventDetail
                 });
             }
         });
@@ -422,6 +424,8 @@ router.get('/terms', Verify.verifyOrdinaryUser ,function(req, res, next) {
 });
 
 router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
+
+    var workshopDetail = require('../public/data/workshop');
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;

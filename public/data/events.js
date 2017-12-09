@@ -8,11 +8,7 @@ module.exports = {
             eventVenue : "The LNMIIT, Jaipur",
             memberUpperLimit : 4,
             memberLowerLimit : 1,
-            prizeWorth : {
-                prize1 : '30,000',
-                prize2 : '15,000',
-                prize3 : '10,000',
-            },
+            prizeWorth :  '30,000',
             tabs : [
                 {
                     tabName: 'Synopsis',

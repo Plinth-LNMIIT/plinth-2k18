@@ -207,9 +207,16 @@
  .inner-content2{
    padding: 16px;
  }
+ 
  #tabs > li > a{
-     border-color: white;
+     border:unset;
      font-size: 2rem;
+   
+ }
+
+ .heading-li{
+     font-size: 2.2rem;
+     padding-left: 3%;
  }
 
 @media only screen and (max-width: 960px) {
@@ -232,7 +239,16 @@
      .boxing{
         padding: 15% 0 15% 0  ;
      }
-   
+
+     #tabs > li > a{
+        border:unset;
+        font-size: 1rem;
+      
+    }
+    .heading-li{
+        font-size: 2rem;
+        padding-left: 10%;
+    }
       
       
  }
