@@ -22,15 +22,26 @@
                                             
 
 
-
                                                     <div class="my-rotate">
 
                                                         <div uk-grid>
                                                             <h1 class="uk-align-center">
-                                                                <span>Registration Form</span>
+                                                                <span>Payment Status</span>
                                                             </h1>
                                                         </div>
                                                         
+                                                        <div uk-grid>
+                                                            
+                                                                <% if(status == 'success'){ %>
+
+                                                                    <% } else if(status == 'fail') { %>
+
+                                                                        <%  } else if(status == 'open') { %>
+
+                                                                            <% } %>
+
+
+                                                        </div>
 
 
                                                     </div>
@@ -70,6 +81,7 @@
         <script src="js/uikit-icons.min.js "></script>
         <script src="js/canvasloader.js "></script>
         <script src="js/slowStar.js "></script>
+        <script src="js/printe.js"></script>
         <script>
              
             var obj = { Title: 'Status', Url: 'https://plinth.in/payment/paystatus' };

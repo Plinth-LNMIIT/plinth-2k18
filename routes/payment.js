@@ -13,8 +13,8 @@ var poc = require('../config/authuser').poc;
 
 
 
-var hostURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://plinth.mukuljain.me'
-var paytmURL = 'https://pguat.paytm.com/oltp-web/processTransaction';
+var hostURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://plinth.mukuljain.me';
+var paytmURL =  process.env.NODE_ENV === 'development' ? 'https://pguat.paytm.com/oltp-web/processTransaction' : 'https://secure.paytm.in/oltp-web/processTransaction';
 var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2018';
 
 router.get('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
@@ -24,7 +24,7 @@ router.get('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
         payment.event.eventName = 'mun';
         var order_id = "Plinth-" + payment.event.eventName + "-" + (count+1) + "-" + id_tag;
         payment.status = 'OPEN';
-        payment.amount = 400;
+        payment.amount = 1;
         payment.date.createdAt = ''+ new Date();
         payment.orderId = order_id;
         payment.team = [];
@@ -56,8 +56,6 @@ router.get('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
                     INDUSTRY_TYPE_ID : paytm.industryID,
                     MID              : paytm.mid,
                     WEBSITE          : paytm.website,
-                    // MOBILE_NO        : result.phoneNumber,
-                    // EMAIL            : result.email,
                     CALLBACK_URL     : hostURL + '/payment/response',
                     
                 }
@@ -106,6 +104,7 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
                             name : user.name,
                             gender : user.gender,
                         },
+                        "status": 'fail',
                         details : result,
                     })
                     return;
@@ -130,6 +129,7 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
                             name : user.name,
                             gender : user.gender,
                         },
+                        "status": 'success',
                         details : result,
                     });
                 }
@@ -141,74 +141,11 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
                             name : user.name,
                             gender : user.gender,
                         },
+                        "status": 'open',
                         details : result,
                     })
                 }
 
-
-                /* result.save(function(err2) {
-                    if (err2){
-                        console.log(err2);
-                        return;
-                    } else {
-                        User.findOne({'email' : result.team[0].email}, function(err3, user){
-                            user.events.push(result);
-                            user.save(function(err4) {
-                               
-                                if (err4){
-                                    console.log(err4);
-                                    return;
-                                } else {
-                                    res.redirect('/');
-                                   /*  res.render('paystatus', {
-                                        "page": 'paystatus',
-                                        isLoggedIn: true,
-                                        user: user
-                                    }); 
-                                    
-                                }
-
-                            });
-                        });
-                    }
-                
-                });
-
-
-                if(paramlist.STATUS === "OPEN"){
-                    res.render('payment_open',{
-                        amount   : doc.payment.amount,
-                        order_id : doc.payment.order_id,
-                        eventName : doc.eventName
-                    })
-                }
-                else if(paramlist.STATUS === 'TXN_SUCCESS'){
-                    doc ={
-                        team : [
-                            {
-                                name : result.name,
-                                email : result.email,
-                                phoneNumber : result.phoneNumber,
-                            }
-                        ],
-                        payment :{
-                            order_id : result.order_id,
-                            date : paramlist.TXNDATE,
-                            amount : paramlist.TXNAMOUNT,
-                        },
-                        eventName : "MUN 2017"
-                    }
-                    res.render('payment_succeed',{
-                        details : doc,
-                        backURL : "/mun"
-                    })
-                }
-                else{
-                    res.render('payment_failed', {
-                        clubName : "",
-                        backURL : "/mun/pay",
-                    });
-                } */
             }
         });
     }
@@ -220,6 +157,7 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
                 name : user.name,
                 gender : user.gender,
             },
+            "status": 'fail',
             details : 'none',
         });
     }
