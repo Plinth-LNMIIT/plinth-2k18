@@ -5,8 +5,11 @@
     <% include partials/head %>
         <link rel="stylesheet" href="css/competitions.css">
         <script>
-                var events = <%- JSON.stringify(events) %> ;
-                var event;
+            var current;
+            var next;
+            var mevent;
+            var mevents = <%- JSON.stringify(events) %> ;
+                
             </script>
 </head>
 
@@ -533,34 +536,34 @@
                                             <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
                                         </span>
                                         <h1 class="sub-heading-text uk-align-center">
-                                            <span></span>
+                                            <span id='clubName'></span>
                                         </h1>
                                     </div>
 
-                                    <div >
+                                    <div>
                                             
                                             <h1 class="heading-li uk-align-center ">
-                                                <span></span>
+                                                <span id='eventName'></span>
                                             </h1>
                                         </div>
 
                                         <div>
-                                                <ul class="uk-list text-list  uk-align-center uk-list-medium">
+                                                <ul class="uk-list text-list  uk-text-center uk-list-medium">
                                                         <li class="uk-active">
-                                                            Fee
+                                                            Fee :  <span id='eventFee'></span>
                                                         </li>
                                                         <li>
-                                                            Date
+                                                            Date :  <span id='eventDate'></span>
                                                         </li>
                                                         <li>
-                                                            Venue
+                                                            Venue : <span id='eventVenue'></span>
                                                         </li>
                                                         <li>
-                                                           Register & payment
+                                                           Register & payment  <span id='eventName'></span>
                                                         </li>
                                                         
                                                         <li>
-                                                                prizes worth
+                                                                Prizes Worth : <span id='prizeWorth'></span>
                                                         </li>
 
                                                     </ul>
@@ -574,16 +577,16 @@
                                         <div uk-grid>
                                             <ul id="tabs" class="uk-flex-center uk-visible@m" uk-tab>
                                                 <li class="uk-active">
-                                                    <a href="#">Synopsis</a>
+                                                    <a id="synopsis" href="#">Synopsis</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Event Description</a>
+                                                    <a id="description" href="#">Event Description</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Rules</a>
+                                                    <a id="rules" href="#">Rules</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Judges & Mentors</a>
+                                                    <a  id="judges" href="#">Judges & Mentors</a>
                                                 </li>
 
                                             </ul>
@@ -599,16 +602,16 @@
                                                     <div uk-dropdown="mode: click">
                                                         <ul class="uk-nav uk-dropdown-nav uk-text-right">
                                                                 <li class="uk-active">
-                                                                        <a href="#">Synopsis</a>
+                                                                        <a id="synopsis" href="#">Synopsis</a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">Event Description</a>
+                                                                        <a id="description" href="#">Event Description</a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">Rules</a>
+                                                                        <a id="rules" href="#">Rules</a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">Judges & Mentors</a>
+                                                                        <a id="judges" href="#">Judges & Mentors</a>
                                                                     </li>
                                                                    
 

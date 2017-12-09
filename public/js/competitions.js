@@ -1,5 +1,4 @@
-var current;
-var next;
+
 $(".astro-image").click(function(){
     $("#main-list").hide();
     $("#astronomy-list").show();
@@ -31,29 +30,75 @@ $(".management-image").click(function(){
 });
 
 $(".back-icon").click(function(){
-   var some =  $(".back-icon").parent().parent().parent().hide();
+   $(".back-icon").parent().parent().parent().hide();
    $("#main-list").show();
 });
-
-/* var current;
+ 
 
 $(".more-details").click(function(){
     next = $(this).find('div.statement').get('0').innerHTML; 
     current = $(this).parent().parent().parent().parent();
-    current.hide();
+   
 
-    events.forEach(element => { 
+    mevents.forEach(element => { 
       
         if(element.eventName == next){
-            event = element;
+            mevent = element;
+            
         }
     });
-    $("#details").show();
+    if(mevent != undefined){
+        $('#clubName').html(mevent.clubName); 
+        $('#eventName').html(mevent.eventName); 
+        $('#eventFee').html(mevent.eventFee); 
+        $('#eventDate').html(mevent.eventDate); 
+        $('#eventVenue').html(mevent.eventVenue); 
+        $('#prizeWorth').html(mevent.prizeWorth); 
+        $('#tab').html(mevent.synopsis); 
+        current.hide();
+        $("#details").show();
+    } 
+   
 });
 
+$("#synopsis").click(function(){
+    $("#synopsis").parent().addClass("uk-active");
+    $("#description").parent().removeClass("uk-active");
+    $("#rules").parent().removeClass("uk-active");
+    $("#judges").parent().removeClass("uk-active");
+    $('#tab').html(mevent.synopsis); 
+ });
+
+ $("#description").click(function(){
+    $("#synopsis").parent().removeClass("uk-active");
+    $("#description").parent().addClass("uk-active");
+    $("#rules").parent().removeClass("uk-active");
+    $("#judges").parent().removeClass("uk-active");
+    $('#tab').html(mevent.eventDescription); 
+ });
+
+
+ $("#rules").click(function(){
+    $("#synopsis").parent().removeClass("uk-active");
+    $("#description").parent().removeClass("uk-active");
+    $("#rules").parent().addClass("uk-active");
+    $("#judges").parent().removeClass("uk-active");
+    $('#tab').html(mevent.rules); 
+ });
+
+
+ $("#judges").click(function(){
+    $("#synopsis").parent().removeClass("uk-active");
+    $("#description").parent().removeClass("uk-active");
+    $("#rules").parent().removeClass("uk-active");
+    $("#judges").parent().addClass("uk-active");
+    $('#tab').html(mevent.judges); 
+ });
+
+ 
 
 $(".back-back-icon").click(function(){
-    var some =  $(".back-back-icon").parent().parent().parent().hide();
+    $(".back-back-icon").parent().parent().parent().hide();
     current.show();
  });
  
@@ -61,4 +106,4 @@ $(".back-back-icon").click(function(){
      
      console.log(next);
      
- } */
+ } 
