@@ -4,6 +4,10 @@
 <head>
     <% include partials/head %>
         <link rel="stylesheet" href="css/competitions.css">
+        <script>
+                var events = <%- JSON.stringify(events) %> ;
+                var event;
+            </script>
 </head>
 
 <body>
@@ -171,7 +175,7 @@
                                         <div class="uk-grid-medium " uk-grid>
 
                                             <div class="boxing-left boxing">
-                                                <div class="hexagon into-image">
+                                                <div class="hexagon into-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -184,7 +188,7 @@
                                             </div>
 
                                             <div class="boxing-right boxing">
-                                                <div class="hexagon astro-hunt-image">
+                                                <div class="hexagon astro-hunt-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -198,7 +202,7 @@
                                         </div>
                                         <div class="uk-grid-medium" uk-grid>
                                             <div class="boxing-center boxing">
-                                                <div class="hexagon astro-quiz-image">
+                                                <div class="hexagon astro-quiz-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -234,7 +238,7 @@
                                         <div class="uk-grid-medium" uk-grid>
 
                                             <div class="boxing-left boxing">
-                                                <div class="hexagon codeswap-image">
+                                                <div class="hexagon codeswap-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -242,19 +246,6 @@
                                                         <div class="hexBottom" id="hiddenArea"></div>
 
                                                         <div class="statement">CodeSwap</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="boxing-right boxing">
-                                                <div class="hexagon coming-soon-image">
-                                                    <div class="hexTop"></div>
-                                                    <div class="hexBottom"></div>
-                                                    <div class="hexagon-hidden2 hover">
-                                                        <div class="hexTop" id="hiddenArea"></div>
-                                                        <div class="hexBottom" id="hiddenArea"></div>
-
-                                                        <div class="statement">More Coming Soon</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -280,7 +271,7 @@
                                         <div class="uk-grid-medium" uk-grid>
 
                                             <div class="boxing">
-                                                <div class="hexagon robowar-image">
+                                                <div class="hexagon robowar-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -301,7 +292,7 @@
 
 
                                             <div class="boxing-left boxing">
-                                                <div class="hexagon robosoccer-image">
+                                                <div class="hexagon robosoccer-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -313,7 +304,7 @@
                                                 </div>
                                             </div>
                                             <div class="boxing-right boxing">
-                                                <div class="hexagon drone-image">
+                                                <div class="hexagon drone-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -329,7 +320,7 @@
 
                                         <div class="uk-grid-medium" uk-grid>
                                             <div class="boxing">
-                                                <div class="hexagon lfr-image">
+                                                <div class="hexagon lfr-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -342,7 +333,7 @@
                                             </div>
 
                                             <div class="boxing">
-                                                <div class="hexagon maze-solver-image">
+                                                <div class="hexagon maze-solver-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover ">
@@ -355,7 +346,7 @@
                                             </div>
 
                                             <div class="boxing">
-                                                <div class="hexagon roborace-image">
+                                                <div class="hexagon roborace-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -377,19 +368,19 @@
 
 
                                             <div class="boxing-left boxing">
-                                                <div class="hexagon rc-plane-image">
+                                                <div class="hexagon rc-plane-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
                                                         <div class="hexTop" id="hiddenArea"></div>
                                                         <div class="hexBottom" id="hiddenArea"></div>
 
-                                                        <div class="statement">RC Place</div>
+                                                        <div class="statement">RC Plane</div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="boxing-right boxing">
-                                                <div class="hexagon transporter-image">
+                                                <div class="hexagon transporter-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -421,7 +412,7 @@
                                         <div class="uk-grid-medium" uk-grid>
 
                                             <div class="boxing-left boxing">
-                                                <div class="hexagon business-quiz-image">
+                                                <div class="hexagon business-quiz-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -434,7 +425,7 @@
                                             </div>
 
                                             <div class="boxing-right boxing">
-                                                <div class="hexagon general-quiz-image">
+                                                <div class="hexagon general-quiz-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -514,7 +505,7 @@
                                         <div class="uk-grid-medium" uk-grid>
 
                                             <div class="boxing-left boxing">
-                                                <div class="hexagon startup-fair-image">
+                                                <div class="hexagon startup-fair-image  more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
                                                     <div class="hexagon-hidden hover">
@@ -526,18 +517,6 @@
                                                 </div>
                                             </div>
 
-                                            <div class="boxing-right boxing">
-                                                <div class="hexagon coming-soon-image">
-                                                    <div class="hexTop"></div>
-                                                    <div class="hexBottom"></div>
-                                                    <div class="hexagon-hidden2 hover">
-                                                        <div class="hexTop" id="hiddenArea"></div>
-                                                        <div class="hexBottom" id="hiddenArea"></div>
-
-                                                        <div class="statement">Coming Soon</div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
 
 
@@ -553,36 +532,58 @@
                                         <span class="back-back-icon">
                                             <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
                                         </span>
-                                        <h1 class="sub-heading-text uk-align-center ">
-                                            <span>Astronomy</span>
+                                        <h1 class="sub-heading-text uk-align-center">
+                                            <span></span>
                                         </h1>
                                     </div>
 
                                     <div >
                                             
                                             <h1 class="heading-li uk-align-center ">
-                                                <span>Event name</span>
+                                                <span></span>
                                             </h1>
                                         </div>
 
+                                        <div>
+                                                <ul class="uk-list text-list  uk-align-center uk-list-medium">
+                                                        <li class="uk-active">
+                                                            Fee
+                                                        </li>
+                                                        <li>
+                                                            Date
+                                                        </li>
+                                                        <li>
+                                                            Venue
+                                                        </li>
+                                                        <li>
+                                                           Register & payment
+                                                        </li>
+                                                        
+                                                        <li>
+                                                                prizes worth
+                                                        </li>
+
+                                                    </ul>
+                                                
+
+                                               
+
+                                            </div>
+
                                     <div class="my-rotate">
                                         <div uk-grid>
-
-
-
-
                                             <ul id="tabs" class="uk-flex-center uk-visible@m" uk-tab>
                                                 <li class="uk-active">
-                                                    <a href="#">Description</a>
-                                                </li>
-                                                <li>
                                                     <a href="#">Synopsis</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Conact</a>
+                                                    <a href="#">Event Description</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Item</a>
+                                                    <a href="#">Rules</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Judges & Mentors</a>
                                                 </li>
 
                                             </ul>
@@ -597,22 +598,28 @@
                                                     </a>
                                                     <div uk-dropdown="mode: click">
                                                         <ul class="uk-nav uk-dropdown-nav uk-text-right">
-                                                            <li>
-                                                                <a href="#">Synopsis</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">Conact</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">Item</a>
-                                                            </li>
+                                                                <li class="uk-active">
+                                                                        <a href="#">Synopsis</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Event Description</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Rules</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Judges & Mentors</a>
+                                                                    </li>
+                                                                   
 
                                                         </ul>
                                                     </div>
                                                 </li>
                                             </ul>
 
-                                            <div class=""></div>
+                                            <div id="tab">
+                                                    
+                                            </div>
 
 
 
@@ -645,11 +652,11 @@
 
                         <% include partials/footer %>
 
-
-
+                      
+        
 
         </div>
-
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- UIkit JS -->
         <script src="js/uikit.min.js"></script>

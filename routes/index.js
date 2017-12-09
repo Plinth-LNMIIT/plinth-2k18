@@ -103,12 +103,14 @@ router.get('/archive', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
 router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) {
     var eventDetail = require('../public/data/events');
+  
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;
         res.render('competitions', {
             "page" : 'competitions',
             "isLoggedIn" : isLoggedIn,
+            "events" : eventDetail.events,
         });
     }
     else {
@@ -126,7 +128,7 @@ router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) 
                         name : user.name,
                         gender : user.gender,
                     },
-                    eventDetail : eventDetail
+                    "events" : eventDetail.events,
                 });
             }
         });

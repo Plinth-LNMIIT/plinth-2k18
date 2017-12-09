@@ -1,5 +1,5 @@
-
-
+var current;
+var next;
 $(".astro-image").click(function(){
     $("#main-list").hide();
     $("#astronomy-list").show();
@@ -35,15 +35,30 @@ $(".back-icon").click(function(){
    $("#main-list").show();
 });
 
-$(".into-image").click(function(){
-    $("#astronomy-list").hide();
+/* var current;
+
+$(".more-details").click(function(){
+    next = $(this).find('div.statement').get('0').innerHTML; 
+    current = $(this).parent().parent().parent().parent();
+    current.hide();
+
+    events.forEach(element => { 
+      
+        if(element.eventName == next){
+            event = element;
+        }
+    });
     $("#details").show();
 });
 
 
 $(".back-back-icon").click(function(){
     var some =  $(".back-back-icon").parent().parent().parent().hide();
-    $("#astronomy-list").show();
+    current.show();
  });
-
  
+ function getNext(){
+     
+     console.log(next);
+     
+ } */
