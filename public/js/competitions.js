@@ -2,31 +2,49 @@
 $(".astro-image").click(function () {
     $("#main-list").hide();
     $("#astronomy-list").show();
+    $('html,body,div').animate({
+        scrollTop: $(this).offset().top},
+        'slow');
 });
 
 $(".coding-image").click(function () {
     $("#main-list").hide();
     $("#coding-list").show();
+    $('html,body,div').animate({
+        scrollTop: $(this).offset().top},
+        'slow');
 });
 
 $(".robotics-image").click(function () {
     $("#main-list").hide();
     $("#robotics-list").show();
+    $('html,body,div').animate({
+        scrollTop: $(this).offset().top},
+        'slow');
 });
 
 $(".quizzing-image").click(function () {
     $("#main-list").hide();
     $("#quizzing-list").show();
+    $('html,body,div').animate({
+        scrollTop: $(this).offset().top},
+        'slow');
 });
 
 $(".literature-image").click(function () {
     $("#main-list").hide();
     $("#literature-list").show();
+    $('html,body,div').animate({
+        scrollTop: $(this).offset().top},
+        'slow');
 });
 
 $(".management-image").click(function () {
     $("#main-list").hide();
     $("#management-list").show();
+    $('html,body,div').animate({
+        scrollTop: $(this).offset().top},
+        'slow');
 });
 
 $(".back-icon").click(function () {
@@ -56,27 +74,34 @@ $(".more-details").click(function () {
         $('#eventVenue').html(mevent.eventVenue);
      
         if (mevent.eventName == 'StartUp Intern Fair') {
-            $(".sponsor").show();
+            
             $("#judges").text('Registered Statups');
 
         } else {
-            $(".sponsor").hide();
+          
             $("#judges").text('Judges & Mentors');
+        }
+        if(mevent.sponsors == null){
+            $("#sponsors").hide();
+        }else{
+            $("#sponsors").show();
         }
 
         if( mevent.eventFee == null){
             $("#fees").hide();
         }else{
+            $("#fees").show();
             $('#eventFee').html(mevent.eventFee);
         }
 
         if( mevent.prizeWorth == null){
             $("#prizes").hide();
         }else{
+            $("#prizes").show();
             $('#prizeWorth').html(mevent.prizeWorth);
         }
 
-        if(mevent.clubName == 'Robotics'){
+        if(mevent.synopsis == null){
             $("#synopsis").hide();
             $('#tab').html(mevent.eventDescription);
             $("#synopsis").parent().removeClass("uk-active");
@@ -87,7 +112,13 @@ $(".more-details").click(function () {
             $("#synopsis").parent().addClass("uk-active");
             $("#description").parent().removeClass("uk-active");
         }
-
+        if(mevent.judges == null){
+            $("#judges").hide();
+            
+        }else{
+            $("#judges").show();
+      
+        }
 
        
         $("#rules").parent().removeClass("uk-active");
@@ -96,6 +127,9 @@ $(".more-details").click(function () {
         $("#sponsors").parent().removeClass("uk-active");
         $("#details").show();
     }
+    $('html,body,div').animate({
+        scrollTop: $(this).offset().top},
+        'slow');
 });
 
 $("#synopsis").click(function () {
