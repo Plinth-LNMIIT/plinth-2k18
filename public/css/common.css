@@ -39,6 +39,11 @@
   
   .sidee{
     color: white;
+    
+  }
+
+  .sidee > li {
+    font-family: 'Righteous', cursive;
   }
    
   .uk-active > a{

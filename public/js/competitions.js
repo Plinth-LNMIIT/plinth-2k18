@@ -51,21 +51,49 @@ $(".more-details").click(function () {
         current.hide();
         $('#clubName').html(mevent.clubName);
         $('#eventName').html(mevent.eventName);
-        $('#eventFee').html(mevent.eventFee);
+      
         $('#eventDate').html(mevent.eventDate);
         $('#eventVenue').html(mevent.eventVenue);
-        $('#prizeWorth').html(mevent.prizeWorth);
+     
+        if (mevent.eventName == 'StartUp Intern Fair') {
+            $(".sponsor").show();
+            $("#judges").text('Registered Statups');
+
+        } else {
+            $(".sponsor").hide();
+            $("#judges").text('Judges & Mentors');
+        }
+
+        if( mevent.eventFee == null){
+            $("#fees").hide();
+        }else{
+            $('#eventFee').html(mevent.eventFee);
+        }
+
+        if( mevent.prizeWorth == null){
+            $("#prizes").hide();
+        }else{
+            $('#prizeWorth').html(mevent.prizeWorth);
+        }
+
+        if(mevent.clubName == 'Robotics'){
+            $("#synopsis").hide();
+            $('#tab').html(mevent.eventDescription);
+            $("#synopsis").parent().removeClass("uk-active");
+            $("#description").parent().addClass("uk-active");
+        } else {
+            $("#synopsis").show();
+            $('#tab').html(mevent.synopsis);
+            $("#synopsis").parent().addClass("uk-active");
+            $("#description").parent().removeClass("uk-active");
+        }
 
 
-
-
-        $("#synopsis").parent().addClass("uk-active");
-        $("#description").parent().removeClass("uk-active");
+       
         $("#rules").parent().removeClass("uk-active");
         $("#judges").parent().removeClass("uk-active");
         $("#contact").parent().removeClass("uk-active");
-        $('#tab').html(mevent.synopsis);
-
+        $("#sponsors").parent().removeClass("uk-active");
         $("#details").show();
     }
 });
@@ -76,6 +104,7 @@ $("#synopsis").click(function () {
     $("#rules").parent().removeClass("uk-active");
     $("#judges").parent().removeClass("uk-active");
     $("#contact").parent().removeClass("uk-active");
+    $("#sponsors").parent().removeClass("uk-active");
     $('#tab').html(mevent.synopsis);
 });
 
@@ -85,6 +114,7 @@ $("#description").click(function () {
     $("#rules").parent().removeClass("uk-active");
     $("#judges").parent().removeClass("uk-active");
     $("#contact").parent().removeClass("uk-active");
+    $("#sponsors").parent().removeClass("uk-active");
     $('#tab').html(mevent.eventDescription);
 });
 
@@ -95,6 +125,7 @@ $("#rules").click(function () {
     $("#rules").parent().addClass("uk-active");
     $("#judges").parent().removeClass("uk-active");
     $("#contact").parent().removeClass("uk-active");
+    $("#sponsors").parent().removeClass("uk-active");
     $('#tab').html(mevent.rules);
 });
 
@@ -105,6 +136,7 @@ $("#judges").click(function () {
     $("#rules").parent().removeClass("uk-active");
     $("#judges").parent().addClass("uk-active");
     $("#contact").parent().removeClass("uk-active");
+    $("#sponsors").parent().removeClass("uk-active");
     $('#tab').html(mevent.judges);
 });
 
@@ -114,8 +146,20 @@ $("#contact").click(function () {
     $("#rules").parent().removeClass("uk-active");
     $("#judges").parent().removeClass("uk-active");
     $("#contact").parent().addClass("uk-active");
+    $("#sponsors").parent().removeClass("uk-active");
     $('#tab').html(mevent.query);
 });
+
+$("#sponsors").click(function () {
+    $("#synopsis").parent().removeClass("uk-active");
+    $("#description").parent().removeClass("uk-active");
+    $("#rules").parent().removeClass("uk-active");
+    $("#judges").parent().removeClass("uk-active");
+    $("#contact").parent().removeClass("uk-active");
+    $("#sponsors").parent().addClass("uk-active");
+    $('#tab').html(mevent.sponsors);
+});
+
 
 
 $(".back-back-icon").click(function () {
