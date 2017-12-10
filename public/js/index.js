@@ -11,11 +11,9 @@ window.onload = function() {
   });
 
   setTimeout(function(){ 
-
-    var loader = document.getElementById('loader');
-    fadeOut(loader);
     Stars();
-    setTimeout(function(){
+    var loader = document.getElementById('loader');
+  
       loader.parentElement.removeChild(loader);
       $('#home').css("visibility",'visible')
       window.addEventListener("orientationchange",function(){
@@ -26,7 +24,7 @@ window.onload = function() {
        
       Stars();
      });
-    } ,100);
+   
    
    
 
