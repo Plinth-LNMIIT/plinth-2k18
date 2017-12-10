@@ -219,8 +219,23 @@
     padding: 0px;
 }
 #tab{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.2rem;
     width: 90%;
+    padding-left:0%;
+    margin-left: 10%;
+    margin-right: 10%; 
 }
+
+#tab > p,ul,li {
+    font-family: 'Oxygen', sans-serif;
+}
+
+#tab > p > b {
+   font-size: 1.4rem;
+   font-weight: unset;
+}
+
 .dropp{
     padding:8px;
     background: rgba(122, 101, 243, 0.836);

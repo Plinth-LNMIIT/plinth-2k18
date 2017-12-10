@@ -2,24 +2,292 @@ module.exports = {
     events : [
         {
             
-            clubName : "Robotics",
-            eventName : "Roborace",
-            eventDate : "18th - 19th Jan 2017",
+            clubName : "Astronomy",
+            eventName : "Into The Universe",
+            eventDate : "20th - 21st Jan 2017",
             eventVenue : "The LNMIIT, Jaipur",
-            memberUpperLimit : 4,
+            memberUpperLimit : 3,
             memberLowerLimit : 1,
             prizeWorth :  '₹ 30,000',
             eventFee :  '₹ 100',
-            synopsis : " <p>This event consists of 2 rounds: Spacewalk and Messier marathon. Detailed description of the event are as follows.</p><p><b>1st Round: Spacewalk</b></p><p>It will be an audio-visual quiz related to astronomy.Pictures and videos would be projected in front and participants have to answer the questions that follow.</p><p><b>2nd Round: Messier Marathon</b></p><p>So are you one of those who sneak out of your rooms during night hours and wander long gazing at the sky, trying to build up your imagination. Well folks then this is a perfect game for you to play, a hunt for the stars. Participants need to set themselves on a voyage of different celestial bodies and conquer to best of their capabilities. So, are you ready for this mission to get kicked off? See you at the battle field . A basic tutorial session would be held on handling of telescope and any further enhancements of the skills would be student’s personal interest.</p>",
-            eventDescription : " <p><b>Spacewalk</b><ol><li>Participants will have 1 minute to answer each question by writing it down on the given sheet.</li><li>These questions will be objective or one word.</li><li>Each question will carry 2 points.</li><li>Marks will be allotted to each question individually.</li><li>Only top 50% teams will go to the next round.</li></ol></p><p><b>Spacewalk</b><ol><li>Teams will be provided with certain token numbers and called upon on its basis.</li><li>A star map, a laser pointer and telescope shall be provided to the team</li><li>The teams which had qualified in the quiz would be required to point at certain celestial objects through pointer and telescope</li><li>Minimum time shall be provided, based on which points are to be rewarded.</li><li>Team with maximum score would be declared winner.</li><li>Teams are suppose to restrain themselves from using any android application such as Google Sky Map or any other lectronic media.</li><li>Points will be given for locating the objects precisely only on first attempt.</li></ol></p>",
-            rules : "<p><b>General Rules </b><ol><li>Participants can form team of up to three.</li><li>Individual participants are also allowed.</li><li>Using mobile phones is not allowed.</li></ol></p>",
-            judges : "<p>Details will be Updated soon</p>",
-            mentors : "<p>Details will be Updated soon</p>",
-            query : "Smriti Jha: +91-7742603667 | smritijha369@gmail.com<br>Kushagra Garg: +91-8561801305 | kushrulesu@gmail.com<br>astronomy.lnmiit@gmail.com<br>",
-            sponsors : "<p>Details will be Updated soon</p>"
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>Event is of three rounds, namely :</p><p><b>Round 1: Astrobowl</b><br>This round will be a pen paper based Question-Answer round testing the knowledge of the participating teams in the field of Astrophysics and observational astronomy. Top 60% teams will qualify for 2nd round.<br><br><b>Round 2: Messier Marathon</b><br>It is the observational sky gazing round. Participants would be required to locate certain constellations, stars and planets in a limited time interval. Based on the accuracy and faster response, top 50% teams will qualify for the final round.<br><br><b>Round 3: Messier Marathon</b><br>This round will happen on the same night after round 2. In this particular round, the participating teams will be provided with a telescope to locate a set of objects in a given time slot. These objects could be Messier objects, planets or any other commonly visible celestial body. Teams will be given 10-15 minutes to locate a given set of these objects.</p>",
+            rules: "<p><b>Description of Telescope used</b><br>Telescope used is either 6” Newtonian Telescope or 6” alt-azimuth mount.<br><br><b>Team Structure:</b><ol><li>One team can have maximum 3 participants.</li><li> Inter college teams are allowed.</li><li>To claim prize you need to be registered here.</li></ol><br><b>Round 1:</b><ol><li>Use of calculators or any other form of electronic gadgets is strictly prohibited specifically mentioned by the Astronomy club.</li><li>Use of unfair means in any form will lead to disqualification from the event.</li><li>Medium of communication and the quizzes will be English.</li><li>The decision of the judges will be final and abiding by all the teams.</li></ol><br><b>Round 2:</b><ol><li>Each team will be provided a pointer and torch during the event.</li><li>Use of personal gadgets/ mobile torches is not allowed.</li></ol><br><b>Round 3:</b><ol><li>Teams will be provided telescope aligned. During the event, if the alignment of Eyepiece and finder is disturbed, then the teams have to align themselves.</li><li>Use of personal gadgets/ mobile phones/ torches is not allowed.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "<p>Details will be Updated soon</p><br>For any query, contact us at astronomy@plinth.in",
+        },
+        {
+            
+            clubName : "Astronomy",
+            eventName : "Astro Hunt",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 3,
+            memberLowerLimit : 1,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>Astro hunt is a fun event in which teams will be participating and they would be required to follow a series of clues and look for the answers. The answers would be places or objects available in the campus. The answers to the clues would be related to astronomy. Teams will have to solve a series of clues in a limited time period. The top 3 teams to solve the clues are declared as the Winners.</p>",
+            rules: "<p><ol><li>Use of internet for solving the clues is allowed.</li><li>Maximum Team Size  : 3 members per team.</li><li>Teams must keep all the hints with them, they will be checked at final checkpoint.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "<p>Details will be Updated soon</p><br>For any query, contact us at astronomy@plinth.in",
+        },
+        {
+            
+            clubName : "Astronomy",
+            eventName : "Astro Quiz",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 1,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>Astro quiz also has two rounds in which teams are required to answer questions related to the various aspects of astronomy. This quiz would be testing the knowledge of the participants in the field of astronomy.</p><p><b>Round 1: Preliminary Round</b><br>It is audio-visual round, questions are open for all teams, top 60% teams will qualify for second round.<br><br><b>Round 2: Final Round</b><br>This round is also a audio-visual round and it is based on the “pounce and bounce” system conducted by quizmaster at LNMIIT. More details will be introduced at the time of event.</p>",
+            rules: "<p><ol><li>Use of calculators or any other form of electronic gadgets is strictly prohibited specifically mentioned by the Astronomy club.</li><li>Use of unfair means in any form will lead to disqualification from the event.</li><li>Maximum team size: 2 members per team.</li><li>In any case, the decision taken by quizmaster will be considered as final.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "<p>Details will be Updated soon</p><br>For any query, contact us at astronomy@plinth.in",
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
            
          
 
         },
+        {
+            
+            clubName : "Management",
+            eventName : "StartUp Intern Fair",
+            eventDate : "9AM - 6PM, 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+        {
+            
+            clubName : "Coding",
+            eventName : "CodeSwap",
+            eventDate : "20th - 21st Jan 2017",
+            eventVenue : "The LNMIIT, Jaipur",
+            memberUpperLimit : 2,
+            memberLowerLimit : 2,
+            prizeWorth :  '₹ 30,000',
+            eventFee :  '₹ 100',
+            synopsis : "<p>Will be Updated Soon</p>",
+            eventDescription : "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            rules: "<p><b>Registration Rules </b><ol><li>Team with exactly 2 members is allowed. </li><li> Team members must be of the same university.</li><li>Positions will be swaped after 30 minutes. </li><li>Plagiarism by any means will lead to immediate disqualification of the team.</li><li>To claim prize you need to be registered here.</li></ol></p>",
+            judges : "<p>Details will be Updated soon</p>", 
+            query : "Aditya Aggarwal: +91-9001904206<br>Yash Aggarwal: +91-9001440508<br><br>For any query, contact us at coding@plinth.in",
+           
+           
+         
+
+        },
+
     ],
 };

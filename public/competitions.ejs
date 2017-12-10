@@ -558,14 +558,23 @@
                                                         <li>
                                                             Venue : <span id='eventVenue'></span>
                                                         </li>
-                                                        <li>
-                                                           Register & payment  <span id='eventName'></span>
-                                                        </li>
+                                                       
                                                         
                                                         <li>
                                                                 Prizes Worth : <span id='prizeWorth'></span>
                                                         </li>
-
+                                                        <br>
+                                                        <li>
+                                                            <% if(isLoggedIn){ %>
+                                                        
+                                                    
+                                                                <a class="uk-button button-font uk-button-default uk-button-large" href="#">Payment</a>
+                                                                <% } else { %>
+                                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#register-center" uk-toggle>Register</a>
+                                                                    <% } %>
+                                                                </li>
+                                                        
+                                                                <br>
                                                     </ul>
                                                 
 
@@ -588,6 +597,10 @@
                                                 <li>
                                                     <a  id="judges" href="#">Judges & Mentors</a>
                                                 </li>
+
+                                                <li>
+                                                        <a  id="contact" href="#">Contact</a>
+                                                    </li>
 
                                             </ul>
                                             
