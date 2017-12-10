@@ -16,20 +16,20 @@
     } 
 
     // for logo    
-    
+     
 });
 
 // Smooth page scrooling
 
-$(".page_scroll").click(function(){
+$(".page_scroll").click(function(event){
 
   if (this.hash !== "") {
 
     event.preventDefault();
-
+    
    
     var hash = this.hash;
-
+    
   
     $('html, body').animate({
       scrollTop: $(hash).offset().top
