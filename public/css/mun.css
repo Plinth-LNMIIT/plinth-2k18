@@ -321,8 +321,12 @@ padding-bottom: 30vh;
 }
 @media only screen and (max-width: 480px) {
  
+  .logo{
+    top: 5%;
+  }
+
   #home{
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     padding-top: 0vh;
       
@@ -336,7 +340,7 @@ padding-bottom: 30vh;
   }  
 
   .heading1{
-    font-size:  3rem;
+    font-size:  2rem;
     text-align: center;
     }
     
