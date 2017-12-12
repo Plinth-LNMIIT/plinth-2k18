@@ -293,7 +293,7 @@ module.exports = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: '₹ 50,000',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -436,7 +436,7 @@ module.exports = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: '₹ 25,000',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -528,7 +528,7 @@ module.exports = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: '₹ 50,000',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -567,7 +567,7 @@ module.exports = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: '₹ 25,000',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -612,7 +612,7 @@ module.exports = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: '₹ 25,000',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -691,7 +691,7 @@ module.exports = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: '₹ 25,000',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -781,7 +781,7 @@ module.exports = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: '₹ 40,000',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -951,7 +951,7 @@ module.exports = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: '₹ 25,000',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
