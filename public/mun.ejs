@@ -29,92 +29,93 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example" data-offset="200" id="style-7">
- 
-	
+
+
 
 	<div id="home">
-			<nav class="navbar navbar-toggleable-md navbar-inverse nav hidden" id="nb">
-					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon "></span>
-					</button>
-			
-					<img class="mun-logo" src="media/mun/logo.png" height="64px" width="64px" style="border-radius: 50%">
-			
-			
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav ml-auto">
+		<nav class="navbar navbar-toggleable-md navbar-inverse nav hidden" id="nb">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon "></span>
+			</button>
+
+			<img class="mun-logo" src="media/mun/logo.png" height="64px" width="64px" style="border-radius: 50%">
+
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link page_scroll" href="#home">Home
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link page_scroll" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link page_scroll" href="#organiser">Organiser's Desk</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link page_scroll" href="#Committees">Committees</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link page_scroll" href="#contant">Contact Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/">Plinth</a>
+					</li>
+
+					<% if(isLoggedIn){ %>
+						<li class="nav-item">
+							<a class="nav-link dropdown-toggle" href="https://plinth.in" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+							 aria-expanded="false"> Hi,
+								<%- user.name %>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background:transparent;right: 0; left: auto;top:unset">
+								<a class="nav-link" href="/profile">Profile</a>
+								<a class="nav-link" href="/user/logout">Logout</a>
+							</div>
+						</li>
+
+
+						<% } else { %>
 							<li class="nav-item">
-								<a class="nav-link page_scroll" href="#home">Home
-									<span class="sr-only">(current)</span>
+								<a class="nav-link" data-target="#registerModel" data-toggle="modal" href="#">
+									Register/Login
 								</a>
+
 							</li>
-							<li class="nav-item">
-								<a class="nav-link page_scroll" href="#about">About</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link page_scroll" href="#organiser">Organiser's Desk</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link page_scroll" href="#Committees">Committees</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link page_scroll" href="#contant">Contact Us</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/">Plinth</a>
-							</li>
-			
-							<% if(isLoggedIn){ %>
-								<li class="nav-item">
-									<a class="nav-link dropdown-toggle" href="https://plinth.in" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Hi,
-										<%- user.name %>
-									</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background:transparent;right: 0; left: auto;top:unset">
-											<a class="nav-link" href="/profile">Profile</a>
-											<a class="nav-link"  href="/user/logout">Logout</a>
-										  </div> 
-								</li>
-			
-			
-								<% } else { %>
-									<li class="nav-item">
-										<a class="nav-link" data-target="#registerModel" data-toggle="modal" href="#">
-											Register/Login
-										</a>
-			
-									</li>
-									<% } %>
-			
-						</ul>
-			
+							<% } %>
+
+				</ul>
+
+			</div>
+		</nav>
+
+		<div class="modal fade" id="registerModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Register Yourself</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
 					</div>
-				</nav>
-			
-				<div class="modal fade" id="registerModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">Register Yourself</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="medium">Register yourself for different competitions through this portal to know further details and proceedings of PLINTH'18.
-									Morever if you register through this platform , you would be able to get exclusive coupons and offers.</div>
-			
-								<div class="register-button">
-									<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/google")'>
-										<i class="fa fa-google-plus" aria-hidden="true"></i> Register with Google</a>
-									<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/facebook")'>
-										<i class="fa fa-facebook" aria-hidden="true"></i> Register with Facebook</a>
-			
-								</div>
-							</div>
+					<div class="modal-body">
+						<div class="medium">Register yourself for different competitions through this portal to know further details and proceedings of PLINTH'18.
+							Morever if you register through this platform , you would be able to get exclusive coupons and offers.</div>
+
+						<div class="register-button">
+							<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/google")'>
+								<i class="fa fa-google-plus" aria-hidden="true"></i> Register with Google</a>
+							<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/facebook")'>
+								<i class="fa fa-facebook" aria-hidden="true"></i> Register with Facebook</a>
+
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
 
 		<div class="logo container">
 			<img src="media/mun/plinth-logo.png" height="70px">
@@ -141,61 +142,61 @@
 			</div>
 
 
-			<a  class="btn btn-outline-secondary" href="#contant">Register Now</a>
+			<a class="btn btn-outline-secondary" href="#contant">Register Now</a>
 
 			<% if(isLoggedIn){ %>
-				<a  class="btn btn-outline-secondary" data-target="#payModel" data-toggle="modal" href="#">Pay Now</a>
+				<a class="btn btn-outline-secondary" data-target="#payModel" data-toggle="modal" href="#">Pay Now</a>
 
 
 				<% } else { %>
-					<a  class="btn btn-outline-secondary" data-target="#registerModel" data-toggle="modal" href="#">Pay Now</a>
+					<a class="btn btn-outline-secondary" data-target="#registerModel" data-toggle="modal" href="#">Pay Now</a>
 					<% } %>
-			
-			
+
+
 		</div>
 
 		<div class="modal fade" id="registerModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Register Yourself</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<div class="medium">Register yourself for different competitions through this portal to know further details and proceedings of PLINTH'18.
-								Morever if you register through this platform , you would be able to get exclusive coupons and offers.</div>
-		
-							<div class="register-button">
-								<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/google")'>
-									<i class="fa fa-google-plus" aria-hidden="true"></i> Register with Google</a>
-								<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/facebook")'>
-									<i class="fa fa-facebook" aria-hidden="true"></i> Register with Facebook</a>
-		
-							</div>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Register Yourself</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="medium">Register yourself for different competitions through this portal to know further details and proceedings of PLINTH'18.
+							Morever if you register through this platform , you would be able to get exclusive coupons and offers.</div>
+
+						<div class="register-button">
+							<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/google")'>
+								<i class="fa fa-google-plus" aria-hidden="true"></i> Register with Google</a>
+							<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/facebook")'>
+								<i class="fa fa-facebook" aria-hidden="true"></i> Register with Facebook</a>
+
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="modal fade" id="payModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">Payment Form</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="medium">Coming Soon</div>
-			
-								 
-							</div>
-						</div>
+		<div class="modal fade" id="payModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Payment Form</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="medium">Coming Soon</div>
+
+
 					</div>
 				</div>
+			</div>
+		</div>
 
 		<a href="#about" class="page_scroll hidee">
 			<div class="scrolldown-container page_scroll">
@@ -253,7 +254,7 @@
 				<hr class="underline-2">
 				<div class="row ">
 					<div class="col-md-12 text-center">
-						<img src="media/mun/img3.png" alt="SecGen">
+						<img src="media/mun/anirudh.jpg" alt="SecGen" id="sec-img">
 					</div>
 					<div class="col-md-12 text-center">
 						<div>Anirudh Saini</div>
@@ -297,10 +298,8 @@
 						<img class="card-img-top" src="media/mun/disec.png" alt="Card image cap">
 						<div class="card-block">
 							<h4 class="card-title">GA(DISEC)</h4>
-							<p class="card-text">DISEC deals with topics that center around disarmament, global issues, and threats to peace that jeopardize international
-								security.
-							</p>
-							<a data-target="#myModal11" class="btn btn-primary" data-toggle="modal" href="#"> Learn More</a>
+							 
+							<a data-target="#gadisec-modal" class="btn btn-outline-secondary" data-toggle="modal" href="#">View Agenda</a>
 
 						</div>
 					</div>
@@ -311,8 +310,8 @@
 						<img class="card-img-top" src="media/mun/unhrc.png" alt="Card image cap">
 						<div class="card-block">
 							<h4 class="card-title">UNHRC</h4>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a data-target="#myModal11" class="btn btn-primary" data-toggle="modal" href="#"> Learn More</a>
+							 
+							<a data-target="#unhrc-modal" class="btn btn-outline-secondary" data-toggle="modal" href="#">View Agenda</a>
 						</div>
 					</div>
 				</li>
@@ -321,8 +320,8 @@
 						<img class="card-img-top" src="media/mun/aippm.png" alt="Card image cap">
 						<div class="card-block">
 							<h4 class="card-title">AIPPM</h4>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a data-target="#myModal11" class="btn btn-primary" data-toggle="modal" href="#"> Learn More</a>
+							  
+							<a data-target="#aippm-modal" class="btn btn-outline-secondary" data-toggle="modal" href="#">View Agenda</a>
 						</div>
 					</div>
 				</li>
@@ -331,43 +330,93 @@
 						<img class="card-img-top" src="media/mun/unicef.svg" alt="Card image cap">
 						<div class="card-block">
 							<h4 class="card-title">UNICEF</h4>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a data-target="#myModal11" class="btn btn-primary" data-toggle="modal" href="#"> Learn More</a>
+							 
+							<a data-target="#unicef-modal" class="btn btn-outline-secondary" data-toggle="modal" href="#">View Agenda</a>
 						</div>
 					</div>
 				</li>
-				<!-- 	<li id="unodc">
-					<div class="card" style="width: 20rem;">
-						<img class="card-img-top" src="media/mun/5.jpg" alt="Card image cap">
-						<div class="card-block">
-							<h4 class="card-title">Card title</h4>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					</div>
-				</li> -->
 			</ul>
 		</div>
 
-		<!-- <div tabindex="-1" class="modal fade" id="myModal11" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+		<div tabindex="-1" class="modal fade" id="gadisec-modal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+						<h4 class="modal-title" id="myModalLabel">Gadisec Agenda</h4>
 					</div>
 					<div class="modal-body">
-						...1
+						Coming Soon
 					</div>
 					<div class="modal-footer">
 						<button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
 
 					</div>
 				</div>
-			 
+
 			</div>
-			 
-		</div> -->
+
+		</div>
+
+		<div tabindex="-1" class="modal fade" id="unhrc-modal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+
+						<h4 class="modal-title" id="myModalLabel">UNHRC Agenda</h4>
+					</div>
+					<div class="modal-body">
+						Coming Soon
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div tabindex="-1" class="modal fade" id="aippm-modal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+
+						<h4 class="modal-title" id="myModalLabel">AIPPM Agenda</h4>
+					</div>
+					<div class="modal-body">
+						Coming Soon
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div tabindex="-1" class="modal fade" id="unicef-modal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+
+						<h4 class="modal-title" id="myModalLabel">UNICEF Agenda</h4>
+					</div>
+					<div class="modal-body">
+						Coming Soon
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
 		<!-- /.modal -->
 
 		<!-- ##################### END ########################### -->

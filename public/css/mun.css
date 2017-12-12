@@ -108,7 +108,11 @@ canvas {
   margin: 40px auto;
 }
 
- 
+#sec-img {
+  padding-bottom: 10px;
+  width: 200px;
+  border-radius: 100%;
+}
 
 
 

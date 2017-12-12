@@ -17,30 +17,38 @@ var hostURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :
 var paytmURL =  process.env.NODE_ENV === 'development' ? 'https://pguat.paytm.com/oltp-web/processTransaction' : 'https://secure.paytm.in/oltp-web/processTransaction';
 var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2018';
 
-router.get('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
+router.post('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
     var payment = new Payment();
+
   
     Payment.count({}, function(err, count){
-        payment.event.eventName = 'mun';
-        var order_id = "Plinth-" + payment.event.eventName + "-" + (count+1) + "-" + id_tag;
+        var param_data = req.body;
+        payment.event.eventName = param_data.eventName;
         payment.status = 'OPEN';
-        payment.amount = 1;
         payment.date.createdAt = ''+ new Date();
-        payment.orderId = order_id;
         payment.team = [];
-        var team = {
-            email          : 'shubham.mangal15@gmail.com',
-            name           : 'Ayush',
-            phoneNumber    : 9685748587,
-            type           : 'accomodate',
-            college        : 'lnmiit',
-            year           : 3,
-            city           : 'Jaipur',
-            accommodation  : 'yes',
-            resume         : 'no',
-        };
-        
-        payment.team.push(team);
+        var teams = [];
+        if(payment.event.eventName == 'mun'){
+            var order_id = "Plinth-" + payment.event.eventName + "-" + (count+1) + "-" + id_tag;
+            payment.amount = param_data.amount;
+            payment.orderId = order_id;
+            var team = {
+                email          : param_data.email,
+                name           : param_data.name,
+                phoneNumber    : param_data.contact,
+                type           : param_data.type,
+                college        : 'lnmiit',
+                city           : param_data.city,
+                accommodation  : 'yes',
+            };
+
+            teams.push(team);
+            
+        } else {
+            res.redirect('/');
+        }
+
+        payment.team = teams;
         payment.save(function(err) {
             if (err){
                 console.log(err);
@@ -49,7 +57,7 @@ router.get('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
             else{
                 paramaters ={
                     REQUEST_TYPE     : "DEFAULT",
-                    ORDER_ID         : order_id,
+                    ORDER_ID         : payment.orderId,
                     CUST_ID          : "plinth-" + payment.team[0].email,
                     TXN_AMOUNT       :  payment.amount,
                     CHANNEL_ID       :'WEB',
@@ -73,6 +81,7 @@ router.get('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
 });
 
 router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
+  
     var isLoggedIn;
     var user;
     if(req.decoded.sub === "")
@@ -87,6 +96,7 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
         });
     }
     var paramlist = req.body;
+    console.log(paramlist);
     if(checksum.verifychecksum(paramlist, paytm.key)){
         Payment.findOneAndUpdate({'orderId' : paramlist.ORDERID},{$set : {'status' : paramlist.STATUS, 'tranId' : paramlist.TXNID, 'date.paidAt' :  ''+ new Date() }}, {'new': true} ,function(err1, result){
             if(err1){

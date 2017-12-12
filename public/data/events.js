@@ -422,7 +422,7 @@ module.exports = {
             query: "<p>"
                         +"Harshil Bhandari: +91-7597526581"
                         +"<br>"
-                        +"Yash Aggarwal: +91-9571016327"
+                        +"Parth Agarwal: +91-9571016327"
                         +"<br><br>"
                         +"For any query, contact us at robotics@plinth.in"
                     +"</p>",
