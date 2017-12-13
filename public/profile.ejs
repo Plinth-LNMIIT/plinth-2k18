@@ -108,9 +108,7 @@
                                                                                 <%= user.events[i].status %>
                                                                             </td>
                                                                             <td>
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                                <a href="/pdf/<%= user.events[i].orderId %>" target="_blank">Receipt</a>
                                                                             </td>
                                                                         </tr>
                                                                         <% } %>
