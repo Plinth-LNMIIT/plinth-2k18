@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+
+        <link rel="stylesheet" href="css/404.css">
+
+</head>
+
+<body>
+
+    <% include partials/loader %>
+        <div id="home">
+            <canvas id="canvas"></canvas>
+
+            <% include partials/header %>
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+
+
+
+                            <div class="my-rotate">
+
+                                
+
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+
+                        <% include partials/footer %>
+
+
+
+
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js "></script>
+        <script src="js/uikit-icons.min.js "></script>
+        <script src="js/canvasloader.js "></script>
+        <script src="js/slowStar.js "></script>
+        <script src="js/printe.js"></script>
+        <script>
+
+            var obj = { Title: 'Status', Url: 'https://plinth.in/payment/paystatus' };
+            history.pushState(obj, obj.Title, obj.Url);
+
+
+        </script>
+
+</body>
+
+</html>

@@ -303,12 +303,24 @@ module.exports = {
                                     
                                     +"<b>ARENA</b>"
                                     +"<ol>"
-                                        +"<li>Cage size - 16 X 16</li>"
+                                        +"<li>Cage size - 18 X 18</li>"
                                         +"<li>Cage flooring – Metal/Wooden</li>"
                                     +"</ol>"
                                     
                                 +"</p>",
-            synopsis: null,
+            synopsis: "<p>"
+                            +"<p>"
+                                +"The Bay-blade battle with energies of various supernatural creatures was a great childhood love of each and every one of us."
+                            +"</p>"
+                            +"<p>"
+                                +"Taking the much larger concept in reality, we are here introducing the “Robowar” event in our Tech fest “Plinth”, which would be having the excitement of the final Battle. With the Robots designed and implemented by the students themselves and energies of great researches and day-night hard work, the competition will be full of enthusiasm for the techies."
+                            +"</p>"
+                            +"<p>"
+                                +"Be ready and hold your seats to witness the sparks of clashing pincers, axes and saw tails. With current in the veins and blood in wires, here comes the most exciting, the most thrilling and the most awesome war, the Robowar in an amazing arena in our institution’s campus. So, be there at time you won’t get a chance to blink till the very end."
+                            +"</p>"    
+                        +"</p>"
+                            
+                        +"</p>",
             rules: "<p>"
                         +"<b>Robot Specification</b>"
                         +"<ol>"

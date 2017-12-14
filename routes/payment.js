@@ -1,15 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
-var Eventx = require('../schema/event');
 var User = require('../schema/user');
 var Verify = require('./verify');
+var Utils = require('./utils');
 var Payment = require('../schema/payment');
-var mongoose = require('mongoose');
-var paytm = require('../config/paytm');
-var eventURL = require('../config/eventURL');
+var paytm = require('../config/paytm'); 
 var checksum = require('../checksum/checksum');
-var poc = require('../config/authuser').poc;
 
 
 
@@ -118,10 +115,7 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
                     res.render('paystatus', {
                         "page" : 'paystatus',
                         "isLoggedIn" : isLoggedIn,
-                        "user" : {
-                            name : user.name,
-                            gender : user.gender,
-                        },
+                        "user" : user,
                         "status": 'fail',
                         details : result,
                     })
@@ -132,6 +126,7 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
                     var emails = [];
                     for(var i=0; i<result.team.length; i++ ){
                         emails.push(result.team[i].email);
+                       
                     }
 
                     var bulk = User.collection.initializeOrderedBulkOp();
@@ -141,13 +136,11 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
                     }
                     bulk.execute();
 
+                    Utils.mail(result);
                     res.render('paystatus', {
                         "page" : 'paystatus',
                         "isLoggedIn" : isLoggedIn,
-                        "user" : {
-                            name : user.name,
-                            gender : user.gender,
-                        },
+                        "user" : user,
                         "status": 'success',
                         details : result,
                     });
@@ -156,10 +149,7 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
                     res.render('paystatus', {
                         "page" : 'paystatus',
                         "isLoggedIn" : isLoggedIn,
-                        "user" : {
-                            name : user.name,
-                            gender : user.gender,
-                        },
+                        "user" : user,
                         "status": 'open',
                         details : result,
                     })
@@ -172,17 +162,12 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
         res.render('paystatus', {
             "page" : 'paystatus',
             "isLoggedIn" : isLoggedIn,
-            "user" : {
-                name : user.name,
-                gender : user.gender,
-            },
+            "user" : user,
             "status": 'fail',
             details : 'none',
         });
     }
    
 });
- 
-    
  
 module.exports = router;
