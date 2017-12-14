@@ -15,131 +15,178 @@
             <canvas id="canvas"></canvas>
 
             <% include partials/header %>
-                                <div class="uk-position-center main-content ">
+                <div class="uk-position-center main-content ">
 
-                                    <div class="scroll-content" id="style-7">
-                                        <div class="inner-content">
-                                            <div uk-grid>
-                                                <h1 class="uk-align-center heading-text">
-                                                    <span>Profile</span>
-                                                </h1>
-                                            </div>
-                                            <div class="my-rotate">
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div uk-grid>
+                                <h1 class="uk-align-center heading-text">
+                                    <span>Profile</span>
+                                </h1>
+                            </div>
+                            <div class="my-rotate">
 
-                                                <div uk-grid>
-                                                    <h1 id="prof" class="uk-align-center sub-heading ">
-                                                        <span>About</span>
-                                                    </h1>
-                                                    </div>
-                                                    <div class="about-margin uk-align-center">
-                                                        <table id="userp" class="uk-table uk-table-justify uk-table-small uk-table-middle">
+                                <div class="table-margin" uk-grid>
+                                    <h1 id="prof" class="uk-align-center sub-heading ">
+                                        <span>About</span>
+                                    </h1>
+                                </div>
+                                <div class="table-margin" uk-grid>
 
-                                                            <tbody>
+                                    <table id="userp" class="uk-table uk-grid-medium uk-table-middle">
 
-                                                                <tr class="tr-font">
-                                                                    <td>Name</td>
-                                                                    <td>
-                                                                        <%- user.name %>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="tr-font">
-                                                                    <td>Email</td>
-                                                                    <td>
-                                                                        <%- user.email %>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="tr-font">
-                                                                    <td>Contact Number</td>
-                                                                    <td>
-                                                                        <%- user.phoneNumber %>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="tr-font">
-                                                                    <td>College</td>
-                                                                    <td>
-                                                                        <%- user.college %>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="tr-font">
-                                                                    <td>City</td>
-                                                                    <td>
-                                                                        <%- user.city %>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                        <tbody class="uk-visible@m">
 
+                                            <tr>
+                                                <td class="head-font">Name</td>
+                                                <td class="body-font">
+                                                    <%- user.name %>
+                                                </td>
+                                                <td></td>
+                                                <td class="head-font">Contact Number</td>
+                                                <td class="body-font">
+                                                    <%- user.phoneNumber %>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="head-font">Email</td>
+                                                <td class="body-font">
+                                                    <%- user.email %>
+                                                </td>
+                                            </tr>
 
-                                               
-                                                <div class="table-margin" uk-grid>
-                                                    <h1 id="prof" class="uk-align-center sub-heading">
-                                                        <span>Registered Events</span>
-                                                    </h1>
+                                            <tr>
+                                                <td class="head-font">College</td>
+                                                <td class="body-font">
+                                                    <%- user.college %>
+                                                </td>
+                                                <td></td>
+                                                <td class="head-font">City</td>
+                                                <td class="body-font">
+                                                    <%- user.city %>
+                                                </td>
+                                            </tr>
 
-                                                    <table id="userp" class="uk-table uk-grid-medium uk-table-middle uk-table-divider">
-                                                        <thead>
-                                                            <tr class="th-font">
+                                        </tbody>
 
-                                                                <th>Event Name</th>
-                                                                <th>Team Size</th>
-                                                                <th>Payment Status</th>
-                                                                <th>Actions</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
+                                        <tbody class="uk-hidden@m">
 
-                                                            <% if(user.events.length === 1) { %>
-                                                                <tr class="tr-font">
+                                            <tr>
+                                                <td class="head-font">Name</td>
+                                                <td class="body-font">
+                                                    <%- user.name %>
+                                                </td>
 
-                                                                    <td colspan="4" class="uk-text-center">No registered events to display.</td>
-                                                                </tr>
-                                                                <% } else { %>
-                                                                    <% if(user.events.length > 0 ){  for(var i=1; i<user.events.length; i++) { %>
-                                                                        <tr class="tr-font">
+                                            </tr>
+                                            <tr>
 
-                                                                            <td>
-                                                                                <%= user.events[i].event.eventName %>
-                                                                            </td>
-                                                                            <td>
-                                                                                <%= user.events[i].team.length %>
-                                                                            </td>
-                                                                            <td>
-                                                                                <%= user.events[i].status %>
-                                                                            </td>
-                                                                            <td>
-                                                                                <a href="/pdf/<%= user.events[i].orderId %>" target="_blank">Receipt</a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <% } %>
-                                                                            <% } } %>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+                                                <td class="head-font">Contact Number</td>
+                                                <td class="body-font">
+                                                    <%- user.phoneNumber %>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="head-font">Email</td>
+                                                <td class="body-font">
+                                                    <%- user.email %>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="head-font">College</td>
+                                                <td class="body-font">
+                                                    <%- user.college %>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
 
 
-                                            </div>
+                                                <td class="head-font">City</td>
+                                                <td class="body-font">
+                                                    <%- user.city %>
+                                                </td>
+                                            </tr>
 
-                                        </div>
-
-                                    </div>
+                                        </tbody>
+                                    </table>
 
 
                                 </div>
 
+                                <div class="table-margin" uk-grid>
+                                    <h1 id="prof" class="uk-align-center sub-heading">
+                                        <span>Registered Events</span>
+                                    </h1>
+                                </div>
+                                <div class="table-margin" uk-grid>
+                                    <% if(user.events.length === 1) { %>
+                                        <div class="uk-text-center body-font">
+                                            No registered events to display.
+                                        </div>
+                                        <% } else { %>
+                                            <table id="userp" class="uk-table  uk-table-justify uk-grid-medium uk-table-middle uk-table-divider">
+
+                                                <thead>
+                                                    <tr>
+
+                                                        <th class="head-font">Event Name</th>
+                                                        <th class="head-font">Team Size</th>
+                                                        <th class="head-font">Payment Status</th>
+                                                        <th class="head-font">Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+
+
+                                                    <%   for(var i=1; i<user.events.length; i++) { %>
+                                                        <tr>
+
+                                                            <td class="body-font">
+                                                                <%= user.events[i].event.eventName %>
+                                                            </td>
+                                                            <td class="body-font">
+                                                                <%= user.events[i].team.length %>
+                                                            </td>
+                                                            <td class="body-font">
+                                                                <%= user.events[i].status %>
+                                                            </td>
+                                                            <td class="body-font">
+                                                                <a href="/pdf/<%= user.events[i].orderId %>" target="_blank">Receipt</a>
+                                                            </td>
+                                                        </tr>
+                                                        <% } %>
+
+                                                </tbody>
+                                            </table>
+
+                                            <% }  %>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
 
 
 
 
 
-                                <% include partials/leftbar %>
+
+                <% include partials/leftbar %>
 
 
 
-                                    <% include partials/rightbar %>
+                    <% include partials/rightbar %>
 
 
-                                    <% include partials/footer %>
+                        <% include partials/footer %>
 
 
 

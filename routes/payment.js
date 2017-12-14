@@ -49,7 +49,7 @@ router.post('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
         } else {
             
         }
-
+        payment.teamSize = teams.length;
         payment.team = teams;
         console.log(payment);
         payment.save(function(err) {

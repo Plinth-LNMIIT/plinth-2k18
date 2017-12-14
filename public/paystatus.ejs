@@ -15,63 +15,169 @@
             <canvas id="canvas"></canvas>
 
             <% include partials/header %>
-                                <div class="uk-position-center main-content ">
+                <div class="uk-position-center main-content ">
 
-                                    <div class="scroll-content" id="style-7">
-                                        <div class="inner-content">
-                                            
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div uk-grid>
+                                <h1 class="uk-align-center heading-text">
+                                    <span>Payment Details</span>
+                                </h1>
+                            </div>
+                            <div class="my-rotate">
+
+                                <div class="table-margin" uk-grid>
+                                    <h1 id="prof" class="uk-align-center sub-heading ">
+                                        <span>Transaction Details</span>
+                                    </h1>
+                                </div>
+                                <div class="table-margin" uk-grid>
+
+                                    <table id="userp" class="uk-table uk-grid-medium uk-table-middle">
+
+                                        <tbody class="uk-visible@m">
+
+                                            <tr>
+                                                <td class="head-font">Event Name</td>
+                                                <td class="body-font">
+                                                    <%- details.event.eventName %>
+                                                </td>
+
+                                                <td></td>
+                                                <td class="head-font">Date:</td>
+                                                <td class="body-font">
+                                                    <%- (details.date.paidAt).substring(0,25) %>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="head-font">Order ID</td>
+                                                <td class="body-font">
+                                                    <%- details.orderId %>
+                                                </td>
+                                                <td></td>
+                                                <td class="head-font">Transaction ID</td>
+                                                <td class="body-font">
+                                                    <%- details.tranId %>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="head-font">Amount</td>
+                                                <td class="body-font">
+                                                    ₹
+                                                    <%- details.amount %> /-
+                                                </td>
+                                                <td></td>
+                                                <td class="head-font">Payment Status</td>
+                                                <td class="body-font">
+                                                    <% if(status == 'success'){ %>
+                                                        SuccessFull
+                                                        <% } else if(status == 'fail') { %>
+                                                            Failed
+                                                            <%  } else if(status == 'open') { %>
+                                                                Open
+                                                                <% } %>
+                                                </td>
 
 
-                                                    <div class="my-rotate">
-
-                                                        <div uk-grid>
-                                                            <h1 class="uk-align-center">
-                                                                <span>Payment Details</span>
-                                                            </h1>
-                                                        </div>
-                                                        
-                                                        <div uk-grid>
-                                                            
-                                                                <% if(status == 'success'){ %>
-                                                                    <div>
-                                                                            Date: <%- details.date.paidAt %><br>
-                                                                            Event Name: <%- details.event.eventName %><br>
-                                                                            Order ID: <%- details.order_id %>
-                                                                        </div>
-                                                                    <% } else if(status == 'fail') { %>
-
-                                                                        <%  } else if(status == 'open') { %>
-
-                                                                            <% } %>
+                                            </tr>
 
 
-                                                        </div>
+                                        </tbody>
+
+                                        <tbody class="uk-hidden@m">
+
+                                            <tr>
+                                                <td class="head-font">Event Name</td>
+                                                <td class="body-font">
+                                                    <%- details.event.eventName %>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="head-font">Date:</td>
+                                                <td class="body-font">
+                                                    <%- (details.date.paidAt).substring(0,25) %>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="head-font">Order ID</td>
+                                                <td class="body-font">
+                                                    <%- details.orderId %>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="head-font">Transaction ID</td>
+                                                <td class="body-font">
+                                                    <%- details.tranId %>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
 
 
-                                                    </div>
-                                                  
+                                                <td class="head-font">Amount</td>
+                                                <td class="body-font">
+                                                    ₹
+                                                    <%- details.amount %> /-
+                                                </td>
+                                            </tr>
+
+                                            <tr>
 
 
-                                        </div>
+                                                <td class="head-font">Payment Status</td>
+                                                <td class="body-font">
+                                                    <% if(status == 'success'){ %>
+                                                        SuccessFull
+                                                        <% } else if(status == 'fail') { %>
+                                                            Failed
+                                                            <%  } else if(status == 'open') { %>
+                                                                Open
+                                                                <% } %>
+                                                </td>
+                                            </tr>
 
-                                    </div>
+                                        </tbody>
+                                    </table>
 
 
                                 </div>
 
+                                <div class="body-font uk-text-center" uk-grid>
+                                    For downloading the Receipt :
+                                    <a href="/pdf/<%= details.orderId %>" target="_blank">Payment Receipt</a>
+                                </div>
+
+                                <div class="body-font uk-text-center" uk-grid>
+                                    For any query regarding payment :
+                                    <a href="mailto:payment@plinth.in" target="_blank">payment@plinth.in</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
 
 
 
 
 
-                                <% include partials/leftbar %>
+
+                <% include partials/leftbar %>
 
 
 
-                                    <% include partials/rightbar %>
+                    <% include partials/rightbar %>
 
 
-                                    <% include partials/footer %>
+                        <% include partials/footer %>
 
 
 
@@ -87,11 +193,11 @@
         <script src="js/slowStar.js "></script>
         <script src="js/printe.js"></script>
         <script>
-             
+
             var obj = { Title: 'Status', Url: 'https://plinth.in/payment/paystatus' };
             history.pushState(obj, obj.Title, obj.Url);
 
-            
+
         </script>
 
 </body>

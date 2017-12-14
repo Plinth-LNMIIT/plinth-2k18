@@ -1,15 +1,16 @@
 .table-margin{
   margin-left: 15%;
   margin-right:15%;
+}
+.head-font{
+  font-family: 'Righteous', cursive;
+  font-size: 1.2rem;
 } 
-.tr-font{
-  font-family: 'Oxygen', sans-serif;
+.body-font{
+font-family: 'Oxygen', sans-serif;
 font-size: 1.2rem;
 }
-.th-font{
-
-  font-family: 'Righteous', cursive ;
-}
+ 
 
 .sub-heading{
   font-size: 1.8rem;
@@ -20,13 +21,9 @@ font-size: 1.2rem;
   }
   
   #userp{
-    margin-top: 20px;
+    margin-top: 10px;
   }
-  
- .about-margin{
-  margin-left: 35%;
-  margin-right:15%;
- } 
+
 
 @media only screen and (max-width: 1023px) {
   .table-margin{
@@ -56,11 +53,6 @@ font-size: 1.2rem;
   .sub-heading{
     font-size: 1.5rem;
   }
-
-  .about-margin{
-    margin-left: 10%;
-    margin-right:10%;
-   }
 }
 
 
