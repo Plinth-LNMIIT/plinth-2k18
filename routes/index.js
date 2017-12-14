@@ -26,10 +26,7 @@ router.get('/', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('index',{
                     "page" : 'home',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -58,10 +55,7 @@ router.get('/about', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('about',{
                     "page" : 'about',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -89,10 +83,7 @@ router.get('/archive', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('archive',{
                     "page" : 'archive',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -124,10 +115,7 @@ router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) 
                 res.render('competitions',{
                     "page" : 'competitions',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    },
+                    "user" : user,
                     "events" : eventDetail.events,
                 });
             }
@@ -157,10 +145,7 @@ router.get('/contact', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('contact',{
                     "page" : 'contact',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -189,10 +174,7 @@ router.get('/faqs', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('faqs',{
                     "page" : 'faqs',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" :user
                 });
             }
         });
@@ -221,10 +203,7 @@ router.get('/gallery', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('gallery',{
                     "page" : 'gallery',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -253,10 +232,7 @@ router.get('/mun', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('mun',{
                     "page" : 'mun',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -285,10 +261,7 @@ router.get('/sop', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('sop',{
                     "page" : 'sop',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -317,10 +290,7 @@ router.get('/sponsors', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('sponsors',{
                     "page" : 'sponsors',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -349,10 +319,7 @@ router.get('/talks', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('talks',{
                     "page" : 'talks',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -381,10 +348,7 @@ router.get('/team', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('team',{
                     "page" : 'team',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -413,10 +377,7 @@ router.get('/terms', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('terms',{
                     "page" : 'terms',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });
@@ -448,10 +409,7 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('workshops',{
                     "page" : 'workshops',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : {
-                        name : user.name,
-                        gender : user.gender,
-                    }
+                    "user" : user
                 });
             }
         });

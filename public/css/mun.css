@@ -97,6 +97,9 @@ font-size:  3.25rem;
 
      text-align: left;
 }     
+.align-center{
+  text-align: center;
+} 
  
 
 canvas {

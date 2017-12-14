@@ -13,42 +13,48 @@ var poc = require('../config/authuser').poc;
 
 
 
-var hostURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://plinth.mukuljain.me';
-var paytmURL =  process.env.NODE_ENV === 'development' ? 'https://pguat.paytm.com/oltp-web/processTransaction' : 'https://secure.paytm.in/oltp-web/processTransaction';
+var hostURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'http://localhost:3000';
 var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2018';
 
 router.post('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
     var payment = new Payment();
-
-  
+    
     Payment.count({}, function(err, count){
-        var param_data = req.body;
+        var param_data =JSON.parse(req.body.data);
+       
         payment.event.eventName = param_data.eventName;
         payment.status = 'OPEN';
         payment.date.createdAt = ''+ new Date();
         payment.team = [];
         var teams = [];
-        if(payment.event.eventName == 'mun'){
+        if(payment.event.eventName == 'MUN'){
             var order_id = "Plinth-" + payment.event.eventName + "-" + (count+1) + "-" + id_tag;
-            payment.amount = param_data.amount;
+            if(param_data.details.delegation == 'IP'){
+                payment.amount = 1200;
+            }else {
+                payment.amount = 800;
+            }
+           
             payment.orderId = order_id;
             var team = {
-                email          : param_data.email,
-                name           : param_data.name,
-                phoneNumber    : param_data.contact,
-                type           : param_data.type,
-                college        : 'lnmiit',
-                city           : param_data.city,
-                accommodation  : 'yes',
+                email          : param_data.details['email'],
+                name           : param_data.details.name,
+                phoneNumber    : param_data.details.phoneNumber,
+                delegation     : param_data.details.delegation,
+                college        : param_data.details.college,
+                city           : param_data.details.city,
+                committee      : param_data.details.committee,
+                portfolio      : param_data.details.portfolio,
+                accommodation  : param_data.details.accommodation,
             };
-
             teams.push(team);
             
         } else {
-            res.redirect('/');
+            
         }
 
         payment.team = teams;
+        console.log(payment);
         payment.save(function(err) {
             if (err){
                 console.log(err);
@@ -64,6 +70,8 @@ router.post('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
                     INDUSTRY_TYPE_ID : paytm.industryID,
                     MID              : paytm.mid,
                     WEBSITE          : paytm.website,
+                   /*  EMAIL            : payment.team[0].email,
+                    MOBILE_NO        : payment.team[0].phoneNumber, */
                     CALLBACK_URL     : hostURL + '/payment/response',
                     
                 }
@@ -72,11 +80,11 @@ router.post('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
                 // Create an array having all required parameters for creating checksum.
                 checksum.genchecksum(paramaters, paytm.key, function (err, result) {
                     console.log(result);
-                    result['PAYTM_URL'] = paytmURL;
+                    result['PAYTM_URL'] = paytm.url;
                     res.render('pgredirect',{ 'restdata' : result});
                 });
             }
-        });
+        }); 
     });
 });
 
@@ -129,6 +137,7 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
                     var bulk = User.collection.initializeOrderedBulkOp();
                     for(var i=0; i < emails.length; i++){
                         bulk.find({'email': emails[i]}).update({$push: {events: result}});
+                        
                     }
                     bulk.execute();
 
@@ -173,5 +182,7 @@ router.post('/response', Verify.verifyOrdinaryUser,function(req,res){
     }
    
 });
-
+ 
+    
+ 
 module.exports = router;
