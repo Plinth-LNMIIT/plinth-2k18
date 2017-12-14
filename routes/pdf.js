@@ -11,45 +11,66 @@ var PDFDocument = require('pdfkit');
 router.get('/:id', Verify.verifyOrdinaryUser, function (req, res, next) {
   if (req.decoded.sub === "") {
     isLoggedIn = false;
-
+    res.render('404', {
+      "page": '404',
+      "isLoggedIn": isLoggedIn,
+    });
   }
   else {
-    Payment.findOne({ 'orderId': req.params.id }, function (err, payment) {
+    User.findOne({ 'email': req.decoded.sub }, function (err, user) {
+      isLoggedIn = user.valid;
+      // if there are any errors, return the error
       if (err)
         return done(err);
+      // check to see if theres already a user with that email
+      if (user) {
+
+        Payment.findOne({ 'orderId': req.params.id }, function (err, payment) {
+          if (err)
+            return done(err);
 
 
-      isUser = false;
-      if (payment) {
-        for (var i = 0; i < payment.team.length; i++) {
-          if (payment.team[i].email == req.decoded.sub) {
-            isUser = true;
+          isUser = false;
+          if (payment) {
+            for (var i = 0; i < payment.team.length; i++) {
+              if (payment.team[i].email == req.decoded.sub) {
+                isUser = true;
+              }
+            }
+
           }
-        }
-
-      }
 
 
-      if (isUser) {
+          if (isUser) {
 
-        var doc = Utils.pdf(payment);
-        
-        setTimeout(function () {
-          fs.readFile(doc, function (err, data) {
-            res.contentType("application/pdf");
-            res.send(data);
+            var doc = Utils.pdf(payment);
+
             setTimeout(function () {
-               Utils.delpdf(doc);
-            }, 3000);
+              fs.readFile(doc, function (err, data) {
+                res.contentType("application/pdf");
+                res.send(data);
+                setTimeout(function () {
+                  Utils.delpdf(doc);
+                }, 3000);
 
-          });
-        }, 1000);
-      }
+              });
+            }, 1000);
+          }
 
-      else {
-          
+          else {
+            res.render('404', {
+              "page": '404',
+              "isLoggedIn": isLoggedIn,
+              "user": user
+            });
+          }
+        });
+
+
       }
     });
+
+
   }
 
 
