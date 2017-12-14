@@ -18,7 +18,7 @@ exports.pdf = function (result) {
                 var path = './public/data/' + result.orderId + '.pdf';
                 doc.image('./public/media/plinth-logo.png', 25, 50, { height: 48 })
                 doc.image('./public/media/lnmiit-logo.jpeg', 475, 50, { height: 48 })
-        
+                
                 doc.font('./public/fonts/Righteous-Regular.ttf', 28)
                 .text('plinth 2018', 50, 50, {align : 'center'})
                 .moveDown(.1)

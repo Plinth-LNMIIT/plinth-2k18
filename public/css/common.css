@@ -1,40 +1,5 @@
-
-/* latin-ext */
-@font-face {
-  font-family: 'Righteous';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Righteous'), local('Righteous-Regular'), url('../fonts/Righteous-Regular.ttf') format('ttf');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Righteous';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Righteous'), local('Righteous-Regular'), url('../fonts/Righteous-Regular.ttf') format('ttf');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
-}
-
-/* latin-ext */
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oxygen Regular'), local('Oxygen-Regular'), url('../fonts/Oxygen-Regular.ttf') format('ttf');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oxygen Regular'), local('Oxygen-Regular'), url('../fonts/Oxygen-Regular.ttf') format('ttf');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
-}
-
 * {
-    font-family: 'Righteous', cursive;
+    font-family: 'Audiowide', cursive;
     margin: 0;
     padding: 0;
     font-size: 100%;
@@ -76,7 +41,7 @@
   }
 
   .sidee > li {
-    font-family: 'Righteous', cursive;
+    font-family: 'Audiowide', cursive;
   }
    
   .uk-active > a{
@@ -90,12 +55,12 @@
    
   
   .fontset > li > a{
-    font-family: 'Righteous', cursive;
+    font-family: 'Audiowide', cursive;
     font-size: 1.2rem;
   }
   
   .fontset1 > li > a{
-    font-family: 'Righteous', cursive;
+    font-family: 'Audiowide', cursive;
     font-size: 1rem;
   }
   
@@ -202,7 +167,7 @@
 }
 
 .heading{
-  font-family: 'Righteous', cursive ;
+  font-family: 'Audiowide', cursive ;
   font-size: 24px;
   margin-top:2% !important;
    
@@ -263,7 +228,7 @@
        padding-bottom: 20px ;
      }
      .fontset1 > li > a{
-      font-family: 'Righteous', cursive ;
+      font-family: 'Audiowide', cursive ;
       font-size: 1rem ;
       height: 40px ;
     }
@@ -307,7 +272,7 @@
      }
    
      .fontset1 > li > a{
-       font-family: 'Righteous', cursive ;
+       font-family: 'Audiowide', cursive ;
        font-size: 0.8rem ;
        height: 30px ;
      }
@@ -369,7 +334,7 @@
     }
   
     .fontset1 > li > a{
-      font-family: 'Righteous', cursive ;
+      font-family: 'Audiowide', cursive ;
       font-size: 0.6rem ;
       height: 20px ;
     }
@@ -452,7 +417,7 @@
                        }
                      
                        .fontset1 > li > a{
-                         font-family: 'Righteous', cursive ;
+                         font-family: 'Audiowide', cursive ;
                          font-size: 0.6rem ;
                          height: 20px ;
                        }
