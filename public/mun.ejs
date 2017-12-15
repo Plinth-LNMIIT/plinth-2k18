@@ -115,16 +115,16 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title">Register Yourself</h5>
+						<h5 class="modal-title font-a">Register Yourself</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body">
+					<div class="modal-body font-o">
 						<div class="medium">Register yourself for different competitions through this portal to know further details and proceedings of PLINTH'18.
 							Morever if you register through this platform , you would be able to get exclusive coupons and offers.</div>
 
-						<div class="register-button">
+						<div class="register-button font-a">
 							<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/google")'>
 								<i class="fa fa-google-plus" aria-hidden="true"></i> Google</a>
 							<a type="button" class="btn btn-outline-primary" onclick='userLoginInitiate("/user/auth/facebook")'>
@@ -164,7 +164,7 @@
 			<a class="btn btn-outline-secondary font-a" href="#contant">Register Now</a>
 
 			<% if(isLoggedIn){ %>
-				<a class="btn btn-outline-secondary font-a" id="paynow" data-target="#registerModel" data-toggle="modal" href="#">Pay Now</a>
+				<a class="btn btn-outline-secondary font-a" id="paynow" data-target="#payModel" data-toggle="modal" href="#">Pay Now</a>
 
 
 				<% } else { %>
@@ -178,7 +178,7 @@
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title">Payment Form</h5>
+							<h5 class="modal-title font-a">Payment Form</h5>
 							<button type="button" id="form-close" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -271,7 +271,7 @@
 			</div>
 			<% } %>
 
-				<div class="scrolldown-container page_scroll">
+				<div class="scrolldown-container page_scroll small-hidden">
 					<a href="#about" class="page_scroll hidee">
 
 						<div class="scrolldown-btn">
@@ -331,7 +331,7 @@
 					<div class="col-md-12 text-center">
 						<img src="media/mun/anirudh.jpg" alt="SecGen" id="sec-img">
 					</div>
-					<div class="col-md-12 text-center">
+					<div class="col-md-12 text-center font-a">
 						<div>Anirudh Saini</div>
 						<div>Secretary General</div>
 
@@ -541,8 +541,8 @@
 		<hr class="underline-1">
 		<hr class="underline-2">
 		<div style=" text-align: center;">
-			<a class="btn btn-outline-secondary" href="https://goo.gl/forms/Jiv0dyuYAkffqR4X2" target="_blank">Delegate</a>
-			<a class="btn btn-outline-secondary" href="https://goo.gl/forms/4eOVjUlCWBNuA4DB3" target="_blank">International Press</a>
+			<a class="btn btn-outline-secondary font-a" href="https://goo.gl/forms/Jiv0dyuYAkffqR4X2" target="_blank">Delegate</a>
+			<a class="btn btn-outline-secondary font-a" href="https://goo.gl/forms/4eOVjUlCWBNuA4DB3" target="_blank">International Press</a>
 		</div>
 	</div>
 
@@ -555,11 +555,11 @@
 		<div class="address container">
 			<div class="row">
 				<div class="mail col-md-6">
-					<i class="fa fa-phone" aria-hidden="true">&nbsp;&nbsp;+91-9082081504</i>
+					<i class="fa fa-phone " aria-hidden="true">&nbsp;&nbsp;<span class="font-a">+91-9082081504</span></i>
 					<br>
-					<i class="fa fa-envelope-o" aria-hidden="true">&nbsp;&nbsp;mun@plinth.in</i>
+					<i class="fa fa-envelope-o" aria-hidden="true">&nbsp;&nbsp;<span class="font-a">mun@plinth.in</span></i>
 				</div>
-				<div class="add col-md-6">
+				<div class="add col-md-6 font-a">
 					<p> The LNM Institute of Information Technology
 						<br> Rupa ki Nangal, Post-Sumel, Via-Jamdoli
 						<br> Jaipur-302031,

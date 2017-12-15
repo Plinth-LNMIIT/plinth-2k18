@@ -51,10 +51,10 @@ router.get('/:id', Verify.verifyOrdinaryUser, function (req, res, next) {
                 res.send(data);
                 setTimeout(function () {
                   Utils.delpdf(doc);
-                }, 3000);
+                }, 4000);
 
               });
-            }, 1000);
+            }, 2000);
           }
 
           else {
