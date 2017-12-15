@@ -157,7 +157,7 @@ exports.pdf = function (result) {
                   .lineTo(575, 745)
                   .stroke() 
                   doc.font('./public/fonts/Oxygen-Bold.ttf', 10)
-                  .text('Recipt Generated At ', 25, 750)
+                  .text('Receipt Generated At ', 25, 750)
                   .font('./public/fonts/Oxygen-Regular.ttf', 10)
                   .text(': '+ dateFormat((new Date()), format1),120,750) 
                   .font('./public/fonts/Oxygen-Regular.ttf', 10)
