@@ -159,7 +159,7 @@ exports.pdf = function (result) {
                   doc.font('./public/fonts/Oxygen-Bold.ttf', 10)
                   .text('Receipt Generated At ', 25, 750)
                   .font('./public/fonts/Oxygen-Regular.ttf', 10)
-                  .text(': '+ dateFormat((new Date()), format1),120,750) 
+                  .text(': '+ dateFormat((new Date()), format1),130,750) 
                   .font('./public/fonts/Oxygen-Regular.ttf', 10)
                   .text('Page 1 of 1',450,750) 
                   
