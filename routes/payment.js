@@ -27,9 +27,9 @@ router.post('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
         if(payment.event.eventName == 'MUN'){
             var order_id = "Plinth-" + payment.event.eventName + "-" + (count+1) + "-" + id_tag;
             if(param_data.details.delegation == 'IP'){
-                payment.amount = 1200;
-            }else {
                 payment.amount = 800;
+            }else {
+                payment.amount = 1200;
             }
            
             payment.orderId = order_id;

@@ -17,7 +17,7 @@
         .end()
         .append('<option value="IP">International Press</option>');
 
-      $('#amount').text('Amount :₹ 1200/-');
+      $('#amount').text('Amount :₹ 800/-');
       $('#hidden-matter').show();
     } else if (inputValue === 'Delegates') {
 
@@ -30,7 +30,7 @@
         + '<option value="AIPPM">AIPPM</option>'
         + '<option value="UNICEF">UNICEF</option>');
 
-      $('#amount').text('Amount :₹ 800/-');
+      $('#amount').text('Amount :₹ 1200/-');
       $('#hidden-matter').show();
     }
 
@@ -137,7 +137,7 @@
 
   $(".page_scroll").click(function (event) {
 
-    if (this.hash !== "") {
+    if (this.hash !== ""  && this.hash !== undefined) {
 
       event.preventDefault();
 
@@ -152,6 +152,8 @@
 
         window.location.hash = hash;
       });
+    } else{
+      return true;
     }
   })
 
