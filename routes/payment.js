@@ -10,7 +10,7 @@ var checksum = require('../checksum/checksum');
 
 
 
-var hostURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'http://localhost:3000';
+var hostURL = process.env.HOST_URL;
 var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2018';
 
 router.post('/initiate',Verify.verifyOrdinaryUser, function(req, res) {
