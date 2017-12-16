@@ -45,7 +45,7 @@
                                 <%- user.name %>
                             </a>
                             <div class="uk-margin-small uk-padding-small hover-class" uk-dropdown>
-                                <ul class="uk-nav fontset uk-text-center uk-dropdown-nav">
+                                <ul class="uk-nav fontset uk-text-center uk-dropdown-nav hover-class">
                                     <li <%if(page=="profile" ){%>class="uk-active"
                                         <%}%> >
                                             <a href="/profile">Profile</a>
@@ -171,6 +171,11 @@
                                 <%}%> >
                                     <a href="/sop">SOP</a>
                             </li>
+
+                            <li <%if(page=="Campus Ambassador" ){%>class="uk-active"
+                                    <%}%> >
+                                        <a href="/ca">Campus Ambassador</a>
+                                </li>
 
 
 

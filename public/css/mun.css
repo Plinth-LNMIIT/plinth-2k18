@@ -171,7 +171,8 @@ canvas {
 }
 
 .scrolldown-container {
-  width: 100%;
+  width:60px;
+  left: 90%;
   top: 85vh;
   height: 100px;
   position: absolute;
@@ -180,7 +181,6 @@ canvas {
   width: 50px;
   height: 100px;
   position: absolute;
-  left: 90%;
   top: 50%;
   bottom: auto;
   right: auto;
