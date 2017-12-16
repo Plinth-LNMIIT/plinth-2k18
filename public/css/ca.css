@@ -1,0 +1,50 @@
+ 
+.left-padding{
+    padding-left: 10% ;
+} 
+.form-padding{
+    
+    padding-left:15%;
+    padding-right:15%;
+}
+ 
+  
+
+
+@media only screen and (max-width: 1023px) {
+    .form-padding{
+        padding-left:12%;
+        padding-right:12%;
+    }
+ }
+ 
+ @media only screen and (max-width: 767px) {
+    .form-padding{
+        padding-left:10%;
+        padding-right:10%;
+    }
+ }
+ 
+ @media only screen and (max-width: 480px) {
+    .form-padding{
+        padding-left:5%;
+        padding-right:5%;
+    }
+   
+ }
+ 
+ @media only screen and (min-device-width: 480px) 
+                    and (max-device-width: 640px) 
+                    and (orientation: landscape) {
+                        .form-padding{
+                            padding-left:15%;
+                            padding-right:15%;
+                        }
+                          
+ 
+ }
+ 
+  
+  
+ 
+ 

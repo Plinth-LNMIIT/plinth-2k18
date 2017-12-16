@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+        <link rel="stylesheet" href="css/ca.css">
+
+
+
+
+</head>
+
+<body>
+    <% include partials/loader %>
+        <div id="home">
+            <canvas id="canvas"></canvas>
+            <% include partials/header %>
+
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div uk-grid>
+                                <h1 class="uk-align-center heading-text">
+                                    <span>Campus Ambassador Program</span>
+                                </h1>
+                            </div>
+
+
+                            <div class="my-rotate">
+                                <div class="uk-child-width-1-2@m form-padding" uk-grid>
+                                    <div>
+                                        <form id="ca-form">
+                                            <fieldset class="uk-fieldset">
+
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="name" type="text" placeholder="Name" required>
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="mobile_number" type="number" placeholder="Mobile Number" required>
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="whatsapp_number" type="number" placeholder="Whatsapp Number" required>
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="email" type="email" placeholder="Email" required>
+                                                </div>
+
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="college_name" type="text" placeholder="College Name" required>
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="college_address" type="text" placeholder="College Address" required>
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="college_city" type="text" placeholder="College City" required>
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <input class="uk-input" name="college_strength" type="number" placeholder="College Strength">
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <textarea class="uk-textarea" name="director_details" rows="3" placeholder="Contact Details - Institute Director" required></textarea>
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <textarea class="uk-textarea" name="student_authority_details" rows="3" placeholder="Contact details - President/Highest Student Authority, Student Body" required></textarea>
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <textarea class="uk-textarea" name="motive" rows="3" placeholder="Primary Motive to apply for this post" required    ></textarea>
+                                                </div>
+                                                <div class="uk-margin">
+                                                    <textarea class="uk-textarea" name="past_exp" rows="5" placeholder="Relevant Past Experience"></textarea>
+                                                </div>
+                                                <button type="submit" id="submit-form" class="uk-button uk-align-center uk-button-primary">Submit</button>
+
+                                            </fieldset>
+                                        </form>
+                                        <div id="form-response" class="uk-hidden uk-text-center">
+                                                Thank you for your interest, 
+                                                <br>We will get back to you shortly.
+                                            </div>
+                                    </div>
+                                    <div class="left-padding">
+
+                                        <div>
+                                            <div class="heading">
+                                                About
+                                            </div>
+                                            <div class="text">
+                                                    Now, you too have a chance to become a part of this technical extravaganza. 
+                                                    <br>
+                                                    With Campus Ambassador Program you get a chance to be an extended part of the organising team of Plinth'18.
+                                                    <br>
+                                                    All you have to do is lead the contingent from your college taking part in Technex and make sure that people in your institute know about it. 
+                                                    <br>
+                                                    Be the leader in a crowd of followers.
+                                            </div>
+                                            
+                                            <br>
+                                            <div class="heading">
+                                                    As a Campus Ambassador,
+                                                  <br>  <span class="text">you have the 3 golden responsibilities:</span>     
+                                            </div>
+                                           
+                                            <div class="text">
+                                                   <span class="heading">PUBLICISE</span> - our events in your college via different means and social networking platforms.
+                                            </div>
+                                            <div class="text">
+                                                    <span class="heading">COORDINATE</span> - with us and help us organise workshops in your college.
+                                             </div>
+                                             <div class="text">
+                                                    <span class="heading">TASKS</span> - that are assigned to you must be completed before the deadline.
+                                             </div>
+                                                  
+                                               <br>
+                                               <br>
+                                               
+                                               <div class="heading">PERKS</div>
+                                               <div >
+                                                   <ol>
+                                                       <li class="text">An opportunity to improve your communication and managerial skills by interacting with people coming from diverse fields and from various colleges across India.</li>
+                                                        <li class="text">Enrolling in CAP makes you a member of our proud team.</li>
+                                                        <li class="text">The Top 3 CAs get FREE ACCOMODATION & FREE PASSES to the PRONITE.</li>
+                                                        <li class="text">All the CAP members will receive a certificate of appreciation issued to them by Plinth.</li>
+
+                                                    </ol>
+                                                 <span class="text">Goodies, Vouchers, Coupons and much more...</span>   
+                                               </div>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                             
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="text uk-text-center">
+                                            <span>
+                                                <i class="fa fa-user" aria-hidden="true"></i> Akshit Singh</span>
+                                            <br>
+                                            <span>
+                                                <i class="fa fa-phone" aria-hidden="true"></i> 8003809604</span>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="link-text text uk-text-center">
+                                            Contact us at
+                                            <a href="mailto:ca@plinth.in">ca@plinth.in</a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        <% include partials/footer %>
+
+
+
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+
+        <script src="js/canvasloader.js"></script>
+        <script src="js/slowStar.js"></script>
+        <script src="js/jquery.serialize-object.min.js"></script>
+        <script src="js/ca.js"></script>
+
+</body>
+
+</html>
