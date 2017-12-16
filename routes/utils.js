@@ -18,7 +18,7 @@ exports.pdf = function (result) {
                   }
                 });
                
-                var path = './public/data/' + Math.floor((Math.random() * 10) + 1); +''+ result.orderId + '.pdf';
+                var path = './public/data/' + Math.floor((Math.random() * 10) + 1) +''+ result.orderId + '.pdf';
                 doc.image('./public/media/plinth-logo.png', 25, 50, { height: 48 })
                 doc.image('./public/media/lnmiit-logo.jpeg', 475, 50, { height: 48 })
                 
