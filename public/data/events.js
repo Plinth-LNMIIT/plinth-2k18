@@ -5,11 +5,11 @@ module.exports = {
             clubName: "Astronomy",
             eventName: "Into The Universe",
             payName: "INT",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 3,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: null,
             eventFee: null,
             synopsis:  "<p>"
                             +"<b>Astro Bowl</b>"
@@ -91,11 +91,11 @@ module.exports = {
             clubName: "Astronomy",
             eventName: "Astro Hunt",
             payName: "AH",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 3,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: null,
             eventFee: null,
             synopsis:  "<p>"
                             +"Foresee the unfathomable and explore the mysteries of the universe. Only the sharp, intelligent and astronomy enthusiasts will make it to the end. The route to solve the mysteries of the universe lies within the depths of the dark sky and your imagination. It’s time to bring out the Galileo Galilei in you and look into the infinite cosmic depths."
@@ -127,11 +127,11 @@ module.exports = {
             clubName: "Astronomy",
             eventName: "Astro Quiz",
             payName: "AQ",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: null,
             eventFee: null,
             synopsis:  "<p>"
                             +"Can you answer some basic questions on Astronomy? Well we have another event in for you which is an amalgam of fun and intellect.s"
@@ -169,11 +169,11 @@ module.exports = {
             clubName: "Coding",
             eventName: "CodeSwap",
             payName: "CS",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 2,
-            prizeWorth: '₹ 30,000',
+            prizeWorth: '₹ 30,000/-',
             eventFee: null,
             synopsis: null,
             eventDescription: "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
@@ -206,7 +206,7 @@ module.exports = {
             memberUpperLimit: 1,
             memberLowerLimit: 1,
             prizeWorth: null,
-            eventFee: null,
+            eventFee: '<br>₹ 100/-  Students <br>   ₹ 1000/-  Startups',
             synopsis: "<p>Startup intern fair is a one-stop place for getting a chance to do an internship in some of the well-known and budding startups of the country. Ranging from technical to a non-technical domain, one can select the internship of their genre, get screened and get a chance to grab their favorite internship. SIF aims to provide a hassle free and an aggregated hiring process. The time has come to put an end to your impasse and land up in your dream internship.</p>",
             eventDescription: "<p>Are you capable of making the next big app or writing geeky codes to build an awesome application or working out the next business model or writing beautiful blogs or are you too convincing to rephrase somebody's opinion but simply whiling away your time finding the best place to showcase your skills? Well, the time has come to put an end to your impasse.</p><p>Startup Intern Fair aims at connecting the budding startups looking out for their Jarvis to help them reach the level they have envisioned, with the young students waiting for the opportunities to enhance their skill set. Just like a fair, startups would set up their stall and screen the students based on their resume and personal interaction and if you have got what they require, then you might land up in your favourite internship be it technical , management or content writing.</p>",
             rules: "<p>"
@@ -232,18 +232,20 @@ module.exports = {
             clubName: "Quizzing",
             eventName: "Business Quiz",
             payName: "BQ",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
-            eventFee: null,
+            prizeWorth: null,
+            eventFee: '₹ 200/-',
             synopsis: "<p>\“Pressing buzzers is like proposing a girl ... you must do it fast, or others will take that chance.\”  - Pickbrain</p><p>What connects ‘Mitron’ and ‘Acche din’ ? <br> Pretty easy, right? Then try this – <br> Google is a _____ internet company and Facebook is a _____ internet company.</p> <p>If you can already feel your grey cells warming up, then BizQ is the place to be. Test your knowledge about various domains of the business world at BizQ. <br> After all, answers are everywhere it is just the matter of asking right questions.</p>",
             eventDescription: "<p><ol><li>The Quiz will be held in 2 rounds, both these rounds will take place back to back at LNMIIT during Plinth.</li><li>The final round will be between the top 8 teams from Prelims.</li><li>The decision of Quizmaster will be final and binding.</li></ol></p>",
             rules: "<p><b>General Rules </b><ol><li>A team can consist of 1 or 2 participants</li><li>Both the participants must be from same institute.</li><li>Decision of the Quiz master is final.</li><li>Any means of cheating will lead to immediate disqualification from the event.</li></ol></p>",
             judges: null,
             query: "<p>"
-                        +"Details will be Updated soon"
+                        +"Shikhar Dalela: +91-7742158600"
+                        +"<br>"
+                        +"Rachit Jain: +91-7073743152"
                         +"<br><br>"
                         +"For any query, contact us at quizzinga@plinth.inn"
                     +"</p>",
@@ -254,12 +256,12 @@ module.exports = {
             clubName: "Quizzing",
             eventName: "General Quiz",
             payName: "GQ",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 30,000',
-            eventFee: null,
+            prizeWorth: null,
+            eventFee: '₹ 200/-',
             synopsis: "<p>Let your intellect shine, let the rolling of your brain race with every passing minute. The LNMIIT Quiz Club is back with its general quiz “The Quest” to warm up your grey cells.</p><p>So, fasten your belts and get ready to race against those who hold the same passion and wisdom for Quizzing. <br> After all, it’s all about finding the right answers isn’t it.</p>",
             eventDescription: "<p>"
                                     +"<ol>"
@@ -279,7 +281,9 @@ module.exports = {
                     +"</p>",
             judges: null,
             query: "<p>"
-                        +"Details will be Updated soon"
+                        +"Shikhar Dalela: +91-7742158600"
+                        +"<br>"
+                        +"Rachit Jain: +91-7073743152"
                         +"<br><br>"
                         +"For any query, contact us at quizzinga@plinth.inn"
                     +"</p>",
@@ -289,11 +293,11 @@ module.exports = {
             clubName: "Robotics",
             eventName: "Robowar",
             payName: "RW",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 50,000',
+            prizeWorth: '₹ 50,000/-',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -444,11 +448,11 @@ module.exports = {
             clubName: "Robotics",
             eventName: "Robosoccer",
             payName: "RS",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 25,000',
+            prizeWorth: '₹ 25,000/-',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -536,11 +540,11 @@ module.exports = {
             clubName: "Robotics",
             eventName: "Drone Obstruction",
             payName: "DO",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 50,000',
+            prizeWorth: '₹ 50,000/-',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -575,11 +579,11 @@ module.exports = {
             clubName: "Robotics",
             eventName: "LFR",
             payName: "LFR",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 25,000',
+            prizeWorth: '₹ 25,000/-',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -620,11 +624,11 @@ module.exports = {
             clubName: "Robotics",
             eventName: "Maze Solver",
             payName: "MS",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 25,000',
+            prizeWorth: '₹ 25,000/-',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -699,11 +703,11 @@ module.exports = {
             clubName: "Robotics",
             eventName: "Roborace",
             payName: "RB",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 25,000',
+            prizeWorth: '₹ 25,000/-',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -789,11 +793,11 @@ module.exports = {
             clubName: "Robotics",
             eventName: "RC Plane",
             payName: "RCP",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 40,000',
+            prizeWorth: '₹ 40,000/-',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
@@ -959,11 +963,11 @@ module.exports = {
             clubName: "Robotics",
             eventName: "Transporter",
             payName: "TP",
-            eventDate: "20th - 21st Jan 2017",
+            eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: '₹ 25,000',
+            prizeWorth: '₹ 25,000/-',
             eventFee: null,
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
