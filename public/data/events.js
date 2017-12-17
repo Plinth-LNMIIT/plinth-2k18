@@ -10,7 +10,7 @@ module.exports = {
             memberUpperLimit: 3,
             memberLowerLimit: 1,
             prizeWorth: null,
-            eventFee: null,
+            eventFee: '₹ 100/-',
             synopsis:  "<p>"
                             +"<b>Astro Bowl</b>"
                             +"<p>"
@@ -96,7 +96,7 @@ module.exports = {
             memberUpperLimit: 3,
             memberLowerLimit: 1,
             prizeWorth: null,
-            eventFee: null,
+            eventFee: '₹ 100/-',
             synopsis:  "<p>"
                             +"Foresee the unfathomable and explore the mysteries of the universe. Only the sharp, intelligent and astronomy enthusiasts will make it to the end. The route to solve the mysteries of the universe lies within the depths of the dark sky and your imagination. It’s time to bring out the Galileo Galilei in you and look into the infinite cosmic depths."
                         +"</p>",
@@ -132,7 +132,7 @@ module.exports = {
             memberUpperLimit: 2,
             memberLowerLimit: 1,
             prizeWorth: null,
-            eventFee: null,
+            eventFee: '₹ 100/-',
             synopsis:  "<p>"
                             +"Can you answer some basic questions on Astronomy? Well we have another event in for you which is an amalgam of fun and intellect.s"
                         +"</p>"
@@ -473,7 +473,9 @@ module.exports = {
                                    
                                    
                                 +"</p>",
-            synopsis: null,
+            synopsis: "<p>"
+                            + "RoboSoccer is a football event in which robots on remote control stand against each other. Show your abilities and skills in robot control, dribbling and shooting to bring your team to victory."
+                        +"</p>",
             rules: "<p>"
                       
                         +"<b>General Rules</b>"
@@ -553,7 +555,14 @@ module.exports = {
                                     +"</p>"
                                    
                                 +"</p>",
-            synopsis: null,
+            synopsis: "<p>"
+                            +"<p>"
+                                +"Drone racing is a rapidly evolving modern sport capturing imaginations of tech enthusiasts worldwide.  Imagine flying around in a Tron like world with neon light streaks and markers all around. Your field of view, like that of a rebel pilot in Star Wars whizzing through the action. This is kind of what it feels like to be a pilot in a drone race."
+                            +"</p>"
+                            +"<p>"
+                                +"So, in this plinth get immersed in a futuristic atmosphere with drones whizzing past you and get ready to feel the ‘a-drone-aline’ rush."
+                            +"</p>"
+                        +"</p>",
             rules: "<p>"
                         +"<b>General Instructions</b>"
                         +"<ol>"
@@ -599,7 +608,9 @@ module.exports = {
                                     +"</p>" 
                                    
                                 +"</p>",
-            synopsis: null,
+            synopsis: "<p>"
+                            +"An autonomous bot that follows white lines on black surface or vice-versa. It is an automated guided bot that follows visual lines embedded on the floor. The bot must be able to detect particular line and keep following it." 
+                        +"</p>",
             rules: "<p>"
                         +"<b>General Instructions</b>"
                         +"<ol>"
@@ -660,7 +671,9 @@ module.exports = {
                                     +"</ol>"
                                    
                                 +"</p>",
-            synopsis: null,
+            synopsis: "<p>"
+                            +"Make an autonomous bot that completes the maze in shortest time."
+                        +"</p>",
             rules: "<p>"
                         
                         +"<b>General Rules</b>"
@@ -899,7 +912,18 @@ module.exports = {
                                         +"<li>But,​ ​you​ ​are​ ​strongly​ ​suggested​ ​to​ ​bring​ ​all​ ​the​ ​materials​ ​you​ ​require​ ​to​ ​repair​ ​your model.​ ​We​ ​cannot​ ​assure​ ​you​ ​of​ ​the​ ​materials​ ​we​ ​provide​.</li>"
                                     +"</ol>"
                                 +"</p>",
-            synopsis: null,
+            synopsis: "<p>"
+                            +"<p>"
+                                +"\"Can we pretend that airplanes in the night sky are like shootin' stars"
+                                +"<br>"
+                                +"I could really use a wish right now, wish right now, wish right now\""
+                            +"</p>"
+                            +"<p>"
+                                +"So, if your wishes also coincide with wright brothers you have arrived at right place.Plinth 2018 presents for the first time RC plane flying competition."
+                                +"<br>"
+                                +"Get ready to feed  your inner pilot and show your enthusiasm by building a remote control plane and show your insane flying skills..... Soo get ready to Rule the Sky!!"
+                            +"</p>"
+                        +"</p>",
             rules: "<p>"
                         +"<b>General​​ ​​Rules</b>"
                         +"<ol>"
@@ -987,7 +1011,18 @@ module.exports = {
                                         +"</li>"
                                     +"</ol>"
                                 +"</p>",
-            synopsis: null,
+            synopsis: "<p>"
+                            +"<p>"
+                                +"Imagine you are in a battlefield. Your squad gets raided by the enemy forces and you get separated from your squad in the attack. You are stranded alone in the enemy territory."
+                            +"</p>"
+                            +"<p>"
+                                +"Our aim is to design a transporter that can navigate in the rough conditions of the battlefield and clear all the obstacles and hurdles in your way to safe territory. The path is stringy and time is minimal."
+                            +"</p>"
+                            +"<p>"
+                                +"Fasten your seatbelts the war has just started, get ready with your claws to grab and change the phase of the battle."
+                            +"</p>"
+                            
+                        +"</p>",
             rules: "<p>"
                         +"<b>General Rules</b>"
                         +"<ol>"
