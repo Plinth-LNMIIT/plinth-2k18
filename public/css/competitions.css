@@ -161,6 +161,25 @@
     background-repeat: no-repeat;
 }
 
+.rostrum-image{
+    background: url(/media/intouni.jpeg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.scribbled-image{
+    background: url(/media/astrohunt.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+.unerase-image{
+    background: url(/media/astroquiz.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
 #astronomy-list{
     display: none;
 }

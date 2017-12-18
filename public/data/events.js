@@ -134,7 +134,7 @@ module.exports = {
             prizeWorth: null,
             eventFee: '₹ 100/-',
             synopsis:  "<p>"
-                            +"Can you answer some basic questions on Astronomy? Well we have another event in for you which is an amalgam of fun and intellect.s"
+                            +"Can you answer some basic questions on Astronomy? Well we have another event in for you which is an amalgam of fun and intellect."
                         +"</p>"
                         +"<p>"
                             +"Astro-quiz again is a 2 round event. Both rounds will be based on a audio-visual question-answer pattern."
@@ -164,6 +164,165 @@ module.exports = {
                     +"</p>",
             sponsors: null,
         },
+
+        {
+
+            clubName: "Literature",
+            eventName: "Rostrum",
+            payName: "RST",
+            eventDate: "19th - 21st Jan 2017",
+            eventVenue: "The LNMIIT, Jaipur",
+            memberUpperLimit: 2,
+            memberLowerLimit: 2,
+            prizeWorth: '₹ 20,000/-',
+            eventFee: null,
+            synopsis:  "<p>"
+                           
+                            +"<p>"
+                                +"Do you think you belong to the literal progeny of the great Atticus Finch? Then come join us at Rostrum - the Debate and be a part of a grand battle of wits and rebuttal skills." 
+                            +"</p>"
+                          
+                            +"<p>"
+                                +"Experience the back and forth lash of knowledge as teams prove their point with their beliefs and views at stake. Sway a rapt audience with your case and drive home the opinion that you have nurtured inside you."
+                            +"</p>"
+                        +"</p>",
+            eventDescription: null,
+            rules: "<p>"
+                        +"<p>"
+                            +"<ol>"
+                                +"<li>The participants are expected to register in teams of two. One participant has present his case for the motion and the other has to speak against the motion of the house.</li>"
+                                +"<li> The organizers would match each participant with a random opponent who shall share the stage.</li>"
+                                +"<li>The case presented by each participant will have a time limit of 3 minutes.</li>"
+                                +"<li>This will be followed by a question/counter round which will last for 1 minute.</li>"
+                                +"<li>The topic of the house would be announced to the registered participants and be intimidated through the Plinth 2018 Facebook page a few days prior to the contest.</li>"
+                            +"</ol>"
+                        +"</p>"
+                      
+                        +"<p>"
+                            + "Online Registrations will be open till 19th January, 2018. Offline registration will be subject to the discretion of the organizers."
+                        +"</p>"
+                    +"</p>",
+            judges: null,
+            query: "<p>"
+                        +"Will be Updated Soon."
+                        +"<br><br>"
+                        +"For any query, contact us at literary@plinth.in"
+                    +"</p>",
+            sponsors: null,
+        },
+        {
+
+            clubName: "Literature",
+            eventName: "Scribbled Stories",
+            payName: "TSS",
+            eventDate: "19th - 21st Jan 2017",
+            eventVenue: "The LNMIIT, Jaipur",
+            memberUpperLimit: 3,
+            memberLowerLimit: 1,
+            prizeWorth: '',
+            eventFee: '<p>'
+                            +"<p>"
+                                +"Early Bird Offer: ₹ 299/- till 10th January’18. ( Early Bird to prove that we keep up with our fads)."
+                            +"</p>"
+                            +"<p>"
+                                +"₹ 399/- from 10 th January onwards."
+                                +"<br>"
+                                +"Offer: ₹ 100/- off for Rostrum Participants. (Because we have more things to look after.)"
+                            +"</p>"
+                        +'</p>',
+            synopsis:  "<p>"
+                            +"<p>"
+                                +"What sprints through your mind when you look up at the sky, pink and blue and orange with a perfect sunset? A few lines of poetry?"
+                            +"</p>"
+                            +"<p>"
+                                +"What comes to your mind when you hear the waves rolling towards you? Or is it a story you hear?"
+                            +"</p>"
+                            +"<p>"
+                                +"When you read the paper, does your mind run off to weave endings to unsolved murders? Do your nerve endings light up at the thought of writing a great political satire?"
+                            +"</p>"
+                            +"<p>"
+                                +"Don’t all of us have a deep corner in our souls that creates that need to get our thoughts out on paper for others to see?"
+                            +"</p>"
+                            +"<p>"
+                                +"Indulge in your sweet addiction of the written word and get a chance to be featured on The Scribbled Stories’ social media handles."
+                            +"</p>"
+                            +"<p>"
+                                +"Maybe the next time, your friends will tag you on your own post."
+                            +"</p>"
+                            
+                        +"</p>",
+            eventDescription: "<p>"
+                                    +"<ol>"
+                                        +"<li>"
+                                            +"The duration of The Scribbled Stories Workshop will be 2 Hours 30 Minutes. (Yeah. Not 5 Hours, because we don’t like to see people sleep while we work)."
+                                        +"</li>"
+                                        +"<li>"
+                                            +"Two authors (to be announced soon) from The Scribbled Stories will be hosting you. ( The committee hates giving spoilers, or does it?)"
+                                        +"</li>"
+                                        +"<li>"
+                                            +"There are no restrictions in genres. ( Because we’re like that)"
+                                        +"</li>"
+                                    +"</ol>"
+                                    +"<br>"
+                                    +"<b>PERKS</b>"
+                                    +"<p>( We thought that this might be enough to get money out from your pocket.)</p>"
+                                    +"<ol>"
+                                        +"<li>"
+                                            +"Top 20 write ups received from the participants will posted on the official social media pages of The Scribbled Stories with the participants name on the post."
+                                        +"<li>"
+                                        +"<li>"
+                                            +"The selected write ups will be given an exposure of upto 5,00,000 people on Facebook."
+                                        +"<li>"
+                                        +"<li>"
+                                            +"The writers of the selected write ups will be awarded with prizes worth INR 10,000."
+                                        +"<li>"
+                                    +"</ol>"
+                                +"</p>",
+            rules: "<p>"
+                        +"<b>General Rules </b>"
+                        +"<ol>"
+                            +"<li>The participants shall reach the venue at least 5 minutes before the event starts. (OMG! Before time? That’s tough, right? But we just decided to not have a havoc!)</li>"
+                            +"<li>Each participant will be engaged individually in the workshop. ( Ahaa! We don’t want to see you sharing your prize. We love our audience, you see.)</li>"
+                            +"<li>Carrying an ID card and the entry pass is mandatory. ( It won’t be a pleasant feeling to pay and not attend. Promise you won’t say that we didn’t warn you.)</li>"
+                            
+                        +"</ol>"
+                    +"</p>",
+            judges: null,
+            query: "<p>"
+            +"Will be Updated Soon."
+            +"<br><br>"
+            +"For any query, contact us at literary@plinth.in"
+        +"</p>",
+            sponsors: null,
+        },
+        {
+
+            clubName: "Literature",
+            eventName: "UnErase Poetry",
+            payName: "UEP",
+            eventDate: "19th - 21st Jan 2017",
+            eventVenue: "The LNMIIT, Jaipur",
+            memberUpperLimit: 2,
+            memberLowerLimit: 1,
+            prizeWorth: null,
+            eventFee: '₹ 100/-',
+            synopsis:  "<p>"
+                            +"Does “O captain, my captain”, a series of rather unrelated words, bring joy to you? Does your inner self constantly seeks for explanation and meaning to life? Wouldn’t it be awesome if you  be fuel itself to introspect one’s own self. Well that is what poetry is based on."
+                        +"</p>"
+                        +"<p>"
+                            +"Poetry can be called the purest form of expression through words. UnErase Poetry offers you the platform, to hear out thought preaching and most truthful form of poetry. So break away from the chains that tether you to the unreal expectations of both men and women and join us as poets hold the mic to express beauty in its most natural form."
+                        +"</p>",
+            eventDescription: null,
+            rules: null,
+            judges: null,
+            query: "<p>"
+                        +"Will be Updated Soon."
+                        +"<br><br>"
+                        +"For any query, contact us at literary@plinth.in"
+                    +"</p>",
+            sponsors: null,
+        }, 
+
         {
 
             clubName: "Coding",
@@ -196,6 +355,7 @@ module.exports = {
                         +"For any query, contact us at coding@plinth.in"
                     +"</p>",
         },
+
         {
 
             clubName: "Management",
@@ -227,6 +387,7 @@ module.exports = {
                     +"</p>",
             sponsors: "Coming Soon",
         },
+
         {
 
             clubName: "Quizzing",
@@ -289,6 +450,7 @@ module.exports = {
                     +"</p>",
             sponsors: null, 
         },
+
         {
             clubName: "Robotics",
             eventName: "Robowar",

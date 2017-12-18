@@ -9,8 +9,8 @@
             var next;
             var mevent;
             var mevents = <%- JSON.stringify(events) %> ;
-                
-            </script>
+
+        </script>
 </head>
 
 <body>
@@ -240,18 +240,18 @@
                                     <div class="my-rotate">
                                         <div class="uk-grid-medium" uk-grid>
 
-                                                <div class="boxing-center boxing">
-                                                        <div class="hexagon coming-soon-image">
-                                                            <div class="hexTop"></div>
-                                                            <div class="hexBottom"></div>
-                                                            <div class="hexagon-hidden2 hover">
-                                                                <div class="hexTop" id="hiddenArea"></div>
-                                                                <div class="hexBottom" id="hiddenArea"></div>
-        
-                                                                <div class="statement">Coming Soon</div>
-                                                            </div>
-                                                        </div>
+                                            <div class="boxing-center boxing">
+                                                <div class="hexagon coming-soon-image">
+                                                    <div class="hexTop"></div>
+                                                    <div class="hexBottom"></div>
+                                                    <div class="hexagon-hidden2 hover">
+                                                        <div class="hexTop" id="hiddenArea"></div>
+                                                        <div class="hexBottom" id="hiddenArea"></div>
+
+                                                        <div class="statement">Coming Soon</div>
                                                     </div>
+                                                </div>
+                                            </div>
                                         </div>
 
 
@@ -458,23 +458,50 @@
                                         </h1>
                                     </div>
                                     <div class="my-rotate">
-                                        <div class="uk-grid-medium" uk-grid>
+                                        <div class="uk-grid-medium " uk-grid>
 
-                                            <div class="boxing-center boxing">
-                                                <div class="hexagon coming-soon-image">
+                                            <div class="boxing-left boxing">
+                                                <div class="hexagon rostrum-image more-details">
                                                     <div class="hexTop"></div>
                                                     <div class="hexBottom"></div>
-                                                    <div class="hexagon-hidden2 hover">
+                                                    <div class="hexagon-hidden hover">
                                                         <div class="hexTop" id="hiddenArea"></div>
                                                         <div class="hexBottom" id="hiddenArea"></div>
 
-                                                        <div class="statement">Coming Soon</div>
+                                                        <div class="statement">Rostrum</div>
                                                     </div>
                                                 </div>
                                             </div>
- 
-                                        </div>
 
+                                            <div class="boxing-right boxing">
+                                                <div class="hexagon scribbled-image more-details">
+                                                    <div class="hexTop"></div>
+                                                    <div class="hexBottom"></div>
+                                                    <div class="hexagon-hidden hover">
+                                                        <div class="hexTop" id="hiddenArea"></div>
+                                                        <div class="hexBottom" id="hiddenArea"></div>
+
+                                                        <div class="statement">Scribbled Stories</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-grid-medium" uk-grid>
+                                            <div class="boxing-center boxing">
+                                                <div class="hexagon unerase-image more-details">
+                                                    <div class="hexTop"></div>
+                                                    <div class="hexBottom"></div>
+                                                    <div class="hexagon-hidden hover">
+                                                        <div class="hexTop" id="hiddenArea"></div>
+                                                        <div class="hexBottom" id="hiddenArea"></div>
+
+                                                        <div class="statement">UnErase Poetry</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
 
 
 
@@ -529,46 +556,50 @@
                                     </div>
 
                                     <div>
-                                            
-                                            <h1 class="heading-li uk-align-center ">
-                                                <span id='eventName'></span>
-                                            </h1>
-                                        </div>
 
-                                        <div>
-                                                <ul class="uk-list text-list  uk-text-center uk-list-medium">
-                                                        <li id="fees">
-                                                            Fee :  <span id='eventFee'></span>
-                                                        </li>
-                                                        <li>
-                                                            Date :  <span id='eventDate'></span>
-                                                        </li>
-                                                        <li>
-                                                            Venue : <span id='eventVenue'></span>
-                                                        </li>
-                                                       
-                                                        
-                                                        <li id="prizes">
-                                                                Prizes Worth : <span id='prizeWorth'></span>
-                                                        </li>
-                                                        <br>
-                                                        <li>
-                                                            <% if(isLoggedIn){ %>
-                                                        
-                                                    
-                                                                <a class="uk-button button-font uk-button-default uk-button-large" href="#">Event Registeration</a>
-                                                                <% } else { %>
-                                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#register-center" uk-toggle>Register</a>
-                                                                    <% } %>
-                                                                </li>
-                                                        
-                                                                <br>
-                                                    </ul>
-                                                
+                                        <h1 class="heading-li uk-align-center ">
+                                            <span id='eventName'></span>
+                                        </h1>
+                                    </div>
 
-                                               
+                                    <div>
+                                        <ul class="uk-list text-list  uk-text-center uk-list-medium">
+                                            <li id="fees">
+                                                Fee :
+                                                <span id='eventFee'></span>
+                                            </li>
+                                            <li>
+                                                Date :
+                                                <span id='eventDate'></span>
+                                            </li>
+                                            <li>
+                                                Venue :
+                                                <span id='eventVenue'></span>
+                                            </li>
 
-                                            </div>
+
+                                            <li id="prizes">
+                                                Prizes Worth :
+                                                <span id='prizeWorth'></span>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <% if(isLoggedIn){ %>
+
+
+                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#">Event Registeration</a>
+                                                    <% } else { %>
+                                                        <a class="uk-button button-font uk-button-default uk-button-large" href="#register-center" uk-toggle>Register</a>
+                                                        <% } %>
+                                            </li>
+
+                                            <br>
+                                        </ul>
+
+
+
+
+                                    </div>
 
                                     <div class="my-rotate">
                                         <div uk-grid>
@@ -583,22 +614,22 @@
                                                     <a id="rules" href="#">Rules</a>
                                                 </li>
                                                 <li>
-                                                    <a  id="judges" href="#">Judges & Mentors</a>
+                                                    <a id="judges" href="#">Judges & Mentors</a>
                                                 </li>
 
                                                 <li>
-                                                        <a  id="contact" href="#">Contact</a>
+                                                    <a id="contact" href="#">Contact</a>
                                                 </li>
 
                                                 <li>
-                                                        <a  id="sponsors" href="#">Sponsors</a>
+                                                    <a id="sponsors" href="#">Sponsors</a>
                                                 </li>
 
                                             </ul>
-                                            
-    
+
+
                                             <div id="tab">
-                                                    
+
                                             </div>
 
 
@@ -632,11 +663,11 @@
 
                         <% include partials/footer %>
 
-                      
-        
+
+
 
         </div>
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- UIkit JS -->
         <script src="js/uikit.min.js"></script>

@@ -120,6 +120,23 @@ $(".more-details").click(function () {
       
         }
 
+        if(mevent.rules == null){
+
+           $("#rules").hide();
+            
+        }else{
+            $("#rules").show();
+      
+        }
+
+        if(mevent.eventDescription == null){
+
+           $("#description").hide();
+            
+        }else{
+            $("#description").show();
+      
+        }
        
         $("#rules").parent().removeClass("uk-active");
         $("#judges").parent().removeClass("uk-active");
