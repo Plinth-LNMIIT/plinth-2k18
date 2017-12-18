@@ -471,7 +471,7 @@ module.exports = {
             memberUpperLimit: 2,
             memberLowerLimit: 1,
             prizeWorth: '₹ 50,000/-',
-            eventFee: null,
+            eventFee: '₹ 700/-',
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
                                     +"<p>"
@@ -626,7 +626,7 @@ module.exports = {
             memberUpperLimit: 2,
             memberLowerLimit: 1,
             prizeWorth: '₹ 25,000/-',
-            eventFee: null,
+            eventFee: '₹ 250/-',
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
                                     +"<p>"
@@ -720,7 +720,7 @@ module.exports = {
             memberUpperLimit: 2,
             memberLowerLimit: 1,
             prizeWorth: '₹ 50,000/-',
-            eventFee: null,
+            eventFee: '₹ 600/-',
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
                                     +"<p>"
@@ -766,7 +766,7 @@ module.exports = {
             memberUpperLimit: 2,
             memberLowerLimit: 1,
             prizeWorth: '₹ 25,000/-',
-            eventFee: null,
+            eventFee: '₹ 250/-',
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
                                     +"<p>"
@@ -813,7 +813,7 @@ module.exports = {
             memberUpperLimit: 2,
             memberLowerLimit: 1,
             prizeWorth: '₹ 25,000/-',
-            eventFee: null,
+            eventFee: '₹ 250/-',
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
                                     +"<p>"
@@ -894,7 +894,7 @@ module.exports = {
             memberUpperLimit: 2,
             memberLowerLimit: 1,
             prizeWorth: '₹ 25,000/-',
-            eventFee: null,
+            eventFee: '₹ 250/-',
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
                                     +"<ol>"
@@ -984,7 +984,7 @@ module.exports = {
             memberUpperLimit: 2,
             memberLowerLimit: 1,
             prizeWorth: '₹ 40,000/-',
-            eventFee: null,
+            eventFee: '₹ 500/-',
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
                                     +"<p>"
@@ -1165,7 +1165,7 @@ module.exports = {
             memberUpperLimit: 2,
             memberLowerLimit: 1,
             prizeWorth: '₹ 25,000/-',
-            eventFee: null,
+            eventFee: '₹ 250/-',
             eventDescription: "<p>"
                                     +"<b>Problem Statement</b>"
                                     +"<p>"
