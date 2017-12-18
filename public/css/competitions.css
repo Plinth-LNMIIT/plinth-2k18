@@ -162,19 +162,19 @@
 }
 
 .rostrum-image{
-    background: url(/media/intouni.jpeg);
+    background: url(/media/rs.jpg);
     background-size: auto 346.4102px;
     background-position: center;
     background-repeat: no-repeat;
 }
 .scribbled-image{
-    background: url(/media/astrohunt.jpg);
+    background: url(/media/ss.jpg);
     background-size: auto 346.4102px;
     background-position: center;
     background-repeat: no-repeat;
 } 
 .unerase-image{
-    background: url(/media/astroquiz.jpg);
+    background: url(/media/unerase.jpg);
     background-size: auto 346.4102px;
     background-position: center;
     background-repeat: no-repeat;
