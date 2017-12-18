@@ -204,7 +204,9 @@ module.exports = {
                     +"</p>",
             judges: null,
             query: "<p>"
-                        +"Will be Updated Soon."
+                        +"Abhinav Mishra: +91-7376423271"
+                        +"<br>"
+                        +"Akash Mahadewan: +91-9660845930"
                         +"<br><br>"
                         +"For any query, contact us at literary@plinth.in"
                     +"</p>",
@@ -217,7 +219,7 @@ module.exports = {
             payName: "TSS",
             eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
-            memberUpperLimit: 3,
+            memberUpperLimit: 1,
             memberLowerLimit: 1,
             prizeWorth: '',
             eventFee: '<p>'
@@ -294,10 +296,12 @@ module.exports = {
                     +"</p>",
             judges: null,
             query: "<p>"
-            +"Will be Updated Soon."
-            +"<br><br>"
-            +"For any query, contact us at literary@plinth.in"
-        +"</p>",
+                        +"Abhinav Mishra: +91-7376423271"
+                        +"<br>"
+                        +"Akash Mahadewan: +91-9660845930"
+                        +"<br><br>"
+                        +"For any query, contact us at literary@plinth.in"
+                    +"</p>",
             sponsors: null,
         },
         {
@@ -307,7 +311,7 @@ module.exports = {
             payName: "UEP",
             eventDate: "19th - 21st Jan 2017",
             eventVenue: "The LNMIIT, Jaipur",
-            memberUpperLimit: 2,
+            memberUpperLimit: 1,
             memberLowerLimit: 1,
             prizeWorth: null,
             eventFee: '₹ 100/-',
@@ -321,7 +325,9 @@ module.exports = {
             rules: null,
             judges: null,
             query: "<p>"
-                        +"Will be Updated Soon."
+                        +"Abhinav Mishra: +91-7376423271"
+                        +"<br>"
+                        +"Akash Mahadewan: +91-9660845930"
                         +"<br><br>"
                         +"For any query, contact us at literary@plinth.in"
                     +"</p>",
