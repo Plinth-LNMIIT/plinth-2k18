@@ -17,7 +17,7 @@
         .end()
         .append('<option value="IP">International Press</option>');
 
-      $('#amount').text('Amount :₹ 800/-');
+      $('#amount').text('Amount :₹ 900/-');
       $('#hidden-matter').show();
     } else if (inputValue === 'Delegates') {
 
