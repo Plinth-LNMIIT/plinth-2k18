@@ -833,6 +833,7 @@ module.exports = {
                                         +"<li>A total of 2 minutes and 30 seconds will be provided to complete the actual run.</li>"
                                         +"<li> If the bot takes more than 3 minutes for completing the dry run, then the extra time taken will be deducted from the timing of the actual run which is 2 minutes and 30 Seconds.</li>"
                                     +"</ol>"
+                                    +"<p>This competition will have two rounds.Those teams which will be selected in first round, they will compete in second round.</p>"
                                     +"<b>Restarts</b>"
                                     +"<ol>"
                                         +"<li>The participants are allowed to take a maximum of 3 restarts in the entire match.</li>"
@@ -842,7 +843,7 @@ module.exports = {
                                         +"<li>During a restart, a contestant must not feed information about the arena to the bot. However, contestants are allowed to adjust sensors(gain, position etc.) and make hardware changes.</li>"
                                         +"<li>The contestant must not alter the bot in any manner that reduces its weight (e.g. removal of a bulky sensor array or switching to lighter batteries to get better speed). The organizers reserve the right to arbitrate in such circumstances.</li>"
                                     +"</ol>"
-                                   
+
                                 +"</p>",
             synopsis: "<p>"
                             +"Make an autonomous bot that completes the maze in shortest time."
