@@ -422,7 +422,7 @@ module.exports = {
                             +"Is your life summarised by the 4 words - Eat, Sleep, Code, Repeat? Want to prove yourself to be The Ultimate Code Master?"
                         +"</p>"
                         +"<p>"
-                            +"Tired of searching for the perfect team mates in every competition? Want to prove your worth as a solo coder? Looking for the perfect platform to show display your skills?"
+                            +"Tired of searching for the perfect team mates in every competition? Want to prove your worth as a solo coder? Looking for the perfect platform to display your skills?"
                         +"</p>"
                         +"<p>"
                             +"This solo coding competition, is designed for the masterminds who think they perform best alone."
