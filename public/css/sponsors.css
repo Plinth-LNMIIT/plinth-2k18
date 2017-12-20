@@ -2,7 +2,7 @@
   /* Hexagons */
 #hexGrid {
  
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   padding: 0.866% 0;
   
@@ -47,7 +47,7 @@
   top:35%;
 } 
 .de{
-  top:40%;
+  top:35%;
 } 
 .extra{
   top:30%;
