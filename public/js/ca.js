@@ -6,6 +6,7 @@ url = 'https://script.google.com/macros/s/AKfycbzNa7IXdkMNQ3Phi8eNEzI-r-IAHlX5_j
 
 document.getElementById('ca-form').onsubmit= function(e){
     e.preventDefault();
+    $('#submit-form').attr("disabled", true);
     $.ajax({
         url: url,
         method: "GET",
@@ -13,7 +14,7 @@ document.getElementById('ca-form').onsubmit= function(e){
         success: function(data) {
             $('#ca-form').hide();
             $('#form-response').removeClass('uk-hidden');
-           
+            $('#submit-form').removeAttr("disabled");
          
         }
     });
