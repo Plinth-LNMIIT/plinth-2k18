@@ -1,28 +1,84 @@
+.project-image{
+    background: url(/media/project.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.roborace-image{
+    background: url(/media/roborace.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.debate-image{
+    background: url(/media/rs.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.quiz-image{
+    background: url(/media/quiz.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sop-image{
+    background: url(/media/coming.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
 
 
+.small-font{
+    font-size: 24px;
+    line-height: 48px;
+}
 
-@media only screen and (max-width: 1023px) {
-  
- }
- 
- @media only screen and (max-width: 767px) {
-  
- }
- 
- @media only screen and (max-width: 480px) {
+
+@media only screen and (max-width: 960px) {
+    
+    .boxing{
+       padding: 5% 0% 5% 0%  ;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .boxing{
+       padding: 10% 0 10% 0  ;
+    }
+}
+
+@media only screen and (max-width: 480px) {
    
-   
- }
+
+    .boxing{
+       padding: 15% 0 15% 0  ;
+    }
+
+    #tabs > li > a{
+       border:unset;
+       font-size: 1rem;
+     
+   }
+   .heading-li{
+       font-size: 2rem;
+       padding-left: 10%;
+   }
+     
+     
+}
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 640px) 
+                   and (orientation: landscape) {
  
- @media only screen and (min-device-width: 480px) 
-                    and (max-device-width: 640px) 
-                    and (orientation: landscape) {
-  
-                  
- 
- }
- 
-  
-  
- 
- 
+                      
+
+                        .boxing{
+                           padding: 10% 0 10% 0  ;
+                        }
+} 
