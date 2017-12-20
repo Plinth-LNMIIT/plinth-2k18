@@ -79,8 +79,14 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-.codeswap-image{
+.iupc-image{
     background: url(/media/codeswap.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.enigma-image{
+    background: url(/media/enigma.jpg);
     background-size: auto 346.4102px;
     background-position: center;
     background-repeat: no-repeat;

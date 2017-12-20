@@ -68,7 +68,7 @@ $(".more-details").click(function () {
     if (mevent != undefined) {
         current.hide();
         $('#clubName').html(mevent.clubName);
-        $('#eventName').html(mevent.eventName);
+        $('#eventName').html(mevent.displayName);
       
         $('#eventDate').html(mevent.eventDate);
         $('#eventVenue').html(mevent.eventVenue);

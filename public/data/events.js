@@ -4,8 +4,9 @@ module.exports = {
 
             clubName: "Astronomy",
             eventName: "Into The Universe",
+            displayName: "Into The Universe",
             payName: "INT",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 3,
             memberLowerLimit: 1,
@@ -75,14 +76,14 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Gaurav Kulkarni: +91-7742669667"
                         +"<br>"
                         +"Malvika Maloo: +91-9950545133"
                         +"<br>"
                         +"Abhinav Binjola:+91-7742323105"
                         +"<br><br>"
-                        +"For any query, contact us at astronomy@plinth.in"
+                        +"For any query, contact us at <a href='mailto:astronomy@plinth.in'>astronomy@plinth.in</a>"
                     +"</p>",
             sponsors: null,
         },
@@ -90,8 +91,9 @@ module.exports = {
 
             clubName: "Astronomy",
             eventName: "Astro Hunt",
+            displayName: "Astro Hunt",
             payName: "AH",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 3,
             memberLowerLimit: 1,
@@ -111,14 +113,14 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Gaurav Kulkarni: +91-7742669667"
                         +"<br>"
                         +"Aarshi Chaurasia: +91-8290720034"
                         +"<br>"
                         +"Monil Narang:+91-9462236381"
                         +"<br><br>"
-                        +"For any query, contact us at astronomy@plinth.in"
+                        +"For any query, contact us at <a href='mailto:astronomy@plinth.in'>astronomy@plinth.in</a>"
                     +"</p>",
             sponsors: null,
         },
@@ -126,8 +128,9 @@ module.exports = {
 
             clubName: "Astronomy",
             eventName: "Astro Quiz",
+            displayName: "Astro Quiz",
             payName: "AQ",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
@@ -153,14 +156,14 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Priyansh Jain: +91-8290925378"
                         +"<br>"
                         +"Ria Lamba: +91-9799494808"
                         +"<br>"
                         +"Kartik Shankavaram:+91-9460521848"
                         +"<br><br>"
-                        +"For any query, contact us at astronomy@plinth.in"
+                        +"For any query, contact us at <a href='mailto:astronomy@plinth.in'>astronomy@plinth.in</a>"
                     +"</p>",
             sponsors: null,
         },
@@ -169,8 +172,9 @@ module.exports = {
 
             clubName: "Literature",
             eventName: "Rostrum",
+            displayName: "Rostrum - The Debate",
             payName: "RST",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 2,
@@ -199,16 +203,16 @@ module.exports = {
                         +"</p>"
                       
                         +"<p>"
-                            + "Online Registrations will be open till 19th January, 2018. Offline registration will be subject to the discretion of the organizers."
+                            + "Online Registrations will be open till 19<sup>th</sup>January, 2018. Offline registration will be subject to the discretion of the organizers."
                         +"</p>"
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Abhinav Mishra: +91-7376423271"
                         +"<br>"
                         +"Akash Mahadewan: +91-9660845930"
                         +"<br><br>"
-                        +"For any query, contact us at literary@plinth.in"
+                        +"For any query, contact us at <a href='mailto:literary@plinth.in'>literary@plinth.in</a>" 
                     +"</p>",
             sponsors: null,
         },
@@ -216,8 +220,9 @@ module.exports = {
 
             clubName: "Literature",
             eventName: "Scribbled Stories",
+            displayName: "The Scribbled Stories - Workshop",
             payName: "TSS",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 1,
             memberLowerLimit: 1,
@@ -295,12 +300,12 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Abhinav Mishra: +91-7376423271"
                         +"<br>"
                         +"Akash Mahadewan: +91-9660845930"
                         +"<br><br>"
-                        +"For any query, contact us at literary@plinth.in"
+                        +"For any query, contact us at <a href='mailto:literary@plinth.in'>literary@plinth.in</a>" 
                     +"</p>",
             sponsors: null,
         },
@@ -308,8 +313,9 @@ module.exports = {
 
             clubName: "Literature",
             eventName: "UnErase Poetry",
+            displayName: "UnErase Poetry",
             payName: "UEP",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 1,
             memberLowerLimit: 1,
@@ -324,12 +330,12 @@ module.exports = {
             eventDescription: null,
             rules: null,
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Abhinav Mishra: +91-7376423271"
                         +"<br>"
                         +"Akash Mahadewan: +91-9660845930"
                         +"<br><br>"
-                        +"For any query, contact us at literary@plinth.in"
+                        +"For any query, contact us at <a href='mailto:literary@plinth.in'>literary@plinth.in</a>" 
                     +"</p>",
             sponsors: null,
         }, 
@@ -337,33 +343,131 @@ module.exports = {
         {
 
             clubName: "Coding",
-            eventName: "CodeSwap",
-            payName: "CS",
-            eventDate: "19th - 21st Jan 2017",
+            eventName: "IUPC",
+            displayName: "Inter University Programming Challenge(IUPC)",
+            payName: "IUPC",
+            eventDate: "<p>"
+                            +"Online Round - 6<sup>th</sup> Jan, 2018"
+                            +"<br>"
+                            +"Onsite Round - 21<sup>st</sup> Jan, 2018"
+                        +"</p>",
             eventVenue: "The LNMIIT, Jaipur",
-            memberUpperLimit: 2,
-            memberLowerLimit: 2,
-            prizeWorth: '₹ 30,000/-',
+            memberUpperLimit: 3,
+            memberLowerLimit: 1,
+            prizeWorth: '₹ 20,000/-',
             eventFee: null,
-            synopsis: null,
-            eventDescription: "<p>“CodeSwap” is a Short Programming Team Contest . In this programming event there will be 2 problems to be solved in 1 Hour.<br> The Team will consist of 2 member .The first member will solve Problem A and the second member will solve Problem B. After 30min they will swap their positions and complete the program of other person.</p>",
+            synopsis:  "<p>"
+                            +"See logic in everything around? Is your daily language “Syntax”?"
+                        +"</p>"
+                        +"<p>"
+                            +"The team contest designed to rattle your brains - Think you (and your partner(s)) are smart enough to crack the code? Ever wanted to experience the ACM – ICPC adrenaline? Want to battle it out with some of the best coders in the country?"
+                        +"</p>"
+                        +"<p>"
+                            +"Then register yourself for this legacy coding contest !"
+                        +"</p>",
+            eventDescription: "<p>"
+                                    +"The contest will involve 2 rounds – an online qualifier round and a final onsite battle!"
+                                +"</p>"
+                                +"<p>"
+                                    +"The registered teams will first compete in the online qualifier round - The teams that will cross the cut off will be invited to the onsite round to battle it out to the finish line."
+                                +"</p>"
+                                +"<p>"
+                                    +"Following the ICPC format, both online and onsite rounds will have a set of 10 questions, each ranging from cakewalk to hard level and you get 5 hours in each round to crack as many as you can!"
+                                +"</p>"
+                                +"<p>"
+                                    +"Certificates and prizes(worth Rs 20, 000) will be awarded to the top 3 winners of the onsite round."
+                                +"</p>"
+                                +"<b>Platform Partner:</b>"
+                                +"<p>HackerEarth</p>",
             rules: "<p>"
-                        +"<b>Registration Rules </b>"
+                        +"<b>Key Details of IUPC'18</b>"
                         +"<ol>"
-                            +"<li>Team with exactly 2 members is allowed. </li>"
-                            +"<li> Team members must be of the same university.</li>"
-                            +"<li>Positions will be swaped after 30 minutes. </li>"
+                            +"<li>The first online round of the contest will be held on 6<sup>th</sup> January 2018 (Saturday).</li>"
+                            +"<li>Contest duration will be 5 hours.</li>"
+                            +"<li>Team with a maximum of 3 members is allowed. Team Members must be of the same college/university.</li>"
                             +"<li>Plagiarism by any means will lead to immediate disqualification of the team.</li>"
-                            +"<li>To claim prize you need to be registered here.</li>"
+                            +"<li>Teams that cross the cut off score in the Qualifier Round will be selected for the Onsite Round during PLINTH'18 at The LNMIIT, Jaipur.</li>"
+                            +"<li>Penalty of 10 Minutes will be charged for every incorrect submission.</li>"
                         +"</ol>"
+                        +"<p>Prizes worth ₹ 20,000/- for grabs (only for the onsite Round) !!</p>"
                     +"</p>",
             judges: null,
-            query: "<p>"
-                        +"Aditya Aggarwal: +91-9001904206"
+           query: "<p class='link-text'>"
+                        +"Aditya Aggarwal: +91-8791636347"
                         +"<br>"
-                        +"Yash Aggarwal: +91-9001440508"
+                        +"Garvit Bhatia: +91-9414858869"
+                        +"<br>"
+                        +"Vrinda Goel: +91-8003890410"
                         +"<br><br>"
-                        +"For any query, contact us at coding@plinth.in"
+                        +"For any query, contact us at <a href='mailto:coding@plinth.in'>coding@plinth.in</a>"
+                    +"</p>",
+        },
+        {
+
+            clubName: "Coding",
+            eventName: "Enigma",
+            displayName: "Enigma – The Plinth CodeSprint",
+            payName: "ENCS",
+            eventDate: "<p>"
+                            +"Online Round - 11<sup>th</sup> Jan, 2018"
+                            +"<br>"
+                            +"Onsite Round - 20<sup>th</sup> Jan, 2018"
+                        +"</p>",
+            eventVenue: "The LNMIIT, Jaipur",
+            memberUpperLimit: 1,
+            memberLowerLimit: 1,
+            prizeWorth: '₹ 15,000/-',
+            eventFee: null,
+            synopsis:  "<p>"
+                            +"Is your life summarised by the 4 words - Eat, Sleep, Code, Repeat? Want to prove yourself to be The Ultimate Code Master?"
+                        +"</p>"
+                        +"<p>"
+                            +"Tired of searching for the perfect team mates in every competition? Want to prove your worth as a solo coder? Looking for the perfect platform to show display your skills?"
+                        +"</p>"
+                        +"<p>"
+                            +"This solo coding competition, is designed for the masterminds who think they perform best alone."
+                        +"</p>"
+                        +"<p>"
+                            +"So, if this is a challenge you dare to take on, then register yourself in this ultimate CodeSprint !"
+                        +"</p>",
+            eventDescription: "<p>"
+                                    +"The contest will involve 2 rounds – an online qualifier round and a final onsite battle!"
+                                +"</p>"
+                                +"<p>"
+                                    +"The registered particpants will first compete in the online qualifier round - The participants that qualify this round will get a chance to fight the codewar, to win, in the onsite round."
+                                +"</p>"
+                                +"<p>"
+                                    +"Both online and onsite rounds will have a set of 7 questions, each ranging from cakewalk to hard level and you get 4 hours in each round to crack as many as you can!"
+                                +"</p>"
+                                +"<p>"
+                                    +"Certificates and prizes(worth ₹ 15, 000) will be awarded to the top 3 winners of the onsite round."
+                                +"</p>"
+                                +"<p>"
+                                    +"<b>P.S :</b> There is a special detail about the online round held on CodeChef that will be revealed soon! Stay tuned!"
+                                +"</p>"
+                                +"<b>Platform Partner:</b>"
+                                +"<p>CodeChef</p>",
+            rules: "<p>"
+                        +"<b>Key Details of Enigma – The Plinth CodeSprint'18</b>"
+                        +"<ol>"
+                            +"<li>The first online round of the contest will be held on 11<sup>th</sup> January 2018 (Thursday).</li>"
+                            +"<li>Contest duration will be 4 hours.</li>"
+                            +"<li>This is a solo contest – no team participation is allowed.</li>"
+                            +"<li>Plagiarism by any means will lead to immediate disqualification of the participant.   </li>"
+                            +"<li>Participants that cross the cut off score in the Qualifier Round will be selected for the Onsite Round during PLINTH'18 at The LNMIIT, Jaipur.</li>"
+                            +"<li>Penalty of 10 Minutes will be charged for every incorrect submission.</li>"
+                        +"</ol>"
+                        +"<p>Prizes worth ₹ 15,000/- for grabs (only for the onsite Round) !!</p>"
+                    +"</p>",
+            judges: null,
+           query: "<p class='link-text'>"
+                        +"Aditya Aggarwal: +91-8791636347"
+                        +"<br>"
+                        +"Garvit Bhatia: +91-9414858869"
+                        +"<br>"
+                        +"Vrinda Goel: +91-8003890410"
+                        +"<br><br>"
+                        +"For any query, contact us at <a href='mailto:coding@plinth.in'>coding@plinth.in</a>"
                     +"</p>",
         },
 
@@ -371,8 +475,9 @@ module.exports = {
 
             clubName: "Management",
             eventName: "StartUp Intern Fair",
+            displayName: "StartUp Intern Fair",
             payName: "SIF",
-            eventDate: "9AM - 6PM, 21st Jan 2017",
+            eventDate: "9AM - 6PM, 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 1,
             memberLowerLimit: 1,
@@ -389,12 +494,12 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-            query: "<p>"
+            query: "<p class='link-text'>"
                         +"Deepanshu Sharma: +91-9636618379"
                         +"<br>"
                         +"Paresh Mishra: +91-9521876701"
                         +"<br><br>"
-                        +"For any query, contact us at sif@plinth.in"
+                        +"For any query, contact us at <a href='mailto:sif@plinth.in'>sif@plinth.in</a>"
                     +"</p>",
             sponsors: "Coming Soon",
         },
@@ -403,8 +508,9 @@ module.exports = {
 
             clubName: "Quizzing",
             eventName: "Business Quiz",
+            displayName: "Business Quiz",
             payName: "BQ",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
@@ -414,12 +520,12 @@ module.exports = {
             eventDescription: "<p><ol><li>The Quiz will be held in 2 rounds, both these rounds will take place back to back at LNMIIT during Plinth.</li><li>The final round will be between the top 8 teams from Prelims.</li><li>The decision of Quizmaster will be final and binding.</li></ol></p>",
             rules: "<p><b>General Rules </b><ol><li>A team can consist of 1 or 2 participants</li><li>Both the participants must be from same institute.</li><li>Decision of the Quiz master is final.</li><li>Any means of cheating will lead to immediate disqualification from the event.</li></ol></p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Shikhar Dalela: +91-7742158600"
                         +"<br>"
                         +"Rachit Jain: +91-7073743152"
                         +"<br><br>"
-                        +"For any query, contact us at quizzinga@plinth.inn"
+                        +"For any query, contact us at <a href='mailto:quizzinga@plinth.in'>quizzinga@plinth.in</a>" 
                     +"</p>",
             sponsors: null, 
         },
@@ -427,8 +533,9 @@ module.exports = {
 
             clubName: "Quizzing",
             eventName: "General Quiz",
+            displayName: "General Quiz",
             payName: "GQ",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
@@ -452,12 +559,12 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Shikhar Dalela: +91-7742158600"
                         +"<br>"
                         +"Rachit Jain: +91-7073743152"
                         +"<br><br>"
-                        +"For any query, contact us at quizzinga@plinth.inn"
+                        +"For any query, contact us at <a href='mailto:quizzinga@plinth.in'>quizzinga@plinth.in</a>"
                     +"</p>",
             sponsors: null, 
         },
@@ -465,8 +572,9 @@ module.exports = {
         {
             clubName: "Robotics",
             eventName: "Robowar",
+            displayName: "Robowar",
             payName: "RW",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 6,
             memberLowerLimit: 2,
@@ -608,20 +716,21 @@ module.exports = {
                         
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Harshil Bhandari: +91-7597526581"
                         +"<br>"
                         +"Parth Agarwal: +91-9571016327"
                         +"<br><br>"
-                        +"For any query, contact us at robotics@plinth.in"
+                        +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
             sponsors: null, 
         },
         {
             clubName: "Robotics",
             eventName: "Robosoccer",
+            displayName: "Robosoccer",
             payName: "RS",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 6,
             memberLowerLimit: 3,
@@ -702,20 +811,21 @@ module.exports = {
                         
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Divyansh Shara: +91-7727050728"
                         +"<br>"
                         +"Harsh Upadhyay: +91-9929543341"
                         +"<br><br>"
-                        +"For any query, contact us at robotics@plinth.in"
+                        +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
             sponsors: null, 
         },
         {
             clubName: "Robotics",
             eventName: "Drone Obstruction",
+            displayName: "Drone Obstruction",
             payName: "DO",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 5,
             memberLowerLimit: 1,
@@ -748,20 +858,21 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Prakhar Kesarwani: +91-8209034268"
                         +"<br>"
                         +"Kanishk Sharma: +91-7599063441"
                         +"<br><br>"
-                        +"For any query, contact us at robotics@plinth.in"
+                        +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
             sponsors: null, 
         },
         {
             clubName: "Robotics",
             eventName: "LFR",
+            displayName: "LFR",
             payName: "LFR",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 4,
             memberLowerLimit: 1,
@@ -795,20 +906,21 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Akshay Shrimali: +91-9461395585"
                         +"<br>"
                         +"Divya Baid: +91-9660172742"
                         +"<br><br>"
-                        +"For any query, contact us at robotics@plinth.in"
+                        +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
             sponsors: null, 
         },
         {
             clubName: "Robotics",
             eventName: "Maze Solver",
+            displayName: "Maze Solver",
             payName: "MS",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 4,
             memberLowerLimit: 1,
@@ -877,20 +989,21 @@ module.exports = {
                         
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Rishabh Jain: +91-9521611320"
                         +"<br>"
                         +"Kritika Jain: +91-9131919809"
                         +"<br><br>"
-                        +"For any query, contact us at robotics@plinth.in"
+                        +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
             sponsors: null, 
         },
         {
             clubName: "Robotics",
             eventName: "Roborace",
+            displayName: "Roborace",
             payName: "RB",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 4,
             memberLowerLimit: 1,
@@ -967,20 +1080,21 @@ module.exports = {
                         
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Ashish Raj Gupta: +91-7300044970"
                         +"<br>"
                         +"Karan Singh Chouhan: +91-8561875907"
                         +"<br><br>"
-                        +"For any query, contact us at robotics@plinth.in"
+                        +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
             sponsors: null, 
         },
         {
             clubName: "Robotics",
             eventName: "RC Plane",
+            displayName: "RC Plane",
             payName: "RCP",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 5,
             memberLowerLimit: 1,
@@ -1148,20 +1262,21 @@ module.exports = {
                         
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Yogesh Modi: +91-9784877567"
                         +"<br>"
                         +"Neha Jhamtani: +91-8769081710"
                         +"<br><br>"
-                        +"For any query, contact us at robotics@plinth.in"
+                        +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
             sponsors: null, 
         },
         {
             clubName: "Robotics",
             eventName: "Transporter",
+            displayName: "Transporter",
             payName: "TP",
-            eventDate: "19th - 21st Jan 2017",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 5,
             memberLowerLimit: 1,
@@ -1228,12 +1343,12 @@ module.exports = {
                         
                     +"</p>",
             judges: null,
-            query: "<p>"
+           query: "<p class='link-text'>"
                         +"Khyati Doshi: +91-9636445125"
                         +"<br>"
                         +"Puru upadhyay: +91-9166015620"
                         +"<br><br>"
-                        +"For any query, contact us at robotics@plinth.in"
+                        +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
             sponsors: null, 
         },
