@@ -523,7 +523,7 @@ module.exports = {
            query: "<p class='link-text'>"
                         +"Shikhar Dalela: +91-7742158600"
                         +"<br>"
-                        +"Rachit Jain: +91-7073743152"
+                        +"Rachit Sharma: +91-7073743152"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:quizzinga@plinth.in'>quizzinga@plinth.in</a>" 
                     +"</p>",
@@ -562,7 +562,7 @@ module.exports = {
            query: "<p class='link-text'>"
                         +"Shikhar Dalela: +91-7742158600"
                         +"<br>"
-                        +"Rachit Jain: +91-7073743152"
+                        +"Rachit Sharma: +91-7073743152"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:quizzinga@plinth.in'>quizzinga@plinth.in</a>"
                     +"</p>",
