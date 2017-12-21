@@ -1,26 +1,150 @@
 
+.scribbled-image{
+    background: url(/media/ss.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+.iot-image{
+    background: url(/media/iot1.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+#details{
+    display: none;
+}
+
+.back-back-icon{
+    padding-left: 0%; 
+}
+
+.backy{
+    padding-left: 0%; 
+}
+
+.fill-space{
+    height: 100%;
+}
+.scroll-content2{
+    max-height: 100%;
+     min-height: 100%;
+   overflow-y: scroll;
+  }
+
+ .inner-content2{
+   padding: 16px;
+ }
+ 
+ #tabs > li > a{
+     border:unset;
+     font-size: 1.5rem;
+   
+ }
+#tabs{
+    background: rgba(109, 121, 231, 0.603);
+    width: 90%;
+    padding: 0px;
+}
+#tab{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.2rem;
+    width: 90%;
+    padding-left:0%;
+    margin-left: 10%;
+    margin-right: 10%; 
+}
+
+#tab > p,ul,li {
+    font-family: 'Oxygen', sans-serif;
+}
+
+#tab > p > b {
+   font-size: 1.4rem;
+   font-weight: unset;
+}
+
+.dropp{
+    padding:8px;
+    background: rgba(122, 101, 243, 0.836);
+}
+.above-drop {
+    margin-top: 0px;
+    padding:0px;
+     
+}
+.uk-tab::before{
+    left:0;
+}
+ 
+ .heading-li{
+     font-size: 2.2rem;
+     padding-left: 3%;
+ }
+ .text-list{
+    padding-left: 3%;
+     font-size: 1.4rem;
+ }
+
+ @media only screen and (max-width: 1366px) {
+    #tabs > li > a{
+         
+        font-size: 1.2rem;
+      
+    }
+}
 
 
-@media only screen and (max-width: 1023px) {
-  
- }
- 
- @media only screen and (max-width: 767px) {
-  
- }
- 
- @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 960px) {
+    #tabs > li > a{
+         
+        font-size: 1.2rem;
+      
+    }
+    .boxing{
+       padding: 5% 0% 5% 0%  ;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .boxing{
+       padding: 10% 0 10% 0  ;
+    }
+}
+
+@media only screen and (max-width: 480px) {
    
-   
- }
+
+    .boxing{
+       padding: 15% 0 15% 0  ;
+    }
+
+    #tabs > li > a{
+       border:unset;
+       font-size: 1rem;
+     
+   }
+   .heading-li{
+       font-size: 1.5rem;
+       padding-left: 10%;
+   }
+     
+     
+}
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 640px) 
+                   and (orientation: landscape) {
  
- @media only screen and (min-device-width: 480px) 
-                    and (max-device-width: 640px) 
-                    and (orientation: landscape) {
-  
-                  
- 
- }
+                      
+
+                        .boxing{
+                           padding: 10% 0 10% 0  ;
+                        }
+} 
+
  
   
   

@@ -1,14 +1,3 @@
-.boxing-left{
-   
-}
-.boxing-right{
-  
-}
-.boxing-center{
-    
- 
-    
-}
 .astro-image{
     background: url(/media/astronomy.jpg);
     background-size: auto 346.4102px;
@@ -283,6 +272,14 @@
      font-size: 1.4rem;
  }
 
+ @media only screen and (max-width: 1366px) {
+    #tabs > li > a{
+         
+        font-size: 1.2rem;
+      
+    }
+}
+
 @media only screen and (max-width: 960px) {
      
      .boxing{
@@ -310,7 +307,7 @@
       
     }
     .heading-li{
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding-left: 10%;
     }
       

@@ -1,24 +1,121 @@
 module.exports = {
-    events : [
+    workshops : [
         {
-            
-            clubName : "Robotics",
-            eventName : "Roborace",
-            eventDate : "18th - 19th Jan 2017",
+            clubName : "Workshops",
+            eventName : "Internet Of Things",
+            displayName : "Roborace",
+            payName: "INT",
+            eventDate : "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue : "The LNMIIT, Jaipur",
-            memberUpperLimit : 4,
+            eventCompany : "Proxbotics Creation",
+            memberUpperLimit : 1,
             memberLowerLimit : 1,
-            prizeWorth :  '₹ 30,000',
-            synopsis : " <p>This event consists of 2 rounds: Spacewalk and Messier marathon. Detailed description of the event are as follows.</p><p><b>1st Round: Spacewalk</b></p><p>It will be an audio-visual quiz related to astronomy.Pictures and videos would be projected in front and participants have to answer the questions that follow.</p><p><b>2nd Round: Messier Marathon</b></p><p>So are you one of those who sneak out of your rooms during night hours and wander long gazing at the sky, trying to build up your imagination. Well folks then this is a perfect game for you to play, a hunt for the stars. Participants need to set themselves on a voyage of different celestial bodies and conquer to best of their capabilities. So, are you ready for this mission to get kicked off? See you at the battle field . A basic tutorial session would be held on handling of telescope and any further enhancements of the skills would be student’s personal interest.</p>",
+            eventFee: null,
+            synopsis: null,
             eventDescription : " <p><b>Spacewalk</b><ol><li>Participants will have 1 minute to answer each question by writing it down on the given sheet.</li><li>These questions will be objective or one word.</li><li>Each question will carry 2 points.</li><li>Marks will be allotted to each question individually.</li><li>Only top 50% teams will go to the next round.</li></ol></p><p><b>Spacewalk</b><ol><li>Teams will be provided with certain token numbers and called upon on its basis.</li><li>A star map, a laser pointer and telescope shall be provided to the team</li><li>The teams which had qualified in the quiz would be required to point at certain celestial objects through pointer and telescope</li><li>Minimum time shall be provided, based on which points are to be rewarded.</li><li>Team with maximum score would be declared winner.</li><li>Teams are suppose to restrain themselves from using any android application such as Google Sky Map or any other lectronic media.</li><li>Points will be given for locating the objects precisely only on first attempt.</li></ol></p>",
-            rules : "<p><b>General Rules </b><ol><li>Participants can form team of up to three.</li><li>Individual participants are also allowed.</li><li>Using mobile phones is not allowed.</li></ol></p>",
-            judges : "<p>Details will be Updated soon</p>",
-            mentors : "<p>Details will be Updated soon</p>",
-            query : "Smriti Jha: +91-7742603667 | smritijha369@gmail.com<br>Kushagra Garg: +91-8561801305 | kushrulesu@gmail.com<br>astronomy.lnmiit@gmail.com<br>",
-            sponsors : "<p>Details will be Updated soon</p>"
-           
+            highlights:null,
+            workshopContent: null,
+            rules: null,
+            benefits: null,
+            query : null,
+            sponsors : null,
+            
          
 
+        },
+        {
+
+            clubName: "Workshops",
+            eventName: "Scribbled Stories",
+            displayName: "The Scribbled Stories",
+            payName: "TSS",
+            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
+            eventVenue: "The LNMIIT, Jaipur",
+            eventCompany : "The Scribbled Stories",
+            memberUpperLimit: 1,
+            memberLowerLimit: 1,
+            eventFee: '<p>'
+                           +"₹ 299/- (Early Bird)"
+                           +"<br>"
+                           +"₹ 399/- (10th Jan onwards)"      
+                        +'</p>',
+            synopsis:  "<p>"
+                            +"<p>"
+                                +"What sprints through your mind when you look up at the sky, pink and blue and orange with a perfect sunset? A few lines of poetry?"
+                            +"</p>"
+                            +"<p>"
+                                +"What comes to your mind when you hear the waves rolling towards you? Or is it a story you hear?"
+                            +"</p>"
+                            +"<p>"
+                                +"When you read the paper, does your mind run off to weave endings to unsolved murders? Do your nerve endings light up at the thought of writing a great political satire?"
+                            +"</p>"
+                            +"<p>"
+                                +"Don’t all of us have a deep corner in our souls that creates that need to get our thoughts out on paper for others to see?"
+                            +"</p>"
+                            +"<p>"
+                                +"Indulge in your sweet addiction of the written word and get a chance to be featured on The Scribbled Stories’ social media handles."
+                            +"</p>"
+                            +"<p>"
+                                +"Maybe the next time, your friends will tag you on your own post."
+                            +"</p>"
+                            
+                        +"</p>",
+            eventDescription: null,
+            highlights:null,
+            workshopContent: "<p>"
+                                    +"<b>Description</b>"
+                                    +"<ol>"
+                                        +"<li>"
+                                            +"The duration of The Scribbled Stories Workshop will be 2 Hours 30 Minutes. (Yeah. Not 5 Hours, because we don’t like to see people sleep while we work)."
+                                        +"</li>"
+                                        +"<li>"
+                                            +"Two authors (to be announced soon) from The Scribbled Stories will be hosting you. ( The committee hates giving spoilers, or does it?)"
+                                        +"</li>"
+                                        +"<li>"
+                                            +"There are no restrictions in genres. ( Because we’re like that)"
+                                        +"</li>"
+                                    +"</ol>"
+                                    +"<br>"
+                                    +"<b>Fees</b>"
+                                    +"<p>"
+                                            +"Early Bird Offer: ₹ 299/- till 10th January’18. ( Early Bird to prove that we keep up with our fads)."
+                                            +"<br>"
+                                            +"₹ 399/- from 10 th January onwards."
+                                            +"<br>"
+                                            +"Offer: ₹ 100/- off for Rostrum Participants. (Because we have more things to look after.)"
+                                    +"</p>"
+                                +"</p>",
+            rules: "<p>"
+                        +"<b>General Rules </b>"
+                        +"<ol>"
+                            +"<li>The participants shall reach the venue at least 5 minutes before the event starts. (OMG! Before time? That’s tough, right? But we just decided to not have a havoc!)</li>"
+                            +"<li>Each participant will be engaged individually in the workshop. ( Ahaa! We don’t want to see you sharing your prize. We love our audience, you see.)</li>"
+                            +"<li>Carrying an ID card and the entry pass is mandatory. ( It won’t be a pleasant feeling to pay and not attend. Promise you won’t say that we didn’t warn you.)</li>"
+                        +"</ol>"
+                    +"</p>",
+            benefits: "<p>"
+                            +"<b>PERKS</b>"
+                            +"<p>( We thought that this might be enough to get money out from your pocket.)</p>"
+                            +"<ol>"
+                                +"<li>"
+                                    +"Top 20 write ups received from the participants will posted on the official social media pages of The Scribbled Stories with the participants name on the post."
+                                +"</li>"
+                                +"<li>"
+                                    +"The selected write ups will be given an exposure of upto 5,00,000 people on Facebook."
+                                +"</li>"
+                                +"<li>"
+                                    +"The writers of the selected write ups will be awarded with prizes worth INR 10,000."
+                                +"</li>"
+                            +"</ol>"
+                        +"</p>",
+            query: "<p class='link-text'>"
+                        +"Abhinav Mishra: +91-7376423271"
+                        +"<br>"
+                        +"Akash Mahadewan: +91-9660845930"
+                        +"<br><br>"
+                        +"For any query, contact us at <a href='mailto:literary@plinth.in'>literary@plinth.in</a>" 
+                    +"</p>",
+            sponsors: null,
         },
     ],
 };

@@ -424,6 +424,7 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
         res.render('workshops', {
             "page" : 'workshops',
             "isLoggedIn" : isLoggedIn,
+            "workshops" : workshopDetail.workshops,
         });
     }
     else {
@@ -438,7 +439,8 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('workshops',{
                     "page" : 'workshops',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : user
+                    "user" : user,
+                    "workshops" : workshopDetail.workshops,
                 });
             }
         });
