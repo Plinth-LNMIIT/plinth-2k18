@@ -80,7 +80,7 @@
 
        
 
-      form.action = "/payment/initiate";
+      form.action = "/payment/initiate/MUN";
       form.method = 'POST';
 
       
