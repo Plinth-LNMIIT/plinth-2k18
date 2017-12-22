@@ -25,7 +25,7 @@
     }
   
   
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     .table-margin{
       margin-left: 15%;
       margin-right:15%;
