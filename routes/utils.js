@@ -4,6 +4,8 @@ var nodemailer = require('nodemailer');
 var dateFormat = require('dateformat');
 var format = 'dd-mm-yyyy hh:MM TT'; 
 var format1 = 'dd-mm-yyyy hh:MM:ss TT'; 
+let google = require('googleapis');
+let sheetAuth = require('../sheetAuth');
  
 
 
@@ -238,3 +240,30 @@ exports.mail = function (events) {
       
    });
 };
+
+
+exports.saveSheet = function (result) {
+      
+    sheetAuth.authenticate().then((auth)=>{
+      
+            var sheets = google.sheets('v4');
+            sheets.spreadsheets.values.append({
+              auth: auth,
+              spreadsheetId: process.env.SHEET_TEST,
+              range: 'SUO!A2:B', 
+              valueInputOption: "USER_ENTERED",
+              resource: {
+                values: [ ["Void", "Canvas","", "Website"]]
+              }
+            }, (err, response) => {
+              if (err) {
+                console.log('The API returned an error: ' + err);
+                return;
+              } else {
+                  console.log("Appended");
+              }
+            });
+         
+      });
+};
+
