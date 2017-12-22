@@ -116,8 +116,21 @@ $(".more-details").click(function () {
             $("#judges").hide();
             
         }else{
+           
             $("#judges").show();
-      
+        }
+
+        if(mevent.paymentURL == null){
+            $("#payment").hide(); 
+        }else{
+            $("#payment").show();
+        }
+
+        if(mevent.otherURL == null){
+            $("#other").hide(); 
+        }else{
+            $("#other").show();
+            $("#oUrl").attr("href", mevent.otherURL);
         }
 
         if(mevent.rules == null){

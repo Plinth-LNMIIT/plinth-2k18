@@ -19,8 +19,7 @@ $(".more-details").click(function () {
         $('#clubName').html(mevent.clubName);
         $('#eventName').html(mevent.displayName);
         $('#eventDate').html(mevent.eventDate);
-        $('#eventVenue').html(mevent.eventVenue);
-        $('#eventCompany').html(mevent.eventCompany);
+        $('#eventVenue').html(mevent.eventVenue); 
      
         if(mevent.sponsors == null){
             $("#sponsors").hide();

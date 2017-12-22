@@ -2,6 +2,7 @@ module.exports = {
     events: [
         {
 
+            paymentURL: "/payment/initiate/INT",
             clubName: "Astronomy",
             eventName: "Into The Universe",
             displayName: "Into The Universe",
@@ -86,9 +87,11 @@ module.exports = {
                         +"For any query, contact us at <a href='mailto:astronomy@plinth.in'>astronomy@plinth.in</a>"
                     +"</p>",
             sponsors: null,
+            otherURL: null,
         },
         {
 
+            paymentURL: "/payment/initiate/AH",
             clubName: "Astronomy",
             eventName: "Astro Hunt",
             displayName: "Astro Hunt",
@@ -122,10 +125,12 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:astronomy@plinth.in'>astronomy@plinth.in</a>"
                     +"</p>",
-            sponsors: null,
+            sponsors: null, 
+            otherURL: null,
         },
         {
 
+            paymentURL: "/payment/initiate/AQ",
             clubName: "Astronomy",
             eventName: "Astro Quiz",
             displayName: "Astro Quiz",
@@ -156,7 +161,7 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-           query: "<p class='link-text'>"
+            query: "<p class='link-text'>"
                         +"Priyansh Jain: +91-8290925378"
                         +"<br>"
                         +"Ria Lamba: +91-9799494808"
@@ -165,11 +170,14 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:astronomy@plinth.in'>astronomy@plinth.in</a>"
                     +"</p>",
-            sponsors: null,
+            sponsors: null,   
+            otherURL: null,
         },
 
+        
         {
 
+            paymentURL: "/payment/initiate/RST",
             clubName: "Literature",
             eventName: "Rostrum",
             displayName: "Rostrum - The Debate",
@@ -207,7 +215,7 @@ module.exports = {
                         +"</p>"
                     +"</p>",
             judges: null,
-           query: "<p class='link-text'>"
+            query: "<p class='link-text'>"
                         +"Abhinav Mishra: +91-7376423271"
                         +"<br>"
                         +"Akash Mahadewan: +91-9660845930"
@@ -215,19 +223,21 @@ module.exports = {
                         +"For any query, contact us at <a href='mailto:literary@plinth.in'>literary@plinth.in</a>" 
                     +"</p>",
             sponsors: null,
+            otherURL: null,
         },
+        
         {
 
+            paymentURL: null,
             clubName: "Literature",
             eventName: "UnErase Poetry",
             displayName: "UnErase Poetry",
-            payName: "UEP",
             eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 1,
             memberLowerLimit: 1,
             prizeWorth: null,
-            eventFee: '₹ 100/-',
+            eventFee: null,
             synopsis:  "<p>"
                             +"Does “O captain, my captain”, a series of rather unrelated words, bring joy to you? Does your inner self constantly seeks for explanation and meaning to life? Wouldn’t it be awesome if you  be fuel itself to introspect one’s own self. Well that is what poetry is based on."
                         +"</p>"
@@ -245,10 +255,13 @@ module.exports = {
                         +"For any query, contact us at <a href='mailto:literary@plinth.in'>literary@plinth.in</a>" 
                     +"</p>",
             sponsors: null,
+            otherURL: null,
         }, 
 
+        
         {
 
+            paymentURL: null,
             clubName: "Coding",
             eventName: "IUPC",
             displayName: "Inter University Programming Challenge(IUPC)",
@@ -299,7 +312,7 @@ module.exports = {
                         +"<p>Prizes worth ₹ 20,000/- for grabs (only for the onsite Round) !!</p>"
                     +"</p>",
             judges: null,
-           query: "<p class='link-text'>"
+            query: "<p class='link-text'>"
                         +"Aditya Aggarwal: +91-8791636347"
                         +"<br>"
                         +"Garvit Bhatia: +91-9414858869"
@@ -308,9 +321,12 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:coding@plinth.in'>coding@plinth.in</a>"
                     +"</p>",
-        },
+            sponsors: null,
+            otherURL: "https://www.hackerearth.com/challenge/college/plinth-iupc-2k18/",
+        },    
         {
 
+            paymentURL: null,
             clubName: "Coding",
             eventName: "Enigma",
             displayName: "Enigma – The Plinth CodeSprint",
@@ -367,7 +383,7 @@ module.exports = {
                         +"<p>Prizes worth ₹ 15,000/- for grabs (only for the onsite Round) !!</p>"
                     +"</p>",
             judges: null,
-           query: "<p class='link-text'>"
+            query: "<p class='link-text'>"
                         +"Aditya Aggarwal: +91-8791636347"
                         +"<br>"
                         +"Garvit Bhatia: +91-9414858869"
@@ -376,10 +392,13 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:coding@plinth.in'>coding@plinth.in</a>"
                     +"</p>",
+            sponsors: null,
+            otherURL: null,
         },
 
         {
 
+            paymentURL: "/payment/initiate/SIF",
             clubName: "Management",
             eventName: "StartUp Intern Fair",
             displayName: "StartUp Intern Fair",
@@ -409,10 +428,13 @@ module.exports = {
                         +"For any query, contact us at <a href='mailto:sif.plinth@gmail.com'>sif.plinth@gmail.com</a>"
                     +"</p>",
             sponsors: "Coming Soon",
+            otherURL: null,
         },
 
+        
         {
 
+            paymentURL: "/payment/initiate/BQ",
             clubName: "Quizzing",
             eventName: "Business Quiz",
             displayName: "Business Quiz",
@@ -434,10 +456,13 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:quizzinga@plinth.in'>quizzinga@plinth.in</a>" 
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
+        
         {
 
+            paymentURL: "/payment/initiate/GQ",
             clubName: "Quizzing",
             eventName: "General Quiz",
             displayName: "General Quiz",
@@ -473,10 +498,13 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:quizzinga@plinth.in'>quizzinga@plinth.in</a>"
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
 
+        
         {
+            paymentURL: "/payment/initiate/RW",
             clubName: "Robotics",
             eventName: "Robowar",
             displayName: "Robowar",
@@ -630,9 +658,12 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
+        
         {
+            paymentURL: "/payment/initiate/RS",
             clubName: "Robotics",
             eventName: "Robosoccer",
             displayName: "Robosoccer",
@@ -718,16 +749,19 @@ module.exports = {
                         
                     +"</p>",
             judges: null,
-           query: "<p class='link-text'>"
+            query: "<p class='link-text'>"
                         +"Divyansh Shara: +91-7727050728"
                         +"<br>"
                         +"Harsh Upadhyay: +91-9929543341"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
+        
         {
+            paymentURL: "/payment/initiate/DO",
             clubName: "Robotics",
             eventName: "Drone Obstruction",
             displayName: "Drone Obstruction",
@@ -765,16 +799,19 @@ module.exports = {
                         +"</ol>"
                     +"</p>",
             judges: null,
-           query: "<p class='link-text'>"
+            query: "<p class='link-text'>"
                         +"Prakhar Kesarwani: +91-8209034268"
                         +"<br>"
                         +"Kanishk Sharma: +91-7599063441"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
+        
         {
+            paymentURL: "/payment/initiate/LFR",
             clubName: "Robotics",
             eventName: "LFR",
             displayName: "LFR",
@@ -820,9 +857,12 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
+        
         {
+            paymentURL: "/payment/initiate/MS",
             clubName: "Robotics",
             eventName: "Maze Solver",
             displayName: "Maze Solver",
@@ -903,13 +943,16 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
+        
         {
+            paymentURL: "/payment/initiate/RR",
             clubName: "Robotics",
             eventName: "Roborace",
             displayName: "Roborace",
-            payName: "RB",
+            payName: "RR",
             eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 4,
@@ -994,9 +1037,12 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
+        
         {
+            paymentURL: "/payment/initiate/RCP",
             clubName: "Robotics",
             eventName: "RC Plane",
             displayName: "RC Plane",
@@ -1176,9 +1222,12 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
+        
         {
+            paymentURL: "/payment/initiate/TP",
             clubName: "Robotics",
             eventName: "Transporter",
             displayName: "Transporter",
@@ -1257,7 +1306,8 @@ module.exports = {
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
-            sponsors: null, 
+            sponsors: null,
+            otherURL: null, 
         },
     ],
  

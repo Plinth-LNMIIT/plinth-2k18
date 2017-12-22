@@ -1,6 +1,7 @@
 module.exports = {
     workshops : [
         {
+            paymentURL: "/payment/initiate/IOT",
             clubName : "Workshops",
             eventName : "Internet Of Things",
             displayName : "Internet Of Things",
@@ -10,7 +11,7 @@ module.exports = {
             eventCompany : "HYDROLUS TECHNOLOGY",
             memberUpperLimit : 1,
             memberLowerLimit : 1,
-            eventFee: null,
+            eventFee: '₹ 600/-',
             synopsis: null,
             eventDescription : "<p>"
                                     +"<p>"
@@ -84,6 +85,7 @@ module.exports = {
         },
         {
 
+            paymentURL: "/payment/initiate/TSS",
             clubName: "Workshops",
             eventName: "Scribbled Stories",
             displayName: "The Scribbled Stories",
