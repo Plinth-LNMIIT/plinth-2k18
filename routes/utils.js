@@ -207,7 +207,7 @@ exports.mail = function (events) {
     
    var mailOptions = {
        from: '"Plinth Payment" <payment@plinth.in>',  
-       to: '' + events.team[0].email,  
+       to: '' + events.email,  
        subject: 'Payment Confirmation for ' + events.event.eventName,  
        
        html: '<div style="width:649px;margin:0 auto;border:#ececec solid 1px"> <div style="padding:22px 34px 15px 34px"> <div> <div style="text-align:center;"> <img title="Paytm Logo" src="cid:unique@kreata.ee" height=\'50\' style="margin-right:8px;" alt="Paytm" class="CToWUd"> </div><br> <div style="text-align:center;vertical-align:middle;font:bold 32px Arial;line-height: 50px;"> <div>plinth 2018 </div> </div> </div> <div style=" color:#333333;font:normal 14px Arial,Helvetica,sans-serif;"> <div style="font:bold 21px Arial,Helvetica,sans-serif;margin-top:10px;text-align:center"> <u>Transaction Receipt</u> </div> <br> <div><b>Order No:</b> ' + events.orderId + ' <br><b>Date:</b> ' +  (events.date.paidAt).substring(0,25) + ' </div> <div style="padding-top:10px"> <a href="mailto:'+ events.team[0].email +'" target="_blank">' + events.team[0].email + '</a> </div> </div> <div style="clear:both"></div> </div> <div style="width:584px;background-color:#ffffff;border:#e8e7e7 solid 1px;padding:27px 0;margin:0 auto"> <div style="border-bottom:#717171 dotted 1px;font:normal 14px Arial,Helvetica,sans-serif;color:#666666;padding:0px 33px 10px"> <br> <table style="width:100%" border="0" cellspacing="0" cellpadding="2"> <tbody> <tr> <td width="450px">' + events.event.eventName + '</td> <td>Rs.' + events.amount + '</td> </tr> </tbody> </table> </div> <div style="border-bottom:#717171 dotted 1px;font:normal 14px Arial,Helvetica,sans-serif;color:#666666;padding:10px 33px 10px"> <br> <table style="width:100%" border="0" cellspacing="0" cellpadding="2"> <tbody> <tr> <td width="450px">Total</td> <td>Rs.' + events.amount + '</td> </tr> </tbody> </table> </div> <div style="border-bottom:#717171 dotted 1px;font:600 14px Arial,Helvetica,sans-serif;color:#333333;padding:17px 33px 17px"> <table style="width:100%" border="0" cellspacing="0" cellpadding="2"> <tbody> <tr> <td width="450px">Amount paid</td> <td>Rs.' + events.amount + '</td> </tr> </tbody> </table> </div> <div style=" color:#333333;font:normal 14px Arial,Helvetica,sans-serif; padding:16px;"> Dear '+ events.team[0].name +', <br> <br> You have successfully registered for the event <b>'+ events.event.eventName +'</b> in Plinth. The invoice for this transaction is attached in this mail and can also be downloaded from the Profile section on the Plinth Website. <br> <br> If you notice any error with this transaction, please contact us at payment@plinth.in <br> <br> <br> <div>Cheers! <br> Team Plinth </div> </div></div><br>  </div>',
@@ -275,7 +275,24 @@ exports.saveSheet = function (result) {
                 case 'SIF':
                     sheetID = process.env.SHEET_SIF;
                     ra = result.team[0].type === 'Startup' ? 'Startup' : 'Student';
-                    value = 
+                    value = result.team[0].type === 'Startup' ? 
+                    
+                    
+                    [
+                        result.date.paidAt,
+                        result.orderId,
+                        result.amount,
+                        result.team[0].startupName,
+                        result.team[0].website,
+                        result.team[0].name,
+                        result.team[0].email,
+                        result.team[0].phoneNumber,
+                        result.team[0].domain,
+                        result.team[0].interns,
+                    ] 
+                    
+                    : 
+                
                     [
                         result.date.paidAt,
                         result.orderId,
@@ -285,9 +302,9 @@ exports.saveSheet = function (result) {
                         result.team[0].phoneNumber,
                         result.team[0].college,
                         result.team[0].city,
-                        result.team[0].committee,
-                        result.team[0].portfolio,
-                        result.team[0].accommodation,
+                        result.team[0].year,
+                        result.team[0].resume,
+                        result.team[0].linkedin,
                     ];
                     break;
                 default :

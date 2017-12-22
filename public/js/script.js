@@ -73,6 +73,7 @@
 
       var data = {
         eventName: 'MUN',
+        mEmail: $('#mEmail').val(),
         teamSize: 1,
         details: payDetails,
       };

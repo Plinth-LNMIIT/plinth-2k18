@@ -6,6 +6,7 @@ var paymentSchema = mongoose.Schema({
         tranId         : String,
         status         : String,
         amount         : Number,
+        email          : String,
         event          : {
                 eventName : String,
                 clubName  : String,

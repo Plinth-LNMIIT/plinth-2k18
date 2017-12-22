@@ -21,6 +21,7 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
             var param_data = JSON.parse(req.body.data);
 
             payment.event.eventName = param_data.eventName;
+            payment.email = param_data.mEmail;
             payment.status = 'OPEN';
             payment.date.createdAt = '' + new Date();
             payment.team = [];
@@ -35,7 +36,7 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
 
                 payment.orderId = order_id;
                 var team = {
-                    email: param_data.details['email'],
+                    email: param_data.details.email,
                     name: param_data.details.name,
                     phoneNumber: param_data.details.phoneNumber,
                     delegation: param_data.details.delegation,
@@ -62,7 +63,7 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                     paramaters = {
                         REQUEST_TYPE: "DEFAULT",
                         ORDER_ID: payment.orderId,
-                        CUST_ID: "plinth-" + payment.team[0].email,
+                        CUST_ID: "plinth-" + payment.email,
                         TXN_AMOUNT: payment.amount,
                         CHANNEL_ID: 'WEB',
                         INDUSTRY_TYPE_ID: paytm.industryID,
@@ -132,7 +133,9 @@ router.post('/response', Verify.verifyOrdinaryUser, function (req, res) {
                         emails.push(result.team[i].email);
 
                     }
-
+                    if(emails.indexOf(result.email) == -1 ){
+                        emails.push(result.email);
+                    }
                     var bulk = User.collection.initializeOrderedBulkOp();
                     for (var i = 0; i < emails.length; i++) {
                         bulk.find({ 'email': emails[i] }).update({ $push: { events: result } });
