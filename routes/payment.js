@@ -15,13 +15,15 @@ var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2018';
 
 
 
-router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res) {
+router.post('/register/:payName', Verify.verifyOrdinaryUser, function (req, res) {
+
     var payment = new Payment();
     var payName = req.params.payName;
+   
     if (payName != '') {
         Payment.count({}, function (err, count) {
-            var param_data = JSON.parse(req.body.data);
-
+            var param_data = JSON.parse(req.body.postData);
+            console.log(param_data);
             payment.event.eventName = param_data.eventName;
             payment.email = param_data.mEmail;
             payment.status = 'OPEN';
@@ -35,9 +37,7 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                     case 'MUN':
                        
                         if (param_data.details.delegation == 'IP') {
-                            payment.amount = 900;
                         } else {
-                            payment.amount = 1200;
                         }
                         var team = {
                             email: param_data.details.email,
@@ -55,7 +55,6 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                     case 'SIF':
 
                         if (param_data.type == 'Startup') {
-                            payment.amount = 1000;
                             var team = {
                                 email: param_data.details.email,
                                 name: param_data.details.name,
@@ -70,7 +69,6 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                             teams.push(team);
 
                         } else {
-                            payment.amount = 100;
                             var team = {
                                 email: param_data.details.email,
                                 name: param_data.details.name,
@@ -137,31 +135,145 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                     return;
                 }
                 else {
-                    paramaters = {
-                        REQUEST_TYPE: "DEFAULT",
-                        ORDER_ID: payment.orderId,
-                        CUST_ID: "plinth-" + payment.email,
-                        TXN_AMOUNT: payment.amount,
-                        CHANNEL_ID: 'WEB',
-                        INDUSTRY_TYPE_ID: paytm.industryID,
-                        MID: paytm.mid,
-                        WEBSITE: paytm.website,
-                        /*  EMAIL            : payment.team[0].email,
-                         MOBILE_NO        : payment.team[0].phoneNumber, */
-                        CALLBACK_URL: hostURL + '/payment/response',
-
-                    }
-                    console.log(paramaters);
-
-                    // Create an array having all required parameters for creating checksum.
-                    checksum.genchecksum(paramaters, paytm.key, function (err, result) {
-                        console.log(result);
-                        result['PAYTM_URL'] = paytm.url;
-                        res.render('pgredirect', { 'restdata': result });
-                    });
+                    var bulk = User.collection.initializeOrderedBulkOp();
+                    bulk.find({'email': payment.email}).update({ $push: { rEvents: payment }});
+                    bulk.execute();
+                   // Utils.saveSheet(payment);
+                    res.json({status : true,
+                    orderId: payment.orderId});
                 }
             });
         });
+    } else {
+        res.redirect('/404');
+    }
+
+});
+
+
+router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res) {
+    var payName = req.params.payName;
+     
+    if (payName != '') {
+         
+        
+        Payment.findOne({'orderId' : req.body.orderId }, function(err, payment) {
+            
+            
+             if (err)
+                 return done(err);
+            
+             if (payment){
+
+                 switch(payName){
+
+                    case 'MUN':
+                       
+                        if (payment.team[0].delegation == 'IP') {
+                            payment.amount = 900;
+                        } else {
+                            payment.amount = 1200; 
+                        }
+                        
+                        break;
+                    case 'SIF':
+
+                        if (payment.team[0].type == 'Startup') {
+                            payment.amount = 1000;
+                        } else {
+                            payment.amount = 100;
+                        }
+                        break;
+                    case 'INT':
+                        payment.amount = 100;   
+                        break;
+                    case 'AH':
+                        payment.amount = 100;   
+                        break;
+                    case 'AQ':
+                        payment.amount = 100;   
+                        break;
+                    case 'RST':
+                        payment.amount = 0.01;   
+                        break;
+                    case 'IUPC':
+                        payment.amount = 0.01;   
+                        break;
+                    case 'ENCS':
+                        payment.amount = 0.01;   
+                        break;
+                    case 'BQ':
+                        payment.amount = 200;   
+                        break;
+                    case 'GQ':
+                        payment.amount = 200;   
+                        break;
+                    case 'RW':
+                        payment.amount = 700;   
+                        break;
+                    case 'RS':
+                        payment.amount = 250;   
+                        break;
+                    case 'DO':
+                        payment.amount = 600;   
+                        break;
+                    case 'LFR':
+                        payment.amount = 250;   
+                        break;
+                    case 'MS':
+                        payment.amount = 250;   
+                        break;
+                    case 'RR':
+                        payment.amount = 250;   
+                        break;
+                    case 'RCP':
+                        payment.amount = 500;   
+                        break;
+                    case 'TP':
+                        payment.amount = 250;   
+                        break;
+                    case 'IOT':
+                        payment.amount = 600;       
+                        break;
+                    case 'TSS':
+                        payment.amount = 299;   
+                        break;
+                    default:
+                        payment.amount = 0.01;
+                        break;
+                }
+            
+
+                payment.save(function (err) {
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
+                    else {
+                        paramaters = {
+                            REQUEST_TYPE: "DEFAULT",
+                            ORDER_ID: payment.orderId,
+                            CUST_ID: "plinth-" + payment.email,
+                            TXN_AMOUNT: payment.amount,
+                            CHANNEL_ID: 'WEB',
+                            INDUSTRY_TYPE_ID: paytm.industryID,
+                            MID: paytm.mid,
+                            WEBSITE: paytm.website,
+                            CALLBACK_URL: hostURL + '/payment/response',
+    
+                        }
+                        console.log(paramaters);
+    
+                        
+                        checksum.genchecksum(paramaters, paytm.key, function (err, result) {
+                            console.log(result);
+                            result['PAYTM_URL'] = paytm.url;
+                            res.render('pgredirect', { 'restdata': result });
+                        });
+                    }
+                });
+             }
+         });
     } else {
         res.redirect('/404');
     }
@@ -219,7 +331,15 @@ router.post('/response', Verify.verifyOrdinaryUser, function (req, res) {
 
                     }
                     bulk.execute();
-                    Utils.saveSheet(result);
+
+                    var bulkR = User.collection.initializeOrderedBulkOp();
+                   
+                        bulkR.find({ 'email':result.email }).update({ $pull: { rEvents : { orderId : result.orderId } } });
+
+                  
+                    bulkR.execute();
+
+                   // Utils.updateSheet(result);
                     Utils.mail(result);
                     res.render('paystatus', {
                         "page": 'paystatus',

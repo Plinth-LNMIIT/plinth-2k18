@@ -116,6 +116,7 @@ router.post('/user_register_complete', Verify.verifyOrdinaryUser, function (req,
         city: req.body.city,
         gender: req.body.gender,
         events: ['init'],
+        rEvents: ['init'],
         valid: true,
     };
     console.log(update);

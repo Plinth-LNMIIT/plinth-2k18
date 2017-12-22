@@ -251,7 +251,7 @@ router.get('/mun', Verify.verifyOrdinaryUser ,function(req, res, next) {
     }
     else {
         User.findOne({'email' : req.decoded.sub }, function(err, user) {
-            console.log(user);
+        
             isLoggedIn = user.valid;
             // if there are any errors, return the error
             if (err)
@@ -450,7 +450,7 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
 });
 
 router.get('/profile', Verify.verifyOrdinaryUser ,function(req, res, next) {
-    console.log(req.decoded);
+   
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;

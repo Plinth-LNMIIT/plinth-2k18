@@ -15,6 +15,7 @@ var userSchema = mongoose.Schema({
         valid          : Boolean,
         gender         : String,
         events         : [],
+        rEvents: [],
 });
 userSchema.plugin(mongoose_csv);
 // create the model for users and expose it to our app

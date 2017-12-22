@@ -373,3 +373,130 @@ exports.saveSheet = function (result) {
 };
 
 
+exports.updateSheet = function (result) {
+    
+  sheetAuth.authenticate().then((auth)=>{
+    
+
+          var sheetID;
+          var ra;
+          var value;
+
+          switch(result.event.eventName){
+
+              case 'MUN':
+                  sheetID = process.env.SHEET_MUN;
+                  ra = 'MUN';
+                  value = 
+                  [
+                      result.date.paidAt,
+                      result.orderId,
+                      result.amount,
+                      result.team[0].name,
+                      result.team[0].email,
+                      result.team[0].phoneNumber,
+                      result.team[0].college,
+                      result.team[0].city,
+                      result.team[0].committee,
+                      result.team[0].portfolio,
+                      result.team[0].accommodation,
+                  ];
+                  break;
+              
+              case 'SIF':
+                  sheetID = process.env.SHEET_SIF;
+                  ra = result.team[0].type === 'Startup' ? 'Startup' : 'Student';
+                  value = result.team[0].type === 'Startup' ? 
+                  
+                  
+                  [
+                      result.date.paidAt,
+                      result.orderId,
+                      result.amount,
+                      result.team[0].startupName,
+                      result.team[0].website,
+                      result.team[0].name,
+                      result.team[0].email,
+                      result.team[0].phoneNumber,
+                      result.team[0].domain,
+                      result.team[0].interns,
+                  ] 
+                  
+                  : 
+              
+                  [
+                      result.date.paidAt,
+                      result.orderId,
+                      result.amount,
+                      result.team[0].name,
+                      result.team[0].email,
+                      result.team[0].phoneNumber,
+                      result.team[0].college,
+                      result.team[0].city,
+                      result.team[0].year,
+                      result.team[0].resume,
+                      result.team[0].linkedin,
+                  ];
+                  break;
+              case 'INT':
+                  break;
+              case 'AH':
+                  break;
+              case 'AQ':
+                  break;
+              case 'RST':
+                  break;
+              case 'IUPC':
+                  break;
+              case 'ENCS':
+                  break;
+              case 'BQ':
+                  break;
+              case 'GQ':
+                  break;
+              case 'RW':
+                  break;
+              case 'RS':
+                  break;
+              case 'DO':
+                  break;
+              case 'LFR':
+                  break;
+              case 'MS':
+                  break;
+              case 'RR':
+                  break;
+              case 'RCP':
+                  break;
+              case 'TP':
+                  break;
+              case 'IOT':
+                  break;
+              case 'TSS':
+                  break;
+              default :
+                  sheetID = process.env.SHEET_TEST;
+                  ra = 'SUO';
+                  value= ["HEY"];
+                  break;
+          }
+          var sheets = google.sheets('v4');
+          sheets.spreadsheets.values.append({
+            auth: auth,
+            spreadsheetId: sheetID,
+            range: ra+'!A3:B', 
+            valueInputOption: "USER_ENTERED",
+            resource: {
+              values: [value]
+            }
+          }, (err, response) => {
+            if (err) {
+              console.log('The API returned an error: ' + err);
+              return;
+            } else {
+                console.log("Appended");
+            }
+          });
+       
+    });
+};
