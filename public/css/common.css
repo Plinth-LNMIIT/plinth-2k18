@@ -195,11 +195,23 @@
       
   }
 
+  .labell-text{
+    font-family: 'Audiowide', cursive ;
+    font-size: 1rem;
+  }
+
+  .inputt-text{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1rem;
+  }
 
   #register-center{
     color: black;
   }
 
+  .uk-modal-body{
+    color: black;
+  }
   .black-fill{
     color: black;
   }

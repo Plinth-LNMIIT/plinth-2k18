@@ -242,6 +242,8 @@ exports.mail = function (events) {
 };
 
 
+
+
 exports.saveSheet = function (result) {
       
     sheetAuth.authenticate().then((auth)=>{
@@ -307,6 +309,42 @@ exports.saveSheet = function (result) {
                         result.team[0].linkedin,
                     ];
                     break;
+                case 'INT':
+                    break;
+                case 'AH':
+                    break;
+                case 'AQ':
+                    break;
+                case 'RST':
+                    break;
+                case 'IUPC':
+                    break;
+                case 'ENCS':
+                    break;
+                case 'BQ':
+                    break;
+                case 'GQ':
+                    break;
+                case 'RW':
+                    break;
+                case 'RS':
+                    break;
+                case 'DO':
+                    break;
+                case 'LFR':
+                    break;
+                case 'MS':
+                    break;
+                case 'RR':
+                    break;
+                case 'RCP':
+                    break;
+                case 'TP':
+                    break;
+                case 'IOT':
+                    break;
+                case 'TSS':
+                    break;
                 default :
                     sheetID = process.env.SHEET_TEST;
                     ra = 'SUO';
@@ -333,4 +371,5 @@ exports.saveSheet = function (result) {
          
       });
 };
+
 

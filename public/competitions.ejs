@@ -600,16 +600,52 @@
                                                 <% if(isLoggedIn){ %>
 
 
-                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#">Event Registeration</a>
+                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#register-competitions" id="registerB" uk-toggle>Registration</a>
+
+                                                    <div id="register-competitions" class="uk-flex-top" uk-modal>
+                                                        <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                            <div class="uk-modal-header">
+                                                                <button class="uk-modal-close-default black-fill" type="button" uk-close></button>
+
+                                                                <h2 class="uk-text-center heading-text">
+                                                                    <span>Registration Form</span>
+                                                                </h2>
+
+                                                                <div class="uk-text-center black-fill">
+                                                                        <span id="eName"></span>
+                                                                        
+                                                                </div>
+                                                            </div>
+                                                            <div class="uk-modal-body">
+                                                                    <form class="uk-form-stacked">
+                                                                    
+                                                                        <div class="uk-margin">
+                                                                            <label class="uk-form-label labell-text">Text</label>
+                                                                            <div class="uk-form-controls">
+                                                                                <input class="uk-input inputt-text" id="form-stacked-text" type="text" placeholder="Some text...">
+                                                                            </div>
+                                                                        </div>
+                                                                            
+                                                                    </form>
+                                                            </div>
+                                                            <div class="uk-modal-footer uk-text-right">
+                                                                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                                                <button type="submit" class="uk-button uk-button-primary" id="submit-button">Pay</button>
+                                                                 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+
                                                     <% } else { %>
                                                         <a class="uk-button button-font uk-button-default uk-button-large" href="#register-center" uk-toggle>Register</a>
                                                         <% } %>
                                             </li>
 
                                             <li id="other">
-                                                
-                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#" id="oUrl" target="_blank" >Event Registeration</a>
-                                                   
+
+                                                <a class="uk-button button-font uk-button-default uk-button-large" href="#" id="oUrl" target="_blank">Event Registration</a>
+
                                             </li>
 
                                             <br>

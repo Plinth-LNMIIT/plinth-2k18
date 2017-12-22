@@ -13,6 +13,8 @@ var checksum = require('../checksum/checksum');
 var hostURL = process.env.HOST_URL;
 var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2018';
 
+
+
 router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res) {
     var payment = new Payment();
     var payName = req.params.payName;
@@ -26,31 +28,106 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
             payment.date.createdAt = '' + new Date();
             payment.team = [];
             var teams = [];
-            if (payName == 'MUN') {
-                var order_id = "Plinth-" + payName + "-" + (count + 1) + "-" + id_tag;
-                if (param_data.details.delegation == 'IP') {
-                    payment.amount = 900;
-                } else {
-                    payment.amount = 1200;
+            var order_id = "Plinth-" + payName + "-" + (count + 1) + "-" + id_tag;
+            payment.orderId = order_id;
+             switch(payName){
+
+                    case 'MUN':
+                       
+                        if (param_data.details.delegation == 'IP') {
+                            payment.amount = 900;
+                        } else {
+                            payment.amount = 1200;
+                        }
+                        var team = {
+                            email: param_data.details.email,
+                            name: param_data.details.name,
+                            phoneNumber: param_data.details.phoneNumber,
+                            delegation: param_data.details.delegation,
+                            college: param_data.details.college,
+                            city: param_data.details.city,
+                            committee: param_data.details.committee,
+                            portfolio: param_data.details.portfolio,
+                            accommodation: param_data.details.accommodation,
+                        };
+                        teams.push(team);
+                        break;
+                    case 'SIF':
+
+                        if (param_data.type == 'Startup') {
+                            payment.amount = 1000;
+                            var team = {
+                                email: param_data.details.email,
+                                name: param_data.details.name,
+                                phoneNumber: param_data.details.phoneNumber,
+                                delegation: param_data.details.delegation,
+                                college: param_data.details.college,
+                                city: param_data.details.city,
+                                committee: param_data.details.committee,
+                                portfolio: param_data.details.portfolio,
+                                accommodation: param_data.details.accommodation,
+                            };
+                            teams.push(team);
+
+                        } else {
+                            payment.amount = 100;
+                            var team = {
+                                email: param_data.details.email,
+                                name: param_data.details.name,
+                                phoneNumber: param_data.details.phoneNumber,
+                                delegation: param_data.details.delegation,
+                                college: param_data.details.college,
+                                city: param_data.details.city,
+                                committee: param_data.details.committee,
+                                portfolio: param_data.details.portfolio,
+                                accommodation: param_data.details.accommodation,
+                            };
+                            teams.push(team);
+
+                        }
+                        
+                        
+                        break;
+                    case 'INT':
+                        break;
+                    case 'AH':
+                        break;
+                    case 'AQ':
+                        break;
+                    case 'RST':
+                        break;
+                    case 'IUPC':
+                        break;
+                    case 'ENCS':
+                        break;
+                    case 'BQ':
+                        break;
+                    case 'GQ':
+                        break;
+                    case 'RW':
+                        break;
+                    case 'RS':
+                        break;
+                    case 'DO':
+                        break;
+                    case 'LFR':
+                        break;
+                    case 'MS':
+                        break;
+                    case 'RR':
+                        break;
+                    case 'RCP':
+                        break;
+                    case 'TP':
+                        break;
+                    case 'IOT':
+                        break;
+                    case 'TSS':
+                        break;
+                    default:
+                        break;
                 }
-
-                payment.orderId = order_id;
-                var team = {
-                    email: param_data.details.email,
-                    name: param_data.details.name,
-                    phoneNumber: param_data.details.phoneNumber,
-                    delegation: param_data.details.delegation,
-                    college: param_data.details.college,
-                    city: param_data.details.city,
-                    committee: param_data.details.committee,
-                    portfolio: param_data.details.portfolio,
-                    accommodation: param_data.details.accommodation,
-                };
-                teams.push(team);
-
-            } else {
-
-            }
+            
             payment.teamSize = teams.length;
             payment.team = teams;
             console.log(payment);
