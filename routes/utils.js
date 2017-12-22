@@ -272,6 +272,24 @@ exports.saveSheet = function (result) {
                     ];
                     break;
                 
+                case 'SIF':
+                    sheetID = process.env.SHEET_SIF;
+                    ra = result.team[0].type === 'Startup' ? 'Startup' : 'Student';
+                    value = 
+                    [
+                        result.date.paidAt,
+                        result.orderId,
+                        result.amount,
+                        result.team[0].name,
+                        result.team[0].email,
+                        result.team[0].phoneNumber,
+                        result.team[0].college,
+                        result.team[0].city,
+                        result.team[0].committee,
+                        result.team[0].portfolio,
+                        result.team[0].accommodation,
+                    ];
+                    break;
                 default :
                     sheetID = process.env.SHEET_TEST;
                     ra = 'SUO';

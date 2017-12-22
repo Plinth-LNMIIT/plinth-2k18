@@ -35,11 +35,13 @@
     }
 
   });
-
-  $('#register-button').click(function () {
-    $('#register-button').attr("disabled", true);
+  document.getElementById('mun-form').onsubmit= function(e){
+    e.preventDefault();
+    $('#submit-form').attr("disabled", true);
     registerUser();
-  });
+    $('#submit-form').removeAttr("disabled");
+}
+
   function getDetails() {
     var payDetail = {
       name: $('#name').val(),
@@ -58,7 +60,7 @@
   }
 
   function validate(data) {
-    if (data.name === "" || data.phoneNumber === "" || data.email === "" || data.college === "" || data.accommodation === "" || data.committee === "" || data.portfolio === "" || data.delegation === "")
+    if (data.name === "" || data.phoneNumber === "" || data.email === "" || data.college === "" || data.accommodation === "" || data.committee === "" || data.delegation === "")
       return false;
     else
       return true;
@@ -89,23 +91,15 @@
         node.value = JSON.stringify(data);
         form.appendChild(node.cloneNode());
       
-
-      // To be sent, the form needs to be attached to the main document.
+ 
       form.style.display = "none";
       document.body.appendChild(form);
 
       form.submit();
-      $('#register-button').removeAttr("disabled");
-      // Once the form is sent, remove it.
+     
       document.body.removeChild(form);
 
-   /*    $.post("/payment/initiate",
-        data,
-        function (data, status) {
-
-        }).fail(function () {
-          alert('Sorry for any inconvenience, Try again later. If problem persists, contact query@plinth.in');
-        }); */
+  
 
 
     } else {
