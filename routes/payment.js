@@ -25,6 +25,7 @@ router.post('/register/:payName', Verify.verifyOrdinaryUser, function (req, res)
             var param_data = JSON.parse(req.body.postData);
             console.log(param_data);
             payment.event.eventName = param_data.eventName;
+            payment.event.payName = payName;
             payment.email = param_data.mEmail;
             payment.status = 'OPEN';
             payment.date.createdAt = '' + new Date();
@@ -306,6 +307,16 @@ router.post('/response', Verify.verifyOrdinaryUser, function (req, res) {
 
 
                 if (paramlist.STATUS === "TXN_FAILURE") {
+
+
+                    var bulkR = User.collection.initializeOrderedBulkOp();
+                    
+                         bulkR.find({ 'email':result.email }).update({ $pull: { rEvents : { orderId : result.orderId } } });
+ 
+                   
+                     bulkR.execute();
+
+                     
                     res.render('paystatus', {
                         "page": 'paystatus',
                         "isLoggedIn": isLoggedIn,

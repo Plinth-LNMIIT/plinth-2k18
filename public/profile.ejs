@@ -5,6 +5,7 @@
     <% include partials/head %>
 
         <link rel="stylesheet" href="css/profile.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -116,6 +117,86 @@
 
                                 <div class="table-margin" uk-grid>
                                     <h1 id="prof" class="uk-align-center sub-heading">
+                                        <span>Registered Events</span>
+                                    </h1>
+                                </div>
+                                <div class="table-margin" uk-grid>
+                                    <% if(user.rEvents.length === 1) { %>
+                                        <div class="uk-text-center body-font">
+                                            No events to display.
+                                        </div>
+                                        <% } else { %>
+                                            <table id="userp" class="uk-table  uk-table-justify uk-grid-medium uk-table-middle uk-table-divider">
+
+                                                <thead>
+                                                    <tr>
+
+                                                        <th class="head-font">Event Name</th>
+                                                        <th class="head-font">Team Size</th>
+                                                        <th class="head-font">Payment Status</th>
+                                                        <th class="head-font">Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+
+
+                                                    <%   for(var i=1; i<user.rEvents.length; i++) { %>
+                                                        <tr>
+
+                                                            <td class="body-font">
+                                                                <%= user.rEvents[i].event.eventName %>
+                                                            </td>
+                                                            <td class="body-font">
+                                                                <%= user.rEvents[i].team.length %>
+                                                            </td>
+                                                            <td class="body-font">
+                                                                <%= user.rEvents[i].status %>
+                                                            </td>
+                                                            <td class="body-font link-text">
+                                                                <a href="/pdf/view/<%= user.rEvents[i].orderId %>" target="_blank">View</a>
+                                                                <br>
+                                                                <a href="#" id="payNow<%= i %>">Pay</a>
+                                                                <script>
+                                                                        $("#payNow<%= i %>").click(function(e){
+                                                                            e.preventDefault();
+                                                                            var name,
+                                                                        form = document.createElement("form"),
+                                                                        node = document.createElement("input");
+                                                            
+                                                            
+                                                            
+                                                                      form.action =  "/payment/initiate/<%= user.rEvents[i].event.payName %>";
+                                                                      form.method = 'POST';
+                                                            
+                                                            
+                                                                      node.name = 'orderId';
+                                                                      node.value = "<%= user.rEvents[i].orderId %>";
+                                                                      form.appendChild(node.cloneNode());
+                                                            
+                                                            
+                                                                      form.style.display = "none";
+                                                                      document.body.appendChild(form);
+                                                            
+                                                                      form.submit();
+                                                            
+                                                                      document.body.removeChild(form);
+                                                                        });
+                                                                   
+                                                                        
+                                                                </script>
+                                                            </td>
+                                                        </tr>
+                                                        <% } %>
+
+                                                </tbody>
+                                            </table>
+
+                                            <% }  %>
+                                </div>
+
+                                <div class="table-margin" uk-grid>
+                                    <h1 id="prof" class="uk-align-center sub-heading">
                                         <span>Paid Events</span>
                                     </h1>
                                 </div>
@@ -153,7 +234,7 @@
                                                                 <%= user.events[i].status %>
                                                             </td>
                                                             <td class="body-font">
-                                                                <a href="/pdf/<%= user.events[i].orderId %>" target="_blank">Receipt</a>
+                                                                <a href="/pdf/generate/<%= user.events[i].orderId %>" target="_blank">Receipt</a>
                                                             </td>
                                                         </tr>
                                                         <% } %>
@@ -194,13 +275,13 @@
 
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
         <!-- UIkit JS -->
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
         <script src="js/canvasloader.js"></script>
         <script src="js/slowStar.js"></script>
-
+        
 
 </body>
 

@@ -183,6 +183,167 @@ exports.pdf = function (result) {
               
 };
 
+exports.pdfView = function (result) {
+    
+         var doc = new PDFDocument({
+           size: 'A4',
+           info: {
+             Title: '' + result.event.eventName + ' Registration Details',
+             Author: 'Plinth',
+             Creator: 'Shubham Mangal',
+           }
+         });
+        
+         var path = './public/data/' + Math.floor((Math.random() * 10) + 1) +''+ result.orderId + '.pdf';
+         doc.image('./public/media/plinth-logo.png', 25, 50, { height: 48 })
+         doc.image('./public/media/lnmiit-logo.jpeg', 475, 50, { height: 48 })
+         
+         doc.font('./public/fonts/Righteous-Regular.ttf', 28)
+         .text('plinth 2018', 50, 50, {align : 'center'})
+         .moveDown(.1)
+         .font('./public/fonts/Oxygen-Regular.ttf', 12)
+         .text('19th - 21st January',{align : 'center'})
+ 
+         doc.moveTo(25, 110)
+           .lineTo(575, 110)
+           .stroke()
+ 
+         doc.font('./public/fonts/Oxygen-Bold.ttf', 16)
+         .text('Registration Details',50, 130, { align : 'center', underline : true})
+         
+         doc.font('./public/fonts/Roboto-Bold.ttf', 16)
+         .text('Order Details', 50, 160, { underline : true})
+ 
+         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+         .text('Order ID ', 50, 190)
+         .font('./public/fonts/Oxygen-Regular.ttf', 14)
+         .text(': '+result.orderId, 160, 190) 
+        
+         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+         .text('Status ', 300, 190)
+         if(result.status === 'TXN_SUCCESS'){
+             doc.font('./public/fonts/Oxygen-Regular.ttf', 14)
+             .text(': Success', 370, 190) 
+         }else if (result.status === 'TXN_FAILURE'){
+             doc.font('./public/fonts/Oxygen-Regular.ttf', 14)
+             .text(': Failed', 370, 190)
+         }else {
+             doc.font('./public/fonts/Oxygen-Regular.ttf', 14)
+             .text(': Open', 370, 190)
+         }
+
+         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+         .text('Event Name ', 50, 220)
+         .font('./public/fonts/Oxygen-Regular.ttf', 14)
+         .text(': '+result.event.eventName, 160, 220) 
+ 
+         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+         .text('Date ', 300, 220)
+         .font('./public/fonts/Oxygen-Regular.ttf', 14)
+         .text(': '+dateFormat(result.date.createdAt, format), 370, 220) 
+ 
+         
+
+       
+             doc.font('./public/fonts/Roboto-Bold.ttf', 16)
+             .text('Event Details', 50, 290, { underline : true})
+
+             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+             .text('Organizer ', 50, 320)
+             .font('./public/fonts/Oxygen-Regular.ttf', 14)
+             .text(': Plinth, LNMIIT Jaipur', 140, 320) 
+
+             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+             .text('Venue ', 50, 350)
+             .font('./public/fonts/Oxygen-Regular.ttf', 14)
+             .fillColor('blue')
+             .text(': The LNM Institute of Information Technology, Jaipur, India', 140, 350, {link : 'https://goo.gl/maps/g9nB7pgbRio'}) 
+             .fillColor('black')
+
+             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+             .text('Event Link ', 50, 380)
+             .font('./public/fonts/Oxygen-Regular.ttf', 14)
+             .fillColor('blue')
+             .text(': https://plinth.in', 140, 380, {link : 'https://plinth.in'}) 
+             .fillColor('black')
+
+             doc.font('./public/fonts/Roboto-Bold.ttf', 16)
+             .text('Participants Details', 50, 420, { underline : true})
+
+             if(result.event.eventName === 'MUN' || result.event.eventName === 'mun'){
+                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                 .text('Name ', 50, 450)
+                 .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                 .text(': '+result.team[0].name, 160, 450) 
+         
+                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                 .text('Institute ', 300, 450)
+                 .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                 .text(': '+result.team[0].college, 370, 450) 
+                
+ 
+                  
+ 
+                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                 .text('Delegation ', 50, 480)
+                 .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                 .text(': '+result.team[0].delegation, 160, 480) 
+
+                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                 .text('Email ', 300, 480)
+                 .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                 .text(': '+result.team[0].email, 370, 480)
+         
+                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                 .text('Committee ', 50, 510)
+                     .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                     .text(': ' + result.team[0].committee, 160, 510) 
+
+                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                     .text('Portfolio ', 300, 510)
+                     .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                     .text(': '+ result.team[0].portfolio, 370, 510) 
+             
+         
+             
+         }
+
+        doc.font('./public/fonts/Oxygen-Bold.ttf', 10)
+         .text('Note: ',25,705)
+         .font('./public/fonts/Oxygen-Regular.ttf', 10)
+         .text(' Please bring the printout of this receipt to the event OR show this on your smart phone at the venue.', 55, 705)
+         .font('./public/fonts/Oxygen-Regular.ttf', 10)
+         .text(' Need any help? Write us at payment@plinth.in. We will get back to you shortly!', 25, 725)
+
+
+         doc.moveTo(25, 745)
+           .lineTo(575, 745)
+           .stroke() 
+           doc.font('./public/fonts/Oxygen-Bold.ttf', 10)
+           .text('Receipt Generated At ', 25, 750)
+           .font('./public/fonts/Oxygen-Regular.ttf', 10)
+           .text(': '+ dateFormat((new Date()), format1),130,750) 
+           .font('./public/fonts/Oxygen-Regular.ttf', 10)
+           .text('Page 1 of 1',450,750) 
+           
+          
+         // Stream contents to a file
+         doc.pipe(
+           fs.createWriteStream(path)
+         )
+           .on('finish', function () {
+             console.log('PDF closed');
+           });
+ 
+         // Close PDF and write file.
+         doc.end();
+         
+             return path;
+          
+
+       
+};
+
 exports.delpdf = function (path) {
        
                fs.unlink(path, function (err) {

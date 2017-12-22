@@ -10,6 +10,7 @@ var paymentSchema = mongoose.Schema({
         event          : {
                 eventName : String,
                 clubName  : String,
+                payName   : String,
         },
         date      : {
                 createdAt: String,
