@@ -406,7 +406,7 @@ module.exports = {
                         +"<br>"
                         +"Paresh Mishra: +91-9521876701"
                         +"<br><br>"
-                        +"For any query, contact us at <a href='mailto:sif@plinth.in'>sif@plinth.in</a>"
+                        +"For any query, contact us at <a href='mailto:sif.plinth@gmail.com'>sif.plinth@gmail.com</a>"
                     +"</p>",
             sponsors: "Coming Soon",
         },
