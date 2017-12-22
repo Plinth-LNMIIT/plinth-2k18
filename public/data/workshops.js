@@ -3,21 +3,80 @@ module.exports = {
         {
             clubName : "Workshops",
             eventName : "Internet Of Things",
-            displayName : "Roborace",
-            payName: "INT",
+            displayName : "Internet Of Things",
+            payName: "IOT",
             eventDate : "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue : "The LNMIIT, Jaipur",
-            eventCompany : "Proxbotics Creation",
+            eventCompany : "HYDROLUS TECHNOLOGY",
             memberUpperLimit : 1,
             memberLowerLimit : 1,
             eventFee: null,
             synopsis: null,
-            eventDescription : " <p><b>Spacewalk</b><ol><li>Participants will have 1 minute to answer each question by writing it down on the given sheet.</li><li>These questions will be objective or one word.</li><li>Each question will carry 2 points.</li><li>Marks will be allotted to each question individually.</li><li>Only top 50% teams will go to the next round.</li></ol></p><p><b>Spacewalk</b><ol><li>Teams will be provided with certain token numbers and called upon on its basis.</li><li>A star map, a laser pointer and telescope shall be provided to the team</li><li>The teams which had qualified in the quiz would be required to point at certain celestial objects through pointer and telescope</li><li>Minimum time shall be provided, based on which points are to be rewarded.</li><li>Team with maximum score would be declared winner.</li><li>Teams are suppose to restrain themselves from using any android application such as Google Sky Map or any other lectronic media.</li><li>Points will be given for locating the objects precisely only on first attempt.</li></ol></p>",
+            eventDescription : "<p>"
+                                    +"<p>"
+                                        +"The internet of things (IoT) is the internetworking of physical devices, vehicles, buildings and other items— embedded with electronics, software, sensors, actuators, and network connectivity that enable these objects to collect and exchange data"
+                                    +"</p>"
+                                +"</p>",
             highlights:null,
-            workshopContent: null,
+            workshopContent: "<p>"
+                                    +"<b>Day 1</b>"
+                                    +"<p>Session 1: Introduction to IOT</p>"
+                                    +"<ul>"
+                                        +"<li>What is IOT?</li>"
+                                        +"<li>Basics of IOT</li>"
+                                        +"<li>Applications of IOT</li>"
+                                        +"<li>Introduction to Arduino</li>"
+                                        +"<li>What is ARDUINO?</li>"
+                                        +"<li>What is Open Source Microcontroller Platform?</li>"
+                                        +"<li>Basics of Electronics</li>"
+                                        +"<li>Sensors and Actuators</li>"
+                                        +"<li>Hands on Arduino</li>"
+                                        +"<li>Fundamentals of C programming</li>"
+                                        +"<li>Hello to the Microcontroller World (Your First Arduino Sketch)</li>"
+                                        +"<li>Interfacing Sensors with Arduino</li>"
+                                        +"<li>Reading from Sensors</li>"
+                                    +"</ul>"
+                                    +"<p>Session 2: </p>"
+                                    +"<ul>"
+                                        +"<li>Basics of Networking</li>"
+                                        +"<li>Networking Fundamentals</li>"
+                                        +"<li>Types of Networks</li>"
+                                        +"<li>Network Topologies</li>"
+                                        +"<li>Arduino with Bluetooth</li>"
+                                        +"<li>Interfacing Bluetooth Module with Arduino</li>"
+                                        +"<li>Controlling Arduino with Android Device</li>"
+                                        +"<li>Making Android App Using Online Tools</li>"
+                                        +"<li>Intro to MIT App inventor</li>"
+                                        +"<li>Making your first Android App</li>"
+                                        +"<li>Control Arduino with Your First App</li>"
+                                    +"</ul>"
+                                    +"<b>Day 2</b>"
+                                    +"<p>Session 3: </p>"
+                                    +"<ul>"
+                                        +"<li>Arduino with Esp8266</li>"
+                                        +"<li>Creating program for Local host Web Server</li>"
+                                        +"<li>Hello to the Online World</li>"
+                                        +"<li>What are cloud Servers?</li>"
+                                        +"<li>Cloud computing and IOT</li>"
+                                        +"<li>Project 1: Android Controlled Devices Using Arduino</li>"
+                                        +"<li>Project 2: Internet Controlled LED’S</li>"
+                                        +"<li>Project 3: Home Automation</li>"
+                                    +"</ul>"
+                                    +"<p>Session 4: </p>"
+                                    +"<ul>"
+                                        +"<li>Competition</li>"
+                                        +"<li>Prize Distribution</li>"
+                                    +"</ul>"
+                                    +"<br>"
+                                   
+                                +"</p>",
             rules: null,
             benefits: null,
-            query : null,
+            query: "<p class='link-text'>"
+                        +"Will be updated Soon"
+                        +"<br><br>"
+                        +"For any query, contact us at <a href='mailto:workshops@plinth.in'>workshops@plinth.in</a>" 
+                    +"</p>",
             sponsors : null,
             
          
