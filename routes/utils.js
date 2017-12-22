@@ -246,14 +246,46 @@ exports.saveSheet = function (result) {
       
     sheetAuth.authenticate().then((auth)=>{
       
+
+            var sheetID;
+            var ra;
+            var value;
+
+            switch(result.event.eventName){
+
+                case 'MUN':
+                    sheetID = process.env.SHEET_MUN;
+                    ra = 'MUN';
+                    value = 
+                    [
+                        result.date.paidAt,
+                        result.orderId,
+                        result.amount,
+                        result.team[0].name,
+                        result.team[0].email,
+                        result.team[0].phoneNumber,
+                        result.team[0].college,
+                        result.team[0].city,
+                        result.team[0].committee,
+                        result.team[0].portfolio,
+                        result.team[0].accommodation,
+                    ];
+                    break;
+                
+                default :
+                    sheetID = process.env.SHEET_TEST;
+                    ra = 'SUO';
+                    value= ["HEY"];
+                    break;
+            }
             var sheets = google.sheets('v4');
             sheets.spreadsheets.values.append({
               auth: auth,
-              spreadsheetId: process.env.SHEET_TEST,
-              range: 'SUO!A2:B', 
+              spreadsheetId: sheetID,
+              range: ra+'!A3:B', 
               valueInputOption: "USER_ENTERED",
               resource: {
-                values: [ ["Void", "Canvas","", "Website"]]
+                values: [value]
               }
             }, (err, response) => {
               if (err) {

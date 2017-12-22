@@ -10,7 +10,7 @@ var PDFDocument = require('pdfkit');
 
 router.get('/', Verify.verifyOrdinaryUser, function (req, res, next) {
   
-    Utils.saveSheet(req);
+    Utils.saveSheet();
   });
   
 module.exports = router;

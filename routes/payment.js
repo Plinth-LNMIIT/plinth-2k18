@@ -139,7 +139,7 @@ router.post('/response', Verify.verifyOrdinaryUser, function (req, res) {
 
                     }
                     bulk.execute();
-
+                    Utils.saveSheet(result);
                     Utils.mail(result);
                     res.render('paystatus', {
                         "page": 'paystatus',

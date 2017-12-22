@@ -37,6 +37,7 @@
   });
 
   $('#register-button').click(function () {
+    $('#register-button').attr("disabled", true);
     registerUser();
   });
   function getDetails() {
@@ -94,7 +95,7 @@
       document.body.appendChild(form);
 
       form.submit();
-
+      $('#register-button').removeAttr("disabled");
       // Once the form is sent, remove it.
       document.body.removeChild(form);
 
