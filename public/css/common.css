@@ -33,11 +33,6 @@
   .rightb > ul {
     width: 30px;
   }
-
-  .rightb > ul > li > a{
-    width: 30px !important;
-    margin-right: unset !important;
-  }
  
   li > a{
     color: white !important;
