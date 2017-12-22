@@ -30,9 +30,8 @@
     margin-top: 0px;
   } 
 
-  .rightb > ul > li > a{
+  .rightb > ul > li {
     width: 30px !important;
-    margin-right: unset !important;
   }
 
   li > a{
