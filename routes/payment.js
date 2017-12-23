@@ -55,31 +55,30 @@ router.post('/register/:payName', Verify.verifyOrdinaryUser, function (req, res)
                         break;
                     case 'SIF':
 
-                        if (param_data.type == 'Startup') {
+                        if (param_data.details.type == 'Startup') {
                             var team = {
+                                type: param_data.details.type,
                                 email: param_data.details.email,
                                 name: param_data.details.name,
                                 phoneNumber: param_data.details.phoneNumber,
-                                delegation: param_data.details.delegation,
-                                college: param_data.details.college,
-                                city: param_data.details.city,
-                                committee: param_data.details.committee,
-                                portfolio: param_data.details.portfolio,
-                                accommodation: param_data.details.accommodation,
+                                startupName: param_data.details.startupName,
+                                website: param_data.details.website,
+                                interns: param_data.details.interns,
+                                domain: param_data.details.domain,
                             };
                             teams.push(team);
 
                         } else {
                             var team = {
+                                type: param_data.details.type,
                                 email: param_data.details.email,
                                 name: param_data.details.name,
                                 phoneNumber: param_data.details.phoneNumber,
-                                delegation: param_data.details.delegation,
                                 college: param_data.details.college,
                                 city: param_data.details.city,
-                                committee: param_data.details.committee,
-                                portfolio: param_data.details.portfolio,
-                                accommodation: param_data.details.accommodation,
+                                resume: param_data.details.resume,
+                                linkedin: param_data.details.linkedin,
+                                year: param_data.details.year,
                             };
                             teams.push(team);
 
@@ -139,7 +138,7 @@ router.post('/register/:payName', Verify.verifyOrdinaryUser, function (req, res)
                     var bulk = User.collection.initializeOrderedBulkOp();
                     bulk.find({'email': payment.email}).update({ $push: { rEvents: payment }});
                     bulk.execute();
-                   // Utils.saveSheet(payment);
+                    Utils.saveSheet(payment);
                     res.json({status : true,
                     orderId: payment.orderId});
                 }
@@ -350,7 +349,7 @@ router.post('/response', Verify.verifyOrdinaryUser, function (req, res) {
                   
                     bulkR.execute();
 
-                   // Utils.updateSheet(result);
+                    Utils.updateSheet(result);
                     Utils.mail(result);
                     res.render('paystatus', {
                         "page": 'paystatus',

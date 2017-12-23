@@ -212,10 +212,13 @@
   .uk-modal-body{
     color: black;
   }
+  
   .black-fill{
     color: black;
   }
-  
+  .red-fill{
+    color: red;
+  }
   .medium{
     font-size: 16px;
     padding: 5%;

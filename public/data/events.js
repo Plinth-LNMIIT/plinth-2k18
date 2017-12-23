@@ -2,6 +2,7 @@ module.exports = {
     events: [
         {
 
+            fee:100,
             paymentURL: "/payment/initiate/INT",
             clubName: "Astronomy",
             eventName: "Into The Universe",
@@ -91,6 +92,7 @@ module.exports = {
         },
         {
 
+            fee:100,
             paymentURL: "/payment/initiate/AH",
             clubName: "Astronomy",
             eventName: "Astro Hunt",
@@ -130,6 +132,8 @@ module.exports = {
         },
         {
 
+     
+            fee:100,
             paymentURL: "/payment/initiate/AQ",
             clubName: "Astronomy",
             eventName: "Astro Quiz",
@@ -177,6 +181,8 @@ module.exports = {
         
         {
 
+     
+            fee:0,
             paymentURL: "/payment/initiate/RST",
             clubName: "Literature",
             eventName: "Rostrum",
@@ -228,6 +234,8 @@ module.exports = {
         
         {
 
+     
+            fee:0,
             paymentURL: null,
             clubName: "Literature",
             eventName: "UnErase Poetry",
@@ -261,6 +269,8 @@ module.exports = {
         
         {
 
+     
+            fee:0,
             paymentURL: null,
             clubName: "Coding",
             eventName: "IUPC",
@@ -326,6 +336,8 @@ module.exports = {
         },    
         {
 
+     
+            fee:0,
             paymentURL: null,
             clubName: "Coding",
             eventName: "Enigma",
@@ -398,6 +410,11 @@ module.exports = {
 
         {
 
+     
+            fee:{
+                startup: 1000,
+                student: 100,
+            },
             paymentURL: "/payment/initiate/SIF",
             clubName: "Management",
             eventName: "StartUp Intern Fair",
@@ -434,6 +451,8 @@ module.exports = {
         
         {
 
+     
+            fee:200,
             paymentURL: "/payment/initiate/BQ",
             clubName: "Quizzing",
             eventName: "Business Quiz",
@@ -462,6 +481,8 @@ module.exports = {
         
         {
 
+     
+            fee:200,
             paymentURL: "/payment/initiate/GQ",
             clubName: "Quizzing",
             eventName: "General Quiz",
@@ -504,6 +525,8 @@ module.exports = {
 
         
         {
+      
+            fee:700,
             paymentURL: "/payment/initiate/RW",
             clubName: "Robotics",
             eventName: "Robowar",
@@ -663,6 +686,8 @@ module.exports = {
         },
         
         {
+      
+            fee:250,
             paymentURL: "/payment/initiate/RS",
             clubName: "Robotics",
             eventName: "Robosoccer",
@@ -761,6 +786,8 @@ module.exports = {
         },
         
         {
+      
+            fee:600,
             paymentURL: "/payment/initiate/DO",
             clubName: "Robotics",
             eventName: "Drone Obstruction",
@@ -811,6 +838,8 @@ module.exports = {
         },
         
         {
+      
+            fee:250,
             paymentURL: "/payment/initiate/LFR",
             clubName: "Robotics",
             eventName: "LFR",
@@ -862,6 +891,8 @@ module.exports = {
         },
         
         {
+      
+            fee:250,
             paymentURL: "/payment/initiate/MS",
             clubName: "Robotics",
             eventName: "Maze Solver",
@@ -948,6 +979,8 @@ module.exports = {
         },
         
         {
+      
+            fee:250,
             paymentURL: "/payment/initiate/RR",
             clubName: "Robotics",
             eventName: "Roborace",
@@ -1042,6 +1075,8 @@ module.exports = {
         },
         
         {
+      
+            fee:500,
             paymentURL: "/payment/initiate/RCP",
             clubName: "Robotics",
             eventName: "RC Plane",
@@ -1215,7 +1250,7 @@ module.exports = {
                         
                     +"</p>",
             judges: null,
-           query: "<p class='link-text'>"
+            query: "<p class='link-text'>"
                         +"Yogesh Modi: +91-9784877567"
                         +"<br>"
                         +"Neha Jhamtani: +91-8769081710"
@@ -1227,6 +1262,8 @@ module.exports = {
         },
         
         {
+      
+            fee:250,
             paymentURL: "/payment/initiate/TP",
             clubName: "Robotics",
             eventName: "Transporter",
