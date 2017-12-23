@@ -8,9 +8,9 @@ var Payment = require('../schema/payment');
 var fs = require('fs');
 var PDFDocument = require('pdfkit');
 
-router.get('/', Verify.verifyOrdinaryUser, function (req, res, next) {
+/* router.get('/', Verify.verifyOrdinaryUser, function (req, res, next) {
   
     Utils.saveSheet();
-  });
+  }); */
   
 module.exports = router;

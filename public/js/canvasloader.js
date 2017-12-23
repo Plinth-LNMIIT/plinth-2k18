@@ -13,7 +13,7 @@ window.onload = function() {
           
          Stars();
         }); 
-      },100);
+      },0);
    };
    
 function fadeOut(el){

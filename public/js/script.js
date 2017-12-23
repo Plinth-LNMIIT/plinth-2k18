@@ -86,27 +86,31 @@ function registerUser() {
       .done(function (data) {
 
         if (data.status) {
-          var name,
-            form = document.createElement("form"),
-            node = document.createElement("input");
+
+          setTimeout(function(){
+              var name,
+              form = document.createElement("form"),
+              node = document.createElement("input");
 
 
 
-          form.action = "/payment/initiate/MUN";
-          form.method = 'POST';
+            form.action = "/payment/initiate/MUN";
+            form.method = 'POST';
 
 
-          node.name = 'orderId';
-          node.value = data.orderId;
-          form.appendChild(node.cloneNode());
+            node.name = 'orderId';
+            node.value = data.orderId;
+            form.appendChild(node.cloneNode());
 
 
-          form.style.display = "none";
-          document.body.appendChild(form);
+            form.style.display = "none";
+            document.body.appendChild(form);
 
-          form.submit();
+            form.submit();
 
-          document.body.removeChild(form);
+            document.body.removeChild(form);
+          },1000);
+          
 
         }
 
