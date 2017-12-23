@@ -315,7 +315,7 @@ router.post('/response', Verify.verifyOrdinaryUser, function (req, res) {
                    
                      bulkR.execute();
 
-                     
+                    Utils.updateSheet(result); 
                     res.render('paystatus', {
                         "page": 'paystatus',
                         "isLoggedIn": isLoggedIn,

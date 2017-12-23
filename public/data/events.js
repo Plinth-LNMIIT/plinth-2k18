@@ -3,7 +3,7 @@ module.exports = {
         {
 
             fee:100,
-            paymentURL: "/payment/initiate/INT",
+            paymentURL: null,
             clubName: "Astronomy",
             eventName: "Into The Universe",
             displayName: "Into The Universe",
@@ -93,7 +93,7 @@ module.exports = {
         {
 
             fee:100,
-            paymentURL: "/payment/initiate/AH",
+            paymentURL: null,
             clubName: "Astronomy",
             eventName: "Astro Hunt",
             displayName: "Astro Hunt",
@@ -134,7 +134,7 @@ module.exports = {
 
      
             fee:100,
-            paymentURL: "/payment/initiate/AQ",
+            paymentURL: null,
             clubName: "Astronomy",
             eventName: "Astro Quiz",
             displayName: "Astro Quiz",
@@ -183,7 +183,7 @@ module.exports = {
 
      
             fee:0,
-            paymentURL: "/payment/initiate/RST",
+            paymentURL: null,
             clubName: "Literature",
             eventName: "Rostrum",
             displayName: "Rostrum - The Debate",
@@ -415,7 +415,7 @@ module.exports = {
                 startup: 1000,
                 student: 100,
             },
-            paymentURL: "/payment/initiate/SIF",
+            paymentURL: true,
             clubName: "Management",
             eventName: "StartUp Intern Fair",
             displayName: "StartUp Intern Fair",
@@ -453,7 +453,7 @@ module.exports = {
 
      
             fee:200,
-            paymentURL: "/payment/initiate/BQ",
+            paymentURL: null,
             clubName: "Quizzing",
             eventName: "Business Quiz",
             displayName: "Business Quiz",
@@ -483,7 +483,7 @@ module.exports = {
 
      
             fee:200,
-            paymentURL: "/payment/initiate/GQ",
+            paymentURL: null,
             clubName: "Quizzing",
             eventName: "General Quiz",
             displayName: "General Quiz",
@@ -527,7 +527,7 @@ module.exports = {
         {
       
             fee:700,
-            paymentURL: "/payment/initiate/RW",
+            paymentURL: null,
             clubName: "Robotics",
             eventName: "Robowar",
             displayName: "Robowar",
@@ -688,7 +688,7 @@ module.exports = {
         {
       
             fee:250,
-            paymentURL: "/payment/initiate/RS",
+            paymentURL: null,
             clubName: "Robotics",
             eventName: "Robosoccer",
             displayName: "Robosoccer",
@@ -788,7 +788,7 @@ module.exports = {
         {
       
             fee:600,
-            paymentURL: "/payment/initiate/DO",
+            paymentURL: null,
             clubName: "Robotics",
             eventName: "Drone Obstruction",
             displayName: "Drone Obstruction",
@@ -840,7 +840,7 @@ module.exports = {
         {
       
             fee:250,
-            paymentURL: "/payment/initiate/LFR",
+            paymentURL: null,
             clubName: "Robotics",
             eventName: "LFR",
             displayName: "LFR",
@@ -893,7 +893,7 @@ module.exports = {
         {
       
             fee:250,
-            paymentURL: "/payment/initiate/MS",
+            paymentURL: null,
             clubName: "Robotics",
             eventName: "Maze Solver",
             displayName: "Maze Solver",
@@ -981,7 +981,7 @@ module.exports = {
         {
       
             fee:250,
-            paymentURL: "/payment/initiate/RR",
+            paymentURL: null,
             clubName: "Robotics",
             eventName: "Roborace",
             displayName: "Roborace",
@@ -1077,7 +1077,7 @@ module.exports = {
         {
       
             fee:500,
-            paymentURL: "/payment/initiate/RCP",
+            paymentURL: null,
             clubName: "Robotics",
             eventName: "RC Plane",
             displayName: "RC Plane",
@@ -1264,7 +1264,7 @@ module.exports = {
         {
       
             fee:250,
-            paymentURL: "/payment/initiate/TP",
+            paymentURL: null,
             clubName: "Robotics",
             eventName: "Transporter",
             displayName: "Transporter",
