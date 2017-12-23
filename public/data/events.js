@@ -455,9 +455,9 @@ module.exports = {
             fee:200,
             paymentURL: null,
             clubName: "Quizzing",
-            eventName: "Business Quiz",
-            displayName: "Business Quiz",
-            payName: "BQ",
+            eventName: "Brandwagon",
+            displayName: "Brandwagon",
+            payName: "BW",
             eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
@@ -478,16 +478,15 @@ module.exports = {
             sponsors: null,
             otherURL: null, 
         },
-        
         {
 
      
             fee:200,
             paymentURL: null,
             clubName: "Quizzing",
-            eventName: "General Quiz",
-            displayName: "General Quiz",
-            payName: "GQ",
+            eventName: "The Quest",
+            displayName: "The Quest",
+            payName: "TQ",
             eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,

@@ -591,9 +591,9 @@ exports.saveSheet = function (result) {
                 break;
             case 'ENCS':
                 break;
-            case 'BQ':
+            case 'BW':
                 break;
-            case 'GQ':
+            case 'TQ':
                 break;
             case 'RW':
                 break;
@@ -732,9 +732,9 @@ exports.updateSheet = function (result) {
                 break;
             case 'ENCS':
                 break;
-            case 'BQ':
+            case 'BW':
                 break;
-            case 'GQ':
+            case 'TQ':
                 break;
             case 'RW':
                 break;

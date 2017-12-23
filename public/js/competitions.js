@@ -364,10 +364,10 @@ $("#submit-button").click(function (e) {
         case 'ENCS':
              
             break;
-        case 'BQ':
+        case 'BW':
              
             break;
-        case 'GQ':
+        case 'TQ':
              
             break;
         case 'RW':

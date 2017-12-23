@@ -98,9 +98,9 @@ router.post('/register/:payName', Verify.verifyOrdinaryUser, function (req, res)
                         break;
                     case 'ENCS':
                         break;
-                    case 'BQ':
+                    case 'BW':
                         break;
-                    case 'GQ':
+                    case 'TQ':
                         break;
                     case 'RW':
                         break;
@@ -202,10 +202,10 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                     case 'ENCS':
                         payment.amount = 0.01;   
                         break;
-                    case 'BQ':
+                    case 'BW':
                         payment.amount = 200;   
                         break;
-                    case 'GQ':
+                    case 'TQ':
                         payment.amount = 200;   
                         break;
                     case 'RW':
