@@ -13,7 +13,27 @@ var checksum = require('../checksum/checksum');
 var hostURL = process.env.HOST_URL;
 var id_tag = process.env.NODE_ENV === 'development' ? 'dev' : '2018';
 
+router.get('/admin/check/:id', Verify.verifyOrdinaryUser, function(req,res){
+    var url;
+    paramaters = {
+        ORDER_ID: req.params.id,
+        MID: paytm.mid,
+    }
+   
 
+    
+    checksum.genchecksum(paramaters, paytm.key, function (err, result) {
+        
+        url='https://secure.paytm.in/oltp/HANDLER_INTERNAL/getTxnStatus?JsonData={%22MID%22:%22'+result['MID']+'%22,%22ORDERID%22:%22'+result['ORDER_ID']+'%22,%22CHECKSUMHASH%22:%22'+result['CHECKSUMHASH']+'%22}';
+        
+        var request = require('request');
+       
+        request.post(url,function(error, response, body){
+            res.json(JSON.parse(body));
+          }); 
+      
+    });
+});
 
 router.post('/register/:payName', Verify.verifyOrdinaryUser, function (req, res) {
 

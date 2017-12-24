@@ -213,7 +213,7 @@ canvas {
   height: 100vh;
   width: 100%;
     margin-top: 0vh;
-padding-bottom: 30vh;  
+ 
 }
 
  
@@ -272,7 +272,7 @@ padding-bottom: 30vh;
 @media only screen and (max-width: 1024px) {
 
    #home{
-    height: 100vh;
+    height: 100%;
     width: 100%;
       margin-top: 0vh;
  padding-bottom: 30vh;  
@@ -389,10 +389,32 @@ padding-bottom: 30vh;
 }
 
 @media only screen and (min-device-width: 480px) 
-                  and (max-device-width: 640px) 
+                  and (max-device-width: 740px) 
                   and (orientation: landscape) {
+#home{
+  height: 100%;
+}
+ 
+.small-hidden{
+  display: none;
+}             
 
-                 
+.mun-home-logo{
+  height: 60px;
+  width: 60px;
+}
+
+.heading1{
+  font-size:  1.5rem;
+}
+
+.heading2{
+  font-size:  .7rem;
+}
+
+.heading3{
+  font-size:  .7rem;
+}
 } 
 
 
