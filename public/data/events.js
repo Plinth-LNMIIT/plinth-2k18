@@ -323,11 +323,11 @@ module.exports = {
                     +"</p>",
             judges: null,
             query: "<p class='link-text'>"
-                        +"Aditya Aggarwal: +91-8791636347"
+                        +"Vrinda Goel: +91-8003890410"
                         +"<br>"
                         +"Garvit Bhatia: +91-9414858869"
                         +"<br>"
-                        +"Vrinda Goel: +91-8003890410"
+                        +"Aditya Aggarwal: +91-8791636347"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:coding@plinth.in'>coding@plinth.in</a>"
                     +"</p>",
@@ -396,11 +396,11 @@ module.exports = {
                     +"</p>",
             judges: null,
             query: "<p class='link-text'>"
-                        +"Aditya Aggarwal: +91-8791636347"
+                        +"Vrinda Goel: +91-8003890410"
                         +"<br>"
                         +"Garvit Bhatia: +91-9414858869"
                         +"<br>"
-                        +"Vrinda Goel: +91-8003890410"
+                        +"Aditya Aggarwal: +91-8791636347"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:coding@plinth.in'>coding@plinth.in</a>"
                     +"</p>",
