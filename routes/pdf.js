@@ -11,10 +11,7 @@ var PDFDocument = require('pdfkit');
 router.get('/generate/:id', Verify.verifyOrdinaryUser, function (req, res, next) {
   if (req.decoded.sub === "") {
     isLoggedIn = false;
-    res.render('404', {
-      "page": '404',
-      "isLoggedIn": isLoggedIn,
-    });
+    res.redirect('/404');
   }
   else {
     User.findOne({ 'email': req.decoded.sub }, function (err, user) {
@@ -38,6 +35,8 @@ router.get('/generate/:id', Verify.verifyOrdinaryUser, function (req, res, next)
               }
             }
 
+          }    else {
+            res.redirect('/404');
           }
 
 
@@ -58,11 +57,7 @@ router.get('/generate/:id', Verify.verifyOrdinaryUser, function (req, res, next)
           }
 
           else {
-            res.render('404', {
-              "page": '404',
-              "isLoggedIn": isLoggedIn,
-              "user": user
-            });
+            res.redirect('/404');
           }
         });
 
@@ -81,10 +76,7 @@ router.get('/generate/:id', Verify.verifyOrdinaryUser, function (req, res, next)
 router.get('/view/:id', Verify.verifyOrdinaryUser, function (req, res, next) {
   if (req.decoded.sub === "") {
     isLoggedIn = false;
-    res.render('404', {
-      "page": '404',
-      "isLoggedIn": isLoggedIn,
-    });
+    res.redirect('/404');
   }
   else {
     User.findOne({ 'email': req.decoded.sub }, function (err, user) {
@@ -108,6 +100,8 @@ router.get('/view/:id', Verify.verifyOrdinaryUser, function (req, res, next) {
               }
             }
 
+          } else {
+            res.redirect('/404');
           }
 
 
@@ -128,11 +122,7 @@ router.get('/view/:id', Verify.verifyOrdinaryUser, function (req, res, next) {
           }
 
           else {
-            res.render('404', {
-              "page": '404',
-              "isLoggedIn": isLoggedIn,
-              "user": user
-            });
+            res.redirect('/404');
           }
         });
 

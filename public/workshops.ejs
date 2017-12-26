@@ -5,10 +5,7 @@
     <% include partials/head %>
         <link rel="stylesheet" href="css/workshops.css">
         <script>
-            var current;
-            var next;
-            var mevent;
-            var mevents = <%- JSON.stringify(workshops) %> ;
+            var urls = <%- JSON.stringify(workshopUrl) %> ;
 
         </script>
 </head>
@@ -31,133 +28,33 @@
                                         </h1>
                                     </div>
                                     <div class="my-rotate">
-                                            <div class="uk-grid-medium" uk-grid>
-    
-                                                <div class="boxing-left boxing">
-                                                    <div class="hexagon iot-image more-details">
-                                                        <div class="hexTop"></div>
-                                                        <div class="hexBottom"></div>
-                                                        <div class="hexagon-hidden hover">
-                                                            <div class="hexTop" id="hiddenArea"></div>
-                                                            <div class="hexBottom" id="hiddenArea"></div>
-    
-                                                            <div class="statement">Internet Of Things</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="boxing-right boxing">
-                                                    <div class="hexagon scribbled-image more-details">
-                                                        <div class="hexTop"></div>
-                                                        <div class="hexBottom"></div>
-                                                        <div class="hexagon-hidden hover">
-                                                            <div class="hexTop" id="hiddenArea"></div>
-                                                            <div class="hexBottom" id="hiddenArea"></div>
-    
-                                                            <div class="statement">Scribbled Stories</div>
-                                                        </div>
+                                        <div class="uk-grid-medium" uk-grid>
+
+                                            <div class="boxing-left boxing">
+                                                <div class="hexagon iot-image more-details">
+                                                    <div class="hexTop"></div>
+                                                    <div class="hexBottom"></div>
+                                                    <div class="hexagon-hidden hover">
+                                                        <div class="hexTop" id="hiddenArea"></div>
+                                                        <div class="hexBottom" id="hiddenArea"></div>
+
+                                                        <div class="statement">Internet Of Things</div>
                                                     </div>
                                                 </div>
                                             </div>
-    
-    
-    
-    
-                                        </div>
-                                </div>
-                            </div>
 
-                            <div id="details">
-                                <div>
-                                    <div uk-grid>
-                                        <span class="back-back-icon">
-                                            <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
-                                        </span>
-                                        <h1 class="heading-text uk-align-center">
-                                            <span id='clubName'></span>
-                                        </h1>
-                                    </div>
+                                            <div class="boxing-right boxing">
+                                                <div class="hexagon scribbled-image more-details">
+                                                    <div class="hexTop"></div>
+                                                    <div class="hexBottom"></div>
+                                                    <div class="hexagon-hidden hover">
+                                                        <div class="hexTop" id="hiddenArea"></div>
+                                                        <div class="hexBottom" id="hiddenArea"></div>
 
-                                    <div>
-
-                                        <h1 class="heading-li uk-align-center ">
-                                            <span id='eventName'></span>
-                                        </h1>
-                                    </div>
-
-                                    <div>
-                                        <ul class="uk-list text-list  uk-text-center uk-list-medium">
-                                            <li id="fees">
-                                                Fee :
-                                                <span id='eventFee'></span>
-                                            </li>
-                                            <li>
-                                                Date :
-                                                <span id='eventDate'></span>
-                                            </li>
-                                            <li>
-                                                Venue :
-                                                <span id='eventVenue'></span>
-                                            </li>
-
-
-                                           
-                                            <br>
-                                            <li>
-                                                <% if(isLoggedIn){ %>
-
-
-                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#register-workshops" uk-toggle>Registration</a>
-                                                    <% } else { %>
-                                                        <a class="uk-button button-font uk-button-default uk-button-large" href="#register-center" uk-toggle>Register</a>
-                                                        <% } %>
-                                            </li>
-
-                                            <br>
-                                        </ul>
-
-
-
-
-                                    </div>
-
-                                    <div class="my-rotate">
-                                        <div uk-grid>
-                                            <ul id="tabs" class="uk-flex-center uk-text-center" uk-tab>
-                                                
-                                                <li class="uk-active">
-                                                    <a id="synopsis" href="#">Synopsis</a>
-                                                </li>
-                                                <li >
-                                                    <a id="description" href="#">Event Description</a>
-                                                </li>
-                                                <li>
-                                                    <a id="highlights" href="#">Highlights</a>
-                                                </li>
-                                                <li>
-                                                    <a id="workshopContent" href="#">Workshop Structure</a>
-                                                </li>
-                                                <li>
-                                                    <a id="rules" href="#">Rules</a>
-                                                </li>
-                                                <li>
-                                                    <a id="benefits" href="#">Benefits</a>
-                                                </li>
-
-                                                <li>
-                                                    <a id="contact" href="#">Contact</a>
-                                                </li>
-
-                                            </ul>
-
-
-                                            <div id="tab">
-
+                                                        <div class="statement">Scribbled Stories</div>
+                                                    </div>
+                                                </div>
                                             </div>
-
-
-
-
                                         </div>
 
 
@@ -166,6 +63,7 @@
                                     </div>
                                 </div>
                             </div>
+
 
 
                         </div>
@@ -197,10 +95,28 @@
         <!-- UIkit JS -->
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
-        <script src="js/workshops.js"></script>
+       
         <script src="js/canvasloader.js"></script>
         <script src="js/slowStar.js"></script>
 
+        <script>
+
+            $(".more-details").click(function () {
+                next = $(this).find('div.statement').get('0').innerHTML;
+
+                console.log(urls);
+                urls.forEach(element => {
+
+                    if (element.eventName == next) {
+
+                        window.location = window.location + element.eventUrl;
+
+                    }
+                });
+
+            });
+
+        </script>
 
 </body>
 

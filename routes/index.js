@@ -543,15 +543,15 @@ router.get('/terms', Verify.verifyOrdinaryUser ,function(req, res, next) {
 });
 
 router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
-
-    var workshopDetail = require('../data/workshops');
+    var workshopUrl = require('../data/workshops').workshopUrl;
+    
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;
         res.render('workshops', {
             "page" : 'workshops',
             "isLoggedIn" : isLoggedIn,
-            "workshops" : workshopDetail.workshops,
+            "workshopUrl" : workshopUrl.workshops,
         });
     }
     else {
@@ -567,7 +567,7 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
                     "page" : 'workshops',
                     "isLoggedIn" : isLoggedIn,
                     "user" : user,
-                    "workshops" : workshopDetail.workshops,
+                    "workshopUrl" : workshopUrl.workshops,
                 });
             }
         });
@@ -575,6 +575,70 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
   
   
 });
+
+router.get('/workshops/:workshop', Verify.verifyOrdinaryUser ,function(req, res, next) {
+
+        var workshopDetail = require('../data/workshops').workshops;
+        var worskhops = ['iot', 'scribbledstories'];
+        var workshop = req.params.workshop;
+        var detail;
+        var valid = false;
+         
+        if(worskhops.indexOf(workshop) > -1){
+            
+                  
+                        valid = true;
+            
+                        workshopDetail.workshops.forEach(element => {
+                            
+                            if(element.eventUrl == workshop){
+                               
+                                detail = element;
+                            }
+                        });
+                
+                    
+                }
+
+
+        if(req.decoded.sub === "")
+        {
+            isLoggedIn = false;
+            if(valid){
+                res.render('workshop', {
+                    "page" : 'workshops',
+                    "isLoggedIn" : isLoggedIn,
+                    "workshop" : detail,
+                });
+            } else {
+                res.redirect('/404');
+            }
+        }
+        else {
+            User.findOne({'email' : req.decoded.sub }, function(err, user) {
+               
+                isLoggedIn = user.valid;
+                // if there are any errors, return the error
+                if (err)
+                    return done(err);
+                // check to see if theres already a user with that email
+                if (user){
+                    if(valid){    
+                        res.render('workshop',{
+                            "page" : 'workshops',
+                            "isLoggedIn" : isLoggedIn,
+                            "user" : user,
+                            "workshop" : detail,
+                        });
+                    } else {
+                        res.redirect('/404');
+                    }
+                }
+            });
+        }
+      
+      
+    });
 
 router.get('/profile', Verify.verifyOrdinaryUser ,function(req, res, next) {
    

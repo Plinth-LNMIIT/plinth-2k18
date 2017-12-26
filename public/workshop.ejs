@@ -7,8 +7,8 @@
         <script>
             var current;
             var next;
-            var mevent;
-            var mevents = <%- JSON.stringify(workshops) %> ;
+            var mevent = <%- JSON.stringify(workshop) %> ;
+           
 
         </script>
 </head>
@@ -23,49 +23,7 @@
 
                     <div class="scroll-content" id="style-7">
                         <div class="inner-content">
-                            <div id="main-list">
-                                <div>
-                                    <div uk-grid>
-                                        <h1 class="heading-text  uk-align-center ">
-                                            <span>Workshops</span>
-                                        </h1>
-                                    </div>
-                                    <div class="my-rotate">
-                                            <div class="uk-grid-medium" uk-grid>
-    
-                                                <div class="boxing-left boxing">
-                                                    <div class="hexagon iot-image more-details">
-                                                        <div class="hexTop"></div>
-                                                        <div class="hexBottom"></div>
-                                                        <div class="hexagon-hidden hover">
-                                                            <div class="hexTop" id="hiddenArea"></div>
-                                                            <div class="hexBottom" id="hiddenArea"></div>
-    
-                                                            <div class="statement">Internet Of Things</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="boxing-right boxing">
-                                                    <div class="hexagon scribbled-image more-details">
-                                                        <div class="hexTop"></div>
-                                                        <div class="hexBottom"></div>
-                                                        <div class="hexagon-hidden hover">
-                                                            <div class="hexTop" id="hiddenArea"></div>
-                                                            <div class="hexBottom" id="hiddenArea"></div>
-    
-                                                            <div class="statement">Scribbled Stories</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-    
-    
-    
-    
-                                        </div>
-                                </div>
-                            </div>
+                     
 
                             <div id="details">
                                 <div>
@@ -74,30 +32,32 @@
                                             <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
                                         </span>
                                         <h1 class="heading-text uk-align-center">
-                                            <span id='clubName'></span>
+                                            <span id='clubName'><%- workshop.clubName %></span>
                                         </h1>
                                     </div>
 
                                     <div>
 
                                         <h1 class="heading-li uk-align-center ">
-                                            <span id='eventName'></span>
+                                            <span id='eventName'><%- workshop.displayName %></span>
                                         </h1>
                                     </div>
 
                                     <div>
                                         <ul class="uk-list text-list  uk-text-center uk-list-medium">
+                                                <% if(workshop.eventFee != null ){ %>
                                             <li id="fees">
                                                 Fee :
-                                                <span id='eventFee'></span>
+                                                <span id='eventFee'><%- workshop.eventFee %></span>
                                             </li>
+                                            <% } %>
                                             <li>
                                                 Date :
-                                                <span id='eventDate'></span>
+                                                <span id='eventDate'><%- workshop.eventDate %></span>
                                             </li>
                                             <li>
                                                 Venue :
-                                                <span id='eventVenue'></span>
+                                                <span id='eventVenue'><%- workshop.eventVenue %></span>
                                             </li>
 
 
@@ -124,26 +84,36 @@
                                     <div class="my-rotate">
                                         <div uk-grid>
                                             <ul id="tabs" class="uk-flex-center uk-text-center" uk-tab>
-                                                
+                                                    <% if(workshop.synopsis != null ){ %>  
                                                 <li class="uk-active">
                                                     <a id="synopsis" href="#">Synopsis</a>
                                                 </li>
+                                                <% } %>
+                                                <% if(workshop.eventDescription != null ){ %>
                                                 <li >
                                                     <a id="description" href="#">Event Description</a>
                                                 </li>
+                                                <% } %>
+                                                <% if(workshop.highlights != null ){ %>
                                                 <li>
                                                     <a id="highlights" href="#">Highlights</a>
                                                 </li>
+                                                <% } %>
+                                                <% if(workshop.workshopContent != null ){ %>
                                                 <li>
                                                     <a id="workshopContent" href="#">Workshop Structure</a>
                                                 </li>
+                                                <% } %>
+                                                <% if(workshop.rules != null ){ %>
                                                 <li>
                                                     <a id="rules" href="#">Rules</a>
                                                 </li>
+                                                <% } %>
+                                                <% if(workshop.benefits != null ){ %>
                                                 <li>
                                                     <a id="benefits" href="#">Benefits</a>
                                                 </li>
-
+                                                <% } %>
                                                 <li>
                                                     <a id="contact" href="#">Contact</a>
                                                 </li>
@@ -152,7 +122,14 @@
 
 
                                             <div id="tab">
-
+                                                    <% if(workshop.synopsis != null ){ %>  
+                                                        <%- workshop.synopsis %>
+                                                        <% } else if(workshop.eventDescription != null){ %>
+                                                            <%- workshop.eventDescription %>
+                                                            <% } else { %>
+                                                                <%- workshop.highlights %>
+                                                                <% } %>
+                                                   
                                             </div>
 
 

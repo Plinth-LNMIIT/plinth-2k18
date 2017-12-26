@@ -1,6 +1,7 @@
-module.exports = {
+module.exports.workshops = {
     workshops : [
         {
+            eventUrl: 'iot',
             paymentURL: "/payment/initiate/IOT",
             clubName : "Workshops",
             eventName : "Internet Of Things",
@@ -84,7 +85,7 @@ module.exports = {
 
         },
         {
-
+            eventUrl: 'scribbledstories',
             paymentURL: "/payment/initiate/TSS",
             clubName: "Workshops",
             eventName: "Scribbled Stories",
@@ -178,5 +179,19 @@ module.exports = {
                     +"</p>",
             sponsors: null,
         },
+    ],
+};
+
+module.exports.workshopUrl = {
+    workshops: [
+        {
+            eventName: 'Internet Of Things',
+            eventUrl: '/iot',
+        },
+        {
+            eventName: 'Scribbled Stories',
+            eventUrl: '/scribbledstories',
+        },
+       
     ],
 };

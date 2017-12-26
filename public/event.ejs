@@ -31,38 +31,42 @@
                                             <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
                                         </span>
                                         <h1 class="heading-text uk-align-center">
-                                            <span id='clubName'></span>
+                                            <span id='clubName'><%- event.clubName %></span>
                                         </h1>
                                     </div>
 
                                     <div>
 
                                         <h1 class="heading-li uk-align-center ">
-                                            <span id='eventName'></span>
+                                            <span id='eventName'><%- event.displayName %></span>
                                         </h1>
                                     </div>
 
                                     <div>
                                         <ul class="uk-list text-list  uk-text-center uk-list-medium">
+                                                <% if(event.eventFee != null ){ %>
                                             <li id="fees">
                                                 Fee :
-                                                <span id='eventFee'></span>
+                                                <span id='eventFee'><%- event.eventFee %></span>
                                             </li>
+                                            <% } %>
                                             <li>
                                                 Date :
-                                                <span id='eventDate'></span>
+                                                <span id='eventDate'><%- event.eventDate %></span>
                                             </li>
                                             <li>
                                                 Venue :
-                                                <span id='eventVenue'></span>
+                                                <span id='eventVenue'><%- event.eventVenue %></span>
                                             </li>
 
-
+                                            <% if(event.prizeWorth != null ){ %>
                                             <li id="prizes">
                                                 Prizes Worth :
-                                                <span id='prizeWorth'></span>
+                                                <span id='prizeWorth'><%- event.prizeWorth %></span>
                                             </li>
+                                            <% } %>
                                             <br>
+                                            <% if(event.paymentURL != null ){ %>    
                                             <li id="payment">
                                                 <% if(isLoggedIn){ %>
 
@@ -286,13 +290,14 @@
                                                         <a class="uk-button button-font uk-button-default uk-button-large" href="#register-center" uk-toggle>Register</a>
                                                         <% } %>
                                             </li>
-
+                                            <% } %>   
+                                            <% if(event.otherURL != null ){ %> 
                                             <li id="other">
 
-                                                <a class="uk-button button-font uk-button-default uk-button-large" href="#" id="oUrl" target="_blank">Event Registration</a>
+                                                <a class="uk-button button-font uk-button-default uk-button-large" href="<%= event.otherURL %>" id="oUrl" target="_blank">Event Registration</a>
 
                                             </li>
-
+                                            <% } %>   
                                             <br>
                                         </ul>
 
@@ -304,32 +309,45 @@
                                     <div class="my-rotate">
                                         <div uk-grid>
                                             <ul id="tabs" class="uk-flex-center uk-text-center" uk-tab>
-                                                <li class="uk-active">
+                                                    <% if(event.synopsis != null ){ %>   
+                                                <li>
                                                     <a id="synopsis" href="#">Synopsis</a>
                                                 </li>
+                                                <% } %>
+                                                <% if(event.eventDescription != null ){ %>
                                                 <li>
                                                     <a id="description" href="#">Event Description</a>
                                                 </li>
+                                                <% } %>
+                                                <% if(event.rules != null ){ %>
                                                 <li>
                                                     <a id="rules" href="#">Rules</a>
                                                 </li>
+                                                <% } %>
+                                                <% if(event.judges != null ){ %>
                                                 <li>
-                                                    <a id="judges" href="#">Judges & Mentors</a>
+                                                    <a id="judges" href="#">
+                                                            <% if(event.eventName == 'StartUp Intern Fair' ){ %>
+                                                                Registered Statups
+                                                        <% } else { %>
+                                                            Judges & Mentors
+                                                            <% } %>
+                                                    </a>
                                                 </li>
-
+                                                <% } %>
                                                 <li>
                                                     <a id="contact" href="#">Contact</a>
                                                 </li>
-
+                                                <% if(event.sponsors != null ){ %>
                                                 <li>
                                                     <a id="sponsors" href="#">Sponsors</a>
                                                 </li>
-
+                                                 <% } %>
                                             </ul>
 
 
                                             <div id="tab">
-
+                                                    <%- event.synopsis %>
                                             </div>
 
 

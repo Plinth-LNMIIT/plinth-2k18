@@ -20,6 +20,6 @@ $(".more-details").click(function () {
 $('.wonder-away').click(function () {
 
 
-    window.location = window.location.origin + '/workshops';
+    window.location = window.location.origin + '/workshops/scribbledstories';
 
 });
