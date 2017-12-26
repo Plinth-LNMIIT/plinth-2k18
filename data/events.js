@@ -1,7 +1,7 @@
-module.exports = {
+module.exports.events = {
     events: [
         {
-
+            eventUrl: 'intotheuniverse',
             fee:100,
             paymentURL: null,
             clubName: "Astronomy",
@@ -91,7 +91,7 @@ module.exports = {
             otherURL: null,
         },
         {
-
+            eventUrl: 'astrohunt',
             fee:100,
             paymentURL: null,
             clubName: "Astronomy",
@@ -132,7 +132,7 @@ module.exports = {
         },
         {
 
-     
+            eventUrl: 'astroquiz',
             fee:100,
             paymentURL: null,
             clubName: "Astronomy",
@@ -181,7 +181,7 @@ module.exports = {
         
         {
 
-     
+            eventUrl: 'rostrum',
             fee:0,
             paymentURL: null,
             clubName: "Literature",
@@ -231,10 +231,9 @@ module.exports = {
             sponsors: null,
             otherURL: null,
         },
-        
         {
 
-     
+            eventUrl: 'unerase',
             fee:0,
             paymentURL: null,
             clubName: "Literature",
@@ -269,7 +268,7 @@ module.exports = {
         
         {
 
-     
+            eventUrl: 'iupc',
             fee:0,
             paymentURL: null,
             clubName: "Coding",
@@ -336,7 +335,7 @@ module.exports = {
         },    
         {
 
-     
+            eventUrl: 'enigma',
             fee:0,
             paymentURL: null,
             clubName: "Coding",
@@ -410,7 +409,7 @@ module.exports = {
 
         {
 
-     
+            eventUrl: 'sif',
             fee:{
                 startup: 1000,
                 student: 100,
@@ -451,7 +450,7 @@ module.exports = {
         
         {
 
-     
+            eventUrl: 'brandwagon',
             fee:200,
             paymentURL: null,
             clubName: "Quizzing",
@@ -480,7 +479,7 @@ module.exports = {
         },
         {
 
-     
+            eventUrl: 'thequest',
             fee:200,
             paymentURL: null,
             clubName: "Quizzing",
@@ -524,7 +523,7 @@ module.exports = {
 
         
         {
-      
+            eventUrl: 'robowar',
             fee:700,
             paymentURL: null,
             clubName: "Robotics",
@@ -683,9 +682,8 @@ module.exports = {
             sponsors: null,
             otherURL: null, 
         },
-        
         {
-      
+            eventUrl: 'robosoccer',
             fee:250,
             paymentURL: null,
             clubName: "Robotics",
@@ -783,9 +781,8 @@ module.exports = {
             sponsors: null,
             otherURL: null, 
         },
-        
         {
-      
+            eventUrl: 'droneobstruction',
             fee:600,
             paymentURL: null,
             clubName: "Robotics",
@@ -835,9 +832,8 @@ module.exports = {
             sponsors: null,
             otherURL: null, 
         },
-        
         {
-      
+            eventUrl: 'lfr',
             fee:250,
             paymentURL: null,
             clubName: "Robotics",
@@ -888,9 +884,8 @@ module.exports = {
             sponsors: null,
             otherURL: null, 
         },
-        
         {
-      
+            eventUrl: 'mazesolver',
             fee:250,
             paymentURL: null,
             clubName: "Robotics",
@@ -976,9 +971,8 @@ module.exports = {
             sponsors: null,
             otherURL: null, 
         },
-        
         {
-      
+            eventUrl: 'roborace',
             fee:250,
             paymentURL: null,
             clubName: "Robotics",
@@ -1072,9 +1066,8 @@ module.exports = {
             sponsors: null,
             otherURL: null, 
         },
-        
         {
-      
+            eventUrl: 'rcplane',
             fee:500,
             paymentURL: null,
             clubName: "Robotics",
@@ -1259,9 +1252,8 @@ module.exports = {
             sponsors: null,
             otherURL: null, 
         },
-        
         {
-      
+            eventUrl: 'transporter',
             fee:250,
             paymentURL: null,
             clubName: "Robotics",
@@ -1347,4 +1339,86 @@ module.exports = {
         },
     ],
  
+};
+
+module.exports.eventUrl = {
+    events: [
+        {
+            eventName: 'Into The Universe',
+            eventUrl: '/intotheuniverse',
+        },
+        {
+            eventName: 'Astro Hunt',
+            eventUrl: '/astrohunt',
+        },
+        {
+            eventName: 'Astro Quiz',
+            eventUrl: '/astroquiz',
+        },
+
+        {
+            eventName: 'IUPC',
+            eventUrl: '/iupc',
+        },
+        {
+            eventName: 'Enigma',
+            eventUrl: '/enigma',
+        },
+
+        {
+            eventName: 'Brandwagon',
+            eventUrl: '/brandwagon',
+        },
+        {
+            eventName: 'The Quest',
+            eventUrl: '/thequest',
+        },
+
+        {
+            eventName: 'Robowar',
+            eventUrl: '/robowar',
+        },
+        {
+            eventName: 'Robosoccer',
+            eventUrl: '/robosoccer',
+        },
+        {
+            eventName: 'Drone Obstruction',
+            eventUrl: '/droneobstruction',
+        },
+        {
+            eventName: 'LFR',
+            eventUrl: '/lfr',
+        },
+        {
+            eventName: 'Maze Solver',
+            eventUrl: '/mazesolver',
+        },
+        {
+            eventName: 'Roborace',
+            eventUrl: '/roborace',
+        },
+        {
+            eventName: 'RC Plane',
+            eventUrl: '/rcplane',
+        },
+        {
+            eventName: 'Transporter',
+            eventUrl: '/transporter',
+        },
+
+        {
+            eventName: 'StartUp Intern Fair',
+            eventUrl: '/sif',
+        },
+
+        {
+            eventName: 'Rostrum',
+            eventUrl: '/rostrum',
+        },
+        {
+            eventName: 'UnErase Poetry',
+            eventUrl: '/unerase',
+        },
+    ],
 };

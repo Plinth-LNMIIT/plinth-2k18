@@ -92,7 +92,7 @@ router.get('/archive', Verify.verifyOrdinaryUser ,function(req, res, next) {
 });
 
 router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) {
-    var eventDetail = require('../public/data/events');
+    
   
     if(req.decoded.sub === "")
     {
@@ -100,7 +100,7 @@ router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) 
         res.render('competitions', {
             "page" : 'competitions',
             "isLoggedIn" : isLoggedIn,
-            "events" : eventDetail.events,
+            
         });
     }
     else {
@@ -115,7 +115,7 @@ router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) 
                     "page" : 'competitions',
                     "isLoggedIn" : isLoggedIn,
                     "user" : user,
-                    "events" : eventDetail.events,
+                     
                 });
             }
         });
@@ -123,6 +123,133 @@ router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) 
   
   
 });
+
+
+router.get('/competitions/:category', Verify.verifyOrdinaryUser ,function(req, res, next) {
+    var categories = ['astronomy', 'coding', 'robotics', 'quizzing', 'literature', 'management'];
+    var eventUrls = require('../data/events').eventUrl;
+    var category = req.params.category;
+    var valid = false;
+    if(categories.indexOf(category) > -1){
+        valid = true;
+    }
+ 
+
+    if(req.decoded.sub === "")
+    {
+        isLoggedIn = false;
+
+        if(valid){
+            res.render('categories', {
+                "page" : 'competitions',
+                "isLoggedIn" : isLoggedIn,
+                "category": category,
+                "eventUrl" : eventUrls.events,
+            });
+        } else{
+            res.redirect('/404');
+        }
+       
+    }
+    else {
+        User.findOne({'email' : req.decoded.sub }, function(err, user) {
+            isLoggedIn = user.valid;
+            // if there are any errors, return the error
+            if (err)
+                return done(err);
+            // check to see if theres already a user with that email
+            if (user){
+                if(valid){
+                    res.render('categories',{
+                        "page" : 'competitions',
+                        "isLoggedIn" : isLoggedIn,
+                        "user" : user,
+                        "category": category,
+                        "eventUrl" : eventUrls.events,
+                    });
+                } else {
+                    res.redirect('/404');
+                }
+               
+            }
+        });
+    }
+  
+  
+});
+
+router.get('/competitions/:category/:event', Verify.verifyOrdinaryUser ,function(req, res, next) {
+    var eventDetail = require('../data/events').events;
+    var categories = ['astronomy', 'coding', 'robotics', 'quizzing', 'literature', 'management'];
+    var events = {
+        astronomy:['intotheuniverse', 'astrohunt', 'astroquiz'],
+        coding:['iupc', 'enigma'],
+        robotics:['robowar', 'robosoccer', 'droneobstruction', 'lfr', 'mazesolver', 'roborace', 'rcplane', 'transporter'],
+        quizzing:['brandwagon', 'thequest'],
+        literature:['rostrum', 'unerase'],
+        management:['sif'],
+
+    };
+    var category = req.params.category;
+    var event = req.params.event;
+    var valid = false;
+
+    var detail;
+    if(categories.indexOf(category) > -1){
+
+        if(events[category].indexOf(event) > -1){
+            valid = true;
+
+            eventDetail.events.forEach(element => {
+
+                if(element.eventUrl == event){
+                    detail = element;
+                }
+            });
+        }
+        
+    }
+    if(req.decoded.sub === "")
+    {
+        isLoggedIn = false;
+
+        if(valid){
+            res.render('event', {
+                "page" : 'competitions',
+                "isLoggedIn" : isLoggedIn,
+                "event" : detail,
+            });
+        } else {
+            res.redirect('/404');
+        }
+   
+    }
+    else {
+        User.findOne({'email' : req.decoded.sub }, function(err, user) {
+            isLoggedIn = user.valid;
+            // if there are any errors, return the error
+            if (err)
+                return done(err);
+            // check to see if theres already a user with that email
+            if (user){
+                if(valid){
+                    res.render('event',{
+                        "page" : 'competitions',
+                        "isLoggedIn" : isLoggedIn,
+                        "user" : user,
+                        "event" : detail,
+                    });
+                }else {
+                    res.redirect('/404');
+                }
+               
+            }
+        });
+    }
+  
+  
+});
+
 
 router.get('/contact', Verify.verifyOrdinaryUser ,function(req, res, next) {
     if(req.decoded.sub === "")
@@ -417,7 +544,7 @@ router.get('/terms', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
 router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
-    var workshopDetail = require('../public/data/workshops');
+    var workshopDetail = require('../data/workshops');
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;

@@ -174,29 +174,7 @@
     background-position: center;
     background-repeat: no-repeat;
 } 
-
-#astronomy-list{
-    display: none;
-}
-#coding-list{
-    display: none;
-}
-#robotics-list{
-    display: none;
-}
-#quizzing-list{
-    display: none;
-}
-#literature-list{
-    display: none;
-}
-#management-list{
-    display: none;
-}
-
-#details{
-    display: none;
-}
+ 
 
 .back-icon{
     padding-left: 0%; 

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+        <link rel="stylesheet" href="css/competitions.css">
+        <script>
+            var current;
+            var curr;
+            var next;
+            var mevent = <%- JSON.stringify(event) %> ;
+
+        </script>
+</head>
+
+<body>
+    <% include partials/loader %>
+        <div id="home">
+            <canvas id="canvas"></canvas>
+
+            <% include partials/header %>
+
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div id="details">
+                                <div>
+                                    <div uk-grid>
+                                        <span class="back-back-icon">
+                                            <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                        </span>
+                                        <h1 class="heading-text uk-align-center">
+                                            <span id='clubName'></span>
+                                        </h1>
+                                    </div>
+
+                                    <div>
+
+                                        <h1 class="heading-li uk-align-center ">
+                                            <span id='eventName'></span>
+                                        </h1>
+                                    </div>
+
+                                    <div>
+                                        <ul class="uk-list text-list  uk-text-center uk-list-medium">
+                                            <li id="fees">
+                                                Fee :
+                                                <span id='eventFee'></span>
+                                            </li>
+                                            <li>
+                                                Date :
+                                                <span id='eventDate'></span>
+                                            </li>
+                                            <li>
+                                                Venue :
+                                                <span id='eventVenue'></span>
+                                            </li>
+
+
+                                            <li id="prizes">
+                                                Prizes Worth :
+                                                <span id='prizeWorth'></span>
+                                            </li>
+                                            <br>
+                                            <li id="payment">
+                                                <% if(isLoggedIn){ %>
+
+
+                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#" id="registerB">Registration</a>
+                                                    <div id="register-competitions" class="uk-flex-top" uk-modal>
+                                                        <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                            <div class="uk-modal-header">
+                                                                <button class="uk-modal-close-default black-fill" type="button" uk-close></button>
+
+                                                                <h2 class="uk-text-center heading-text">
+                                                                    <span>Registration Form</span>
+                                                                </h2>
+
+                                                                <div class="uk-text-center black-fill">
+                                                                    <span class="eName"></span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="uk-modal-body">
+                                                                <div id="form-content" class="content-hide">
+                                                                        <p>Sorry, Contact admin@plinth.in if this error persist.</p>  
+                                                                </div>
+
+                                                                <div id="SIF-content" class="content-hide">
+                                                                    <form class="uk-form-stacked">
+                                                                        <div class="uk-margin">
+                                                                            <label class="uk-form-label labell-text">Registering As</label>
+                                                                            <div class="uk-form-controls">
+
+                                                                                <label class="inputt-text">
+                                                                                    <input class="uk-radio" type="radio" name="sif_type"
+                                                                                        id="startup" value="Startup"> Startup</label>
+                                                                                <br>
+                                                                                <label class="inputt-text">
+                                                                                    <input class="uk-radio" type="radio" name="sif_type"
+                                                                                        id="student" value="Student"> Student</label>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="startupContent">
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_startup_name">StartUp Name*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_name" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_website">Website*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_website" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_startup_contact_name">Name*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_contact_name" type="text" value="<%- user.name %>">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_startup_contact_email">Email*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_contact_email" type="email" value="<%- user.email %>">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_startup_contact_contactNumber">Contact Number*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_contact_contactNumber" type="number" value="<%- user.phoneNumber %>">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_startup_intern">No. of Interns*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_intern" type="number" min="1">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_startup_domain">Domain*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <select class="uk-select" id="sif_startup_domain">
+                                                                                        <option value="Technical" selected>Technical</option>
+                                                                                        <option value="Management">Management</option>
+                                                                                        <option value="Marketing">Marketing</option>
+                                                                                        <option value="Content Writing">Content Writing</option>
+                                                                                        <option value="Designing">Designing</option>
+                                                                                        <option value="Other">Other</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div id="studentContent">
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_student_name">Name*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_student_name" type="text" value="<%- user.name %>">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_student_email">Email*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_student_email" type="email" value="<%- user.email %>">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_student_contactNumber">Contact Number*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_student_contactNumber" type="number" value="<%- user.phoneNumber %>">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_student_college">College*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_student_college" type="text" value="<%- user.college %>">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_student_city">City*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_student_city" type="text" value="<%- user.city %>">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_student_year">Year*</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <select class="uk-select" id="sif_student_year">
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+                                                                                        <option value="4">4</option>
+                                                                                        <option value="5">5</option>
+                                                                                        <option value="NA" selected>NA</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_student_resume">Resume Link</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_student_resume" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="uk-margin">
+                                                                                <label class="uk-form-label labell-text" for="sif_student_linkedin">Linkedin Link</label>
+                                                                                <div class="uk-form-controls">
+
+                                                                                    <input class="uk-input inputt-text" id="sif_student_linkedin" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </form>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="uk-modal-footer uk-text-right">
+
+                                                                <input type="hidden" class="uk-input" id="mEmail" value="<%- user.email %>">
+                                                                <div id="error" class="uk-text-center red-fill">* Please fill all the required inputs.</div>
+                                                                <br>
+                                                                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                                                <button type="submit" class="uk-button uk-button-primary" id="submit-button">Submit</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="pay-competitions" class="uk-flex-top" uk-modal>
+                                                        <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                            <div class="uk-modal-header">
+                                                                <button class="uk-modal-close-default black-fill" type="button" uk-close></button>
+
+                                                                <h2 class="uk-text-center heading-text">
+                                                                    <span>Payment Form</span>
+                                                                </h2>
+
+                                                                <div class="uk-text-center black-fill">
+                                                                    <span class="eName"></span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="uk-modal-body uk-text-center">
+                                                                <p> Registration SuccessFull.</p>
+                                                                <div>Order Id:
+                                                                    <span id="payOrderId" class="inputt-text"></span>
+                                                                </div>
+                                                                <div>Amount:
+                                                                        <span class="inputt-text">₹ <span id="payAmount"></span>/-</span>
+                                                                </div>
+
+                                                                <p class="inputt-text">
+                                                                    <span class="labell-text">Note:</span>
+                                                                    <br> If you choose to pay later, visit your profile and click
+                                                                    Pay against relevant Event Registration.</p>
+                                                            </div>
+                                                            <div class="uk-modal-footer uk-text-right">
+                                                                <button class="uk-button uk-button-default uk-modal-close" type="button">Pay Later</button>
+                                                                <button type="submit" class="uk-button uk-button-primary" id="pay-button">Pay Now</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <% } else { %>
+                                                        <a class="uk-button button-font uk-button-default uk-button-large" href="#register-center" uk-toggle>Register</a>
+                                                        <% } %>
+                                            </li>
+
+                                            <li id="other">
+
+                                                <a class="uk-button button-font uk-button-default uk-button-large" href="#" id="oUrl" target="_blank">Event Registration</a>
+
+                                            </li>
+
+                                            <br>
+                                        </ul>
+
+
+
+
+                                    </div>
+
+                                    <div class="my-rotate">
+                                        <div uk-grid>
+                                            <ul id="tabs" class="uk-flex-center uk-text-center" uk-tab>
+                                                <li class="uk-active">
+                                                    <a id="synopsis" href="#">Synopsis</a>
+                                                </li>
+                                                <li>
+                                                    <a id="description" href="#">Event Description</a>
+                                                </li>
+                                                <li>
+                                                    <a id="rules" href="#">Rules</a>
+                                                </li>
+                                                <li>
+                                                    <a id="judges" href="#">Judges & Mentors</a>
+                                                </li>
+
+                                                <li>
+                                                    <a id="contact" href="#">Contact</a>
+                                                </li>
+
+                                                <li>
+                                                    <a id="sponsors" href="#">Sponsors</a>
+                                                </li>
+
+                                            </ul>
+
+
+                                            <div id="tab">
+
+                                            </div>
+
+
+
+
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        <% include partials/footer %>
+
+
+
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/event.js"></script>
+        <script src="js/canvasloader.js"></script>
+        <script src="js/slowStar.js"></script>
+
+
+</body>
+
+</html>

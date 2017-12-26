@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+        <link rel="stylesheet" href="css/competitions.css">
+        <script>
+             var urls = <%- JSON.stringify(eventUrl) %> ;
+        </script>
+</head>
+
+<body>
+    <% include partials/loader %>
+        <div id="home">
+            <canvas id="canvas"></canvas>
+
+            <% include partials/header %>
+
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                        
+                            <% if(category == "astronomy"){ %>
+                                <div id="astronomy-list">
+                                    <div>
+                                        <div uk-grid>
+                                            <span class="back-icon">
+                                                <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                            </span>
+                                            <h1 class="heading-text  uk-align-center ">
+                                                <span>Astronomy</span>
+                                            </h1>
+                                        </div>
+                                        <div class="my-rotate">
+                                            <div class="uk-grid-medium " uk-grid>
+    
+                                                <div class="boxing-left boxing">
+                                                    <div class="hexagon into-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Into The Universe</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="boxing-right boxing">
+                                                    <div class="hexagon astro-hunt-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Astro Hunt</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uk-grid-medium" uk-grid>
+                                                <div class="boxing-center boxing">
+                                                    <div class="hexagon astro-quiz-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Astro Quiz</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                            </div>
+    
+    
+    
+    
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            <% } else if(category == "coding"){ %>
+                                <div id="coding-list">
+                                    <div>
+                                        <div uk-grid>
+                                            <span class="back-icon">
+                                                <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                            </span>
+                                            <h1 class="heading-text  uk-align-center ">
+                                                <span>Coding</span>
+                                            </h1>
+                                        </div>
+                                        <div class="my-rotate">
+                                            <div class="uk-grid-medium" uk-grid>
+    
+                                                <div class="boxing-left boxing">
+                                                    <div class="hexagon iupc-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">IUPC</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="boxing-right boxing">
+                                                    <div class="hexagon enigma-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Enigma</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+    
+    
+                                        </div>
+                                    </div>
+                                </div>
+                          
+                            <% } else if(category == "robotics"){ %>
+                                <div id="robotics-list">
+                                    <div>
+                                        <div uk-grid>
+                                            <span class="back-icon">
+                                                <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                            </span>
+                                            <h1 class="heading-text  uk-align-center ">
+                                                <span>Robotics</span>
+                                            </h1>
+                                        </div>
+                                        <div class="my-rotate">
+                                            <div class="uk-grid-medium" uk-grid>
+    
+                                                <div class="boxing">
+                                                    <div class="hexagon robowar-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Robowar</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                            </div>
+                                            <div class="uk-grid-medium " uk-grid>
+    
+    
+    
+    
+    
+                                                <div class="boxing-left boxing">
+                                                    <div class="hexagon robosoccer-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Robosoccer</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="boxing-right boxing">
+                                                    <div class="hexagon drone-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Drone Obstruction</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="uk-grid-medium" uk-grid>
+                                                <div class="boxing">
+                                                    <div class="hexagon lfr-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">LFR</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="boxing">
+                                                    <div class="hexagon maze-solver-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover ">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Maze Solver</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="boxing">
+                                                    <div class="hexagon roborace-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Roborace</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                            </div>
+    
+                                            <div class="uk-grid-medium" uk-grid>
+    
+    
+    
+    
+    
+                                                <div class="boxing-left boxing">
+                                                    <div class="hexagon rc-plane-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">RC Plane</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="boxing-right boxing">
+                                                    <div class="hexagon transporter-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Transporter</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } else if(category == "quizzing"){ %>
+                                <div id="quizzing-list">
+                                    <div>
+                                        <div uk-grid>
+                                            <span class="back-icon">
+                                                <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                            </span>
+                                            <h1 class="heading-text  uk-align-center ">
+                                                <span>Quizzing</span>
+                                            </h1>
+                                        </div>
+                                        <div class="my-rotate">
+                                            <div class="uk-grid-medium" uk-grid>
+    
+                                                <div class="boxing-left boxing">
+                                                    <div class="hexagon business-quiz-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Brandwagon</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="boxing-right boxing">
+                                                    <div class="hexagon general-quiz-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">The Quest</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+    
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } else if(category == "literature"){ %>
+                                <div id="literature-list">
+                                    <div>
+                                        <div uk-grid>
+                                            <span class="back-icon">
+                                                <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                            </span>
+                                            <h1 class="heading-text  uk-align-center ">
+                                                <span>Literature</span>
+                                            </h1>
+                                        </div>
+                                        <div class="my-rotate">
+                                            <div class="uk-grid-medium " uk-grid>
+    
+                                                <div class="boxing-left boxing">
+                                                    <div class="hexagon rostrum-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Rostrum</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="boxing-right boxing">
+                                                    <div class="hexagon scribbled-image wonder-away">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">Scribbled Stories</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uk-grid-medium" uk-grid>
+                                                <div class="boxing-center boxing">
+                                                    <div class="hexagon unerase-image more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">UnErase Poetry</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                            </div>
+    
+    
+    
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } else if(category == "management"){ %>
+                                <div id="management-list">
+                                    <div>
+                                        <div uk-grid>
+                                            <span class="back-icon ">
+                                                <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                            </span>
+                                            <h1 class="heading-text  uk-align-center ">
+                                                <span>Management</span>
+                                            </h1>
+                                        </div>
+                                        <div class="my-rotate">
+                                            <div class="uk-grid-medium" uk-grid>
+    
+                                                <div class="boxing-left boxing">
+                                                    <div class="hexagon startup-fair-image  more-details">
+                                                        <div class="hexTop"></div>
+                                                        <div class="hexBottom"></div>
+                                                        <div class="hexagon-hidden hover">
+                                                            <div class="hexTop" id="hiddenArea"></div>
+                                                            <div class="hexBottom" id="hiddenArea"></div>
+    
+                                                            <div class="statement">StartUp Intern Fair</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+          
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        <% include partials/footer %>
+
+
+
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/categories.js"></script>
+        <script src="js/canvasloader.js"></script>
+        <script src="js/slowStar.js"></script>
+
+
+</body>
+
+</html>
