@@ -178,9 +178,11 @@
 
 .back-icon{
     padding-left: 0%; 
+    cursor: pointer;
 }
 .back-back-icon{
     padding-left: 0%; 
+    cursor: pointer;
 }
 
 .backy{
@@ -248,6 +250,10 @@
  .text-list{
     padding-left: 3%;
      font-size: 1.4rem;
+ }
+
+ .eName{
+     font-size: 1.2rem;
  }
 
  @media only screen and (max-width: 1366px) {

@@ -12,7 +12,8 @@
     background-repeat: no-repeat;
 } 
 .back-back-icon{
-    padding-left: 0%; 
+    padding-left: 0%;
+    cursor: pointer; 
 }
 
 .backy{

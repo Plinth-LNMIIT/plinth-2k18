@@ -67,22 +67,22 @@ $("#sponsors").click(function () {
 });
 
 
+$('#startupContent').hide();
+$('#studentContent').hide();
+$('#error').hide();
 
-
+var orderId;
+var fee;
 
 $("#registerB").click(function (e) {
 
     e.preventDefault();
 
-    $(".eName").html(mevent.displayName);
-    
     $(".content-hide").hide();
     $("#"+mevent.payName+"-content").show();
     UIkit.modal('#register-competitions').show();
 });
 
-$('#startupContent').hide();
-$('#studentContent').hide();
 
 $('input[type="radio"][name="sif_type"]').click(function () {
     var inputValue = $('input[type="radio"][name="sif_type"]:checked').val();
@@ -97,9 +97,8 @@ $('input[type="radio"][name="sif_type"]').click(function () {
 
 });
 
-$('#error').hide();
-var orderId;
-var fee;
+
+
 $("#submit-button").click(function (e) {
 
     e.preventDefault();
