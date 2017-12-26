@@ -43,111 +43,18 @@ router.post('/register/:payName', Verify.verifyOrdinaryUser, function (req, res)
     if (payName != '') {
         Payment.count({}, function (err, count) {
             var param_data = JSON.parse(req.body.postData);
-            console.log(param_data);
             payment.event.eventName = param_data.eventName;
             payment.event.payName = payName;
+            payment.event.clubName =  param_data.clubName;
             payment.email = param_data.mEmail;
             payment.status = 'OPEN';
             payment.date.createdAt = '' + new Date();
-            payment.team = [];
-            var teams = [];
+            payment.team = param_data.details.teams;
+            payment.accomodation = param_data.details.accomodation;
+            payment.teamName = param_data.details.teamName;
             var order_id = "Plinth-" + payName + "-" + (count + 1) + "-" + id_tag;
             payment.orderId = order_id;
-             switch(payName){
-
-                    case 'MUN':
-                       
-                        if (param_data.details.delegation == 'IP') {
-                        } else {
-                        }
-                        var team = {
-                            email: param_data.details.email,
-                            name: param_data.details.name,
-                            phoneNumber: param_data.details.phoneNumber,
-                            delegation: param_data.details.delegation,
-                            college: param_data.details.college,
-                            city: param_data.details.city,
-                            committee: param_data.details.committee,
-                            portfolio: param_data.details.portfolio,
-                            accommodation: param_data.details.accommodation,
-                        };
-                        teams.push(team);
-                        break;
-                    case 'SIF':
-
-                        if (param_data.details.type == 'Startup') {
-                            var team = {
-                                type: param_data.details.type,
-                                email: param_data.details.email,
-                                name: param_data.details.name,
-                                phoneNumber: param_data.details.phoneNumber,
-                                startupName: param_data.details.startupName,
-                                website: param_data.details.website,
-                                interns: param_data.details.interns,
-                                domain: param_data.details.domain,
-                            };
-                            teams.push(team);
-
-                        } else {
-                            var team = {
-                                type: param_data.details.type,
-                                email: param_data.details.email,
-                                name: param_data.details.name,
-                                phoneNumber: param_data.details.phoneNumber,
-                                college: param_data.details.college,
-                                city: param_data.details.city,
-                                resume: param_data.details.resume,
-                                linkedin: param_data.details.linkedin,
-                                year: param_data.details.year,
-                            };
-                            teams.push(team);
-
-                        }
-                        
-                        
-                        break;
-                    case 'INT':
-                        break;
-                    case 'AH':
-                        break;
-                    case 'AQ':
-                        break;
-                    case 'RST':
-                        break;
-                    case 'IUPC':
-                        break;
-                    case 'ENCS':
-                        break;
-                    case 'BW':
-                        break;
-                    case 'TQ':
-                        break;
-                    case 'RW':
-                        break;
-                    case 'RS':
-                        break;
-                    case 'DO':
-                        break;
-                    case 'LFR':
-                        break;
-                    case 'MS':
-                        break;
-                    case 'RR':
-                        break;
-                    case 'RCP':
-                        break;
-                    case 'TP':
-                        break;
-                    case 'IOT':
-                        break;
-                    case 'TSS':
-                        break;
-                    default:
-                        break;
-                }
-            
-            payment.teamSize = teams.length;
-            payment.team = teams;
+            payment.teamSize = payment.team.length;
             console.log(payment);
             payment.save(function (err) {
                 if (err) {

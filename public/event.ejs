@@ -4,10 +4,15 @@
 <head>
     <% include partials/head %>
         <link rel="stylesheet" href="css/competitions.css">
+        <% if(isLoggedIn){ %>
+            <script>
+            var name = <%- JSON.stringify(user.name) %> ;
+            var email = <%- JSON.stringify(user.email) %> ;
+            var contact = <%- JSON.stringify(user.phoneNumber) %> ;
+            var college = <%- JSON.stringify(user.college) %> ;
+        </script>
+            <% } %>
         <script>
-            var current;
-            var curr;
-            var next;
             var mevent = <%- JSON.stringify(event) %> ;
 
         </script>
@@ -71,9 +76,10 @@
                                                 <% if(isLoggedIn){ %>
 
 
-                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#" id="registerB">Registration</a>
+                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#register-competitions" id="registerB" uk-toggle>Registration</a>
                                                     <div id="register-competitions" class="uk-flex-top" uk-modal>
                                                         <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                                <form id="register-form" class="uk-form-stacked">
                                                             <div class="uk-modal-header">
                                                                 <button class="uk-modal-close-default black-fill" type="button" uk-close></button>
 
@@ -87,75 +93,73 @@
                                                                 </div>
                                                             </div>
                                                             <div class="uk-modal-body">
-                                                                <div id="form-content" class="content-hide">
-                                                                        <p>Sorry, Contact admin@plinth.in if this error persist.</p>  
-                                                                </div>
-
-                                                                <div id="SIF-content" class="content-hide">
-                                                                    <form class="uk-form-stacked">
-                                                                        <div class="uk-margin">
+                                                               
+                                                                <% if(event.payName == 'SIF'){ %>
+                                                                <div id="SIF-content" >
+                                                                  
+                                                                        <div class="uk-margin ex-pad">
                                                                             <label class="uk-form-label labell-text">Registering As</label>
                                                                             <div class="uk-form-controls">
 
                                                                                 <label class="inputt-text">
                                                                                     <input class="uk-radio" type="radio" name="sif_type"
-                                                                                        id="startup" value="Startup"> Startup</label>
+                                                                                        id="startup" value="Startup" required> Startup</label>
                                                                                 <br>
                                                                                 <label class="inputt-text">
                                                                                     <input class="uk-radio" type="radio" name="sif_type"
-                                                                                        id="student" value="Student"> Student</label>
+                                                                                        id="student" value="Student" required> Student</label>
 
                                                                             </div>
                                                                         </div>
-                                                                        <div id="startupContent">
-                                                                            <div class="uk-margin">
+                                                                        <div id="startupContent" class="uk-grid-small" uk-grid>
+                                                                            <div class="uk-width-1-1">
                                                                                 <label class="uk-form-label labell-text" for="sif_startup_name">StartUp Name*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_startup_name" type="text">
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_name" type="text" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-1 uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_website">Website*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_website" type="text">
+                                                                                    <input class="uk-input inputt-text" id="sif_website" type="text" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-1 uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_startup_contact_name">Name*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_startup_contact_name" type="text" value="<%- user.name %>">
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_contact_name" type="text" value="<%- user.name %>" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_startup_contact_email">Email*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_startup_contact_email" type="email" value="<%- user.email %>">
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_contact_email" type="email" value="<%- user.email %>" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_startup_contact_contactNumber">Contact Number*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_startup_contact_contactNumber" type="number" value="<%- user.phoneNumber %>">
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_contact_contactNumber" type="number" value="<%- user.phoneNumber %>" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_startup_intern">No. of Interns*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_startup_intern" type="number" min="1">
+                                                                                    <input class="uk-input inputt-text" id="sif_startup_intern" type="number" min="1" required>
                                                                                 </div>
                                                                             </div>
 
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_startup_domain">Domain*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <select class="uk-select" id="sif_startup_domain">
+                                                                                    <select class="uk-select" id="sif_startup_domain" required>
                                                                                         <option value="Technical" selected>Technical</option>
                                                                                         <option value="Management">Management</option>
                                                                                         <option value="Marketing">Marketing</option>
@@ -167,47 +171,47 @@
                                                                             </div>
 
                                                                         </div>
-                                                                        <div id="studentContent">
-                                                                            <div class="uk-margin">
+                                                                        <div id="studentContent" class="uk-grid-small" uk-grid>
+                                                                            <div class="uk-width-1-2@s">
                                                                                 <label class="uk-form-label labell-text" for="sif_student_name">Name*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_student_name" type="text" value="<%- user.name %>">
+                                                                                    <input class="uk-input inputt-text" id="sif_student_name" type="text" value="<%- user.name %>" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s">
                                                                                 <label class="uk-form-label labell-text" for="sif_student_email">Email*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_student_email" type="email" value="<%- user.email %>">
+                                                                                    <input class="uk-input inputt-text" id="sif_student_email" type="email" value="<%- user.email %>" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_student_contactNumber">Contact Number*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_student_contactNumber" type="number" value="<%- user.phoneNumber %>">
+                                                                                    <input class="uk-input inputt-text" id="sif_student_contactNumber" type="number" value="<%- user.phoneNumber %>" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_student_college">College*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_student_college" type="text" value="<%- user.college %>">
+                                                                                    <input class="uk-input inputt-text" id="sif_student_college" type="text" value="<%- user.college %>" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_student_city">City*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <input class="uk-input inputt-text" id="sif_student_city" type="text" value="<%- user.city %>">
+                                                                                    <input class="uk-input inputt-text" id="sif_student_city" type="text" value="<%- user.city %>" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_student_year">Year*</label>
                                                                                 <div class="uk-form-controls">
 
-                                                                                    <select class="uk-select" id="sif_student_year">
+                                                                                    <select class="uk-select" id="sif_student_year" required>
                                                                                         <option value="1">1</option>
                                                                                         <option value="2">2</option>
                                                                                         <option value="3">3</option>
@@ -217,14 +221,14 @@
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_student_resume">Resume Link</label>
                                                                                 <div class="uk-form-controls">
 
                                                                                     <input class="uk-input inputt-text" id="sif_student_resume" type="text">
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="uk-margin">
+                                                                            <div class="uk-width-1-2@s uk-margin-top">
                                                                                 <label class="uk-form-label labell-text" for="sif_student_linkedin">Linkedin Link</label>
                                                                                 <div class="uk-form-controls">
 
@@ -235,162 +239,106 @@
 
                                                                     </form>
                                                                 </div>
-
-                                                                <div id="RW-content" class="content-hide">
-                                                                        <form class="uk-form-stacked">
-                                                                            <div class="uk-margin">
-                                                                                <label class="uk-form-label labell-text">Registering As</label>
+                                                                <% } else { %>
+                                                                <div id="content" >
+                                                                       
+                                                                            <div class="uk-margin ex-pad">
+                                                                                <label class="uk-form-label labell-text">Team Name*</label>
                                                                                 <div class="uk-form-controls">
-    
-                                                                                    <label class="inputt-text">
-                                                                                        <input class="uk-radio" type="radio" name="sif_type"
-                                                                                            id="startup" value="Startup"> Startup</label>
-                                                                                    <br>
-                                                                                    <label class="inputt-text">
-                                                                                        <input class="uk-radio" type="radio" name="sif_type"
-                                                                                            id="student" value="Student"> Student</label>
-    
+                                                                                    <input class="uk-input inputt-text" id="teamName" type="text" required>
                                                                                 </div>
                                                                             </div>
-                                                                            <div id="startupContent">
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_startup_name">StartUp Name*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_startup_name" type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_website">Website*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_website" type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_startup_contact_name">Name*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_startup_contact_name" type="text" value="<%- user.name %>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_startup_contact_email">Email*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_startup_contact_email" type="email" value="<%- user.email %>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_startup_contact_contactNumber">Contact Number*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_startup_contact_contactNumber" type="number" value="<%- user.phoneNumber %>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_startup_intern">No. of Interns*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_startup_intern" type="number" min="1">
-                                                                                    </div>
-                                                                                </div>
-    
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_startup_domain">Domain*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <select class="uk-select" id="sif_startup_domain">
-                                                                                            <option value="Technical" selected>Technical</option>
-                                                                                            <option value="Management">Management</option>
-                                                                                            <option value="Marketing">Marketing</option>
-                                                                                            <option value="Content Writing">Content Writing</option>
-                                                                                            <option value="Designing">Designing</option>
-                                                                                            <option value="Other">Other</option>
+                                                                            <div class="uk-margin ex-pad">
+                                                                                <label class="uk-form-label labell-text">Team Size*</label>
+                                                                                <div class="uk-form-controls">
+                                                                                    <select class="uk-select" id="teamSize" required>
+                                                                                            <% for(var i=event.memberLowerLimit; i<=event.memberUpperLimit; i++) {%>
+                                                                                                <% if(i != event.memberLowerLimit){ %>
+                                                                                                    <option value="<%= i %>" ><%= i %></option>
+                                                                                                <% } else { %>
+                                                                                                    <option value="<%= i %>" selected><%= i %></option>
+                                                                                                <% } %>
+                                                                                                    
+                                                                                            <% } %>
                                                                                         </select>
-                                                                                    </div>
-                                                                                </div>
-    
-                                                                            </div>
-                                                                            <div id="studentContent">
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_student_name">Name*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_student_name" type="text" value="<%- user.name %>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_student_email">Email*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_student_email" type="email" value="<%- user.email %>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_student_contactNumber">Contact Number*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_student_contactNumber" type="number" value="<%- user.phoneNumber %>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_student_college">College*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_student_college" type="text" value="<%- user.college %>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_student_city">City*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_student_city" type="text" value="<%- user.city %>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_student_year">Year*</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <select class="uk-select" id="sif_student_year">
-                                                                                            <option value="1">1</option>
-                                                                                            <option value="2">2</option>
-                                                                                            <option value="3">3</option>
-                                                                                            <option value="4">4</option>
-                                                                                            <option value="5">5</option>
-                                                                                            <option value="NA" selected>NA</option>
-                                                                                        </select>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_student_resume">Resume Link</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_student_resume" type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="uk-margin">
-                                                                                    <label class="uk-form-label labell-text" for="sif_student_linkedin">Linkedin Link</label>
-                                                                                    <div class="uk-form-controls">
-    
-                                                                                        <input class="uk-input inputt-text" id="sif_student_linkedin" type="text">
-                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-    
-                                                                        </form>
-                                                                    </div>
 
+                                                                            <div id="team-content" class="uk-grid-small" uk-grid>
+                                                                                    <% for(var i=0; i < event.memberLowerLimit; i++) {%>
+                                                                                        <% if(i == 0){ %>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text" for="member-name-<%= i %>">Leader Name*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="member-name-<%= i %>" type="text" value="<%= user.name %>" required></div>
+                                                                                            </div>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text" for="member-email-<%= i %>">Leader Email*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="member-email-<%= i %>" type="email" value="<%= user.email %>" required> </div>
+                                                                                            </div>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text" for="member-number-<%= i %>">Leader Contact Number*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="member-number-<%= i %>" type="number" value="<%= user.phoneNumber %>" required> </div>
+                                                                                            </div>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text" for="member-college-<%= i %>">Leader College*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="member-college-<%= i %>" type="text" value="<%= user.college %>" required> </div>
+                                                                                            </div>
+                                                                                        <% } else { %>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text" for="member-name-<%= i %>">Member <%= i %> Name*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="member-name-<%= i %>" type="text" required> </div>
+                                                                                            </div>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text" for="member-email-<%= i %>">Member <%= i %> Email*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="member-email-<%= i %>" type="email" required> </div>
+                                                                                            </div>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text" for="member-number-<%= i %>">Member <%= i %> Contact Number*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="member-number-<%= i %>" type="number" required> </div>
+                                                                                            </div>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text" for="member-college-<%= i %>">Member <%= i %> College*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="member-college-<%= i %>" type="text" required> </div>
+                                                                                            </div>
+                                                                                        <% } %>
+                                                                                            
+                                                                                    <% } %>
+
+                                                                            </div>
+
+                                                                            <div class="uk-margin ex-pad">
+                                                                                    <label class="uk-form-label labell-text">Accomodation*</label>
+                                                                                    <div class="uk-form-controls">
+                                                                                        <select class="uk-select" id="accomodation" required>
+                                                                                                    <option value="Yes" selected>Yes</option>
+                                                                                                    <option value="No" >No</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                            </div>                  
+                                                                </div>
+                                                                <% } %>
                                                             </div>
                                                             <div class="uk-modal-footer uk-text-right">
 
                                                                 <input type="hidden" class="uk-input" id="mEmail" value="<%- user.email %>">
-                                                                <div id="error" class="uk-text-center red-fill">* Please fill all the required inputs.</div>
-                                                                <br>
+                                                                <div id="error">
+                                                                        <div class="uk-text-center red-fill">* Please fill all the required inputs.</div>
+                                                                        <br>
+                                                                </div>
+                                                               
                                                                 <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
                                                                 <button type="submit" class="uk-button uk-button-primary" id="submit-button">Submit</button>
 
                                                             </div>
+                                                        </form>
                                                         </div>
                                                     </div>
 

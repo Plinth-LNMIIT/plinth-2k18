@@ -37,13 +37,17 @@ $('input[type="radio"]').click(function () {
 });
 document.getElementById('mun-form').onsubmit = function (e) {
   e.preventDefault();
-  $('#submit-form').attr("disabled", true);
+  $('#submit-button').attr("disabled", true);
   registerUser();
-  $('#submit-form').removeAttr("disabled");
+  
 }
 
-function getDetails() {
-  var payDetail = {
+
+function registerUser() {
+
+  var teams=[];
+  var check = false;
+  var team = {
     name: $('#name').val(),
     phoneNumber: $('#contact').val(),
     email: $('#email').val(),
@@ -52,29 +56,24 @@ function getDetails() {
     delegation: $('input[name=typeRadio]:checked').attr('value'),
     committee: $('#committee option:selected').val(),
     portfolio: $('#portfolio').val(),
-    accommodation: $('#accomodation option:selected').val(),
   }
+  teams.push(team);
 
-  return payDetail;
+  var payDetails = {
+    accomodation:$('#accomodation option:selected').val(),
+    teams : teams,
+  };
 
-}
-
-function validate(data) {
-  if (data.name === "" || data.phoneNumber === "" || data.email === "" || data.college === "" || data.accommodation === "" || data.committee === "" || data.delegation === "")
-    return false;
+  if (team.name === "" || team.phoneNumber === "" || team.email === "" || team.city ==="" || team.college === "" || payDetails.accommodation === "" || team.committee === "" || team.delegation === "")
+    check = false;
   else
-    return true;
-}
-
-function registerUser() {
-
-  var payDetails = getDetails();
-  if (validate(payDetails)) {
+    check = true;
+  if (check) {
 
     var data = {
       eventName: 'MUN',
+      clubName: 'MUN',
       mEmail: $('#mEmail').val(),
-      teamSize: 1,
       details: payDetails,
     };
 
@@ -112,7 +111,7 @@ function registerUser() {
           },1000);
           
 
-        }
+        } 
 
 
 
@@ -121,6 +120,7 @@ function registerUser() {
 
 
       }).fail(function (err) {
+        $('#submit-button').removeAttr("disabled");
         alert('Sorry for any inconvenience, Try again later. If problem persists, contact payment@plinth.in');
       });
 
@@ -129,6 +129,7 @@ function registerUser() {
 
 
   } else {
+    $('#submit-button').removeAttr("disabled");
     alert('Sorry for any inconvenience, Try again later. If problem persists, contact query@plinth.in');
   }
 

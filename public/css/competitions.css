@@ -256,6 +256,12 @@
      font-size: 1.2rem;
  }
 
+ .ex-pad{
+     padding-left: 15px;
+ }
+
+ 
+
  @media only screen and (max-width: 1366px) {
     #tabs > li > a{
          

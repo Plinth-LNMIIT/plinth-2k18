@@ -3,7 +3,7 @@ module.exports.events = {
         {
             eventUrl: 'intotheuniverse',
             fee:100,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Astronomy",
             eventName: "Into The Universe",
             displayName: "Into The Universe",
@@ -93,7 +93,7 @@ module.exports.events = {
         {
             eventUrl: 'astrohunt',
             fee:100,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Astronomy",
             eventName: "Astro Hunt",
             displayName: "Astro Hunt",
@@ -134,7 +134,7 @@ module.exports.events = {
 
             eventUrl: 'astroquiz',
             fee:100,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Astronomy",
             eventName: "Astro Quiz",
             displayName: "Astro Quiz",
@@ -452,7 +452,7 @@ module.exports.events = {
 
             eventUrl: 'brandwagon',
             fee:200,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Quizzing",
             eventName: "Brandwagon",
             displayName: "Brandwagon",
@@ -481,7 +481,7 @@ module.exports.events = {
 
             eventUrl: 'thequest',
             fee:200,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Quizzing",
             eventName: "The Quest",
             displayName: "The Quest",
@@ -525,7 +525,7 @@ module.exports.events = {
         {
             eventUrl: 'robowar',
             fee:700,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Robotics",
             eventName: "Robowar",
             displayName: "Robowar",
@@ -685,7 +685,7 @@ module.exports.events = {
         {
             eventUrl: 'robosoccer',
             fee:250,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Robotics",
             eventName: "Robosoccer",
             displayName: "Robosoccer",
@@ -784,7 +784,7 @@ module.exports.events = {
         {
             eventUrl: 'droneobstruction',
             fee:600,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Robotics",
             eventName: "Drone Obstruction",
             displayName: "Drone Obstruction",
@@ -835,7 +835,7 @@ module.exports.events = {
         {
             eventUrl: 'lfr',
             fee:250,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Robotics",
             eventName: "LFR",
             displayName: "LFR",
@@ -887,7 +887,7 @@ module.exports.events = {
         {
             eventUrl: 'mazesolver',
             fee:250,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Robotics",
             eventName: "Maze Solver",
             displayName: "Maze Solver",
@@ -974,7 +974,7 @@ module.exports.events = {
         {
             eventUrl: 'roborace',
             fee:250,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Robotics",
             eventName: "Roborace",
             displayName: "Roborace",
@@ -1069,7 +1069,7 @@ module.exports.events = {
         {
             eventUrl: 'rcplane',
             fee:500,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Robotics",
             eventName: "RC Plane",
             displayName: "RC Plane",
@@ -1255,7 +1255,7 @@ module.exports.events = {
         {
             eventUrl: 'transporter',
             fee:250,
-            paymentURL: null,
+            paymentURL: true,
             clubName: "Robotics",
             eventName: "Transporter",
             displayName: "Transporter",

@@ -17,7 +17,9 @@ var paymentSchema = mongoose.Schema({
                 paidAt: String,
         },
         teamSize        : Number,
-        team : [], 
+        team : [],
+        accomodation : String,
+        teamName : String, 
         sheet: String,
 });
 

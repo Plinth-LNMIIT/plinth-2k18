@@ -20,7 +20,7 @@ exports.pdf = function (result) {
         }
     });
 
-    var path = './public/data/' + Math.floor((Math.random() * 10) + 1) + '' + result.orderId + '.pdf';
+    var path = './data/' + Math.floor((Math.random() * 10) + 1) + '' + result.orderId + '.pdf';
     doc.image('./public/media/plinth-logo.png', 25, 50, { height: 48 })
     doc.image('./public/media/lnmiit-logo.jpeg', 475, 50, { height: 48 })
 
@@ -103,8 +103,19 @@ exports.pdf = function (result) {
             .text(': https://plinth.in', 140, 380, { link: 'https://plinth.in' })
             .fillColor('black')
 
-        doc.font('./public/fonts/Roboto-Bold.ttf', 16)
-            .text('Participants Details', 50, 420, { underline: true })
+        if (result.event.payName === 'SIF') {
+            if (result.team[0].type == 'Startup') {
+                doc.font('./public/fonts/Roboto-Bold.ttf', 16)
+                    .text('Startup Details', 50, 420, { underline: true })
+            } else {
+                doc.font('./public/fonts/Roboto-Bold.ttf', 16)
+                    .text('Participants Details', 50, 420, { underline: true })
+            }
+        } else {
+            doc.font('./public/fonts/Roboto-Bold.ttf', 16)
+                .text('Participants Details', 50, 420, { underline: true })
+        }
+
 
         if (result.event.eventName === 'MUN' || result.event.eventName === 'mun') {
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
@@ -144,77 +155,134 @@ exports.pdf = function (result) {
 
         } else if (result.event.payName === 'SIF') {
 
-            if(result.team[0].type == 'Startup'){
+            if (result.team[0].type == 'Startup') {
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                .text('StartUp Name ', 50, 450)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].startupName, 160, 450)
+                    .text('StartUp Name ', 50, 450)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .text(': ' + result.team[0].startupName, 160, 450)
 
-            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                .text('Domain ', 300, 450)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].domain, 370, 450)
-
-
-
-
-            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                .text('Name ', 50, 480)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].name, 160, 480)
-
-            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                .text('Email ', 300, 480)
-                .font('./public/fonts/Oxygen-Regular.ttf', 12)
-                .text(': ' + result.team[0].email, 370, 480)
-
-            }else{
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                .text('Name ', 50, 450)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].name, 160, 450)
-
-            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                .text('Institute ', 300, 450)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].college, 370, 450)
+                    .text('Domain ', 300, 450)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .text(': ' + result.team[0].domain, 370, 450)
 
 
 
 
-            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                .text('Year ', 50, 480)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].year, 160, 480)
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Name ', 50, 480)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .text(': ' + result.team[0].name, 160, 480)
 
-            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                .text('Email ', 300, 480)
-                .font('./public/fonts/Oxygen-Regular.ttf', 12)
-                .text(': ' + result.team[0].email, 370, 480)
- 
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Email ', 300, 480)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                    .text(': ' + result.team[0].email, 370, 480)
+
+            } else {
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Name ', 50, 450)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .text(': ' + result.team[0].name, 160, 450)
+
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Institute ', 300, 450)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .text(': ' + result.team[0].college, 370, 450)
+
+
+
+
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Year ', 50, 480)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .text(': ' + result.team[0].year, 160, 480)
+
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Email ', 300, 480)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                    .text(': ' + result.team[0].email, 370, 480)
+
             }
-        
+
+
+        } else {
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Team Name ', 50, 450)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.teamName, 160, 450)
+
+            if (result.teamSize != 1) {
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Team Size ', 300, 450)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .text(': ' + result.teamSize, 370, 450)
+
+                for (var i = 0; i < result.teamSize; i++) {
+                    if (i == 0) {
+                        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                            .text('Leader Details', 50, 470)
+    
+                        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                            .text('Name ', 50, 490)
+                            .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                            .text(': ' + result.team[i].name, 160, 490)
+    
+                        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                            .text('Email ', 300, 490)
+                            .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                            .text(': ' + result.team[i].email, 370, 490)
+                    } else {
+                        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                            .text('Member '+i+' Details', 50, 470 + 40 * i)
+    
+                        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                            .text('Name ', 50, 490 + 40 * i)
+                            .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                            .text(': ' + result.team[i].name, 160, 490 + 40 * i)
+    
+                        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                            .text('Email ', 300, 490 + 40 * i)
+                            .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                            .text(': ' + result.team[i].email, 370, 490 + 40 * i)
+                    }
+                }
+            } else {
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Name ', 50, 480)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .text(': ' + result.team[0].name, 160, 480)
+
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Email ', 300, 480)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                    .text(': ' + result.team[0].email, 370, 480)
+
+            }
+
+
 
         }
     }
 
-    doc.font('./public/fonts/Oxygen-Bold.ttf', 10)
-        .text('Note: ', 25, 705)
+    doc.font('./public/fonts/Oxygen-Bold.ttf', 12)
+        .text('Note: ', 27, 715)
         .font('./public/fonts/Oxygen-Regular.ttf', 10)
-        .text(' Please bring the printout of this receipt to the event OR show this on your smart phone at the venue.', 55, 705)
+        .text(' Please bring the printout of this receipt to the event OR show this on your smart phone at the venue.', 57, 717)
         .font('./public/fonts/Oxygen-Regular.ttf', 10)
-        .text(' Need any help? Write us at payment@plinth.in. We will get back to you shortly!', 25, 725)
+        .text(' Need any help? Write us at payment@plinth.in. We will get back to you shortly!', 25, 735)
 
 
-    doc.moveTo(25, 745)
-        .lineTo(575, 745)
+    doc.moveTo(25, 750)
+        .lineTo(575, 750)
         .stroke()
     doc.font('./public/fonts/Oxygen-Bold.ttf', 10)
-        .text('Receipt Generated At ', 25, 750)
+        .text('Receipt Generated At ', 25, 755)
         .font('./public/fonts/Oxygen-Regular.ttf', 10)
-        .text(': ' + dateFormat((new Date()), format1), 130, 750)
+        .text(': ' + dateFormat((new Date()), format1), 130, 755)
         .font('./public/fonts/Oxygen-Regular.ttf', 10)
-        .text('Page 1 of 1', 450, 750)
+        .text('Page 1 of 1', 450, 755)
 
 
     // Stream contents to a file
@@ -245,7 +313,7 @@ exports.pdfView = function (result) {
         }
     });
 
-    var path = './public/data/' + Math.floor((Math.random() * 10) + 1) + '' + result.orderId + '.pdf';
+    var path = './data/' + Math.floor((Math.random() * 10) + 1) + '' + result.orderId + '.pdf';
     doc.image('./public/media/plinth-logo.png', 25, 50, { height: 48 })
     doc.image('./public/media/lnmiit-logo.jpeg', 475, 50, { height: 48 })
 
@@ -318,8 +386,18 @@ exports.pdfView = function (result) {
         .text(': https://plinth.in', 140, 380, { link: 'https://plinth.in' })
         .fillColor('black')
 
-    doc.font('./public/fonts/Roboto-Bold.ttf', 16)
-        .text('Participants Details', 50, 420, { underline: true })
+    if (result.event.payName === 'SIF') {
+        if (result.team[0].type == 'Startup') {
+            doc.font('./public/fonts/Roboto-Bold.ttf', 16)
+                .text('Startup Details', 50, 420, { underline: true })
+        } else {
+            doc.font('./public/fonts/Roboto-Bold.ttf', 16)
+                .text('Participants Details', 50, 420, { underline: true })
+        }
+    } else {
+        doc.font('./public/fonts/Roboto-Bold.ttf', 16)
+            .text('Participants Details', 50, 420, { underline: true })
+    }
 
     if (result.event.eventName === 'MUN' || result.event.eventName === 'mun') {
         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
@@ -358,77 +436,126 @@ exports.pdfView = function (result) {
 
 
     } else if (result.event.payName === 'SIF') {
-        
-                    if(result.team[0].type == 'Startup'){
-                        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('StartUp Name ', 50, 450)
-                        .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[0].startupName, 160, 450)
-        
+
+        if (result.team[0].type == 'Startup') {
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('StartUp Name ', 50, 450)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.team[0].startupName, 160, 450)
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Domain ', 300, 450)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.team[0].domain, 370, 450)
+
+
+
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Name ', 50, 480)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.team[0].name, 160, 480)
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Email ', 300, 480)
+                .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                .text(': ' + result.team[0].email, 370, 480)
+
+        } else {
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Name ', 50, 450)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.team[0].name, 160, 450)
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Institute ', 300, 450)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.team[0].college, 370, 450)
+
+
+
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Year ', 50, 480)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.team[0].year, 160, 480)
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Email ', 300, 480)
+                .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                .text(': ' + result.team[0].email, 370, 480)
+
+        }
+
+
+    } else {
+
+        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+            .text('Team Name ', 50, 450)
+            .font('./public/fonts/Oxygen-Regular.ttf', 14)
+            .text(': ' + result.teamName, 160, 450)
+
+        if (result.teamSize != 1) {
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Team Size ', 300, 450)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.teamSize, 370, 450)
+
+            for (var i = 0; i < result.teamSize; i++) {
+                if (i == 0) {
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Domain ', 300, 450)
-                        .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[0].domain, 370, 450)
-        
-        
-        
-        
+                        .text('Leader Details', 50, 470)
+
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Name ', 50, 480)
+                        .text('Name ', 50, 490)
                         .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[0].name, 160, 480)
-        
+                        .text(': ' + result.team[i].name, 160, 490)
+
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Email ', 300, 480)
+                        .text('Email ', 300, 490)
                         .font('./public/fonts/Oxygen-Regular.ttf', 12)
-                        .text(': ' + result.team[0].email, 370, 480)
-        
-                    }else{
-                        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Name ', 50, 450)
-                        .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[0].name, 160, 450)
-        
+                        .text(': ' + result.team[i].email, 370, 490)
+                } else {
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Institute ', 300, 450)
-                        .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[0].college, 370, 450)
-        
-        
-        
-        
+                        .text('Member '+i+' Details', 50, 470 + 40 * i)
+
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Year ', 50, 480)
+                        .text('Name ', 50, 490 + 40 * i)
                         .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[0].year, 160, 480)
-        
+                        .text(': ' + result.team[i].name, 160, 490 + 40 * i)
+
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Email ', 300, 480)
+                        .text('Email ', 300, 490 + 40 * i)
                         .font('./public/fonts/Oxygen-Regular.ttf', 12)
-                        .text(': ' + result.team[0].email, 370, 480)
-         
-                    }
-                
-        
+                        .text(': ' + result.team[i].email, 370, 490 + 40 * i)
                 }
+            }
+        } else {
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Name ', 50, 480)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.team[0].name, 160, 480)
 
-    doc.font('./public/fonts/Oxygen-Bold.ttf', 10)
-        .text('Note: ', 25, 705)
-        .font('./public/fonts/Oxygen-Regular.ttf', 10)
-        .text(' Please bring the printout of this receipt to the event OR show this on your smart phone at the venue.', 55, 705)
-        .font('./public/fonts/Oxygen-Regular.ttf', 10)
-        .text(' Need any help? Write us at payment@plinth.in. We will get back to you shortly!', 25, 725)
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Email ', 300, 480)
+                .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                .text(': ' + result.team[0].email, 370, 480)
+
+        }
 
 
-    doc.moveTo(25, 745)
-        .lineTo(575, 745)
+
+    }
+    
+    doc.moveTo(25, 750)
+        .lineTo(575, 750)
         .stroke()
     doc.font('./public/fonts/Oxygen-Bold.ttf', 10)
-        .text('Receipt Generated At ', 25, 750)
         .font('./public/fonts/Oxygen-Regular.ttf', 10)
-        .text(': ' + dateFormat((new Date()), format1), 130, 750)
-        .font('./public/fonts/Oxygen-Regular.ttf', 10)
-        .text('Page 1 of 1', 450, 750)
+        .text('Page 1 of 1', 450, 755)
+     
+
+     
 
 
     // Stream contents to a file
@@ -537,7 +664,7 @@ exports.saveSheet = function (result) {
                         result.team[0].city,
                         result.team[0].committee,
                         result.team[0].portfolio,
-                        result.team[0].accommodation,
+                        result.accommodation,
                     ];
                 break;
 
@@ -579,41 +706,54 @@ exports.saveSheet = function (result) {
                         result.team[0].linkedin,
                     ];
                 break;
-            case 'INT':
-                break;
-            case 'AH':
-                break;
-            case 'AQ':
-                break;
+
             case 'RST':
                 break;
             case 'IUPC':
                 break;
             case 'ENCS':
                 break;
+
+
+            case 'INT':
+            case 'AH':
+            case 'AQ':
             case 'BW':
-                break;
             case 'TQ':
-                break;
             case 'RW':
-                break;
             case 'RS':
-                break;
             case 'DO':
-                break;
             case 'LFR':
-                break;
             case 'MS':
-                break;
             case 'RR':
-                break;
             case 'RCP':
-                break;
             case 'TP':
+
+                sheetID = process.env['SHEET_' + ('' + result.event.clubName).toUpperCase()];
+                ra = result.event.payName;
+                value = [
+                    result.date.createdAt,
+                    result.date.paidAt,
+                    result.orderId,
+                    result.status,
+                    result.amount,
+                    result.teamName,
+                    result.teamSize,
+                    result.accomodation,
+                ];
+                for (var i = 0; i < result.teamSize; i++) {
+                    value.push(result.team[i].name);
+                    value.push(result.team[i].email);
+                    value.push(result.team[i].phoneNumber);
+                    value.push(result.team[i].college);
+                }
+
                 break;
             case 'IOT':
+
                 break;
             case 'TSS':
+
                 break;
             default:
                 sheetID = process.env.SHEET_TEST;
@@ -621,6 +761,7 @@ exports.saveSheet = function (result) {
                 value = ["HEY"];
                 break;
         }
+        console.log(sheetID, ra, value);
         var sheets = google.sheets('v4');
         sheets.spreadsheets.values.append({
             auth: auth,
@@ -720,41 +861,53 @@ exports.updateSheet = function (result) {
                         result.team[0].linkedin,
                     ];
                 break;
-            case 'INT':
-                break;
-            case 'AH':
-                break;
-            case 'AQ':
-                break;
             case 'RST':
                 break;
             case 'IUPC':
                 break;
             case 'ENCS':
                 break;
+
+
+            case 'INT':
+            case 'AH':
+            case 'AQ':
             case 'BW':
-                break;
             case 'TQ':
-                break;
             case 'RW':
-                break;
             case 'RS':
-                break;
             case 'DO':
-                break;
             case 'LFR':
-                break;
             case 'MS':
-                break;
             case 'RR':
-                break;
             case 'RCP':
-                break;
             case 'TP':
+
+                sheetID = process.env['SHEET_' + ('' + result.event.clubName).toUpperCase()];
+                ra = result.sheet;
+                value = [
+                    result.date.createdAt,
+                    result.date.paidAt,
+                    result.orderId,
+                    result.status,
+                    result.amount,
+                    result.teamName,
+                    result.teamSize,
+                    result.accomodation,
+                ];
+                for (var i = 0; i < result.teamSize; i++) {
+                    value.push(result.team[i].name);
+                    value.push(result.team[i].email);
+                    value.push(result.team[i].phoneNumber);
+                    value.push(result.team[i].college);
+                }
+
                 break;
             case 'IOT':
+
                 break;
             case 'TSS':
+
                 break;
             default:
                 sheetID = process.env.SHEET_TEST;
