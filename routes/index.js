@@ -340,12 +340,14 @@ router.get('/faqs', Verify.verifyOrdinaryUser ,function(req, res, next) {
 });
 
 router.get('/gallery', Verify.verifyOrdinaryUser ,function(req, res, next) {
+    var images = require('../data/images').images;
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;
         res.render('gallery', {
             "page" : 'gallery',
             "isLoggedIn" : isLoggedIn,
+            "images": images,
         });
     }
     else {
@@ -359,7 +361,8 @@ router.get('/gallery', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('gallery',{
                     "page" : 'gallery',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : user
+                    "user" : user,
+                    "images": images,
                 });
             }
         });
