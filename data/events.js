@@ -676,6 +676,10 @@ module.exports.events = {
                         +"Harshil Bhandari: +91-7597526581"
                         +"<br>"
                         +"Parth Agarwal: +91-9571016327"
+                        +"<br>"
+                        +"Shrawan Singh: +91-9680544845"
+                        +"<br>"
+                        +"Vikas Goyal: +91-9413820365"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
@@ -826,6 +830,10 @@ module.exports.events = {
                         +"Prakhar Kesarwani: +91-8209034268"
                         +"<br>"
                         +"Kanishk Sharma: +91-7599063441"
+                        +"<br>"
+                        +"Pankhuri Vanjani: +91-9462346930"
+                        +"<br>"
+                        +"Anushrut: +91-7007135939"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
@@ -1331,6 +1339,8 @@ module.exports.events = {
                         +"Khyati Doshi: +91-9636445125"
                         +"<br>"
                         +"Puru upadhyay: +91-9166015620"
+                        +"<br>"
+                        +"Robin Singh: +91-7011028780"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",

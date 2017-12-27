@@ -161,14 +161,7 @@ exports.pdf = function (result) {
                     .font('./public/fonts/Oxygen-Regular.ttf', 14)
                     .text(': ' + result.team[0].startupName, 160, 450)
 
-                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                    .text('Domain ', 300, 450)
-                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                    .text(': ' + result.team[0].domain, 370, 450)
-
-
-
-
+                
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                     .text('Name ', 50, 480)
                     .font('./public/fonts/Oxygen-Regular.ttf', 14)
@@ -178,6 +171,21 @@ exports.pdf = function (result) {
                     .text('Email ', 300, 480)
                     .font('./public/fonts/Oxygen-Regular.ttf', 12)
                     .text(': ' + result.team[0].email, 370, 480)
+
+                for(var i=0; i< result.team[0].domains.length; i++){
+
+                    doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                        .text('Domain ', 50, 480 + 30 * (i+1))
+                        .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                        .text(': ' + result.team[0].domains[i], 160, 480 + 30 * (i+1))
+
+                    doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                        .text('Interns ', 300, 480 + 30 * (i+1))
+                        .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                        .text(': ' + result.team[0][ '' + (result.team[0].domains[i]).toLowerCase() ], 370, 480 + 30 * (i+1))
+
+
+                }
 
             } else {
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
@@ -444,14 +452,6 @@ exports.pdfView = function (result) {
                 .text(': ' + result.team[0].startupName, 160, 450)
 
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                .text('Domain ', 300, 450)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].domain, 370, 450)
-
-
-
-
-            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Name ', 50, 480)
                 .font('./public/fonts/Oxygen-Regular.ttf', 14)
                 .text(': ' + result.team[0].name, 160, 480)
@@ -460,6 +460,22 @@ exports.pdfView = function (result) {
                 .text('Email ', 300, 480)
                 .font('./public/fonts/Oxygen-Regular.ttf', 12)
                 .text(': ' + result.team[0].email, 370, 480)
+
+            
+                for(var i=0; i< result.team[0].domains.length; i++){
+
+                    doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                        .text('Domain ', 50, 480 + 30 * (i+1))
+                        .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                        .text(': ' + result.team[0].domains[i], 160, 480 + 30 * (i+1))
+
+                    doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                        .text('Interns ', 300, 480 + 30 * (i+1))
+                        .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                        .text(': ' + result.team[0][ '' + (result.team[0].domains[i]).toLowerCase() ], 370, 480 + 30 * (i+1))
+
+
+                }
 
         } else {
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
@@ -684,8 +700,12 @@ exports.saveSheet = function (result) {
                         result.team[0].name,
                         result.team[0].email,
                         result.team[0].phoneNumber,
-                        result.team[0].domain,
-                        result.team[0].interns,
+                        result.team[0].technical,
+                        result.team[0].management,
+                        result.team[0].marketing,
+                        result.team[0].writing,
+                        result.team[0].design,
+                        result.team[0].other
                     ]
 
                     :
@@ -839,8 +859,12 @@ exports.updateSheet = function (result) {
                         result.team[0].name,
                         result.team[0].email,
                         result.team[0].phoneNumber,
-                        result.team[0].domain,
-                        result.team[0].interns,
+                        result.team[0].technical,
+                        result.team[0].management,
+                        result.team[0].marketing,
+                        result.team[0].writing,
+                        result.team[0].design,
+                        result.team[0].other
                     ]
 
                     :

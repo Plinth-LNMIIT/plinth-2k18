@@ -1,4 +1,3 @@
-
 $(".back-back-icon").click(function () {
     var url = "" + window.location;
     window.location = url.substring(0, url.lastIndexOf('/'));
@@ -69,22 +68,72 @@ $("#sponsors").click(function () {
 
 $('#startupContent').hide();
 $('#studentContent').hide();
+$('#technicalInterns').hide();
+$('#managementInterns').hide();
+$('#marketingInterns').hide();
+$('#writingInterns').hide();
+$('#designInterns').hide();
+$('#otherInterns').hide();
 $('#error').hide();
 
 var orderId;
 var fee;
+
+$('#sif_startup_domain option').mousedown(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('selected');
+    switch($(this).val()){
+        case 'Technical':
+            $('#technicalInterns').toggle('show');
+          
+            $('#sif_startup_technical').attr('required', function (_, attr) { return !attr });
+            break;
+        case 'Management':
+            $('#managementInterns').toggle('show');
+            $('#sif_startup_management').attr('required', function (_, attr) { return !attr });
+            break;
+        case 'Marketing':
+            $('#marketingInterns').toggle('show');
+            $('#sif_startup_marketing').attr('required', function (_, attr) { return !attr });
+            break;
+        case 'Content Writing':
+            $('#writingInterns').toggle('show');
+            $('#sif_startup_writing').attr('required', function (_, attr) { return !attr });
+            break;
+        case 'Designing':
+            $('#designInterns').toggle('show');
+            $('#sif_startup_design').attr('required', function (_, attr) { return !attr });
+            break;
+        case 'Other':
+            $('#otherInterns').toggle('show');
+            $('#sif_startup_other').attr('required', function (_, attr) { return !attr });
+            break;
+        default:
+            break;
+    }
+    $("input:visible, textarea:visible, select:visible").attr("disabled", false);
+    $("input:hidden, textarea:hidden, select:hidden").attr("disabled", true);
+    $(this).prop('selected', !$(this).prop('selected'));
+    return false;
+});
 
 
 $('input[type="radio"][name="sif_type"]').click(function () {
     var inputValue = $('input[type="radio"][name="sif_type"]:checked').val();
 
     if (inputValue === 'Startup') {
+       
+        
         $('#startupContent').show();
         $('#studentContent').hide();
+      
+        
     } else if (inputValue === 'Student') {
         $('#studentContent').show();
         $('#startupContent').hide();
     }
+    $("input:visible, textarea:visible, select:visible").attr("disabled", false);
+    $("input:hidden, textarea:hidden, select:hidden").attr("disabled", true);
 
 });
 
@@ -101,24 +150,31 @@ $('#teamSize').on("change", function () {
     $('#team-content').html(teamContent);
 });
 
+
+
 document.getElementById('register-form').onsubmit = function (e) {
     e.preventDefault();
     $('#submit-button').attr("disabled", true);
-    registerUser();
+   
+     registerUser();
  
 }
+
+
 
 function registerUser() {
 
     var teams = [];
     var team;
-    $('#submit-button').attr("disabled", true);
+ 
     var payDetails = '';
     var check = false;
 
     if (mevent.payName == 'SIF') {
         if ($('input[type="radio"][name="sif_type"]:checked').val() == 'Startup') {
-
+            var domains=[], sele = $('option[class="selected"]');
+            for (var i=0, len=sele.length; i<len; i++) {domains.push(sele[i].value);}
+            
             team = {
                 type: $('input[type="radio"][name="sif_type"]:checked').val(),
                 startupName: $('#sif_startup_name').val(),
@@ -126,17 +182,20 @@ function registerUser() {
                 name: $('#sif_startup_contact_name').val(),
                 email: $('#sif_startup_contact_email').val(),
                 phoneNumber: $('#sif_startup_contact_contactNumber').val(),
-                interns: $('#sif_startup_intern').val(),
-                domain: $('#sif_startup_domain option:selected').val(),
+                domains: domains,
+                technical: $('#sif_startup_technical').val(),
+                management: $('#sif_startup_management').val(),
+                marketing: $('#sif_startup_marketing').val(),
+                writing: $('#sif_startup_writing').val(),
+                design: $('#sif_startup_design').val(),
+                other: $('#sif_startup_other').val(),
             };
 
             if (team.startupName === "" ||
                 team.website === "" ||
                 team.email === "" ||
                 team.name === "" ||
-                team.phoneNumber === "" ||
-                team.interns === "" ||
-                team.domain === "") {
+                team.phoneNumber === "") {
 
 
                 check = false;
@@ -239,7 +298,7 @@ function registerUser() {
         $.post("/payment/register/" + mevent.payName,
             { postData: JSON.stringify(data) })
             .done(function (data) {
-
+                $("#register-form").trigger("reset");
                 if (data.status) {
                     orderId = data.orderId;
                     $('#submit-button').removeAttr("disabled");
