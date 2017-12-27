@@ -109,12 +109,15 @@ router.get('/auth/facebook/callback', function (req, res, next) {
 });
 
 router.post('/user_register_complete', Verify.verifyOrdinaryUser, function (req, res) {
+    
+    console.log(req.decoded.sub);
+    var param_data = JSON.parse(req.body.postData);
     var update = {
-        phoneNumber: req.body.phone,
-        college: req.body.institute,
-        year: req.body.year,
-        city: req.body.city,
-        gender: req.body.gender,
+        phoneNumber: param_data.phoneNumber,
+        college: param_data.college,
+        year: param_data.year,
+        city: param_data.city,
+        gender: param_data.gender,
         events: ['init'],
         rEvents: ['init'],
         valid: true,
@@ -123,12 +126,16 @@ router.post('/user_register_complete', Verify.verifyOrdinaryUser, function (req,
   User.findOneAndUpdate({ 'email': req.decoded.sub }, update, { new: true }, function (err, user) {
     if (err) {
         console.log('errr');
-        return done(err);
+         
     }
     if (user) {
         res.cookie('access-token', Verify.getToken(user), { httpOnly: true, secure: false });
 
-        res.redirect('/profile');
+        res.json({status: true});
+        
+    } else {
+        res.json({status: false});
+        
     }
 });
 });

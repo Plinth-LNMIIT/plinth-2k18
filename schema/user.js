@@ -10,7 +10,7 @@ var userSchema = mongoose.Schema({
         name           : String,
         phoneNumber    : Number,
         college        : String,
-        year           : Number,
+        year           : String,
         city           : String,
         valid          : Boolean,
         gender         : String,
