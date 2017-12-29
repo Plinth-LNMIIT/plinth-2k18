@@ -182,8 +182,8 @@ module.exports.events = {
         {
 
             eventUrl: 'rostrum',
-            fee:0,
-            paymentURL: null,
+            fee:200,
+            paymentURL: true,
             clubName: "Literature",
             eventName: "Rostrum",
             displayName: "Rostrum - The Debate",
@@ -193,7 +193,7 @@ module.exports.events = {
             memberUpperLimit: 2,
             memberLowerLimit: 2,
             prizeWorth: '₹ 20,000/-',
-            eventFee: null,
+            eventFee: '₹ 200/-',
             synopsis:  "<p>"
                            
                             +"<p>"
@@ -935,7 +935,8 @@ module.exports.events = {
                                         +"<li>During a restart, a contestant must not feed information about the arena to the bot. However, contestants are allowed to adjust sensors(gain, position etc.) and make hardware changes.</li>"
                                         +"<li>The contestant must not alter the bot in any manner that reduces its weight (e.g. removal of a bulky sensor array or switching to lighter batteries to get better speed). The organizers reserve the right to arbitrate in such circumstances.</li>"
                                     +"</ol>"
-
+                                    +"<br>"
+                                    +"<div class='uk-text-center'><img src='media/mazesolver-map.jpg' /></div>"
                                 +"</p>",
             synopsis: "<p>"
                             +"Make an autonomous bot that completes the maze in shortest time."

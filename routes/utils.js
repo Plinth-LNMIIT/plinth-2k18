@@ -54,7 +54,7 @@ exports.pdf = function (result) {
     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
         .text('Event Name ', 50, 220)
         .font('./public/fonts/Oxygen-Regular.ttf', 14)
-        .text(': ' + result.event.eventName, 160, 220)
+        .text(': ' + result.event.eventName, 160, 220, { width: '140' })
 
     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
         .text('Date ', 300, 220)
@@ -121,7 +121,7 @@ exports.pdf = function (result) {
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Name ', 50, 450)
                 .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].name, 160, 450)
+                .text(': ' + result.team[0].name, 160, 450, { width: '140' })
 
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Institute ', 300, 450)
@@ -161,28 +161,28 @@ exports.pdf = function (result) {
                     .font('./public/fonts/Oxygen-Regular.ttf', 14)
                     .text(': ' + result.team[0].startupName, 160, 450)
 
-                
+
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                     .text('Name ', 50, 480)
                     .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                    .text(': ' + result.team[0].name, 160, 480)
+                    .text(': ' + result.team[0].name, 160, 480, { width: '140' })
 
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                     .text('Email ', 300, 480)
                     .font('./public/fonts/Oxygen-Regular.ttf', 12)
                     .text(': ' + result.team[0].email, 370, 480)
 
-                for(var i=0; i< result.team[0].domains.length; i++){
+                for (var i = 0; i < result.team[0].domains.length; i++) {
 
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Domain ', 50, 480 + 30 * (i+1))
+                        .text('Domain ', 50, 480 + 30 * (i + 1))
                         .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[0].domains[i], 160, 480 + 30 * (i+1))
+                        .text(': ' + result.team[0].domains[i], 160, 480 + 30 * (i + 1))
 
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Interns ', 300, 480 + 30 * (i+1))
+                        .text('Interns ', 300, 480 + 30 * (i + 1))
                         .font('./public/fonts/Oxygen-Regular.ttf', 12)
-                        .text(': ' + result.team[0][ '' + (result.team[0].domains[i]).toLowerCase() ], 370, 480 + 30 * (i+1))
+                        .text(': ' + result.team[0]['' + (result.team[0].domains[i]).toLowerCase()], 370, 480 + 30 * (i + 1))
 
 
                 }
@@ -191,7 +191,7 @@ exports.pdf = function (result) {
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                     .text('Name ', 50, 450)
                     .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                    .text(': ' + result.team[0].name, 160, 450)
+                    .text(': ' + result.team[0].name, 160, 450, { width: '140' })
 
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                     .text('Institute ', 300, 450)
@@ -214,12 +214,32 @@ exports.pdf = function (result) {
             }
 
 
+        } else if (result.event.clubName === 'Workshops') {
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Name ', 50, 450)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.team[0].name, 160, 450, { width: '140' })
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Institute ', 300, 450)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' + result.team[0].college, 370, 450)
+
+
+
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                .text('Email ', 50, 480)
+                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .text(': ' +  result.team[0].email, 160, 480)
+
+         
         } else {
 
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Team Name ', 50, 450)
                 .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.teamName, 160, 450)
+                .text(': ' + result.teamName, 160, 450, { width: '140' })
 
             if (result.teamSize != 1) {
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
@@ -231,25 +251,25 @@ exports.pdf = function (result) {
                     if (i == 0) {
                         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                             .text('Leader Details', 50, 470)
-    
+
                         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                             .text('Name ', 50, 490)
                             .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                            .text(': ' + result.team[i].name, 160, 490)
-    
+                            .text(': ' + result.team[i].name, 160, 490, { width: '140' })
+
                         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                             .text('Email ', 300, 490)
                             .font('./public/fonts/Oxygen-Regular.ttf', 12)
                             .text(': ' + result.team[i].email, 370, 490)
                     } else {
                         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                            .text('Member '+i+' Details', 50, 470 + 40 * i)
-    
+                            .text('Member ' + i + ' Details', 50, 470 + 40 * i)
+
                         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                             .text('Name ', 50, 490 + 40 * i)
                             .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                            .text(': ' + result.team[i].name, 160, 490 + 40 * i)
-    
+                            .text(': ' + result.team[i].name, 160, 490 + 40 * i, { width: '140' })
+
                         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                             .text('Email ', 300, 490 + 40 * i)
                             .font('./public/fonts/Oxygen-Regular.ttf', 12)
@@ -260,7 +280,7 @@ exports.pdf = function (result) {
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                     .text('Name ', 50, 480)
                     .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                    .text(': ' + result.team[0].name, 160, 480)
+                    .text(': ' + result.team[0].name, 160, 480, { width: '140' })
 
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                     .text('Email ', 300, 480)
@@ -362,7 +382,7 @@ exports.pdfView = function (result) {
     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
         .text('Event Name ', 50, 220)
         .font('./public/fonts/Oxygen-Regular.ttf', 14)
-        .text(': ' + result.event.eventName, 160, 220)
+        .text(': ' + result.event.eventName, 160, 220, { width: '140' })
 
     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
         .text('Date ', 300, 220)
@@ -411,7 +431,7 @@ exports.pdfView = function (result) {
         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
             .text('Name ', 50, 450)
             .font('./public/fonts/Oxygen-Regular.ttf', 14)
-            .text(': ' + result.team[0].name, 160, 450)
+            .text(': ' + result.team[0].name, 160, 450, { width: '140' })
 
         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
             .text('Institute ', 300, 450)
@@ -454,34 +474,34 @@ exports.pdfView = function (result) {
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Name ', 50, 480)
                 .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].name, 160, 480)
+                .text(': ' + result.team[0].name, 160, 480, { width: '140' })
 
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Email ', 300, 480)
                 .font('./public/fonts/Oxygen-Regular.ttf', 12)
                 .text(': ' + result.team[0].email, 370, 480)
 
-            
-                for(var i=0; i< result.team[0].domains.length; i++){
 
-                    doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Domain ', 50, 480 + 30 * (i+1))
-                        .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[0].domains[i], 160, 480 + 30 * (i+1))
+            for (var i = 0; i < result.team[0].domains.length; i++) {
 
-                    doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Interns ', 300, 480 + 30 * (i+1))
-                        .font('./public/fonts/Oxygen-Regular.ttf', 12)
-                        .text(': ' + result.team[0][ '' + (result.team[0].domains[i]).toLowerCase() ], 370, 480 + 30 * (i+1))
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Domain ', 50, 480 + 30 * (i + 1))
+                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .text(': ' + result.team[0].domains[i], 160, 480 + 30 * (i + 1))
+
+                doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+                    .text('Interns ', 300, 480 + 30 * (i + 1))
+                    .font('./public/fonts/Oxygen-Regular.ttf', 12)
+                    .text(': ' + result.team[0]['' + (result.team[0].domains[i]).toLowerCase()], 370, 480 + 30 * (i + 1))
 
 
-                }
+            }
 
         } else {
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Name ', 50, 450)
                 .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].name, 160, 450)
+                .text(': ' + result.team[0].name, 160, 450, { width: '140' })
 
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Institute ', 300, 450)
@@ -504,12 +524,31 @@ exports.pdfView = function (result) {
         }
 
 
+    } else if (result.event.clubName === 'Workshops') {
+        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+            .text('Name ', 50, 450)
+            .font('./public/fonts/Oxygen-Regular.ttf', 14)
+            .text(': ' + result.team[0].name, 160, 450, { width: '140' })
+
+        doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+            .text('Institute ', 300, 450)
+            .font('./public/fonts/Oxygen-Regular.ttf', 14)
+            .text(': ' + result.team[0].college, 370, 450)
+
+
+
+
+            doc.font('./public/fonts/Roboto-Bold.ttf', 14)
+            .text('Email ', 50, 480)
+            .font('./public/fonts/Oxygen-Regular.ttf', 14)
+            .text(': ' +  result.team[0].email, 160, 480)
+
     } else {
 
         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
             .text('Team Name ', 50, 450)
             .font('./public/fonts/Oxygen-Regular.ttf', 14)
-            .text(': ' + result.teamName, 160, 450)
+            .text(': ' + result.teamName, 160, 450, { width: '140' })
 
         if (result.teamSize != 1) {
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
@@ -525,7 +564,7 @@ exports.pdfView = function (result) {
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                         .text('Name ', 50, 490)
                         .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[i].name, 160, 490)
+                        .text(': ' + result.team[i].name, 160, 490, { width: '140' })
 
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                         .text('Email ', 300, 490)
@@ -533,12 +572,12 @@ exports.pdfView = function (result) {
                         .text(': ' + result.team[i].email, 370, 490)
                 } else {
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
-                        .text('Member '+i+' Details', 50, 470 + 40 * i)
+                        .text('Member ' + i + ' Details', 50, 470 + 40 * i)
 
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                         .text('Name ', 50, 490 + 40 * i)
                         .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                        .text(': ' + result.team[i].name, 160, 490 + 40 * i)
+                        .text(': ' + result.team[i].name, 160, 490 + 40 * i, { width: '140' })
 
                     doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                         .text('Email ', 300, 490 + 40 * i)
@@ -550,7 +589,7 @@ exports.pdfView = function (result) {
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Name ', 50, 480)
                 .font('./public/fonts/Oxygen-Regular.ttf', 14)
-                .text(': ' + result.team[0].name, 160, 480)
+                .text(': ' + result.team[0].name, 160, 480, { width: '140' })
 
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Email ', 300, 480)
@@ -562,16 +601,16 @@ exports.pdfView = function (result) {
 
 
     }
-    
+
     doc.moveTo(25, 750)
         .lineTo(575, 750)
         .stroke()
     doc.font('./public/fonts/Oxygen-Bold.ttf', 10)
         .font('./public/fonts/Oxygen-Regular.ttf', 10)
         .text('Page 1 of 1', 450, 755)
-     
 
-     
+
+
 
 
     // Stream contents to a file
@@ -680,7 +719,7 @@ exports.saveSheet = function (result) {
                         result.team[0].city,
                         result.team[0].committee,
                         result.team[0].portfolio,
-                        result.accommodation,
+                        result.accomodation,
                     ];
                 break;
 
@@ -727,13 +766,13 @@ exports.saveSheet = function (result) {
                     ];
                 break;
 
-            case 'RST':
-                break;
+
             case 'IUPC':
                 break;
             case 'ENCS':
                 break;
 
+            case 'RST':
 
             case 'INT':
             case 'AH':
@@ -770,10 +809,40 @@ exports.saveSheet = function (result) {
 
                 break;
             case 'IOT':
-
+                sheetID = process.env.SHEET_WORKSHOPS;
+                ra = result.event.payName;
+                value =
+                    [
+                        result.date.createdAt,
+                        result.date.paidAt,
+                        result.orderId,
+                        result.status,
+                        result.amount,
+                        result.team[0].name,
+                        result.team[0].email,
+                        result.team[0].phoneNumber,
+                        result.team[0].college,
+                        result.team[0].collegeId,
+                        result.accomodation,
+                    ];
                 break;
             case 'TSS':
-
+                sheetID = process.env.SHEET_LITERATURE;
+                ra = result.event.payName;
+                value =
+                    [
+                        result.date.createdAt,
+                        result.date.paidAt,
+                        result.orderId,
+                        result.status,
+                        result.amount,
+                        result.team[0].name,
+                        result.team[0].email,
+                        result.team[0].phoneNumber,
+                        result.team[0].college,
+                        result.team[0].collegeId,
+                        result.accomodation,
+                    ];
                 break;
             default:
                 sheetID = process.env.SHEET_TEST;
@@ -839,7 +908,7 @@ exports.updateSheet = function (result) {
                         result.team[0].city,
                         result.team[0].committee,
                         result.team[0].portfolio,
-                        result.team[0].accommodation,
+                        result.accomodation,
                     ];
                 break;
 
@@ -885,14 +954,14 @@ exports.updateSheet = function (result) {
                         result.team[0].linkedin,
                     ];
                 break;
-            case 'RST':
-                break;
+
+
             case 'IUPC':
                 break;
             case 'ENCS':
                 break;
 
-
+            case 'RST':
             case 'INT':
             case 'AH':
             case 'AQ':
@@ -928,10 +997,40 @@ exports.updateSheet = function (result) {
 
                 break;
             case 'IOT':
-
+                sheetID = process.env.SHEET_WORKSHOPS;
+                ra = result.sheet;
+                value =
+                    [
+                        result.date.createdAt,
+                        result.date.paidAt,
+                        result.orderId,
+                        result.status,
+                        result.amount,
+                        result.team[0].name,
+                        result.team[0].email,
+                        result.team[0].phoneNumber,
+                        result.team[0].college,
+                        result.team[0].collegeId,
+                        result.accomodation,
+                    ];
                 break;
             case 'TSS':
-
+                sheetID = process.env.SHEET_LITERATURE;
+                ra = result.sheet;
+                value =
+                    [
+                        result.date.createdAt,
+                        result.date.paidAt,
+                        result.orderId,
+                        result.status,
+                        result.amount,
+                        result.team[0].name,
+                        result.team[0].email,
+                        result.team[0].phoneNumber,
+                        result.team[0].college,
+                        result.team[0].collegeId,
+                        result.accomodation,
+                    ];
                 break;
             default:
                 sheetID = process.env.SHEET_TEST;
