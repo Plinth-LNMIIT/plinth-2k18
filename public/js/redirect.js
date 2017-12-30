@@ -47,7 +47,9 @@ function registerUser() {
             .done(function (data) {
               
                 if (data.status) {
-                     window.location = window.location.origin + '/profile';
+                    setTimeout(function () {
+                        window.location = localStorage.getItem('tempURL');
+                    }, 300);
                 } else {
                     $('#submit-button').attr("disabled", false);
                 }
