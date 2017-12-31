@@ -388,6 +388,13 @@ canvas {
 
 }
 
+@media only screen and (max-width: 360px) {
+  #home{
+    height: 100%;
+  }
+
+}
+
 @media only screen and (min-device-width: 480px) 
                   and (max-device-width: 740px) 
                   and (orientation: landscape) {

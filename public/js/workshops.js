@@ -163,7 +163,17 @@ function registerUser() {
     else {
         check = true;
     }
-    fee = mevent.fee;
+
+    if( mevent.payName == 'TSS'){
+        if( ($('#mEmail').val()).indexOf('@lnmiit.ac.in') > -1){
+            fee = mevent.fee.lnmiit;
+        } else {
+            fee = mevent.fee.non;
+        }
+    } else {
+        fee = mevent.fee;
+    }
+    
   
 
     if (check == true) {

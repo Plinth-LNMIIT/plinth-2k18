@@ -87,7 +87,10 @@ module.exports.workshops = {
         },
         {
             eventUrl: 'scribbledstories',
-            fee: 299,
+            fee: {
+                lnmiit: 150,
+                non: 200,
+            },
             paymentURL: true,
             clubName: "Workshops",
             eventName: "Scribbled Stories",
@@ -99,9 +102,11 @@ module.exports.workshops = {
             memberUpperLimit: 1,
             memberLowerLimit: 1,
             eventFee: '<p>'
-                           +"₹ 299/- (Early Bird)"
+                           +"₹ 150/- (LNMIITians)"
                            +"<br>"
-                           +"₹ 399/- (10th Jan onwards)"      
+                           +"₹ 200/- (Non- LNMIITians)"
+                           +"<br>"
+                           +"₹ 399/- (10<sup>th</sup> Jan onwards)"      
                         +'</p>',
             synopsis:  "<p>"
                             +"<p>"
@@ -142,11 +147,17 @@ module.exports.workshops = {
                                     +"<br>"
                                     +"<b>Fees</b>"
                                     +"<p>"
-                                            +"Early Bird Offer: ₹ 299/- till 10th January’18. ( Early Bird to prove that we keep up with our fads)."
-                                            +"<br>"
-                                            +"₹ 399/- from 10 th January onwards."
-                                            +"<br>"
                                             +"Offer: ₹ 100/- off for Rostrum Participants. (Because we have more things to look after.)"
+                                            +"<br>"
+                                            +"Early Bird Offer: ( Early Bird to prove that we keep up with our fads) "
+                                            +"<br>"
+                                            +"<ul>"
+                                            +"<li>₹ 150/- (LNMIITians)</li>"
+                                            +"<li>₹ 200/- (Non- LNMIITians)</li>"
+                                            +"</ul>"
+                                            +"₹ 399/- from 10<sup>th</sup> January onwards."
+                                           
+                                            
                                     +"</p>"
                                 +"</p>",
             rules: "<p>"

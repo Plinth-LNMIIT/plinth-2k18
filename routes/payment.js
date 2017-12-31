@@ -163,7 +163,13 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                         payment.amount = 600;       
                         break;
                     case 'TSS':
-                        payment.amount = 299;   
+
+                        if(payment.email.indexOf('@lnmiit.ac.in') > -1 ){
+                            payment.amount = 150;  
+                        } else {
+                            payment.amount = 200;  
+                        }
+                        
                         break;
                     default:
                         payment.amount = 0.01;
