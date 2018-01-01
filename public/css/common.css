@@ -49,6 +49,7 @@
 
   .sidee > li {
     font-family: 'Audiowide', cursive;
+    font-size: .8vw;
   }
    
   .uk-active > a{
@@ -63,12 +64,12 @@
   
   .fontset > li > a{
     font-family: 'Audiowide', cursive;
-    font-size: 1.2rem;
+    font-size: 1vw;
   }
   
   .fontset1 > li > a{
     font-family: 'Audiowide', cursive;
-    font-size: 1rem;
+    font-size: .9vw;
   }
   
   #home{
@@ -159,13 +160,13 @@
   }
 
   .button-font{
-    font-size:1.5rem;
+    font-size:2.5vh;
   }
   
  .text-padding{
 
   padding-left: 72px;
-  font-size: 20px;
+  font-size: 2.3vh;
   padding-right: 72px;
 }
 
@@ -175,21 +176,29 @@
 
 .heading{
   font-family: 'Audiowide', cursive ;
-  font-size: 24px;
+  font-size: 2.6vh;
   margin-top:2% !important;
    
    
   }
-  
+  p{
+    font-size: 2.3vh;
+  } 
+  p > ul,ol > li{
+    font-size: 2.3vh;
+  }
+  ul,ol > li{
+    font-size: 2.3vh;
+  }
   .bolder{
     font-family: 'Oxygen', sans-serif;
-      font-size: 22px;
+      font-size: 2.5vh;
       margin-top:.2% !important;
     
   }
   .text{
     font-family: 'Oxygen', sans-serif;
-      font-size: 20px;
+      font-size: 2.2vh;
       margin-top:1% !important;
      
       
