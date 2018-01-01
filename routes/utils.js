@@ -645,8 +645,8 @@ exports.mail = function (events) {
         port: 465,
         secure: true,
         auth: {
-            user: 'payment@plinth.in',
-            pass: 'PayPass2018'
+            user: process.env.MAIL_EMAIL,
+            pass: process.env.MAIL_PASS
         }
     });
 
