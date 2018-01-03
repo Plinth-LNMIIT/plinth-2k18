@@ -582,7 +582,7 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
 router.get('/workshops/:workshop', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
         var workshopDetail = require('../data/workshops').workshops;
-        var worskhops = ['iot', 'scribbledstories'];
+        var worskhops = ['iot', 'scribbledstories','ethicalhacking','bitcoinblockchain','artificialintelligence'];
         var workshop = req.params.workshop;
         var detail;
         var valid = false;

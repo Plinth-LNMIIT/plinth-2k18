@@ -11,6 +11,24 @@
     background-position: center;
     background-repeat: no-repeat;
 } 
+.eh-image{
+    background: url(/media/eh.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+.bb-image{
+    background: url(/media/bb.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+.ai-image{
+    background: url(/media/ai.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
 .back-back-icon{
     padding-left: 0%;
     cursor: pointer; 
@@ -31,6 +49,10 @@
 
  .inner-content2{
    padding: 16px;
+ }
+
+ .small-text{
+     font-size: 26px;
  }
  
  #tabs > li > a{

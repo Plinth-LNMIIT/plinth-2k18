@@ -808,6 +808,9 @@ exports.saveSheet = function (result) {
                 }
 
                 break;
+            case 'EH':
+            case 'BB':
+            case 'AI':
             case 'IOT':
                 sheetID = process.env.SHEET_WORKSHOPS;
                 ra = result.event.payName;
@@ -996,6 +999,9 @@ exports.updateSheet = function (result) {
                 }
 
                 break;
+            case 'EH':
+            case 'BB':
+            case 'AI':
             case 'IOT':
                 sheetID = process.env.SHEET_WORKSHOPS;
                 ra = result.sheet;
