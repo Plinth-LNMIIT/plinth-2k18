@@ -244,7 +244,7 @@
 }
  
  .heading-li{
-     font-size: 2.2rem;
+     font-size: 3.5vh;
      padding-left: 3%;
  }
  .text-list{
@@ -297,7 +297,7 @@
       
     }
     .heading-li{
-        font-size: 1.5rem;
+        
         padding-left: 10%;
     }
       
@@ -325,6 +325,11 @@
                          .boxing{
                             padding: 10% 0 10% 0  ;
                          }
+
+                         .heading-li{
+        
+                           font-size: 3.5vw;
+                        }
  } 
  
   

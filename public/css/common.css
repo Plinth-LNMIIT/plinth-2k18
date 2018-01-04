@@ -130,13 +130,7 @@
      padding: 0px;
    }
    .heading-text{
-    
-    text-align: center;
-    margin-top: 0%;
-  }
-  
-  .heading-text{
-    
+    font-size: 4vh;
     text-align: center;
     margin-top: 0%;
   }
@@ -278,13 +272,7 @@
       .button-font{
         font-size:1.3rem;
       }
-      
-    
-     .heading-text{
-       font-size: 32px;
-       text-align: center;
-       margin-top: 0% ;
-     }
+   
 
      
     .icon-pack{
@@ -342,11 +330,7 @@
              
                
            }
-     .heading-text{
-       font-size: 24px;
-       text-align: center;
-       margin-top: 0% ;
-     }
+   
 
     .icon-pack{
       display: inline-flex ;
@@ -409,11 +393,7 @@
                
            }
      
-      .heading-text{
-        font-size: 28px;
-        text-align: center;
-        margin-top: 0% ;
-      }
+     
   .icon-pack{
     display: inline-flex ;
   }
@@ -513,9 +493,8 @@
                                }
                         
                          .heading-text{
-                           font-size: 24px;
-                           text-align: center;
-                           margin-top: 0% ;
+                           font-size: 4vw;;
+                           
                          }
                      .icon-pack{
                        display: inline-flex ;
