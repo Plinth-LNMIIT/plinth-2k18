@@ -716,7 +716,9 @@ module.exports.events = {
                                         +"<br>"
                                         +"(*or, Point description will be disclosed on the spot before commencement of the event.)</li>"
                                     +"</ol>"
-                                   
+                                    +"<b>Track</b>"
+                                    +"<br>"
+                                    +"<div class='uk-text-center'><img src='media/robosoccer-track.jpg' /></div>"
                                    
                                 +"</p>",
             synopsis: "<p>"
@@ -805,6 +807,9 @@ module.exports.events = {
                                         +"Design a wireless remote controlled flying platform to complete an obstacle course in minimum time without crashing. The length and breadth of the drone should not exceed by 70cms."
                                     +"</p>"
                                    
+                                    +"<b>Track</b>"
+                                    +"<br>"
+                                    +"<div class='uk-text-center'><img src='media/drone-track.png' /></div>"
                                 +"</p>",
             synopsis: "<p>"
                             +"<p>"
@@ -867,6 +872,9 @@ module.exports.events = {
                                         +"Sensing a line and maneuvering the robot to stay on course, while constantly correcting wrong moves using feedback mechanism forms a simple yet effective closed loop system."
                                     +"</p>" 
                                    
+                                    +"<b>Track</b>"
+                                    +"<br>"
+                                    +"<div class='uk-text-center'><img src='media/lfr-track.png' /></div>"
                                 +"</p>",
             synopsis: "<p>"
                             +"An autonomous bot that follows white lines on black surface or vice-versa. It is an automated guided bot that follows visual lines embedded on the floor. The bot must be able to detect particular line and keep following it." 
@@ -1203,6 +1211,10 @@ module.exports.events = {
                                         +"<li>​Electric​ ​Sockets​ ​(220-230V)​ ​will​ ​be​ ​provided​ ​for​ ​charging​ ​the​ ​batteries,​ ​radio​ ​set​ ​etc., in​ ​case​ ​you​ ​need​ ​more,​ ​you​ ​have​ ​to​ ​inform​ ​us​ ​well​ ​before​ ​the​ ​event.</li>"
                                         +"<li>But,​ ​you​ ​are​ ​strongly​ ​suggested​ ​to​ ​bring​ ​all​ ​the​ ​materials​ ​you​ ​require​ ​to​ ​repair​ ​your model.​ ​We​ ​cannot​ ​assure​ ​you​ ​of​ ​the​ ​materials​ ​we​ ​provide​.</li>"
                                     +"</ol>"
+
+                                    +"<b>Track</b>"
+                                    +"<br>"
+                                    +"<div class='uk-text-center'><img src='media/rcplane-track.png' /></div>"
                                 +"</p>",
             synopsis: "<p>"
                             +"<p>"
@@ -1307,6 +1319,9 @@ module.exports.events = {
                                         +"In this round, certain changes will be made in the track and extra tasks will be added in the track. The team with minimum time and maximum points will win."
                                         +"</li>"
                                     +"</ol>"
+                                    +"<b>Track</b>"
+                                    +"<br>"
+                                    +"<div class='uk-text-center'><img src='media/transporter-track.jpg' /></div>"
                                 +"</p>",
             synopsis: "<p>"
                             +"<p>"
