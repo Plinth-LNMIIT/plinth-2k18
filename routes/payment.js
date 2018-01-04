@@ -99,7 +99,7 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                         if (payment.team[0].delegation == 'IP') {
                             payment.amount = 900;
                         } else {
-                            payment.amount = 1200; 
+                            payment.amount = 1500; 
                         }
                         
                         break;

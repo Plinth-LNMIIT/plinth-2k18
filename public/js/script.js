@@ -30,7 +30,7 @@ $('input[type="radio"]').click(function () {
       + '<option value="AIPPM">AIPPM</option>'
       + '<option value="UNICEF">UNICEF</option>');
 
-    $('#amount').text('Amount :₹ 1200/-');
+    $('#amount').text('Amount :₹ 1500/-');
     $('#hidden-matter').show();
   }
 
