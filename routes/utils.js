@@ -1065,3 +1065,44 @@ exports.updateSheet = function (result) {
 
     });
 };
+
+exports.capSheet = function (result) {
+
+    sheetAuth.authenticate().then((auth) => {
+
+
+        var sheetID;
+        var ra;
+        var value;
+ 
+                sheetID = process.env.SHEET_CAMPUS;
+                ra = 'REF';
+                value =
+                    [
+                        result.date,
+                        result.name,
+                        result.orderId,
+                        result.status,
+                    ];
+                
+        console.log(ra);
+        var sheets = google.sheets('v4');
+        sheets.spreadsheets.values.update({
+            auth: auth,
+            spreadsheetId: sheetID,
+            range: ra,
+            valueInputOption: "USER_ENTERED",
+            resource: {
+                values: [value]
+            }
+        }, (err, response) => {
+            if (err) {
+                console.log('The API returned an error: ' + err);
+                return;
+            } else {
+                console.log("Appended");
+            }
+        });
+
+    });
+};

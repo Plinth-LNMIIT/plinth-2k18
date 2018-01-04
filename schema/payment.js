@@ -19,7 +19,8 @@ var paymentSchema = mongoose.Schema({
         teamSize        : Number,
         team : [],
         accomodation : String,
-        teamName : String, 
+        teamName : String,
+        referrer : String,
         sheet: String,
 });
 
