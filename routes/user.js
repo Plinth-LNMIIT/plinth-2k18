@@ -147,23 +147,4 @@ router.get('/logout', Verify.verifyOrdinaryUser, function (req, res) {
     res.redirect('/');
 });
 
-router.get('/users', Verify.verifyOrdinaryUser, function (req, res) {
-    
-     
-     
-  User.find({ }, function (err, user) {
-    if (err) {
-        console.log('errr');
-         
-    }
-    if (user) {
-      
-                Utils.resSheet(user);
-         
-       
-        
-    }
-});
-});
-
 module.exports = router;
