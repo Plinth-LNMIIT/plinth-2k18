@@ -935,6 +935,21 @@ module.exports.events = {
                                         +"<li>During a restart, a contestant must not feed information about the arena to the bot. However, contestants are allowed to adjust sensors(gain, position etc.) and make hardware changes.</li>"
                                         +"<li>The contestant must not alter the bot in any manner that reduces its weight (e.g. removal of a bulky sensor array or switching to lighter batteries to get better speed). The organizers reserve the right to arbitrate in such circumstances.</li>"
                                     +"</ol>"
+
+                                    +"<b>ARENA</b>"
+                                    +"<p>The game field consists of an arena having dimensions 224 cm X 228 cm (lxb). It consists of the following:</p>"
+                                    +"<ol>"
+                                        +"<li>The arena is composed of random paths made up of white strips.</li>"
+                                        +"<li>All the distances are shown in fig.</li>"
+                                        +"<li>Angle between two adjacent white lines in the path is 90 degree.</li>"
+                                        +"<li>The width of all white stripes will be 30mm.</li>"
+                                        +"<li>The figure below shows the sample arena.</li>"
+                                        +"<li>The actual arena at the competition will consist of alterations in the path.</li>"
+                                        +"<li>A black box of 330 mm x 330 mm is present at the end zone of the arena to indicate the end position.</li>"
+                                    +"</ol>"
+                                    +"<p>Note: The dimensions of the arena will be accurate to within 5% or 20 mm, whichever is less.</p>"
+
+                                    +"<b>Track</b>"
                                     +"<br>"
                                     +"<div class='uk-text-center'><img src='media/mazesolver-map.jpg' /></div>"
                                 +"</p>",

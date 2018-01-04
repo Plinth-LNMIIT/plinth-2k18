@@ -226,7 +226,7 @@
 }
 
 #tab > p > b {
-   font-size: 1.4rem;
+   font-size: 2.5vh;
    font-weight: unset;
 }
 
@@ -249,7 +249,7 @@
  }
  .text-list{
     padding-left: 3%;
-     font-size: 1.4rem;
+     font-size: 2.5vh;
  }
 
  .eName{
@@ -293,7 +293,7 @@
 
      #tabs > li > a{
         border:unset;
-        font-size: 1rem;
+        font-size: .6rem;
       
     }
     .heading-li{
@@ -305,10 +305,22 @@
  }
  
  @media only screen and (min-device-width: 480px) 
-                    and (max-device-width: 640px) 
+                    and (max-device-width: 680px) 
                     and (orientation: landscape) {
-  
-                       
+                        #tabs > li > a{
+                            border:unset;
+                            font-size: .8rem;
+                          
+                        }
+                        .text-list{
+                            padding-left: 3%;
+                             font-size: 3vw;
+                         }
+
+                         #tab > p > b {
+                            font-size: 2.5vw;
+                            font-weight: unset;
+                         }
 
                          .boxing{
                             padding: 10% 0 10% 0  ;
