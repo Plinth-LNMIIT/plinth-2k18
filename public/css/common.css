@@ -576,9 +576,8 @@
 }
 
 .goo5 {
-  width: 700px;
-  height: 150px;
-  position: relative;
+   
+  position: absolute;
 }
 
 .goo5 > div {
