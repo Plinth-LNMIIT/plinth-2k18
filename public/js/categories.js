@@ -23,3 +23,8 @@ $('.wonder-away').click(function () {
     window.location = window.location.origin + '/workshops/scribbledstories';
 
 });
+$('.event-away').click(function () {
+
+    window.open("https://goo.gl/8vt44V");
+     
+});
