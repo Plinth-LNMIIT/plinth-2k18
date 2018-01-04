@@ -9,6 +9,7 @@ var GoogleAuth = require('google-auth-library');
 var Verify = require('./verify');
 var User = require('../schema/user');
 var googleSetting = require('../config/auth').googleAuth;
+var Utils = require('./utils');
 
 /* GET users listing. */
 router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }), function (req, res) { });
@@ -130,7 +131,7 @@ router.post('/user_register_complete', Verify.verifyOrdinaryUser, function (req,
     }
     if (user) {
         res.cookie('access-token', Verify.getToken(user), { httpOnly: true, secure: false });
-
+        Utils.resSheet(user);
         res.json({status: true});
         
     } else {
@@ -146,6 +147,25 @@ router.get('/logout', Verify.verifyOrdinaryUser, function (req, res) {
     res.redirect('/');
 });
 
+router.get('/users', Verify.verifyOrdinaryUser, function (req, res) {
+    
+     
+     
+  User.find({ }, function (err, user) {
+    if (err) {
+        console.log('errr');
+         
+    }
+    if (user) {
+        user.forEach(element => {
 
+            Utils.resSheet(element);
+             
+        });
+       
+        
+    }
+});
+});
 
 module.exports = router;
