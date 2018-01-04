@@ -157,13 +157,9 @@ router.get('/users', Verify.verifyOrdinaryUser, function (req, res) {
          
     }
     if (user) {
-        user.forEach(element => {
-            setTimeout(function(){
-                Utils.resSheet(element);
-            },3000);
-            
-             
-        });
+      
+                Utils.resSheet(user);
+         
        
         
     }

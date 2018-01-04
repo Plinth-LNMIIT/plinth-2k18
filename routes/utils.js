@@ -1116,22 +1116,27 @@ exports.resSheet = function (result) {
 
         var sheetID;
         var ra;
-        var value;
- 
+        var value=[];
+        var valuess;
                 sheetID = process.env.SHEET_REGISTERATION;
                 ra = 'RES';
-                value =
+                result.forEach(user => {
+                    valuess =
                     [
                         '' + (new Date()),
-                        result.name,
-                        result.gender,
-                        result.email,
-                        result.phoneNumber,
-                        result.college,            
-                        result.city,
-                        result.year,
+                        user.name,
+                        user.gender,
+                        user.email,
+                        user.phoneNumber,
+                        user.college,            
+                        user.city,
+                        user.year,
                     ];
-                
+                         
+                   value.push(valuess);
+                    
+                     
+                });          
         console.log(value);
         var sheets = google.sheets('v4');
         sheets.spreadsheets.values.append({
@@ -1140,7 +1145,7 @@ exports.resSheet = function (result) {
             range: ra + '!A3:B',
             valueInputOption: "USER_ENTERED",
             resource: {
-                values: [value]
+                values: value
             }
         }, (err, response) => {
             if (err) {
