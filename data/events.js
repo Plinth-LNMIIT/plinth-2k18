@@ -1058,7 +1058,7 @@ module.exports.events = {
                         +"<ol>"
                             +"<li>Only wheels are allowed for locomotion, conveyer belts may be used.</li>"
                             +"<li>The weight of the bot should not be more than 1.5kgs (excluding power source).</li>"
-                            +"<li>The bot should fit in a box dimensions 20 X 17 X 15 cm.</li>"
+                            +"<li>The bot should fit in a box dimensions 22 X 25 X 16 cm.</li>"
                             +"<li>At all times, bots behavior should be nonoffensive, nondestructive and non- harmful to humans and track.</li>"
                             +"<li>Bots are not allowed to fly or jump.</li>"
                             +"<li>Internal combustion engine cannot be used.</li>"
@@ -1069,7 +1069,7 @@ module.exports.events = {
 
                         +"<b>Team Specification</b>"
                         +"<ol>"
-                            +"<li>Any team can participate in Robo Race, Plinth. A team may consist of 3 to 4 member Participants. These participants can be from same or different institutes.</li>"
+                            +"<li>Any team can participate in Robo Race, Plinth. A team may consist of 1 to 4 member Participants. These participants can be from same or different institutes.</li>"
                             +"<li>Team Representative: Each team must specify their Team Representative (Leader) at the time of registration on the website.</li>"
                             +"<li>All important communications between organizers and the registered teams will be done through Team Representative.</li>"
                             +"<li>Each student must have a valid IdCard of their college.</li>"

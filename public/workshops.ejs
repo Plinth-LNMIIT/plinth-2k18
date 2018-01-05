@@ -151,7 +151,7 @@
 
                     if (element.eventName == next) {
 
-                        window.location = window.location + element.eventUrl;
+                        window.location = (window.location + element.eventUrl).replace(/([^:])(\/\/+)/g, '$1/'); 
 
                     }
                 });

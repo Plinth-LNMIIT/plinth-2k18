@@ -10,7 +10,7 @@ $(".more-details").click(function () {
 
         if (element.eventName == next) {
            
-            window.location =  window.location + element.eventUrl;
+            window.location =  (window.location + element.eventUrl).replace(/([^:])(\/\/+)/g, '$1/');
 
         }
     });
@@ -20,7 +20,7 @@ $(".more-details").click(function () {
 $('.wonder-away').click(function () {
 
 
-    window.location = window.location.origin + '/workshops/scribbledstories';
+    window.location =  (window.location.origin + '/workshops/scribbledstories').replace(/([^:])(\/\/+)/g, '$1/'); 
 
 });
 $('.event-away').click(function () {
