@@ -187,7 +187,7 @@ function registerUser() {
         $.post("/payment/register/" + mevent.payName,
             { postData: JSON.stringify(data) })
             .done(function (data) {
-                $("#register-form").trigger("reset");
+                document.getElementById("register-form").reset();
                 if (data.status) {
                     orderId = data.orderId;
                     $('#submit-button').removeAttr("disabled");
