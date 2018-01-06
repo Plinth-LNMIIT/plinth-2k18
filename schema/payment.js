@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var mongoose_csv = require('mongoose-csv');
+
 
 var paymentSchema = mongoose.Schema({
         orderId        : String,
@@ -24,6 +24,5 @@ var paymentSchema = mongoose.Schema({
         sheet: String,
 });
 
-paymentSchema.plugin(mongoose_csv);
 // create the model for payments and expose it to our app
 module.exports = mongoose.model('Payment', paymentSchema);

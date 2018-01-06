@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+        <link rel="stylesheet" href="css/cryptex.css">
+
+
+</head>
+
+<body>
+    <% include partials/loader %>
+        <div id="home">
+
+
+            <% include partials/header %>
+
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div uk-grid>
+                                <h1 class="uk-align-center heading-text">
+                                    <span>Our Team</span>
+                                </h1>
+                            </div>
+
+                            <div class="uk-text-center" uk-grid>
+                                <h1 class="uk-align-center   box-text border-text">
+                                    <span>Busy Organizing</span>
+                                </h1>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        <% include partials/footer %>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+
+        <script>
+
+            window.onload = function () {
+                var loader = document.getElementById('loader');
+
+                
+                setTimeout(function () {
+                    loader.parentElement.removeChild(loader);
+                    $('#home').css("visibility", 'visible')
+                    
+                }, 0);
+            };
+
+        </script>
+
+
+</body>
+
+</html>

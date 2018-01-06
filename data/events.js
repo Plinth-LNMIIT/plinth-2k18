@@ -461,13 +461,13 @@ module.exports.events = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: null,
+            prizeWorth: '₹ 40,000/-',
             eventFee: '₹ 200/-',
             synopsis: "<p>\“Pressing buzzers is like proposing a girl ... you must do it fast, or others will take that chance.\”  - Pickbrain</p><p>What connects ‘Mitron’ and ‘Acche din’ ? <br> Pretty easy, right? Then try this – <br> Google is a _____ internet company and Facebook is a _____ internet company.</p> <p>If you can already feel your grey cells warming up, then BizQ is the place to be. Test your knowledge about various domains of the business world at BizQ. <br> After all, answers are everywhere it is just the matter of asking right questions.</p>",
             eventDescription: "<p><ol><li>The Quiz will be held in 2 rounds, both these rounds will take place back to back at LNMIIT during Plinth.</li><li>The final round will be between the top 8 teams from Prelims.</li><li>The decision of Quizmaster will be final and binding.</li></ol></p>",
             rules: "<p><b>General Rules </b><ol><li>A team can consist of 1 or 2 participants</li><li>Both the participants must be from same institute.</li><li>Decision of the Quiz master is final.</li><li>Any means of cheating will lead to immediate disqualification from the event.</li></ol></p>",
             judges: null,
-           query: "<p class='link-text'>"
+            query: "<p class='link-text'>"
                         +"Shikhar Dalela: +91-7742158600"
                         +"<br>"
                         +"Rachit Sharma: +91-7073743152"
@@ -490,7 +490,7 @@ module.exports.events = {
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
-            prizeWorth: null,
+            prizeWorth: '₹ 40,000/-',
             eventFee: '₹ 200/-',
             synopsis: "<p>Let your intellect shine, let the rolling of your brain race with every passing minute. The LNMIIT Quiz Club is back with its general quiz “The Quest” to warm up your grey cells.</p><p>So, fasten your belts and get ready to race against those who hold the same passion and wisdom for Quizzing. <br> After all, it’s all about finding the right answers isn’t it.</p>",
             eventDescription: "<p>"

@@ -1,0 +1,30 @@
+body{
+    background: url('../media/wall/(1).jpg');
+    opacity: .7;
+}
+
+@media only screen and (max-width: 1024px) {
+  
+ }
+ 
+ @media only screen and (max-width: 767px) {
+  
+ }
+ 
+ @media only screen and (max-width: 480px) {
+   
+   
+ }
+ 
+ @media only screen and (min-device-width: 480px) 
+                    and (max-device-width: 640px) 
+                    and (orientation: landscape) {
+  
+                  
+ 
+ }
+ 
+  
+  
+ 
+ 
