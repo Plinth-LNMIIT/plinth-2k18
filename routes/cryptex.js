@@ -12,6 +12,7 @@ router.get('/', Verify.verifyOrdinaryUser ,function(req, res, next) {
         res.render('cryptex', {
             "page" : 'cryptex',
             "isLoggedIn" : isLoggedIn,
+            "num" : randomNum()
         });
     }
     else {
@@ -25,7 +26,8 @@ router.get('/', Verify.verifyOrdinaryUser ,function(req, res, next) {
                 res.render('cryptex',{
                     "page" : 'cryptex',
                     "isLoggedIn" : isLoggedIn,
-                    "user" : user
+                    "user" : user,
+                    "num" : randomNum()
                 });
             }
         });
@@ -33,5 +35,10 @@ router.get('/', Verify.verifyOrdinaryUser ,function(req, res, next) {
  
   
 });
+
+var randomNum = function(){
+
+    return Math.floor((Math.random() * 6) + 1);
+}
  
 module.exports = router;
