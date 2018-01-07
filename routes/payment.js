@@ -121,7 +121,7 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                         payment.amount = 100;   
                         break;
                     case 'RST':
-                        payment.amount = 0.01;   
+                        payment.amount = 200;   
                         break;
                     case 'IUPC':
                         payment.amount = 0.01;   

@@ -7,8 +7,16 @@
 
 
 </head>
+<style>
+    body{
+    background: linear-gradient(rgba(73, 73, 73, 0.5),rgba(73, 73, 73, 0.5)), url('../media/wall/(<%- num %>).jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+</style>    
 
-<body style="background: url('../media/wall/(<%- num %>).jpg');">
+<body>
     <% include partials/loader %>
         <div id="home">
 
