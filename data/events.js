@@ -601,7 +601,7 @@ module.exports.events = {
                             +"<li>Use of damaged, non-leak proof batteries may lead to disqualification.</li>"
                             +"<li>Special care should be taken to protect the on-board batteries. If judges found that the battery is not properly protected, then team will be disqualified immediately.</li>"
                             +"<li>Change of battery will not be allowed during the match.</li>"
-                            +"<li>Only bots with on board batteries are allowed. It is suggested to have extra battery ready and charged up during competition so that on advancing to next level, you don’t have to wait or suffer due to uncharged battery. If teams don’t show up on allotted slot, they will be disqualified.</li>"
+                            +"<li>It is suggested to have extra battery ready and charged up during competition so that on advancing to next level, you don’t have to wait or suffer due to uncharged battery. If teams don’t show up on allotted slot, they will be disqualified.</li>"
                         +"</ol>"
                         +"<b>Pneumatics</b>"
                         +"<ol>"
