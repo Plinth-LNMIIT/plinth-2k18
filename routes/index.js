@@ -141,7 +141,7 @@ router.get('/competitions/:category', Verify.verifyOrdinaryUser ,function(req, r
 
         if(valid){
             res.render('categories', {
-                "page" : 'competitions',
+                "page" : category,
                 "isLoggedIn" : isLoggedIn,
                 "category": category,
                 "eventUrl" : eventUrls.events,
@@ -161,7 +161,7 @@ router.get('/competitions/:category', Verify.verifyOrdinaryUser ,function(req, r
             if (user){
                 if(valid){
                     res.render('categories',{
-                        "page" : 'competitions',
+                        "page" : category,
                         "isLoggedIn" : isLoggedIn,
                         "user" : user,
                         "category": category,
@@ -215,7 +215,7 @@ router.get('/competitions/:category/:event', Verify.verifyOrdinaryUser ,function
 
         if(valid){
             res.render('event', {
-                "page" : 'competitions',
+                "page" : event,
                 "isLoggedIn" : isLoggedIn,
                 "event" : detail,
             });
@@ -234,7 +234,7 @@ router.get('/competitions/:category/:event', Verify.verifyOrdinaryUser ,function
             if (user){
                 if(valid){
                     res.render('event',{
-                        "page" : 'competitions',
+                        "page" : event,
                         "isLoggedIn" : isLoggedIn,
                         "user" : user,
                         "event" : detail,
@@ -609,7 +609,7 @@ router.get('/workshops/:workshop', Verify.verifyOrdinaryUser ,function(req, res,
             isLoggedIn = false;
             if(valid){
                 res.render('workshop', {
-                    "page" : 'workshops',
+                    "page" : workshop,
                     "isLoggedIn" : isLoggedIn,
                     "workshop" : detail,
                 });
@@ -628,7 +628,7 @@ router.get('/workshops/:workshop', Verify.verifyOrdinaryUser ,function(req, res,
                 if (user){
                     if(valid){    
                         res.render('workshop',{
-                            "page" : 'workshops',
+                            "page" : workshop,
                             "isLoggedIn" : isLoggedIn,
                             "user" : user,
                             "workshop" : detail,
