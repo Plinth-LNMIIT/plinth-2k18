@@ -1087,10 +1087,10 @@ exports.capSheet = function (result) {
                 
         console.log(ra);
         var sheets = google.sheets('v4');
-        sheets.spreadsheets.values.update({
+        sheets.spreadsheets.values.append({
             auth: auth,
             spreadsheetId: sheetID,
-            range: ra,
+            range: ra + '!A3:B',
             valueInputOption: "USER_ENTERED",
             resource: {
                 values: [value]

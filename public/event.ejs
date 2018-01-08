@@ -277,37 +277,45 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                    
+                                                                            <div class="uk-margin ex-pad">
+                                                                                    <label class="uk-form-label labell-text">Referrer Name</label>
+                                                                                    <div class="uk-form-controls">
+                                                                                            <input class="uk-input inputt-text" id="referral" type="text">
+                                                                                    </div>
+                                                                                </div>
                                                     
                                                                         </div>
                                                                         <% } else { %>
                                                                             <div id="content">
-                                                    
-                                                                                <div class="uk-margin ex-pad">
-                                                                                    <label class="uk-form-label labell-text">Team Name*</label>
-                                                                                    <div class="uk-form-controls">
-                                                                                        <input class="uk-input inputt-text" id="teamName" type="text" required>
-                                                                                    </div>
+
+                                                                                <div class="uk-grid-small" uk-grid>
+                                                                                        <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text">Team Name*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="teamName" type="text" required>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text">Team Size*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <select class="uk-select" id="teamSize" required>
+                                                                                                        <% for(var i=event.memberLowerLimit; i<=event.memberUpperLimit; i++) {%>
+                                                                                                            <% if(i != event.memberLowerLimit){ %>
+                                                                                                                <option value="<%= i %>">
+                                                                                                                    <%= i %>
+                                                                                                                </option>
+                                                                                                                <% } else { %>
+                                                                                                                    <option value="<%= i %>" selected>
+                                                                                                                        <%= i %>
+                                                                                                                    </option>
+                                                                                                                    <% } %>
+                                                                
+                                                                                                                        <% } %>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
                                                                                 </div>
-                                                                                <div class="uk-margin ex-pad">
-                                                                                    <label class="uk-form-label labell-text">Team Size*</label>
-                                                                                    <div class="uk-form-controls">
-                                                                                        <select class="uk-select" id="teamSize" required>
-                                                                                            <% for(var i=event.memberLowerLimit; i<=event.memberUpperLimit; i++) {%>
-                                                                                                <% if(i != event.memberLowerLimit){ %>
-                                                                                                    <option value="<%= i %>">
-                                                                                                        <%= i %>
-                                                                                                    </option>
-                                                                                                    <% } else { %>
-                                                                                                        <option value="<%= i %>" selected>
-                                                                                                            <%= i %>
-                                                                                                        </option>
-                                                                                                        <% } %>
-                                                    
-                                                                                                            <% } %>
-                                                                                        </select>
-                                                                                    </div>
-                                                                                </div>
+                                                                               
                                                     
                                                                                 <div id="team-content" class="uk-grid-small" uk-grid>
                                                                                     <% for(var i=0; i < event.memberLowerLimit; i++) {%>
@@ -364,15 +372,24 @@
                                                     
                                                                                 </div>
                                                     
-                                                                                <div class="uk-margin ex-pad">
-                                                                                    <label class="uk-form-label labell-text">Accomodation*</label>
-                                                                                    <div class="uk-form-controls">
-                                                                                        <select class="uk-select" id="accomodation" required>
-                                                                                            <option value="Yes" selected>Yes</option>
-                                                                                            <option value="No">No</option>
-                                                                                        </select>
-                                                                                    </div>
-                                                                                </div>
+                                                                                <div class="uk-grid-small" uk-grid>
+                                                                                        <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text">Accomodation*</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                    <select class="uk-select" id="accomodation" required>
+                                                                                                        <option value="Yes" selected>Yes</option>
+                                                                                                        <option value="No">No</option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="uk-width-1-2@s">
+                                                                                                <label class="uk-form-label labell-text">Referrer Name</label>
+                                                                                                <div class="uk-form-controls">
+                                                                                                        <input class="uk-input inputt-text" id="referral" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                </div >
+                                                                                
                                                                             </div>
                                                                             <% } %>
                                                                 </div>

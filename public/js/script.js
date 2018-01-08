@@ -74,6 +74,7 @@ function registerUser() {
       eventName: 'MUN',
       clubName: 'MUN',
       mEmail: $('#mEmail').val(),
+      referrer:$('#referral').val(), 
       details: payDetails,
     };
 

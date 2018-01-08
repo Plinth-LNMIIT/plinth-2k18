@@ -182,6 +182,7 @@ function registerUser() {
             eventName: mevent.eventName,
             clubName: mevent.clubName,
             mEmail: $('#mEmail').val(),
+            referrer:$('#referral').val(),
             details: payDetails,
         };
         $.post("/payment/register/" + mevent.payName,

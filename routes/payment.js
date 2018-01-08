@@ -52,10 +52,10 @@ router.post('/register/:payName', Verify.verifyOrdinaryUser, function (req, res)
             payment.team = param_data.details.teams;
             payment.accomodation = param_data.details.accomodation;
             payment.teamName = param_data.details.teamName;
+            payment.referrer = param_data.referrer;
             var order_id = "Plinth-" + payName + "-" + (count + 1) + "-" + id_tag;
             payment.orderId = order_id;
             payment.teamSize = payment.team.length;
-            console.log(payment);
             payment.save(function (err) {
                 if (err) {
                     console.log(err);
@@ -181,7 +181,7 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                         
                         break;
                     default:
-                        payment.amount = 0.01;
+                        payment.amount = 1000;
                         break;
                 }
             
