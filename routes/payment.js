@@ -180,6 +180,15 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                         }
                         
                         break;
+                    case 'UNE':
+
+                        if(payment.email.indexOf('@lnmiit.ac.in') > -1 ){
+                            payment.amount = 200;  
+                        } else {
+                            payment.amount = 250;  
+                        }
+                        
+                        break;
                     default:
                         payment.amount = 1000;
                         break;

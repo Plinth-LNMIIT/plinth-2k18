@@ -285,6 +285,57 @@
                                                                                 </div>
                                                     
                                                                         </div>
+                                                                        <% } else if(event.payName == 'UNE') { %>
+                                                                            <div id="content" class="uk-grid-small" uk-grid>
+                                                                
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text" for="name">
+                                                                                             Name*</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                            <input class="uk-input inputt-text" id="name" type="text" value="<%- user.name %>" required> </div>
+                                                                                    </div>
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text" for="email">
+                                                                                             Email*</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                            <input class="uk-input inputt-text" id="email" type="email" value="<%- user.email %>" required> </div>
+                                                                                    </div>
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text" for="number">
+                                                                                             Contact Number*</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                            <input class="uk-input inputt-text" id="number" type="number" value="<%- user.phoneNumber %>" required> </div>
+                                                                                    </div>
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text" for="college">
+                                                                                             College*</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                            <input class="uk-input inputt-text" id="college" type="text" value="<%- user.college %>" required> </div>
+                                                                                    </div>
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text" for="collegeid">
+                                                                                             College ID</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                            <input class="uk-input inputt-text" id="collegeid" type="text"> </div>
+                                                                                    </div>
+                                                                                
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text">Accomodation*</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                            <select class="uk-select" id="accomodation" required>
+                                                                                                <option value="Yes" selected>Yes</option>
+                                                                                                <option value="No">No</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                            <label class="uk-form-label labell-text">Referrer Name</label>
+                                                                                            <div class="uk-form-controls">
+                                                                                                    <input class="uk-input inputt-text" id="referral" type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                </div>
                                                                         <% } else { %>
                                                                             <div id="content">
 
@@ -439,7 +490,7 @@
                                                                     Pay against relevant Event Registration.</p>
                                                             </div>
                                                             <div class="uk-modal-footer uk-text-right">
-                                                                <button class="uk-button uk-button-default uk-modal-close" type="button">Pay Later</button>
+                                                                <button class="uk-button uk-button-default uk-modal-close" type="button" id="cancel-button">Pay Later</button>
                                                                 <button type="submit" class="uk-button uk-button-primary" id="pay-button">Pay Now</button>
 
                                                             </div>

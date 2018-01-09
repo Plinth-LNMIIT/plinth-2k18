@@ -829,6 +829,7 @@ exports.saveSheet = function (result) {
                         result.accomodation,
                     ];
                 break;
+            case 'UNE':    
             case 'TSS':
                 sheetID = process.env.SHEET_LITERATURE;
                 ra = result.event.payName;
@@ -1020,6 +1021,7 @@ exports.updateSheet = function (result) {
                         result.accomodation,
                     ];
                 break;
+            case 'UNE':
             case 'TSS':
                 sheetID = process.env.SHEET_LITERATURE;
                 ra = result.sheet;

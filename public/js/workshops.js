@@ -211,6 +211,12 @@ function registerUser() {
 
 }
 
+$("#cancel-button").click(function (e) {
+    e.preventDefault();
+    window.location =  (window.location.origin + '/profile').replace(/([^:])(\/\/+)/g, '$1/'); 
+
+});
+
 $("#pay-button").click(function (e) {
 
     e.preventDefault();
