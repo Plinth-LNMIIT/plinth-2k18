@@ -186,7 +186,7 @@ router.get('/competitions/:category/:competition', Verify.verifyOrdinaryUser ,fu
         coding:['iupc', 'enigma'],
         robotics:['robowar', 'robosoccer', 'droneobstruction', 'lfr', 'mazesolver', 'roborace', 'rcplane', 'transporter'],
         quizzing:['brandwagon', 'thequest'],
-        literature:['rostrum', 'unerase'],
+        literature:['rostrum'],
         management:['sif'],
 
     };
@@ -679,20 +679,20 @@ router.get('/events', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
 router.get('/events/:event', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
-        var workshopDetail = require('../data/workshops').workshops;
-        var worskhops = ['iot', 'scribbledstories','ethicalhacking','bitcoinblockchain','artificialintelligence'];
-        var workshop = req.params.workshop;
+        var eventDetail = require('../data/events').events;
+        var events = ['unerase'];
+        var event = req.params.event;
         var detail;
         var valid = false;
          
-        if(worskhops.indexOf(workshop) > -1){
+        if(events.indexOf(event) > -1){
             
                   
                         valid = true;
             
-                        workshopDetail.workshops.forEach(element => {
+                        eventDetail.events.forEach(element => {
                             
-                            if(element.eventUrl == workshop){
+                            if(element.eventUrl == event){
                                
                                 detail = element;
                             }
@@ -706,10 +706,10 @@ router.get('/events/:event', Verify.verifyOrdinaryUser ,function(req, res, next)
         {
             isLoggedIn = false;
             if(valid){
-                res.render('workshop', {
-                    "page" : workshop,
+                res.render('event', {
+                    "page" : event,
                     "isLoggedIn" : isLoggedIn,
-                    "workshop" : detail,
+                    "event" : detail,
                 });
             } else {
                 res.redirect('/404');
@@ -725,11 +725,11 @@ router.get('/events/:event', Verify.verifyOrdinaryUser ,function(req, res, next)
                 // check to see if theres already a user with that email
                 if (user){
                     if(valid){    
-                        res.render('workshop',{
-                            "page" : workshop,
+                        res.render('event',{
+                            "page" : event,
                             "isLoggedIn" : isLoggedIn,
                             "user" : user,
-                            "workshop" : detail,
+                            "event" : detail,
                         });
                     } else {
                         res.redirect('/404');

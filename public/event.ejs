@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+        <link rel="stylesheet" href="css/events.css">
+        <script>
+            var current;
+            var next;
+            var mevent = <%- JSON.stringify(event) %> ;
+           
+
+        </script>
+</head>
+
+<body>
+    <% include partials/loader %>
+        <div id="home">
+            <canvas id="canvas"></canvas>
+
+            <% include partials/header %>
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                     
+
+                            <div id="details">
+                                <div>
+                                    <div uk-grid>
+                                        <span class="back-back-icon">
+                                            <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                                        </span>
+                                        <h1 class="heading-text uk-align-center">
+                                            <span id='clubName'><%- event.clubName %></span>
+                                        </h1>
+                                    </div>
+
+                                    <div>
+
+                                        <h1 class="heading-li uk-align-center ">
+                                            <span id='eventName'><%- event.displayName %></span>
+                                        </h1>
+                                    </div>
+
+                                    <div>
+                                        <ul class="uk-list text-list  uk-text-center uk-list-medium">
+                                                <% if(event.eventFee != null ){ %>
+                                            <li id="fees">
+                                                Fee :
+                                                <span id='eventFee'><%- event.eventFee %></span>
+                                            </li>
+                                            <% } %>
+                                            <li>
+                                                Date :
+                                                <span id='eventDate'><%- event.eventDate %></span>
+                                            </li>
+                                            <li>
+                                                Venue :
+                                                <span id='eventVenue'><%- event.eventVenue %></span>
+                                            </li>
+
+
+                                           
+                                        
+                                            <li>
+                                                <% if(isLoggedIn){ %>
+
+
+                                                    <a class="uk-button button-font uk-button-default uk-button-large" href="#register-events" id="registerB" uk-toggle>Event Registration</a>
+                                                    <div id="register-events" class="uk-flex-top" uk-modal>
+                                                        <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                            <form id="register-form" class="uk-form-stacked">
+                                                                <div class="uk-modal-header">
+                                                                    <button class="uk-modal-close-default black-fill" type="button" uk-close></button>
+                                                    
+                                                                    <h2 class="uk-text-center heading-text">
+                                                                        <span>Registration Form</span>
+                                                                    </h2>
+                                                    
+                                                                    <div class="uk-text-center black-fill">
+                                                                        <span class="eName">
+                                                                            <%- event.displayName %>
+                                                                        </span>
+                                                    
+                                                                    </div>
+                                                                </div>
+                                                                <div class="uk-modal-body">
+                                                                
+                                                                
+                                                                        <div id="content" class="uk-grid-small" uk-grid>
+
+                                                                                <div class="uk-width-1-2@s">
+                                                                                    <label class="uk-form-label labell-text" for="name">
+                                                                                        Name*</label>
+                                                                                    <div class="uk-form-controls">
+                                                                                        <input class="uk-input inputt-text" id="name" type="text" value="<%- user.name %>" required> </div>
+                                                                                </div>
+                                                                                <div class="uk-width-1-2@s">
+                                                                                    <label class="uk-form-label labell-text" for="email">
+                                                                                        Email*</label>
+                                                                                    <div class="uk-form-controls">
+                                                                                        <input class="uk-input inputt-text" id="email" type="email" value="<%- user.email %>" required> </div>
+                                                                                </div>
+                                                                                <div class="uk-width-1-2@s">
+                                                                                    <label class="uk-form-label labell-text" for="number">
+                                                                                        Contact Number*</label>
+                                                                                    <div class="uk-form-controls">
+                                                                                        <input class="uk-input inputt-text" id="number" type="number" value="<%- user.phoneNumber %>" required> </div>
+                                                                                </div>
+                                                                                <div class="uk-width-1-2@s">
+                                                                                    <label class="uk-form-label labell-text" for="college">
+                                                                                        College*</label>
+                                                                                    <div class="uk-form-controls">
+                                                                                        <input class="uk-input inputt-text" id="college" type="text" value="<%- user.college %>" required> </div>
+                                                                                </div>
+                                                                                <div class="uk-width-1-2@s">
+                                                                                    <label class="uk-form-label labell-text" for="collegeid">
+                                                                                        College ID</label>
+                                                                                    <div class="uk-form-controls">
+                                                                                        <input class="uk-input inputt-text" id="collegeid" type="text"> </div>
+                                                                                </div>
+
+                                                                                <div class="uk-width-1-2@s">
+                                                                                    <label class="uk-form-label labell-text">Accomodation*</label>
+                                                                                    <div class="uk-form-controls">
+                                                                                        <select class="uk-select" id="accomodation" required>
+                                                                                            <option value="Yes" selected>Yes</option>
+                                                                                            <option value="No">No</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="uk-width-1-2@s">
+                                                                                    <label class="uk-form-label labell-text">Referrer Name</label>
+                                                                                    <div class="uk-form-controls">
+                                                                                        <input class="uk-input inputt-text" id="referral" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                
+                                                                </div>
+                                                                <div class="uk-modal-footer uk-text-right">
+                                                    
+                                                    
+                                                                    <div id="error">
+                                                                        <div class="uk-text-center red-fill">* Please fill all the required inputs.</div>
+                                                                        <br>
+                                                                    </div>
+                                                    
+                                                                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                                                    <button type="submit" class="uk-button uk-button-primary" id="submit-button">Submit</button>
+                                                    
+                                                                </div>
+                                                            </form>
+                                                            <input type="hidden" class="uk-input" id="mEmail" value="<%- user.email %>">
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="pay-events" class="uk-flex-top" uk-modal>
+                                                        <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                            <div class="uk-modal-header">
+                                                                <button class="uk-modal-close-default black-fill" type="button" uk-close></button>
+
+                                                                <h2 class="uk-text-center heading-text">
+                                                                    <span>Payment Form</span>
+                                                                </h2>
+
+                                                                <div class="uk-text-center black-fill">
+                                                                    <span class="eName"><%- event.displayName %></span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="uk-modal-body uk-text-center">
+                                                                <p> Registration SuccessFull.</p>
+                                                                <div>Order Id:
+                                                                    <span id="payOrderId" class="inputt-text"></span>
+                                                                </div>
+                                                                <div>Amount:
+                                                                        <span class="inputt-text">₹ <span id="payAmount"></span>/-</span>
+                                                                </div>
+
+                                                                <p class="inputt-text">
+                                                                    <span class="labell-text">Note:</span>
+                                                                    <br> If you choose to pay later, visit your profile and click
+                                                                    Pay against relevant Event Registration.</p>
+                                                            </div>
+                                                            <div class="uk-modal-footer uk-text-right">
+                                                                <button class="uk-button uk-button-default uk-modal-close" type="button" id="cancel-button">Pay Later</button>
+                                                                <button type="submit" class="uk-button uk-button-primary" id="pay-button">Pay Now</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                    
+                                                    <% } else { %>
+                                                        <a class="uk-button button-font uk-button-default uk-button-large" href="#register-center" uk-toggle>Login</a>
+                                                        <% } %>
+                                            </li>
+
+                                          
+                                        </ul>
+
+
+
+
+                                    </div>
+
+                                    <div class="my-rotate">
+                                        <div uk-grid>
+                                                <ul id="tabs" class="uk-flex-center uk-text-center" uk-tab>
+                                                        <% if(event.synopsis != null ){ %>
+                                                            <li>
+                                                                <a id="synopsis" href="#">Synopsis</a>
+                                                            </li>
+                                                            <% } %>
+                                                                <% if(event.eventDescription != null ){ %>
+                                                                    <li>
+                                                                        <a id="description" href="#">Event Description</a>
+                                                                    </li>
+                                                                    <% } %>
+                                                                        <% if(event.rules != null ){ %>
+                                                                            <li>
+                                                                                <a id="rules" href="#">Rules</a>
+                                                                            </li>
+                                                                            <% } %>
+                                                                                <% if(event.judges != null ){ %>
+                                                                                    <li>
+                                                                                        <a id="judges" href="#">
+                                                                                            
+                                                                                                    Judges & Mentors
+                                                                                                    
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <% } %>
+                                                                                        <li>
+                                                                                            <a id="contact" href="#">Contact</a>
+                                                                                        </li>
+                                                                                        <% if(event.sponsors != null ){ %>
+                                                                                            <li>
+                                                                                                <a id="sponsors" href="#">Sponsors</a>
+                                                                                            </li>
+                                                                                            <% } %>
+                                                    </ul>
+        
+        
+                                                    <div id="tab">
+                                                        <%- event.synopsis %>
+                                                    </div>
+
+
+
+
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        <% include partials/footer %>
+
+
+ 
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/events.js"></script>
+        <script src="js/canvasloader.js"></script>
+        <script src="js/slowStar.js"></script>
+
+
+</body>
+
+</html>

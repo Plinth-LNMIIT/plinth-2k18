@@ -243,44 +243,6 @@ function registerUser() {
         payDetails = {
             teams: teams,
         };
-    }else if(mevent.payName == 'UNE'){
-        team = {
-            name: $('#name' ).val(),
-            email: $('#email' ).val(),
-            phoneNumber: $('#number' ).val(),
-            college: $('#college' ).val(),
-            collegeId: $('#collegeid' ).val(),
-        };
-    
-        teams.push(team);
-        if (team.name === "" ||
-            team.email === "" ||
-            team.phoneNumber === "" ||
-            team.college === "") {
-            check = false;
-        }
-        else {
-            check = true;
-    
-        }
-        fee = mevent.fee;
-
-        payDetails = {
-            teamSize: '1',
-            teams: teams,
-            accomodation: $('#accomodation').val(),
-        };
-    
-        if (payDetails.teamName === "" ||
-            payDetails.teamSize === "" ||
-            payDetails.teams === "" ||
-            payDetails.accomodation === "") {
-            check = false;
-        }
-        else {
-            check = true;
-        }
-                 
     } else {
         var teamSS = $('#teamSize option:selected').val();
 

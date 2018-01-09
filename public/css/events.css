@@ -1,0 +1,165 @@
+
+.unerase-image{
+    background: url(/media/unerase.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.back-back-icon{
+    padding-left: 0%;
+    cursor: pointer; 
+}
+
+.backy{
+    padding-left: 0%; 
+}
+
+.fill-space{
+    height: 100%;
+}
+.scroll-content2{
+    max-height: 100%;
+     min-height: 100%;
+   overflow-y: scroll;
+  }
+
+ .inner-content2{
+   padding: 16px;
+ }
+
+ .small-text{
+     font-size: 26px;
+ }
+ 
+ #tabs > li > a{
+     border:unset;
+     font-size: 1.5rem;
+   
+ }
+#tabs{
+    background: rgba(109, 121, 231, 0.603);
+    width: 90%;
+    padding: 0px;
+}
+#tab{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.2rem;
+    width: 90%;
+    padding-left:0%;
+    margin-left: 10%;
+    margin-right: 10%; 
+}
+
+#tab > p,ul,li {
+    font-family: 'Oxygen', sans-serif;
+}
+
+#tab > p > b {
+   font-size: 2.5vh;
+   font-weight: unset;
+}
+
+
+.dropp{
+    padding:8px;
+    background: rgba(122, 101, 243, 0.836);
+}
+.above-drop {
+    margin-top: 0px;
+    padding:0px;
+     
+}
+.uk-tab::before{
+    left:0;
+}
+ 
+ 
+.heading-li{
+    font-size: 3.5vh;
+    padding-left: 3%;
+}
+ .text-list{
+    padding-left: 3%;
+     font-size: 2.5vh;
+ }
+
+ @media only screen and (max-width: 1366px) {
+    #tabs > li > a{
+         
+        font-size: 1.2rem;
+      
+    }
+}
+
+
+@media only screen and (max-width: 960px) {
+    #tabs > li > a{
+         
+        font-size: 1.2rem;
+      
+    }
+    .boxing{
+       padding: 5% 0% 5% 0%  ;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .boxing{
+       padding: 10% 0 10% 0  ;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+   
+
+    .boxing{
+       padding: 15% 0 15% 0  ;
+    }
+
+    #tabs > li > a{
+       border:unset;
+       font-size: .6rem;
+     
+   }
+   .heading-li{
+        
+    padding-left: 10%;
+}
+     
+     
+}
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 680px) 
+                   and (orientation: landscape) {
+ 
+                    #tabs > li > a{
+                        border:unset;
+                        font-size: .8rem;
+                      
+                    }
+                    .text-list{
+                        padding-left: 3%;
+                         font-size: 3vw;
+                     }
+                     #tab > p > b {
+                        font-size: 2.5vw;
+                        font-weight: unset;
+                     }
+                        .boxing{
+                           padding: 10% 0 10% 0  ;
+                        }
+
+                        .heading-li{
+        
+                            font-size: 3.5vw;
+                         }
+} 
+
+ 
+  
+  
+ 
+ 

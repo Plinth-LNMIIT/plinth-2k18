@@ -167,20 +167,14 @@
     background-size: auto 346.4102px;
     background-position: center;
     background-repeat: no-repeat;
-}
+}  
+
 .scribbled-image{
     background: url(/media/ss.jpg);
     background-size: auto 346.4102px;
     background-position: center;
     background-repeat: no-repeat;
-} 
-.unerase-image{
-    background: url(/media/unerase.jpg);
-    background-size: auto 346.4102px;
-    background-position: center;
-    background-repeat: no-repeat;
-} 
- 
+}
 
 .back-icon{
     padding-left: 0%; 
