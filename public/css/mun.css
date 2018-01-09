@@ -155,7 +155,7 @@ canvas {
 
 }
 
-
+ 
 .btn-outline-secondary:hover{
   color: black;
 }
@@ -391,6 +391,10 @@ canvas {
 @media only screen and (max-width: 360px) {
   #home{
     height: 100%;
+  }
+  #timer{
+    margin: 0px;
+    left: -35px;
   }
 
 }
