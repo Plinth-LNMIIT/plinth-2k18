@@ -876,7 +876,7 @@ module.exports.events = {
                                     +"<div class='uk-text-center'><img src='media/lfr-track.png' /></div>"
                                 +"</p>",
             synopsis: "<p>"
-                            +"An autonomous bot that follows white lines on black surface or vice-versa. It is an automated guided bot that follows visual lines embedded on the floor. The bot must be able to detect particular line and keep following it." 
+                            +"An autonomous bot that follows black lines on white surface. It is an automated guided bot that follows visual lines embedded on the floor. The bot must be able to detect particular line and keep following it." 
                         +"</p>",
             rules: "<p>"
                         +"<b>General Instructions</b>"
