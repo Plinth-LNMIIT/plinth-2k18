@@ -13,7 +13,7 @@
         </script>
             <% } %>
         <script>
-            var mevent = <%- JSON.stringify(event) %> ;
+            var mevent = <%- JSON.stringify(competition) %> ;
 
         </script>
 </head>
@@ -36,46 +36,46 @@
                                             <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
                                         </span>
                                         <h1 class="heading-text uk-align-center">
-                                            <span id='clubName'><%- event.clubName %></span>
+                                            <span id='clubName'><%- competition.clubName %></span>
                                         </h1>
                                     </div>
 
                                     <div>
 
                                         <h1 class="heading-li uk-align-center ">
-                                            <span id='eventName'><%- event.displayName %></span>
+                                            <span id='eventName'><%- competition.displayName %></span>
                                         </h1>
                                     </div>
 
                                     <div>
                                         <ul class="uk-list text-list  uk-text-center uk-list-medium">
-                                                <% if(event.eventFee != null ){ %>
+                                                <% if(competition.eventFee != null ){ %>
                                             <li id="fees">
                                                 Fee :
-                                                <span id='eventFee'><%- event.eventFee %></span>
+                                                <span id='eventFee'><%- competition.eventFee %></span>
                                             </li>
                                             <% } %>
                                             <li>
                                                 Date :
-                                                <span id='eventDate'><%- event.eventDate %></span>
+                                                <span id='eventDate'><%- competition.eventDate %></span>
                                             </li>
                                             <li>
                                                 Venue :
-                                                <span id='eventVenue'><%- event.eventVenue %></span>
+                                                <span id='eventVenue'><%- competition.eventVenue %></span>
                                             </li>
 
-                                            <% if(event.prizeWorth != null ){ %>
+                                            <% if(competition.prizeWorth != null ){ %>
                                             <li id="prizes">
-                                                    <% if(event.payName == 'IUPC' ){ %>
+                                                    <% if(competition.payName == 'IUPC' ){ %>
                                                 Prizes :
                                                 <% } else { %>
                                                     Prizes Worth :  
                                                     <% } %>
-                                                <span id='prizeWorth'><%- event.prizeWorth %></span>
+                                                <span id='prizeWorth'><%- competition.prizeWorth %></span>
                                             </li>
                                             <% } %>
                                         
-                                            <% if(event.paymentURL != null ){ %>    
+                                            <% if(competition.paymentURL != null ){ %>    
                                             <li id="payment">
                                                 <% if(isLoggedIn){ %>
 
@@ -93,14 +93,14 @@
                                                     
                                                                     <div class="uk-text-center black-fill">
                                                                         <span class="eName">
-                                                                            <%- event.displayName %>
+                                                                            <%- competition.displayName %>
                                                                         </span>
                                                     
                                                                     </div>
                                                                 </div>
                                                                 <div class="uk-modal-body">
                                                     
-                                                                    <% if(event.payName == 'SIF'){ %>
+                                                                    <% if(competition.payName == 'SIF'){ %>
                                                                         <div id="SIF-content">
                                                     
                                                                             <div class="uk-margin ex-pad">
@@ -285,7 +285,7 @@
                                                                                 </div>
                                                     
                                                                         </div>
-                                                                        <% } else if(event.payName == 'UNE') { %>
+                                                                        <% } else if(competition.payName == 'UNE') { %>
                                                                             <div id="content" class="uk-grid-small" uk-grid>
                                                                 
                                                                                     <div class="uk-width-1-2@s">
@@ -350,8 +350,8 @@
                                                                                                 <label class="uk-form-label labell-text">Team Size*</label>
                                                                                                 <div class="uk-form-controls">
                                                                                                     <select class="uk-select" id="teamSize" required>
-                                                                                                        <% for(var i=event.memberLowerLimit; i<=event.memberUpperLimit; i++) {%>
-                                                                                                            <% if(i != event.memberLowerLimit){ %>
+                                                                                                        <% for(var i=competition.memberLowerLimit; i<=competition.memberUpperLimit; i++) {%>
+                                                                                                            <% if(i != competition.memberLowerLimit){ %>
                                                                                                                 <option value="<%= i %>">
                                                                                                                     <%= i %>
                                                                                                                 </option>
@@ -369,7 +369,7 @@
                                                                                
                                                     
                                                                                 <div id="team-content" class="uk-grid-small" uk-grid>
-                                                                                    <% for(var i=0; i < event.memberLowerLimit; i++) {%>
+                                                                                    <% for(var i=0; i < competition.memberLowerLimit; i++) {%>
                                                                                         <% if(i == 0){ %>
                                                                                             <div class="uk-width-1-2@s">
                                                                                                 <label class="uk-form-label labell-text" for="member-name-<%= i %>">Leader Name*</label>
@@ -471,7 +471,7 @@
                                                                 </h2>
 
                                                                 <div class="uk-text-center black-fill">
-                                                                    <span class="eName"><%- event.displayName %></span>
+                                                                    <span class="eName"><%- competition.displayName %></span>
 
                                                                 </div>
                                                             </div>
@@ -503,10 +503,10 @@
                                                         <% } %>
                                             </li>
                                             <% } %>   
-                                            <% if(event.otherURL != null ){ %> 
+                                            <% if(competition.otherURL != null ){ %> 
                                             <li id="other">
 
-                                                <a class="uk-button button-font uk-button-default uk-button-large" href="<%= event.otherURL %>" id="oUrl" target="_blank">Event Registration</a>
+                                                <a class="uk-button button-font uk-button-default uk-button-large" href="<%= competition.otherURL %>" id="oUrl" target="_blank">Event Registration</a>
 
                                             </li>
                                             <% } %>   
@@ -521,25 +521,25 @@
                                     <div class="my-rotate">
                                         <div uk-grid>
                                             <ul id="tabs" class="uk-flex-center uk-text-center" uk-tab>
-                                                    <% if(event.synopsis != null ){ %>   
+                                                    <% if(competition.synopsis != null ){ %>   
                                                 <li>
                                                     <a id="synopsis" href="#">Synopsis</a>
                                                 </li>
                                                 <% } %>
-                                                <% if(event.eventDescription != null ){ %>
+                                                <% if(competition.eventDescription != null ){ %>
                                                 <li>
                                                     <a id="description" href="#">Event Description</a>
                                                 </li>
                                                 <% } %>
-                                                <% if(event.rules != null ){ %>
+                                                <% if(competition.rules != null ){ %>
                                                 <li>
                                                     <a id="rules" href="#">Rules</a>
                                                 </li>
                                                 <% } %>
-                                                <% if(event.judges != null ){ %>
+                                                <% if(competition.judges != null ){ %>
                                                 <li>
                                                     <a id="judges" href="#">
-                                                            <% if(event.eventName == 'StartUp Intern Fair' ){ %>
+                                                            <% if(competition.eventName == 'StartUp Intern Fair' ){ %>
                                                                 Registered Statups
                                                         <% } else { %>
                                                             Judges & Mentors
@@ -550,7 +550,7 @@
                                                 <li>
                                                     <a id="contact" href="#">Contact</a>
                                                 </li>
-                                                <% if(event.sponsors != null ){ %>
+                                                <% if(competition.sponsors != null ){ %>
                                                 <li>
                                                     <a id="sponsors" href="#">Sponsors</a>
                                                 </li>
@@ -559,7 +559,7 @@
 
 
                                             <div id="tab">
-                                                    <%- event.synopsis %>
+                                                    <%- competition.synopsis %>
                                             </div>
 
 
@@ -602,7 +602,7 @@
         <!-- UIkit JS -->
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
-        <script src="js/event.js"></script>
+        <script src="js/competition.js"></script>
         <script src="js/canvasloader.js"></script>
         <script src="js/slowStar.js"></script>
 

@@ -64,14 +64,19 @@
   
   .fontset > li > a{
     font-family: 'Audiowide', cursive;
-    font-size: 1vw;
+    font-size: .9vw;
   }
   
   .fontset1 > li > a{
     font-family: 'Audiowide', cursive;
-    font-size: .9vw;
+    font-size: .8vw;
   }
   
+  .audi > li > a {
+    font-family: 'Audiowide', cursive;
+  }
+
+
   #home{
      
     width: 100%;

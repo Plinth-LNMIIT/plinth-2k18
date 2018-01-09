@@ -26,6 +26,10 @@
                         <%}%> >
                             <a href="/workshops">Workshops</a>
                     </li>
+                    <li <%if(page=="events" ){%>class="uk-active"
+                        <%}%> >
+                            <a href="/events">Events</a>
+                    </li>
                     <li <%if(page=="talks" ){%>class="uk-active"
                         <%}%> >
                             <a href="/talks">Talks</a>
@@ -84,8 +88,29 @@
 
         <div class="uk-navbar-right">
 
+            <ul class="uk-navbar-nav audi">
+                    <% if(isLoggedIn){ %>
+
+                        <li  <%if(page=="profile" ){%>class="uk-active"
+                                <%}%> >
+                            <a href="/profile">Profile</a>
+                        </li>
+                        <li>
+                            <a href="/user/logout">LogOut</a>
+    
+                        </li>
+    
+    
+    
+                        <% } else { %>
+                            <li>
+                                    <a href="#register-center" uk-toggle>Register/Login</a>
+                                </li>
+                        <% }  %>
+            </ul>
+
             <div>
-                <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-flip"></a>
+                <a class="uk-navbar-toggle uk-white" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-flip"></a>
 
             </div>
 
@@ -128,25 +153,6 @@
 
             <ul class="uk-nav uk-nav-default offtext uk-text-center">
 
-                <% if(isLoggedIn){ %>
-
-                    <li>
-                        <a href="/profile">Profile</a>
-                    </li>
-                    <li>
-                        <a href="/user/logout">LogOut</a>
-
-                    </li>
-
-
-
-                    <% } else { %>
-
-                        <li>
-                            <a href="#register-center" uk-toggle>Register/Login</a>
-                        </li>
-                        <% } %>
-
                             <li <%if(page=="home" ){%>class="uk-active"
                                 <%}%> >
                                     <a href="/">Home</a>
@@ -158,6 +164,10 @@
                             <li <%if(page=="workshops" ){%>class="uk-active"
                                 <%}%> >
                                     <a href="/workshops">Workshops</a>
+                            </li>
+                            <li <%if(page=="events" ){%>class="uk-active"
+                                <%}%> >
+                                    <a href="/events">Events</a>
                             </li>
                             <li <%if(page=="talks" ){%>class="uk-active"
                                 <%}%> >

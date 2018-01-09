@@ -127,7 +127,7 @@ router.get('/competitions', Verify.verifyOrdinaryUser ,function(req, res, next) 
 
 router.get('/competitions/:category', Verify.verifyOrdinaryUser ,function(req, res, next) {
     var categories = ['astronomy', 'coding', 'robotics', 'quizzing', 'literature', 'management'];
-    var eventUrls = require('../data/events').eventUrl;
+    var competitionUrls = require('../data/competitions').competitionUrl;
     var category = req.params.category;
     var valid = false;
     if(categories.indexOf(category) > -1){
@@ -144,7 +144,7 @@ router.get('/competitions/:category', Verify.verifyOrdinaryUser ,function(req, r
                 "page" : category,
                 "isLoggedIn" : isLoggedIn,
                 "category": category,
-                "eventUrl" : eventUrls.events,
+                "competitionUrl" : competitionUrls.competitions,
             });
         } else{
             res.redirect('/404');
@@ -165,7 +165,7 @@ router.get('/competitions/:category', Verify.verifyOrdinaryUser ,function(req, r
                         "isLoggedIn" : isLoggedIn,
                         "user" : user,
                         "category": category,
-                        "eventUrl" : eventUrls.events,
+                        "competitionUrl" : competitionUrls.competitions,
                     });
                 } else {
                     res.redirect('/404');
@@ -178,10 +178,10 @@ router.get('/competitions/:category', Verify.verifyOrdinaryUser ,function(req, r
   
 });
 
-router.get('/competitions/:category/:event', Verify.verifyOrdinaryUser ,function(req, res, next) {
-    var eventDetail = require('../data/events').events;
+router.get('/competitions/:category/:competition', Verify.verifyOrdinaryUser ,function(req, res, next) {
+    var competitionDetail = require('../data/competitions').competitions;
     var categories = ['astronomy', 'coding', 'robotics', 'quizzing', 'literature', 'management'];
-    var events = {
+    var competitions = {
         astronomy:['intotheuniverse', 'astrohunt', 'astroquiz'],
         coding:['iupc', 'enigma'],
         robotics:['robowar', 'robosoccer', 'droneobstruction', 'lfr', 'mazesolver', 'roborace', 'rcplane', 'transporter'],
@@ -191,18 +191,18 @@ router.get('/competitions/:category/:event', Verify.verifyOrdinaryUser ,function
 
     };
     var category = req.params.category;
-    var event = req.params.event;
+    var competition = req.params.competition;
     var valid = false;
 
     var detail;
     if(categories.indexOf(category) > -1){
 
-        if(events[category].indexOf(event) > -1){
+        if(competitions[category].indexOf(competition) > -1){
             valid = true;
 
-            eventDetail.events.forEach(element => {
+            competitionDetail.competitions.forEach(element => {
 
-                if(element.eventUrl == event){
+                if(element.eventUrl == competition){
                     detail = element;
                 }
             });
@@ -214,10 +214,10 @@ router.get('/competitions/:category/:event', Verify.verifyOrdinaryUser ,function
         isLoggedIn = false;
 
         if(valid){
-            res.render('event', {
-                "page" : event,
+            res.render('competition', {
+                "page" : competition,
                 "isLoggedIn" : isLoggedIn,
-                "event" : detail,
+                "competition" : detail,
             });
         } else {
             res.redirect('/404');
@@ -233,11 +233,11 @@ router.get('/competitions/:category/:event', Verify.verifyOrdinaryUser ,function
             // check to see if theres already a user with that email
             if (user){
                 if(valid){
-                    res.render('event',{
-                        "page" : event,
+                    res.render('competition',{
+                        "page" : competition,
                         "isLoggedIn" : isLoggedIn,
                         "user" : user,
-                        "event" : detail,
+                        "competition" : detail,
                     });
                 }else {
                     res.redirect('/404');
@@ -580,6 +580,104 @@ router.get('/workshops', Verify.verifyOrdinaryUser ,function(req, res, next) {
 });
 
 router.get('/workshops/:workshop', Verify.verifyOrdinaryUser ,function(req, res, next) {
+
+        var workshopDetail = require('../data/workshops').workshops;
+        var worskhops = ['iot', 'scribbledstories','ethicalhacking','bitcoinblockchain','artificialintelligence'];
+        var workshop = req.params.workshop;
+        var detail;
+        var valid = false;
+         
+        if(worskhops.indexOf(workshop) > -1){
+            
+                  
+                        valid = true;
+            
+                        workshopDetail.workshops.forEach(element => {
+                            
+                            if(element.eventUrl == workshop){
+                               
+                                detail = element;
+                            }
+                        });
+                
+                    
+                }
+
+
+        if(req.decoded.sub === "")
+        {
+            isLoggedIn = false;
+            if(valid){
+                res.render('workshop', {
+                    "page" : workshop,
+                    "isLoggedIn" : isLoggedIn,
+                    "workshop" : detail,
+                });
+            } else {
+                res.redirect('/404');
+            }
+        }
+        else {
+            User.findOne({'email' : req.decoded.sub }, function(err, user) {
+               
+                isLoggedIn = user.valid;
+                // if there are any errors, return the error
+                if (err)
+                    return done(err);
+                // check to see if theres already a user with that email
+                if (user){
+                    if(valid){    
+                        res.render('workshop',{
+                            "page" : workshop,
+                            "isLoggedIn" : isLoggedIn,
+                            "user" : user,
+                            "workshop" : detail,
+                        });
+                    } else {
+                        res.redirect('/404');
+                    }
+                }
+            });
+        }
+      
+      
+    });
+
+router.get('/events', Verify.verifyOrdinaryUser ,function(req, res, next) {
+    var eventUrl = require('../data/events').eventUrl;
+    
+    if(req.decoded.sub === "")
+    {
+        isLoggedIn = false;
+        res.render('events', {
+            "page" : 'events',
+            "isLoggedIn" : isLoggedIn,
+            "eventUrl" : eventUrl.events,
+        });
+    }
+    else {
+        User.findOne({'email' : req.decoded.sub }, function(err, user) {
+           
+            isLoggedIn = user.valid;
+            // if there are any errors, return the error
+            if (err)
+                return done(err);
+            // check to see if theres already a user with that email
+            if (user){
+                res.render('events',{
+                    "page" : 'events',
+                    "isLoggedIn" : isLoggedIn,
+                    "user" : user,
+                    "eventUrl" : eventUrl.events,
+                });
+            }
+        });
+    }
+  
+  
+});
+
+router.get('/events/:event', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
         var workshopDetail = require('../data/workshops').workshops;
         var worskhops = ['iot', 'scribbledstories','ethicalhacking','bitcoinblockchain','artificialintelligence'];
