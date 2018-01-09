@@ -263,6 +263,7 @@ function registerUser() {
             check = true;
     
         }
+        fee = mevent.fee;
 
         payDetails = {
             teamSize: '1',
@@ -279,14 +280,7 @@ function registerUser() {
         else {
             check = true;
         }
-
-        
-            if( ($('#mEmail').val()).indexOf('@lnmiit.ac.in') > -1){
-                fee = mevent.fee.lnmiit;
-            } else {
-                fee = mevent.fee.non;
-            }
-        
+                 
     } else {
         var teamSS = $('#teamSize option:selected').val();
 

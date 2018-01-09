@@ -188,7 +188,7 @@ module.exports.events = {
             eventName: "Rostrum",
             displayName: "Rostrum - The Debate",
             payName: "RST",
-            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
+            eventDate: "19<sup>th</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 2,
@@ -234,26 +234,21 @@ module.exports.events = {
         {
 
             eventUrl: 'unerase',
-            fee:{
-                lnmiit: 200,
-                non: 250,
-            },
+            fee:200,
             paymentURL: true,
             clubName: "Literature",
             eventName: "UnErase Poetry",
             displayName: "UnErase Poetry",
-            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
+            eventDate: "21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             payName: "UNE",
             memberUpperLimit: 1,
             memberLowerLimit: 1,
             prizeWorth: null,
             eventFee: '<p>'
-                           +"₹ 200/- (LNMIITians)"
+                           +"₹ 200/- (Early Bird)"
                            +"<br>"
-                           +"₹ 250/- (Non- LNMIITians)"
-                           +"<br>"
-                           +"₹ 499/- (14<sup>th</sup> Jan onwards)"      
+                           +"₹ 399/- (14<sup>th</sup> Jan onwards)"      
                         +'</p>',
             synopsis:  "<p>"
                             +"Does “O captain, my captain”, a series of rather unrelated words, bring joy to you? Does your inner self constantly seeks for explanation and meaning to life? Wouldn’t it be awesome if you  be fuel itself to introspect one’s own self. Well that is what poetry is based on."
@@ -467,7 +462,7 @@ module.exports.events = {
             eventName: "Brandwagon",
             displayName: "Brandwagon",
             payName: "BW",
-            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
+            eventDate: "21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
@@ -496,7 +491,7 @@ module.exports.events = {
             eventName: "The Quest",
             displayName: "The Quest",
             payName: "TQ",
-            eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
+            eventDate: "20<sup>th</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 2,
             memberLowerLimit: 1,
