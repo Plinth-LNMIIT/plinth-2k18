@@ -697,7 +697,7 @@ module.exports.events = {
             eventDate: "19<sup>th</sup> - 21<sup>st</sup> Jan 2018",
             eventVenue: "The LNMIIT, Jaipur",
             memberUpperLimit: 6,
-            memberLowerLimit: 3,
+            memberLowerLimit: 1,
             prizeWorth: '₹ 25,000/-',
             eventFee: '₹ 250/-',
             eventDescription: "<p>"
@@ -728,7 +728,6 @@ module.exports.events = {
                       
                         +"<b>General Rules</b>"
                         +"<ol>"
-                            +"<li>Registration fees is applicable per bot.</li>"
                             +"<li>A team can consist of a maximum of 6 members.</li>"
                             +"<li>Team should bring 3 bots with them or an Individual can bring 1 bot and build his team here.</li>"
                             +"<li>Maximum 3 robot can play from one side/team.</li>"
