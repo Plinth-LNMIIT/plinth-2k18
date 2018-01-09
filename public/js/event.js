@@ -328,7 +328,13 @@ function registerUser() {
         else {
             check = true;
         }
-        fee = mevent.fee;
+        if( mevent.payName == 'INT' || mevent.payName == 'AH' || mevent.payName == 'AQ'){
+           
+                fee = mevent.fee * payDetails.teamSize;
+             
+        } else {
+            fee = mevent.fee;
+        }
     }
 
     if (check == true) {

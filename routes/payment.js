@@ -112,13 +112,9 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                         }
                         break;
                     case 'INT':
-                        payment.amount = 100;   
-                        break;
                     case 'AH':
-                        payment.amount = 100;   
-                        break;
                     case 'AQ':
-                        payment.amount = 100;   
+                        payment.amount = 100 * payment.teamSize;   
                         break;
                     case 'RST':
                         payment.amount = 200;   
