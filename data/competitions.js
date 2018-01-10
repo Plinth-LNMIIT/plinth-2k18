@@ -257,7 +257,7 @@ module.exports.competitions = {
                                 +"</p>",
             rules: "<p>"
                         +"<p>"
-                            + "Entries will be accepted till 17<sup>th</sup>January, 2018. Offline registration will be subject to the discretion of the organizers."
+                            + "Entries will be accepted till 19<sup>th</sup>January, 2018. Offline registration will be subject to the discretion of the organizers."
                         +"</p>"
                         +"<p>"
                             +"<b>Eligibility Criteria</b>"

@@ -872,18 +872,26 @@ Hexagon Shape
 /* 
 CA Buttons
 */
+.tiny{
+  font-size: 12px;
+  line-height: 20px;
+}
+.normal{
+  font-size: .9vw;
+  
+}
 .btn {
   position: relative;
   display: inline-block;
-  width: 166px;
-  height: 45px;
-  font-size: 12px;
-  line-height: 20px;
+  width: 160px;
+  height: 40px;
+  vertical-align: middle;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
   overflow: hidden;
+  margin-bottom: 1%;
 }
 
 .btn svg {
@@ -903,8 +911,8 @@ CA Buttons
 }
 
 .btn:hover svg rect {
-  stroke-width: 10;
-  stroke-dasharray: 110, 312;
+  stroke-width: 8;
+  stroke-dasharray: 95, 312;
   stroke-dashoffset: 183;
 }
 
