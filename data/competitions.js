@@ -626,10 +626,9 @@ module.exports.competitions = {
                                     +"</p>"
                                     
                                     +"<b>ARENA</b>"
-                                    +"<ol>"
-                                        +"<li>Cage size - 18 X 18</li>"
-                                        +"<li>Cage flooring – Metal/Wooden</li>"
-                                    +"</ol>"
+                                    +"<p>"
+                                        +"The arena shall be having a metal flooring of area 18*18 feet. It will be surrounded by a metal cage of height 8 feet and on top. The cage will be covered with a polycarbonate layer of thickness about 5-7mm."
+                                    +"</p>"
                                     
                                 +"</p>",
             synopsis: "<p>"
