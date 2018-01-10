@@ -120,7 +120,7 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                         payment.amount = 200;   
                         break;
                     case 'PRA':
-                        payment.amount = 100;   
+                        payment.amount = 100 * payment.teamSize;   
                         break;
                     case 'IUPC':
                         payment.amount = 0.01;   
