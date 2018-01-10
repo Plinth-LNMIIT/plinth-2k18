@@ -11,8 +11,8 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-.competition-image{
-    background: url(/media/competition.jpg);
+.design-image{
+    background: url(/media/design.jpg);
     background-size: auto 346.4102px;
     background-position: center;
     background-repeat: no-repeat;
@@ -171,6 +171,12 @@
 
 .scribbled-image{
     background: url(/media/ss.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pratibimb-image{
+    background: url(/media/pratibimb.jpg);
     background-size: auto 346.4102px;
     background-position: center;
     background-repeat: no-repeat;

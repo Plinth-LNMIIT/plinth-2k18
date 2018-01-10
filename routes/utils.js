@@ -786,6 +786,7 @@ exports.saveSheet = function (result) {
             case 'MS':
             case 'RR':
             case 'RCP':
+            case 'PRA':
             case 'TP':
 
                 sheetID = process.env['SHEET_' + ('' + result.event.clubName).toUpperCase()];
@@ -978,6 +979,7 @@ exports.updateSheet = function (result) {
             case 'MS':
             case 'RR':
             case 'RCP':
+            case 'PRA':
             case 'TP':
 
                 sheetID = process.env['SHEET_' + ('' + result.event.clubName).toUpperCase()];

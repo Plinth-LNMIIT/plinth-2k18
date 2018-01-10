@@ -181,6 +181,121 @@ module.exports.competitions = {
         
         {
 
+            eventUrl: 'pratibimb',
+            fee:100,
+            paymentURL: true,
+            clubName: "Design",
+            eventName: "Pratibimb",
+            displayName: "Pratibimb <br> The Design Challenge",
+            payName: "PRA",
+            eventDate: "21<sup>st</sup> Jan 2018",
+            eventVenue: "The LNMIIT, Jaipur",
+            memberUpperLimit: 2,
+            memberLowerLimit: 1,
+            prizeWorth: '₹ 15,000/-',
+            eventFee: '₹ 100/-',
+            synopsis:  "<p>"
+                            +"<p>"
+                                +"<b>What is the event about?</b>"
+                                +"<p>"
+                                    +"‘Pratibimb’ provides a platform to the budding designers, whether as individuals aspiring to showcase their skills amidst their deserving audience,or as teams collaborating their efforts towards implementation and proper utilization of their skill-set under a single roof. It will not only help achieve a achieve a common goal, i.e. of coming up with new ideas of sustainability, but will also enhance our designing potential." 
+                                +"</p>"
+                                +"<p>"
+                                    +"‘Pratibimb’ under the aegis of Plinth ’18,the Techno-Management Literary fest of LNMIIT, brings with it an enormous opportunity for designers to bring their talent in front of the world,and also get applauded for their skills along with a chance of winning cash prizes adds cherry to the cake. The ASME LNMIIT believes in fostering the growth of mechanical engineers via challenges and not all opportunities are found in classrooms." 
+                                +"</p>"
+                                +"<p>"
+                                    +"‘Pratibimb’ is a designing competition which promises to bring before such challenges that would test your mental ability and skills, that you've learnt so far, to it's best." 
+                                +"</p>"
+                            +"</p>"
+                            +"<p>"
+                                +"<b>What can you learn?</b>"
+                                +"<p>"
+                                    +"As is rightly said, a competitive environment stimulates oneself to push on their limits. Hence, this event will not only motivate the participants to perform better than their peers, bringing out your talent multifold but also give you a chance to interact and exchange ideas with some of the great minds from all around the country. Presentation imperceptibly helps you enhance your communication skills or offers an opportunity to test them. Designing, in itself, is a field that assists students boost up their creativity and logical thinking." 
+                                +"</p>"
+                            +"</p>"
+                                +"<p>"
+                                +"<b>Why should you attend it?</b>"
+                                +"<p>"
+                                    +"‘Pratibimb’ as an event is the first of its kind motivating the participants to come with innovative ideas while enhancing their design skills. Also as it is said, an even greater idea is born in the exchange of some great ideas, Pratibimb is here to give you that very needed ground of exchange. After all, keeping up the world's fads is what defines a mechanical engineer." 
+                                +"</p>"                        
+                            +"</p>"
+                        +"</p>",
+            eventDescription: "<p>"
+                                    +"<b>Problem Statement</b>"
+                                    +"<p>"
+                                        +"<ol>"
+                                            +"<li>"
+                                                +"<span>SAFETY AND SECURITY</span>"
+                                                +"<br>"
+                                                +"Model a device which can be placed on any door as one feels like at any position and customized enough to make adjustments affordable. More than anything facility, security is one of the biggest insecurities that the citizens undergo in their daily lives. A machine which can help in serving a purpose to secure houses from thefts, break ins and intruders. If the thieves, of the 21st century, are advancing so should the security. The participants have to come up with such a machine that resolves all the issues pertaining to security these days."
+                                            +"</li>"
+                                            +"<li>"
+                                                +"<span>AGRICULTURE SECTOR MACHINE IN RURAL AREAS</span>"
+                                                +"<br>"
+                                                +"Participants have to come up with an innovative idea that has the potential to make agricultural activities easier for farmers. The processes that participants wish bring advancements in can be any of the procedure that are involved in agriculture, be it ploughing, threshing etc. Agriculture plays a vital in the GDP of our country. Thus, boosting the technology or the machines used in such a crucial sector of India is the necessity of the hour and usually goes latent under the shelter of Smart City illusions and AI."
+                                            +"</li>"
+                                            +"<li>"
+                                                +"<span>HEALTHCARE</span>"
+                                                +"<br>"
+                                                +"Participants have to come up with a smart healthcare tools which can make the monitoring of diseases much easier. People, nowadays, prefer all the tasks of check ups to be performed at their homes itself. Today, people tend to rely upon machines for the cures and prevention too. Therefore, the world needs a machine that can serve it’s crucial purpose as the per the requirement of the customer. Participants have to specify the details of the body functionality that are to be measured and what disease the machine will precaution to."
+                                            +"</li>"
+                                            +"<li>"
+                                                +"<span>INDUSTRIES IN 2050</span>"
+                                                +"<br>"
+                                                +"Like any other species, industries also evolve with time as we can see with the development of AI and data analysis. Participants need to think and come up with a complete insight of what changes will the Mechanical industry undergo along with what are the new machines that might be in production. The machine can be among any category that serves any purpose in the field of mechanical engineering. In a world that is behind the fashion of softwares, people tend to forget the significance of hardware in the daily well-being."
+                                            +"</li>"
+                                            +"<li>"
+                                                +"<span>SOLUTION FOR CURRENTLY PREVAILING PROBLEMS IN INDIAN CITIES</span>"
+                                                +"<br>"
+                                                +"Be it high traffic, scarcity of water or air pollution, all the cities in India have these problems which prove to be a hindrance in the development of the cities. Participants are supposed to think of one such hindrance/ problem and come up with a machine design that can help the mankind solve the same. India needs a solution that has the potential to bring a great changes with a small difference. There are and have been a lot unrealised changes that go unnoticed yet hold a great importance. Participants have to come with such an imperceptible change for their nation."
+                                            +"</li>"
+                                             
+                                        +"</ol>"
+                                    +"</p>"
+                                                             
+                                    
+                                +"</p>",
+            rules: "<p>"
+                        +"<p>"
+                            + "Entries will be accepted till 17<sup>th</sup>January, 2018. Offline registration will be subject to the discretion of the organizers."
+                        +"</p>"
+                        +"<p>"
+                            +"<b>Eligibility Criteria</b>"
+                            +"<ol>"
+                                +"<li>This category is open to students of all ages, because ideas aren't slaves of maturity.</li>"
+                                +"<li>The participants may enter this challenge individually, or as a design team, given that we believe in freedom of opinion!</li>"
+                                +"<li>All team members must be enrolled as a student in an educational institution or online program during the semester/term in which they contribute to the design.</li>"
+                                +"<li>The Challenge is not open to any person who has been employed or is presently working as a professional in 3D printing.</li>"
+                            +"</ol>"
+                        +"</p>"
+                        +"<p>"
+                            +"<b>Judging Criteria</b>"
+                            +"<ol>"
+                                +"<li>Does your design have meaning and impact?</li>"
+                                +"<li>Is the design aesthetically pleasing and evokes emotion?</li>"
+                                +"<li>Does your design have originality and feasibility?</li>"
+                                +"<li>Is your design sustainable?</li>"
+                                +"<li>Advanced Manufacturing: Exploration of the impact of 3D printing on your design, shape, structure or material.</li>"
+                                +"<li>Make the presentation as articulated as you can.</li>"
+                            +"</ol>"
+                        +"</p>"
+                      
+                        
+                    +"</p>",
+            judges: null,
+            query: "<p class='link-text'>"
+                        +"Vishal Singh Jadon: +91-8005614503"
+                        +"<br>"
+                        +"Mudit Parnami: +91-7340064448"
+                        +"<br><br>"
+                        +"For any query, contact us at <a href='mailto:asme@lnmiit.ac.in'>asme@lnmiit.ac.in</a>" 
+                    +"</p>",
+            sponsors: null,
+            otherURL: null,
+        },
+       
+        {
+
             eventUrl: 'rostrum',
             fee:200,
             paymentURL: true,
@@ -1423,6 +1538,10 @@ module.exports.competitionUrl = {
         {
             eventName: 'Rostrum',
             eventUrl: '/rostrum',
+        },
+        {
+            eventName: 'Pratibimb',
+            eventUrl: '/pratibimb',
         },
        
     ],

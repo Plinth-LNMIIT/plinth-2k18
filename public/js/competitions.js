@@ -22,3 +22,6 @@ $(".literature-image").click(function () {
 $(".management-image").click(function () {
     window.location =  window.location + '/management';
 });
+$(".design-image").click(function () {
+    window.location =  window.location + '/design';
+});
