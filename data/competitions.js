@@ -1028,7 +1028,7 @@ module.exports.competitions = {
                                     +"<b>ARENA</b>"
                                     +"<p>The game field consists of an arena having dimensions 224 cm X 228 cm (lxb). It consists of the following:</p>"
                                     +"<ol>"
-                                        +"<li>The arena is composed of random paths made up of white strips.</li>"
+                                        +"<li>The arena is composed of random paths made up of black strips.</li>"
                                         +"<li>All the distances are shown in fig.</li>"
                                         +"<li>Angle between two adjacent white lines in the path is 90 degree.</li>"
                                         +"<li>The width of all white stripes will be 30mm.</li>"
