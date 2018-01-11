@@ -1,3 +1,10 @@
+  #upp{
+      margin-top:0;
+  }
+  .uk-grid-margin{
+    margin-top:0 !important;
+  }
+
   .left-icons{
     position: absolute;
     display: block;
