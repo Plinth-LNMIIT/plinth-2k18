@@ -8,7 +8,7 @@ var Payment = require('../schema/payment');
 var fs = require('fs');
 var PDFDocument = require('pdfkit');
 
- router.get('/', Verify.verifyOrdinaryUser, function (req, res, next) {
+/*  router.get('/', Verify.verifyOrdinaryUser, function (req, res, next) {
   Payment.find({ 'event.clubName' : 'Quizzing'}, function(err, payment) {
             
             
@@ -33,5 +33,5 @@ var PDFDocument = require('pdfkit');
  
     
   }); 
-  
+   */
 module.exports = router;
