@@ -164,7 +164,7 @@
 			<a class="btn btn-outline-secondary font-a page_scroll" href="#register">Register Now</a>
 
 			<% if(isLoggedIn){ %>
-				<a class="btn btn-outline-secondary font-a" id="paynow" data-target="#payModel" data-toggle="modal" href="#">Pay Now</a>
+				<a class="btn btn-outline-secondary font-a" id="paynow" data-target="#noModel" data-toggle="modal" href="#">Pay Now</a>
 
 
 				<% } else { %>
@@ -276,7 +276,28 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="modal fade" id="noModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title font-a">Information</h5>
+								<button type="button" id="form-close" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+									MUN is not accepting any further Registrations.
+								</div>
+	
+							</form>
+							</div>
+						</div>
+					</div>
+				</div>
 			<% } %>
+
+
 
 				<div class="scrolldown-container page_scroll small-hidden">
 					<a href="#about" class="page_scroll hidee">
