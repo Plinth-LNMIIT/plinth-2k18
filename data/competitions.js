@@ -426,7 +426,7 @@ module.exports.competitions = {
             displayName: "Enigma – The Plinth CodeSprint",
             payName: "ENCS",
             eventDate: "<p>"
-                            +"Online Round - 12<sup>th</sup> Jan, 2018"
+                            +"Online Round - 14<sup>th</sup> Jan, 2018"
                             +"<br>"
                             +"Onsite Round - 20<sup>th</sup> Jan, 2018"
                         +"</p>",
@@ -487,7 +487,7 @@ module.exports.competitions = {
                         +"For any query, contact us at <a href='mailto:coding@plinth.in'>coding@plinth.in</a>"
                     +"</p>",
             sponsors: null,
-            otherURL: null,
+            otherURL: "https://goo.gl/forms/aNXz8f0W3wwEDhh82",
         },
 
         {

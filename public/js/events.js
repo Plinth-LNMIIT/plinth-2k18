@@ -1,7 +1,7 @@
  
 
 $(".back-back-icon").click(function () {
-    window.location =  window.location.origin + '/events';
+    window.location =  window.location.origin + '/pronight';
 });
 
 

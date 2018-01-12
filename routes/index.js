@@ -644,14 +644,14 @@ router.get('/workshops/:workshop', Verify.verifyOrdinaryUser ,function(req, res,
       
     });
 
-router.get('/events', Verify.verifyOrdinaryUser ,function(req, res, next) {
+router.get('/pronight', Verify.verifyOrdinaryUser ,function(req, res, next) {
     var eventUrl = require('../data/events').eventUrl;
     
     if(req.decoded.sub === "")
     {
         isLoggedIn = false;
         res.render('events', {
-            "page" : 'events',
+            "page" : 'pronight',
             "isLoggedIn" : isLoggedIn,
             "eventUrl" : eventUrl.events,
         });
@@ -666,7 +666,7 @@ router.get('/events', Verify.verifyOrdinaryUser ,function(req, res, next) {
             // check to see if theres already a user with that email
             if (user){
                 res.render('events',{
-                    "page" : 'events',
+                    "page" : 'pronight',
                     "isLoggedIn" : isLoggedIn,
                     "user" : user,
                     "eventUrl" : eventUrl.events,
@@ -678,7 +678,7 @@ router.get('/events', Verify.verifyOrdinaryUser ,function(req, res, next) {
   
 });
 
-router.get('/events/:event', Verify.verifyOrdinaryUser ,function(req, res, next) {
+router.get('/pronight/:event', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
         var eventDetail = require('../data/events').events;
         var events = ['unerase'];
