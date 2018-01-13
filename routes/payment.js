@@ -30,6 +30,7 @@ router.get('/admin/check/:id', Verify.verifyOrdinaryUser, function(req,res){
        
         request.post(url,function(error, response, body){
             res.json(JSON.parse(body));
+            return;
           }); 
       
     });
@@ -68,6 +69,7 @@ router.post('/register/:payName', Verify.verifyOrdinaryUser, function (req, res)
                     Utils.saveSheet(payment);
                     res.json({status : true,
                     orderId: payment.orderId});
+                    return;
                 }
             });
         });
