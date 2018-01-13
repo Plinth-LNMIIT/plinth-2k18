@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+        <link rel="stylesheet" href="css/cryptex.css">
+
+
+</head>
+<style>
+    body{
+    background: linear-gradient(rgba(73, 73, 73, 0.5),rgba(73, 73, 73, 0.5)), url('../media/wall/(<%- num %>).jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+</style>    
+
+<body>
+    <% include partials/loader %>
+        <div id="home">
+
+
+            <% include partials/header %>
+
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div uk-grid>
+                                <div class="uk-align-center heading-text">
+                                  <p>
+                                        <span class="plinth">Plinth</span> <span class="date">2018</span>
+                                        <br>
+                                        <span class="presents">presents</span>
+                                  </p>  
+                                     
+                                    <span class="cryptex">Cryptex</span>
+                                </div>
+                            </div>
+
+                            <div uk-grid>
+                                    <div class="uk-panel uk-align-center uk-text-center">
+                                            <div class="text-padding">
+                                                    <% if(doc.length > 0){ %>
+                                                    <ul uk-accordion>
+                                                            <%   for(var i=0; i<doc.length; i++) { %>
+                                                            <li>
+                                                                    <h3 class="uk-accordion-title heading point"> Level  <%= doc[i].level %>
+                                                                    </h3>
+                                                                    <div class="text uk-accordion-content">
+                                                                            <b>Image</b> 
+                                                                            <p> <img src="<%= doc[i].image %>" /> </p>
+                                                                            <b>Answer</b> 
+                                                                            <p>   <%   for(var j=0; j <doc[i].answer.length; j++) { %>
+                                                                                    <%= doc[i].answer[j] %>
+                                                                                <br>
+                                                                                <% } %>
+                                                                            </p>
+                                                                            <% if(doc[i].format != ""){ %>
+                                                                            <b>Format</b>
+                                                                            <p> <%= doc[i].format %></p>
+                                                                            <% } %>
+                                                                    </div>
+                                                            </li>
+                                                            <%   } %>
+                                                    </ul>
+                                                    <% } %>
+
+                                                    <a class="uk-button uk-button-default white uk-button-large" href="#add-center" uk-toggle>Add Question</a>     
+                                                    <div id="add-center" class="uk-flex-top" uk-modal>
+                                                            <div class="uk-modal-dialog uk-margin-auto-vertical">
+                                                                <form id="add-form" class="uk-form-stacked" method="post"  action="/cryptex/add" enctype='multipart/form-data'>
+                                                                    <div class="uk-modal-header">
+                                                                        <button class="uk-modal-close-default black-fill" type="button" uk-close></button>
+                                                        
+                                                                        <h2 class="uk-text-center heading-text">
+                                                                            <span>Cryptex Question</span>
+                                                                        </h2>
+                                                         
+                                                                    </div>
+                                                                    <div class="uk-modal-body">
+                                                                    
+                                                                    
+                                                                            <div id="content" class="uk-grid-small" uk-grid>
+    
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text" for="level">
+                                                                                            Level</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                            <input class="uk-input inputt-text" name="level" type="number"> </div>
+                                                                                    </div>
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text" for="image">
+                                                                                            Image</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                                <input class="uk-input inputt-text" type="file" name="image"  accept="image/*">   </div>
+                                                                                    </div>
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text" for="answer">
+                                                                                            Answer</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                            <input class="uk-input inputt-text" name="answer" type="text"> </div>
+                                                                                    </div>
+                                                                                    <div class="uk-width-1-2@s">
+                                                                                        <label class="uk-form-label labell-text" for="format">
+                                                                                            Format</label>
+                                                                                        <div class="uk-form-controls">
+                                                                                            <input class="uk-input inputt-text" name="format" type="text"> </div>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                    
+                                                                    </div>
+                                                                    <div class="uk-modal-footer uk-text-right">
+                                                        
+                                                                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                                                        <button type="submit" class="uk-button uk-button-primary" id="submit-button">Submit</button>
+                                                        
+                                                                    </div>
+                                                                </form>
+                                                                
+                                                            </div>
+                                                        </div>
+                                            </div>
+                                    </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        <% include partials/footer %>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/cryptex.js"></script>
+
+        <script>
+
+            window.onload = function () {
+                var loader = document.getElementById('loader');
+
+                
+                setTimeout(function () {
+                    loader.parentElement.removeChild(loader);
+                    $('#home').css("visibility", 'visible')
+                    
+                }, 0);
+            };
+
+        </script>
+
+
+</body>
+
+</html>

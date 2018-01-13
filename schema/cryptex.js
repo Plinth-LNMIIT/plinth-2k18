@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 
 var cryptexSchema = mongoose.Schema({
     level : Number,
-    question  : String,
     answer  : [],
     image : String,
     format : String,

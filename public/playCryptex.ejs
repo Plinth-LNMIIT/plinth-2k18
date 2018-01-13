@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta property="og:title" content="Cryptex | Plinth 2018, LNMIIT Jaipur | Techno-Management Literary Fest">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://plinth.in/cryptex">
+        
+        <meta name="author" content="Shubham Mangal">
+        <meta name="theme-color" content="#010202">
+        <meta name="description" content="Join your friend on this awesome web hunt. Get ready for a breathtaking journey.">
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@plinthlnmiit">
+        <meta name="twitter:title" content="Plinth, LNMIIT Jaipur">
+        <meta name="twitter:description" content="Techno-Management Literary Fest">
+        <meta name="twitter:creator" content="@smcollinx">
+    <% include partials/head %>
+        <link rel="stylesheet" href="css/cryptex.css">
+
+
+
+
+</head>
+<style>
+    body {
+        background: linear-gradient(rgba(73, 73, 73, 0.5), rgba(73, 73, 73, 0.5)), url('../media/wall/(<%- num %>).jpg');
+        background-size: cover;
+        /* <------ */
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+</style>
+
+<body>
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=547645072247343';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <% include partials/loader %>
+        <div id="home">
+
+
+            <% include partials/header %>
+
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div>
+                                <div class="uk-align-center heading-text">
+                                    <span class="cryptex">Cryptex</span>
+                                    <% if(user.cryptex.level != 28){ %>
+                                        <br>
+                                        <span class="heading"> Level
+                                            <%= user.cryptex.level %>
+                                        </span>
+                                        <div class="uk-child-width-1-2@m uk-text-center" uk-grid>
+                                            <div class="small-padd">
+                                                <div class="heading">
+                                                    Clue
+                                                </div>
+                                                <div class="text" uk-lightbox="animation: slide">
+                                                    <div>
+                                                        <a class="uk-inline uk-overflow-hidden" href="<%= doc.image %>">
+                                                            <img src="<%= doc.image %>" alt="Level <%= user.cryptex.level %>">
+                                                        </a>
+                                                        <div class="text">
+                                                        
+                                                            Click on image to view clue.
+                                                       
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="center-padding small-padd">
+                                                <div class="heading">
+                                                    Answer
+                                                </div>
+                                                <div class="text">
+                                                  
+                                                            <div>
+                                                                    <input class="uk-input uk-width-1-2@m" id="answer" name="answer" type="text" required>
+                                                                </div>
+                                                                <br>
+                                                                <input type="button" value="Submit" class="uk-button uk-button-default white" onclick="submitAns()">
+                                                          
+                                                    
+                                                     </div>
+                                                <div class="heading">
+                                                    Ask you friends
+                                                </div>
+                                                <div class="text">
+                                                    <div>
+                                                        <div class="fb-share-button" data-href="https://plinth.in/cryptex" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+                                                            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fplinth.in%2Fcryptex&amp;src=sdkpreparse">Share</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+                                        <% } else { %>
+
+
+                                            <% } %>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        <% include partials/footer %>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/cryptex.js"></script>
+
+        <script>
+
+            window.onload = function () {
+                var loader = document.getElementById('loader');
+
+
+                setTimeout(function () {
+                    loader.parentElement.removeChild(loader);
+                    $('#home').css("visibility", 'visible')
+
+                }, 0);
+            };
+            // Don't Be Annoyed Guys
+         //   document.addEventListener('contextmenu', event => event.preventDefault());
+
+        </script>
+
+
+</body>
+
+</html>

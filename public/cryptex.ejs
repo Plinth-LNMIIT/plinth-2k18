@@ -28,15 +28,40 @@
                     <div class="scroll-content" id="style-7">
                         <div class="inner-content">
                             <div uk-grid>
-                                <h1 class="uk-align-center heading-text">
-                                    <span>Our Team</span>
-                                </h1>
+                                <div class="uk-align-center heading-text small-padd">
+                                  <p>
+                                        <span class="plinth">Plinth</span> <span class="date">2018</span>
+                                        <br>
+                                        <span class="presents">presents</span>
+                                  </p>  
+                                     
+                                    <span class="cryptex">Cryptex</span>
+                                </div>
                             </div>
 
-                            <div class="uk-text-center" uk-grid>
-                                <h1 class="uk-align-center   box-text border-text">
-                                    <span>Busy Organizing</span>
-                                </h1>
+                            <div class="uk-align-center uk-text-center" uk-grid>
+                                <p class="textp small-padd">
+                                        Get ready, all set to dive into the vast ocean of web hunt to unravel the secrets.<br>
+                                        This whole internet is yours, but mind you, the elusive clues are bound to leave you stumped.
+                                </p>
+                                    
+                              
+                                <p class="textp small-padd">
+                                    So, ready to accept the challenge?
+                                </p>
+                                    <% if(isLoggedIn){ %>
+                                        <% if(newUser){ %>
+                                            <a class="uk-button uk-button-default white uk-button-large" onclick="startGame()">
+                                            Start the Game
+                                            </a>
+                                        <% }else{ %>
+                                            <a class="uk-button uk-button-default white uk-button-large" href="/cryptex/play">
+                                            Continue Playing
+                                            </a>
+                                        <% } %>
+                                    <% } else { %>
+                                        <a class="uk-button uk-button-default white uk-button-large" href="#register-center" uk-toggle>Login to play!</a>
+                                    <% } %>
                             </div>
 
                         </div>

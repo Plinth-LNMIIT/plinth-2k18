@@ -125,7 +125,7 @@ exports.pdf = function (result) {
 
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Institute ', 300, 450)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .font('./public/fonts/Oxygen-Regular.ttf', 12)
                 .text(': ' + result.team[0].college, 370, 450)
 
 
@@ -195,7 +195,7 @@ exports.pdf = function (result) {
 
                 doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                     .text('Institute ', 300, 450)
-                    .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                    .font('./public/fonts/Oxygen-Regular.ttf', 12)
                     .text(': ' + result.team[0].college, 370, 450)
 
 
@@ -222,7 +222,7 @@ exports.pdf = function (result) {
 
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Institute ', 300, 450)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .font('./public/fonts/Oxygen-Regular.ttf', 12)
                 .text(': ' + result.team[0].college, 370, 450)
 
 
@@ -435,7 +435,7 @@ exports.pdfView = function (result) {
 
         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
             .text('Institute ', 300, 450)
-            .font('./public/fonts/Oxygen-Regular.ttf', 14)
+            .font('./public/fonts/Oxygen-Regular.ttf', 12)
             .text(': ' + result.team[0].college, 370, 450)
 
 
@@ -505,7 +505,7 @@ exports.pdfView = function (result) {
 
             doc.font('./public/fonts/Roboto-Bold.ttf', 14)
                 .text('Institute ', 300, 450)
-                .font('./public/fonts/Oxygen-Regular.ttf', 14)
+                .font('./public/fonts/Oxygen-Regular.ttf', 12)
                 .text(': ' + result.team[0].college, 370, 450)
 
 
@@ -532,7 +532,7 @@ exports.pdfView = function (result) {
 
         doc.font('./public/fonts/Roboto-Bold.ttf', 14)
             .text('Institute ', 300, 450)
-            .font('./public/fonts/Oxygen-Regular.ttf', 14)
+            .font('./public/fonts/Oxygen-Regular.ttf', 12)
             .text(': ' + result.team[0].college, 370, 450)
 
 

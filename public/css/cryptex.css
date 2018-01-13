@@ -1,4 +1,41 @@
 
+  
+  .plinth{
+    font: normal 50px rez;
+     
+  
+}
+.point{
+  color: white;
+}
+
+.presents{
+    font:normal 20px caviar;
+ 
+}
+
+.date{
+    font:bold 22px hn;
+  
+}
+  
+.textp{
+  font-family: caviar;
+}
+.small{
+  font-size: 20px;
+}
+
+.center-padding{
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+   
+}
+
+.small-padd{
+  padding-left:0px;
+}
 
 @media only screen and (max-width: 1024px) {
   

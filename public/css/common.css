@@ -1,3 +1,26 @@
+
+ @font-face {
+  font-family: rez;
+  src: url("../fonts/REZ.ttf");
+}
+
+@font-face {
+  font-family: caviar;
+  src: url("../fonts/CaviarDreams.ttf");
+}
+       
+@font-face {
+  font-family: cl;
+  src: url("../fonts/ChampagneAndLimousines.ttf");
+}
+
+@font-face {
+  font-family: hn;
+  src: url("../fonts/HelveticaNeue.ttf");
+}
+
+
+
 * {
     font-family: 'Audiowide', cursive;
     margin: 0px;
@@ -85,7 +108,9 @@
     visibility: hidden ;
   }
 
- 
+ .white{
+   color: white;
+ }
   #loader{
     background-color: black;
     width: 100%;
@@ -877,14 +902,14 @@ CA Buttons
   line-height: 20px;
 }
 .normal{
-  font-size: .9vw;
+  font-size: .7vw;
   
 }
 .btn {
   position: relative;
   display: inline-block;
-  width: 160px;
-  height: 40px;
+  width: 120px;
+  height: 30px;
   vertical-align: middle;
   text-align: center;
   text-transform: uppercase;
@@ -902,7 +927,7 @@ CA Buttons
 
 .btn svg rect {
   stroke: #ffffff;
-  stroke-width: 6;
+  stroke-width: 4;
   stroke-dasharray: 422, 0;
   stroke-dashoffset: 0;
   -webkit-transition: all 900ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -912,10 +937,10 @@ CA Buttons
 
 .btn:hover svg rect {
   stroke-width: 8;
-  stroke-dasharray: 95, 312;
+  stroke-dasharray: 90, 255;
   stroke-dashoffset: 183;
 }
 
 .margin-extra{
-  margin-top: 10%;
+  margin-top: 5%;
 }

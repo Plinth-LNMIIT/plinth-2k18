@@ -44,7 +44,7 @@ app.set('view engine', 'ejs');
 app.use('*/js', express.static(path.join(__dirname, 'public/js')))
 app.use('*/css', express.static(path.join(__dirname, 'public/css')))
 app.use('*/media', express.static(path.join(__dirname, 'public/media')))
-app.use('*/font', express.static(path.join(__dirname, 'public/font')))
+app.use('*/fonts', express.static(path.join(__dirname, 'public/fonts')))
 
 app.use(logger('dev'));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
