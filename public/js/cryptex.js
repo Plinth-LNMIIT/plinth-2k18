@@ -7,7 +7,7 @@ function userLoginInitiate(url) {
 function startGame() {
   $.post("/cryptex/start")
     .done(function (eer) {
-
+      window.location = "/cryptex/play";
     }).fail(function (err) {
       alert('Sorry for any inconvenience, Try again later. If problem persists, contact admin@plinth.in');
     });
