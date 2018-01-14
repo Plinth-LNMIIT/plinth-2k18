@@ -47,16 +47,25 @@
 
                                         <div class="my-rotate">
 
-                                                <% if(isLoggedIn){ %>  
+                                                <% if(isLoggedIn  && user.cryptex != null){ %>  
                                         <div class="uk-text-center" uk-grid>
-                                              <input type="button" class="uk-button uk-button-default white uk-button-large" value="Back To Questions" onclick="window.location='/cryptex/play';">    
+                                              <input type="button" class="uk-button uk-button-default white" value="Back To Questions" onclick="window.location='/cryptex/play';">    
                                         </div>
                                         <% } %>
                                         <div class="uk-text-center table-margin uk-child-width-1-1@m" uk-grid>
                                             <div class="small-padd uk-overflow-auto">
 
                                                     <table id="userp" class="uk-table uk-table-justify uk-grid-medium uk-table-middle uk-table-divider no-margin">
-
+                                                             
+                                                                <ul class="uk-pagination">
+                                                                        <% if(current != 1 ){ %> 
+                                                                    <li><a href="/cryptex/leaderboard/<%= current - 1 %> "><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</a></li>
+                                                                    <% } %> 
+                                                                        <% if(current != pages){ %> 
+                                                                    <li class="uk-margin-auto-left"><a href="/cryptex/leaderboard/<%= current + 1 %> ">Next <span class="uk-margin-small-left" uk-pagination-next></span></a></li>
+                                                                    <% } %> 
+                                                                </ul>
+                                                                 
                                                             <thead>
                                                                 <tr class="">
             

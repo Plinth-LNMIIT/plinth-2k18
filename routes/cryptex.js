@@ -264,7 +264,7 @@ router.post('/submitC', Verify.verifyOrdinaryUser, function (req, res) {
 });
 
 
-router.get('/leaderboard', Verify.verifyOrdinaryUser ,function(req, res) {
+router.get('/leaderboard/:page?', Verify.verifyOrdinaryUser ,function(req, res) {
     var usersProjection = {
         _id: false,
         name           : true,
@@ -273,18 +273,28 @@ router.get('/leaderboard', Verify.verifyOrdinaryUser ,function(req, res) {
         email          : true,
     };
 
-  
+    var perPage = 10;
+    var page = req.params.page || 1;
+    if(page < 1 ){
+        res.redirect('/cryptex/leaderboard');
+    }
+    page = Number(page);
 
   if(req.decoded.sub === ""){
       isLoggedIn = false;
-      User.find({'cryptex.level' : { $exists : true}}, usersProjection, {sort : {'cryptex.level' : -1, 'cryptex.updateTime' : 1 }}, function(err,results){
-          res.render('cryptexLeaderboard', {
+      User.find({'cryptex.level' : { $exists : true}}, usersProjection, {sort : {'cryptex.level' : -1, 'cryptex.updateTime' : 1 }}).skip((perPage * page) - perPage)
+      .limit(perPage).exec( function(err,results){
+        User.find({'cryptex.level' : { $exists : true}}, usersProjection, {sort : {'cryptex.level' : -1, 'cryptex.updateTime' : 1 }}).count().exec(function(err, count) {
+            
+            res.render('cryptexLeaderboard', {
               "page": "cryptex",
               "isLoggedIn" : isLoggedIn,
               "results" : results,
-              "num": randomNum()
+              "num": randomNum(),
+              "current": page,
+              "pages": Math.ceil(count / perPage),
           });
-          console.log(results);
+        })
       })
       return
   }
@@ -294,15 +304,19 @@ router.get('/leaderboard', Verify.verifyOrdinaryUser ,function(req, res) {
           if (err)
               return done(err);
           if (user){
-              User.find({'cryptex.level' : { $exists : true}}, usersProjection, {sort : {'cryptex.level' : -1, 'cryptex.updateTime' : 1 }}, function(err,results){
+              User.find({'cryptex.level' : { $exists : true}}, usersProjection, {sort : {'cryptex.level' : -1, 'cryptex.updateTime' : 1 }}).skip((perPage * page) - perPage)
+              .limit(perPage).exec(  function(err,results){
+                User.find({'cryptex.level' : { $exists : true}}, usersProjection, {sort : {'cryptex.level' : -1, 'cryptex.updateTime' : 1 }}).count().exec(function(err, count) {
                   res.render('cryptexLeaderboard',{
                       "page": "cryptex",
                       "isLoggedIn" : isLoggedIn,
                       "user" : user,
                       "results" : results,
-                      "num": randomNum()
+                      "num": randomNum(),
+                      "current": page,
+                      "pages": Math.ceil(count / perPage),
                   });
-                  console.log(results);
+                })
               })
           }
       });
