@@ -61,7 +61,7 @@
                                                                         <% if(current != 1 ){ %> 
                                                                     <li><a href="/cryptex/leaderboard/<%= current - 1 %> "><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</a></li>
                                                                     <% } %> 
-                                                                        <% if(current >= pages){ %> 
+                                                                        <% if(current < pages){ %> 
                                                                     <li class="uk-margin-auto-left"><a href="/cryptex/leaderboard/<%= current + 1 %> ">Next <span class="uk-margin-small-left" uk-pagination-next></span></a></li>
                                                                     <% } %> 
                                                                 </ul>
