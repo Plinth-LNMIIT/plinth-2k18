@@ -52,15 +52,18 @@
                                     <% if(isLoggedIn){ %>
                                         <% if(time){ %>
                                             <% if(newUser){ %>
-                                                <a class="uk-button uk-button-default white uk-button-large" onclick="startGame()">
+                                                <a class="uk-button uk-button-default white uk-button-large button-font" onclick="startGame()">
                                                 Start the Game
                                                 </a>
                                             <% }else{ %>
-                                                <a class="uk-button uk-button-default white uk-button-large" href="/cryptex/play">
+                                                <a class="uk-button uk-button-default white uk-button-large button-font" href="/cryptex/play">
                                                 Continue Playing
                                                 </a>
                                             <% } %>
-
+                                            <br>
+                                                <a class="uk-button uk-button-default white uk-button-large button-font" href="/cryptex/leaderboard">
+                                                Leaderboard
+                                                </a>
                                             <%  } else { %>
                                                 <p class="textp small-padd">
                                                         Going Live at 12:00 noon, 14 Jan 2018.

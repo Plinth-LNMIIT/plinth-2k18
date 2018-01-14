@@ -19,6 +19,10 @@
   
 }
   
+.button-font{
+  font:bold 22px caviar;
+}
+
 .textp{
   font-family: caviar;
 }
