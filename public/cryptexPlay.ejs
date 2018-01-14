@@ -4,22 +4,12 @@
 <head>
     
 
-    <meta name="author" content="Shubham Mangal">
-    <meta name="theme-color" content="#010202">
-    <meta name="description" content="Join your friend on this awesome web hunt. Get ready for a breathtaking journey.">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@plinthlnmiit">
-<meta name="twitter:title" content="Cryptex | Plinth, LNMIIT Jaipur">
-<meta name="twitter:description" content="Come Join Your Friends on an awesome Web Hunt!! #Cryptex #Plinth #P2k18.">
-<meta name="twitter:creator" content="@smcollinx">
-<meta name="twitter:image" content="https://scontent.fdel1-4.fna.fbcdn.net/v/l/t31.0-8/26233602_1140053632764229_8203187311812945540_o.jpg?oh=fd77316ccb6ee1bfcd4e647d843e95c7&oe=5AF49027">
-<meta name="twitter:domain" content="plinth.in">
+
 
     <% include partials/head %>
         <link rel="stylesheet" href="css/cryptex.css">
-
-
+       
 
 
 </head>
@@ -34,14 +24,7 @@
 </style>
 
 <body>
-    <div id="fb-root"></div>
-    <script>(function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=547645072247343';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+  
     <% include partials/loader %>
         <div id="home">
 
@@ -93,26 +76,20 @@
 
 
                                                 </div>
-                                                <div class="heading">
-                                                    Ask you friends
-                                                </div>
-                                                <div class="text">
-                                                    <div>
-                                                        <div class="fb-share-button" data-href="https://plinth.in/cryptex" data-layout="button_count" data-size="large" data-mobile-iframe="true">
-                                                            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fplinth.in%2Fcryptex&amp;src=sdkpreparse">Share</a>
-                                                        </div>
-                                                        <br>
-                                                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                                    </div>
-                                                </div>
+                                              
 
                                             </div>
 
 
                                         </div>
                                         <% } else { %>
-
-
+                                            <div class="heading">
+                                                    Game is On
+                                            </div>
+                                            <p>
+                                                    Congratulations, you have solved all question. <br>
+                                                    Keep the eye on Leaderboard for results.
+                                            </p>
                                             <% } %>
 
                                 </div>
@@ -164,7 +141,7 @@
                 }, 0);
             };
             // Don't Be Annoyed Guys
-         //   document.addEventListener('contextmenu', event => event.preventDefault());
+           document.addEventListener('contextmenu', event => event.preventDefault());
 
         </script>
 

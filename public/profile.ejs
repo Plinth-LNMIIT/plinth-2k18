@@ -27,14 +27,14 @@
                             </div>
                             <div class="my-rotate">
 
-                                <div class="table-margin" uk-grid>
+                                <div class="table-margin " uk-grid>
                                     <h1 id="prof" class="uk-align-center sub-heading ">
                                         <span>About</span>
                                     </h1>
                                 </div>
-                                <div class="table-margin" uk-grid>
+                                <div class="table-margin uk-overflow-auto uk-child-width-1-1@m" uk-grid>
 
-                                    <table id="userp" class="uk-table uk-grid-medium uk-table-middle">
+                                    <table id="userp" class="uk-table uk-grid-medium uk-table-middle no-margin">
 
                                         <tbody class="uk-visible@m">
 
@@ -120,21 +120,21 @@
                                         <span>Registered Events</span>
                                     </h1>
                                 </div>
-                                <div class="table-margin" uk-grid>
+                                <div class="table-margin uk-overflow-auto uk-child-width-1-1@m" uk-grid>
                                     <% if(user.rEvents.length === 1) { %>
                                         <div class="uk-text-center body-font">
                                             No events to display.
                                         </div>
                                         <% } else { %>
-                                            <table id="userp" class="uk-table  uk-table-justify uk-grid-medium uk-table-middle uk-table-divider">
+                                            <table id="userp" class="uk-table  uk-table-justify uk-grid-medium uk-table-middle uk-table-divider no-margin">
 
                                                 <thead>
                                                     <tr>
 
-                                                        <th class="head-font">Event Name</th>
-                                                        <th class="head-font">Team Size</th>
-                                                        <th class="head-font">Payment Status</th>
-                                                        <th class="head-font">Actions</th>
+                                                        <th class="head-font uk-text-center">Event Name</th>
+                                                        <th class="head-font uk-text-center">Team Size</th>
+                                                        <th class="head-font uk-text-center">Payment Status</th>
+                                                        <th class="head-font uk-text-center">Actions</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -144,16 +144,16 @@
                                                     <%   for(var i=1; i<user.rEvents.length; i++) { %>
                                                         <tr>
 
-                                                            <td class="body-font">
+                                                            <td class="body-font uk-text-center">
                                                                 <%= user.rEvents[i].event.eventName %>
                                                             </td>
-                                                            <td class="body-font">
+                                                            <td class="body-font uk-text-center">
                                                                 <%= user.rEvents[i].team.length %>
                                                             </td>
-                                                            <td class="body-font">
+                                                            <td class="body-font uk-text-center">
                                                                 <%= user.rEvents[i].status %>
                                                             </td>
-                                                            <td class="body-font link-text">
+                                                            <td class="body-font uk-text-center link-text">
                                                                 <a href="/pdf/view/<%= user.rEvents[i].orderId %>" target="_blank">View</a>
                                                                 <br>
                                                                 <a href="#" id="payNow<%= i %>">Pay</a>
@@ -200,21 +200,21 @@
                                         <span>Paid Events</span>
                                     </h1>
                                 </div>
-                                <div class="table-margin" uk-grid>
+                                <div class="table-margin uk-overflow-auto uk-child-width-1-1@m" uk-grid>
                                     <% if(user.events.length === 1) { %>
                                         <div class="uk-text-center body-font">
                                             No events to display.
                                         </div>
                                         <% } else { %>
-                                            <table id="userp" class="uk-table  uk-table-justify uk-grid-medium uk-table-middle uk-table-divider">
+                                            <table id="userp" class="uk-table  uk-table-justify uk-grid-medium uk-table-middle uk-table-divider no-margin">
 
                                                 <thead>
                                                     <tr>
 
-                                                        <th class="head-font">Event Name</th>
-                                                        <th class="head-font">Team Size</th>
-                                                        <th class="head-font">Payment Status</th>
-                                                        <th class="head-font">Actions</th>
+                                                        <th class="head-font uk-text-center">Event Name</th>
+                                                        <th class="head-font uk-text-center">Team Size</th>
+                                                        <th class="head-font uk-text-center">Payment Status</th>
+                                                        <th class="head-font uk-text-center">Actions</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -224,16 +224,16 @@
                                                     <%   for(var i=1; i<user.events.length; i++) { %>
                                                         <tr>
 
-                                                            <td class="body-font">
+                                                            <td class="body-font uk-text-center">
                                                                 <%= user.events[i].event.eventName %>
                                                             </td>
-                                                            <td class="body-font">
+                                                            <td class="body-font uk-text-center">
                                                                 <%= user.events[i].team.length %>
                                                             </td>
-                                                            <td class="body-font">
+                                                            <td class="body-font uk-text-center">
                                                                 <%= user.events[i].status %>
                                                             </td>
-                                                            <td class="body-font link-text">
+                                                            <td class="body-font uk-text-center link-text">
                                                                 <a href="/pdf/generate/<%= user.events[i].orderId %>" target="_blank">Receipt</a>
                                                             </td>
                                                         </tr>

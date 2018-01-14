@@ -50,15 +50,23 @@
                                     So, ready to accept the challenge?
                                 </p>
                                     <% if(isLoggedIn){ %>
-                                        <% if(newUser){ %>
-                                            <a class="uk-button uk-button-default white uk-button-large" onclick="startGame()">
-                                            Start the Game
-                                            </a>
-                                        <% }else{ %>
-                                            <a class="uk-button uk-button-default white uk-button-large" href="/cryptex/play">
-                                            Continue Playing
-                                            </a>
-                                        <% } %>
+                                        <% if(time){ %>
+                                            <% if(newUser){ %>
+                                                <a class="uk-button uk-button-default white uk-button-large" onclick="startGame()">
+                                                Start the Game
+                                                </a>
+                                            <% }else{ %>
+                                                <a class="uk-button uk-button-default white uk-button-large" href="/cryptex/play">
+                                                Continue Playing
+                                                </a>
+                                            <% } %>
+
+                                            <%  } else { %>
+                                                <p class="textp small-padd">
+                                                        Going Live at 12:00 noon, 14 Jan 2018.
+                                                    </p> 
+                                                <% } %>
+                                       
                                     <% } else { %>
                                         <a class="uk-button uk-button-default white uk-button-large" href="#register-center" uk-toggle>Login to play!</a>
                                     <% } %>

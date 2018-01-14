@@ -4,13 +4,13 @@
 }
 .head-font{
   font-family: 'Audiowide', cursive;
-  font-size: 1.2rem;
+  font-size: 1.3vw !important;
+  color: white !important;
 } 
 .body-font{
 font-family: 'Oxygen', sans-serif;
-font-size: 1.2rem;
+font-size: 1.2vw;
 }
- 
 
 .sub-heading{
   font-size: 1.8rem;
@@ -23,30 +23,21 @@ font-size: 1.2rem;
   #userp{
     margin-top: 10px;
   }
-
+  .no-margin{
+    margin-left: unset !important;
+  }
 
 @media only screen and (max-width: 1024px) {
-  .table-margin{
-    margin-left: 15%;
-    margin-right:15%;
-  } 
-
+ 
 }
 
 @media only screen and (max-width: 767px) {
-  .table-margin{
-    margin-left: 10%;
-    margin-right:10%;
-  } 
+ 
 }
 
 @media only screen and (max-width: 480px) {
   
  
-  .table-margin{
-    margin-left: 5%;
-    margin-right:5%;
-  } 
   .tr-font{
     font-size: 1rem;
   }
@@ -59,15 +50,25 @@ font-size: 1.2rem;
 @media only screen and (min-device-width: 480px) 
                    and (max-device-width: 640px) 
                    and (orientation: landscape) {
-                    .table-margin{
-                      margin-left: 10%;
-                      margin-right:10%;
-                    } 
+                  
                     .sub-heading{
                       font-size: 1.5rem;
                     }
 }
 
- 
+@media only screen and (orientation : portrait ) {
+                   
+  .head-font{
+    font-size: 2.4vh !important;
+  } 
+  .body-font{
+  font-size: 1.8vh;
+  }
+
+  .table-margin{
+    margin-left: 2%;
+    margin-right:2%;
+  }
+}
  
 

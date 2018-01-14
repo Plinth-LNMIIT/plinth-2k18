@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+
+
+
+
+    <% include partials/head %>
+        <link rel="stylesheet" href="css/cryptex.css">
+       
+
+
+</head>
+<style>
+    body {
+        background: linear-gradient(rgba(73, 73, 73, 0.5), rgba(73, 73, 73, 0.5)), url('../media/wall/(<%- num %>).jpg');
+        background-size: cover;
+        /* <------ */
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+</style>
+
+<body>
+  
+    <% include partials/loader %>
+        <div id="home">
+
+
+            <% include partials/header %>
+
+                <div class="uk-position-center main-content ">
+
+                    <div class="scroll-content" id="style-7">
+                        <div class="inner-content">
+                            <div>
+                                <div class="uk-align-center heading-text">
+                                    <span class="cryptex">Cryptex</span>
+                                   
+                                        <br>
+                                        <span class="heading"> Leaderboard
+                                        </span>
+
+                                        </div>
+
+                                        <div class="my-rotate">
+
+                                                <% if(isLoggedIn){ %>  
+                                        <div class="uk-text-center" uk-grid>
+                                              <input type="button" class="uk-button uk-button-default white uk-button-large" value="Back To Questions" onclick="window.location='/cryptex/play';">    
+                                        </div>
+                                        <% } %>
+                                        <div class="uk-text-center table-margin uk-child-width-1-1@m" uk-grid>
+                                            <div class="small-padd uk-overflow-auto">
+
+                                                    <table id="userp" class="uk-table uk-table-justify uk-grid-medium uk-table-middle uk-table-divider no-margin">
+
+                                                            <thead>
+                                                                <tr class="">
+            
+                                                                    <th class="head-font uk-text-center">Rank</th>
+                                                                    <th class="head-font uk-text-center">Name</th>
+                                                                    <th class="head-font uk-text-center">College</th>
+                                                                    <th class="head-font uk-text-center">Level</th>
+                                                                    <% if(isLoggedIn && user.email == 'admin@plinth.in'){ %>
+                                                                    <th class="head-font uk-text-center">Email</th>
+                                                                    <% }%>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+            
+            
+            
+                                                                <%   for(var i=0; i<results.length; i++) { %>
+                                                                    <tr>
+            
+                                                                        <td class="body-font uk-text-center">
+                                                                                #<%= i + 1 %>
+                                                                        </td>
+                                                                        <td class="body-font uk-text-center">
+                                                                                <%= results[i].name  %>
+                                                                        </td>
+                                                                        <td class="body-font uk-text-center">
+                                                                                <%= results[i].college  %>
+                                                                        </td>
+                                                                        <td class="body-font uk-text-center">
+                                                                                <% if(results[i].cryptex.level === 28 ){ %>
+                                                                                    Completed
+                                                                                <% } else if(results[i].cryptex.level === 1 ){ %>
+                                                                                    Started
+                                                                                <% }else{ %>
+                                                                                    <%= results[i].cryptex.level  %>
+                                                                                <% } %>
+                                                                        </td>
+                                                                        <% if( isLoggedIn && user.email == 'admin@plinth.in'){ %>
+                                                                            <td class="body-font uk-text-center">
+                                                                                    <%= results[i].email  %>
+                                                                            </td>
+                                                                            <% }%>
+                                                                       
+                                                                      
+                                                                       
+                                                                    </tr>
+                                                                    <% } %>
+            
+                                                            </tbody>
+                                                        </table>
+                                            </div>
+                                       
+                                        </div>
+                                        
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <% include partials/leftbar %>
+
+
+
+                    <% include partials/rightbar %>
+
+                        <% include partials/footer %>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- UIkit JS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/cryptex.js"></script>
+
+        <script>
+
+            window.onload = function () {
+                var loader = document.getElementById('loader');
+
+
+                setTimeout(function () {
+                    loader.parentElement.removeChild(loader);
+                    $('#home').css("visibility", 'visible')
+
+                }, 0);
+            };
+         
+
+        </script>
+
+
+</body>
+
+</html>

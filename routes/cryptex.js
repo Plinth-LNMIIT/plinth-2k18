@@ -36,6 +36,12 @@ router.get('/', Verify.verifyOrdinaryUser, function (req, res, next) {
                 return done(err);
             // check to see if theres already a user with that email
 
+            var timeframe = false;
+
+            if((new Date().getTime()) > 1515911111000){
+                timeframe = true;
+            }
+
             if (user) {
                 res.render('cryptex', {
                     "page": 'cryptex',
@@ -43,6 +49,7 @@ router.get('/', Verify.verifyOrdinaryUser, function (req, res, next) {
                     "user": user,
                     "num": randomNum(),
                     "newUser": newUser,
+                    "time" : timeframe,
                 });
             }
         });
@@ -87,7 +94,7 @@ router.get('/dashboard', Verify.verifyOrdinaryUser, function (req, res) {
 
                     if (err) throw err;
                     else {
-                        res.render('adminCryptex', {
+                        res.render('cryptexAdmin', {
                             "page": 'cryptex',
                             "isLoggedIn": isLoggedIn,
                             "user": user,
@@ -162,7 +169,7 @@ router.get('/play', Verify.verifyOrdinaryUser, function (req, res) {
                     return;
                 }
                 if (user.cryptex.level === limitLevel) {
-                    res.render('playCryptex', {
+                    res.render('cryptexPlay', {
                         "page": 'cryptex',
                         "isLoggedIn": isLoggedIn,
                         "user": user,
@@ -176,7 +183,7 @@ router.get('/play', Verify.verifyOrdinaryUser, function (req, res) {
                             return;
                         }
                         else {
-                            res.render('playCryptex', {
+                            res.render('cryptexPlay', {
                                 "page": 'cryptex',
                                 "isLoggedIn": isLoggedIn,
                                 "user": user,
@@ -208,6 +215,7 @@ router.post('/submitC', Verify.verifyOrdinaryUser, function (req, res) {
                 return;
             }
             if (user) {
+                
                 Cryptex.findOne({ 'level': user.cryptex.level }, function (err, doc) {
                     if (err) {
                         console.log(err);
@@ -219,25 +227,33 @@ router.post('/submitC', Verify.verifyOrdinaryUser, function (req, res) {
                             if (doc.answer[k].toLowerCase() === req.body.answer.toLowerCase()) {
                                 var newLevel = user.cryptex.level + 1;
                                 var timestamp = new Date().getTime();
-                                User.findOneAndUpdate({ 'email': req.decoded.sub }, { 'cryptex.level': newLevel, 'cryptex.updateTime': timestamp }, function (err, user) {
-                                    if (err) {
-                                        res.json({ response: false });
-                                        return;
-                                    }
-                                    if (user) {
-                                        res.json({ response: true });
-                                        return;
-                                    }
-                                    else {
-                                        res.json({ response: false });
-                                        return;
-                                    }
-
-
-                                })
+                                check = true;
                                 break;
                             }
                         }
+                        if(check){
+                            User.findOneAndUpdate({ 'email': req.decoded.sub }, { 'cryptex.level': newLevel, 'cryptex.updateTime': timestamp }, function (err, user) {
+                                if (err) {
+                                    res.json({ response: false });
+                                    return;
+                                }
+                              
+                                if (user) {
+                                    res.json({ response: true });
+                                    return;
+                                }
+                                else {
+                                    res.json({ response: false });
+                                    return;
+                                }
+    
+    
+                            })
+                        }else {
+                            res.json({ response: false });
+                            return;
+                        }
+                      
 
 
                     }
@@ -245,6 +261,52 @@ router.post('/submitC', Verify.verifyOrdinaryUser, function (req, res) {
             }
         })
     }
+});
+
+
+router.get('/leaderboard', Verify.verifyOrdinaryUser ,function(req, res) {
+    var usersProjection = {
+        _id: false,
+        name           : true,
+        cryptex        : true,
+        college        : true,
+        email          : true,
+    };
+
+  
+
+  if(req.decoded.sub === ""){
+      isLoggedIn = false;
+      User.find({'cryptex.level' : { $exists : true}}, usersProjection, {sort : {'cryptex.level' : -1, 'cryptex.updateTime' : 1 }}, function(err,results){
+          res.render('cryptexLeaderboard', {
+              "page": "cryptex",
+              "isLoggedIn" : isLoggedIn,
+              "results" : results,
+              "num": randomNum()
+          });
+          console.log(results);
+      })
+      return
+  }
+  else {
+      User.findOne({'email' : req.decoded.sub }, function(err, user) {
+          isLoggedIn = user.valid;
+          if (err)
+              return done(err);
+          if (user){
+              User.find({'cryptex.level' : { $exists : true}}, usersProjection, {sort : {'cryptex.level' : -1, 'cryptex.updateTime' : 1 }}, function(err,results){
+                  res.render('cryptexLeaderboard',{
+                      "page": "cryptex",
+                      "isLoggedIn" : isLoggedIn,
+                      "user" : user,
+                      "results" : results,
+                      "num": randomNum()
+                  });
+                  console.log(results);
+              })
+          }
+      });
+  }
 });
 
 var randomNum = function () {
