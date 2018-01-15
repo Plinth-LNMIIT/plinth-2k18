@@ -426,7 +426,7 @@ module.exports.competitions = {
             displayName: "Enigma – The Plinth CodeSprint",
             payName: "ENCS",
             eventDate: "<p>"
-                            +"Online Round - 14<sup>th</sup> Jan, 2018"
+                            +"Online Round - 21:00, 15<sup>th</sup> Jan, 2018"
                             +"<br>"
                             +"Onsite Round - 20<sup>th</sup> Jan, 2018"
                         +"</p>",
@@ -467,8 +467,8 @@ module.exports.competitions = {
             rules: "<p>"
                         +"<b>Key Details of Enigma – The Plinth CodeSprint'18</b>"
                         +"<ol>"
-                            +"<li>The first online round of the contest will be held on 11<sup>th</sup> January 2018 (Thursday).</li>"
-                            +"<li>Contest duration will be 4 hours.</li>"
+                            +"<li>The first online round of the contest will be held on 15<sup>th</sup> January 2018 (Thursday).</li>"
+                            +"<li>Contest duration will be 3 hours.</li>"
                             +"<li>This is a solo contest – no team participation is allowed.</li>"
                             +"<li>Plagiarism by any means will lead to immediate disqualification of the participant.   </li>"
                             +"<li>Participants that cross the cut off score in the Qualifier Round will be selected for the Onsite Round during PLINTH'18 at The LNMIIT, Jaipur.</li>"
@@ -487,7 +487,7 @@ module.exports.competitions = {
                         +"For any query, contact us at <a href='mailto:coding@plinth.in'>coding@plinth.in</a>"
                     +"</p>",
             sponsors: null,
-            otherURL: "https://goo.gl/forms/aNXz8f0W3wwEDhh82",
+            otherURL: "https://www.codechef.com/PLCO2018/",
         },
 
         {
