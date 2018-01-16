@@ -947,7 +947,7 @@ module.exports.competitions = {
                                     +"</p>"
                                     +"<b>Description</b>"
                                     +"<p>"
-                                        +"Line following Robot is a machine that can follow a path. The path can be visible like a black line on a white surface (or vice-versa) or it can be invisible like a magnetic field."
+                                        +"Line following Robot is a machine that can follow a path. The path can be visible like a black line ( Width: 3.5 cm ) on a white surface or it can be invisible like a magnetic field."
                                     +"</p>"
                                     +"<p>"
                                         +"Sensing a line and maneuvering the robot to stay on course, while constantly correcting wrong moves using feedback mechanism forms a simple yet effective closed loop system."
