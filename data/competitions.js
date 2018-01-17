@@ -972,9 +972,9 @@ module.exports.competitions = {
                     +"</p>",
             judges: null,
            query: "<p class='link-text'>"
-                        +"Akshay Shrimali: +91-9461395585"
+                        +"Rahul Asani: +91-8955552119"
                         +"<br>"
-                        +"Divya Baid: +91-9660172742"
+                        +"Prajjval Bharadwaj: +91-9636731362"
                         +"<br><br>"
                         +"For any query, contact us at <a href='mailto:robotics@plinth.in'>robotics@plinth.in</a>"
                     +"</p>",
@@ -1424,7 +1424,6 @@ module.exports.competitions = {
                             +"<li>Organisers reserve the rights to change the rules at any point of time as they deem fit.</li>"
                             +"<li>Depending upon the number of participants , the judging committee will decide how many teams will qualify for the main event.</li>"
                             +"<li>Only two players are allowed to enter the arena.</li>"
-                            +"<li>No last minute repairs will be allowed in the arena. However, each team can take time-out of 2 minutes during a match.</li>"
                             +"<li>The track will have one or more slopes, terrain can be rough or smooth.</li>"
                         +"</ol>"
                         +"<b>Team Specification</b>"

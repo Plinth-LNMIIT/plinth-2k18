@@ -5,6 +5,12 @@
     background-position: center;
     background-repeat: no-repeat;
 } 
+.singer-image{
+    background: url(/media/singer.jpg);
+    background-size: auto 346.4102px;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
 
 .back-back-icon{
     padding-left: 0%;
