@@ -175,7 +175,7 @@ router.post('/initiate/:payName', Verify.verifyOrdinaryUser, function (req, res)
                     case 'TSS':
 
                          
-                            payment.amount = 300;  
+                            payment.amount = 500;  
                         
                         
                         break;

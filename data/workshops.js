@@ -473,7 +473,7 @@ module.exports.workshops = {
         
         {
             eventUrl: 'scribbledstories',
-            fee:300,
+            fee:500,
             paymentURL: true,
             clubName: "Workshops",
             eventName: "Scribbled Stories",
@@ -484,7 +484,7 @@ module.exports.workshops = {
             eventCompany : "The Scribbled Stories",
             memberUpperLimit: 1,
             memberLowerLimit: 1,
-            eventFee: "₹ 300/-",
+            eventFee: "₹ 500/-",
             synopsis:  "<p>"
                             +"<p>"
                                 +"What sprints through your mind when you look up at the sky, pink and blue and orange with a perfect sunset? A few lines of poetry?"
@@ -532,7 +532,7 @@ module.exports.workshops = {
                                             +"<li>₹ 150/- (LNMIITians)</li>"
                                             +"<li>₹ 200/- (Non- LNMIITians)</li>"
                                             +"</ul>"
-                                            +"₹ 300/- from 10<sup>th</sup> January onwards."
+                                            +"₹ 500/- from 16<sup>th</sup> January onwards."
                                            
                                             
                                     +"</p>"
