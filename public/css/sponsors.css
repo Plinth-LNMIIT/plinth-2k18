@@ -49,15 +49,7 @@
 
 /*** HEX CONTENT **********************************************************************/
  
-.def{
-  top:35%;
-} 
-.de{
-  top:35%;
-} 
-.extra{
-  top:30%;
-}
+
 .svg-image{
   left: -100%;
   right: -100%;
@@ -80,6 +72,9 @@
    height: 100%;
    margin: 0 auto;
  }
+ .extra{
+  top:40%;
+}
 .headingx{
   position: relative;
   width:90%;
@@ -200,13 +195,16 @@
  
   .titles{
    
-    font-size: 1.0vh;
+    font-size: 1.2vh;
   }
   .partners{
      
-    font-size: .8vh;
+    font-size: 1.0vh;
   }
    
+  .headingx{
+    top:  70%;
+  }
  }
  
  @media only screen and (min-device-width: 480px) 
@@ -220,7 +218,7 @@
                          
                         font-size: 1.4vw;
                       }
-                  
+                     
  
  }
  
