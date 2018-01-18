@@ -681,7 +681,7 @@ router.get('/pronight', Verify.verifyOrdinaryUser ,function(req, res, next) {
 router.get('/pronight/:event', Verify.verifyOrdinaryUser ,function(req, res, next) {
 
         var eventDetail = require('../data/events').events;
-        var events = ['unerase'];
+        var events = ['unerase','altamashfaridi'];
         var event = req.params.event;
         var detail;
         var valid = false;
