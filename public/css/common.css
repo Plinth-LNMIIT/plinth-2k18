@@ -902,17 +902,14 @@ CA Buttons
   line-height: 20px;
 }
 .normal{
-  font-size: .7vw;
+  font-size: .6vw;
   
 }
 .btn {
-  position: relative;
-  display: inline-block;
-  width: 120px;
-  height: 30px;
-  vertical-align: middle;
-  text-align: center;
-  text-transform: uppercase;
+  position: relative; 
+  width: 150px;
+  height: 30px; 
+  text-align: center; 
   color: #ffffff;
   cursor: pointer;
   overflow: hidden;
@@ -937,7 +934,7 @@ CA Buttons
 
 .btn:hover svg rect {
   stroke-width: 8;
-  stroke-dasharray: 90, 255;
+  stroke-dasharray: 120, 255;
   stroke-dashoffset: 183;
 }
 
