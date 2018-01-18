@@ -68,6 +68,7 @@ module.exports.events = {
                                         +"<li>Awaara | Alone | 2014</li>"
                                         +"<li>Dil Mera Muft Ka | Agent Vinod | 2012</li>"
                                         +"<li>Mann Kunto Maula | Gunday | 2013</li>"
+                                        +"<li>Darbadar | I, Me Aur Main | 2013</li>"
                                     +"</ul>"
 
                                     +"<div class='link-text'>"
