@@ -489,6 +489,64 @@ module.exports.competitions = {
             sponsors: null,
             otherURL: "https://www.codechef.com/PLCO2018/",
         },
+        {
+
+            eventUrl: 'codeswap',
+            fee:0,
+            paymentURL: null,
+            clubName: "Coding",
+            eventName: "CodeSwap",
+            displayName: "CodeSwap",
+            payName: "CSP",
+            eventDate: "21<sup>th</sup> Jan, 2018",
+            eventVenue: "The LNMIIT, Jaipur",
+            memberUpperLimit: 1,
+            memberLowerLimit: 1,
+            prizeWorth: '₹ 10,000/-',
+            eventFee: '₹ 50/-',
+            synopsis:  "<p>"
+                            +"Codeswap is a mind-enthralling contest for a team of two, where the long and complex problems not only test an individual’s concepts but also takes the competition to the next level by testing how well an individual understands their partner’s thinking in a short span of time."
+                        +"</p>"
+                        +"<p>"
+                            +"So you think you know your partner’s thinking well enough to complete the challenge? Then register now!"
+                        +"</p>",
+            eventDescription: "<p>"
+                                    +"In this contest a team of two people will have to solve only two problems in 40 minutes - sounds easy?"
+                                +"</p>"
+                                +"<p>"
+                                    +"Well here’s the catch - apart from the contest having lengthy and hard problems, each member will have to work on a problem simultaneously and half way through the contest the partners will switch systems and will continue the problem their partner had started."
+                                +"</p>"
+                                
+                                +"<p>"
+                                    +"Certificates and prizes(worth ₹ 10, 000) will be awarded to the top 3 winners of the onsite round."
+                                +"</p>"
+                               
+                                +"<b>Platform Partner:</b>"
+                                +"<p>Skillenza</p>",
+            rules: "<p>"
+                        +"<b>Key Details</b>"
+                        +"<ol>"
+                            +"<li>The first online round of the contest will be held on 21st January 2018 (Sunday).</li>"
+                            +"<li>Contest duration will be 40 min.</li>"
+                            +"<li>Team with exactly 2 members is allowed.</li>"
+                            +"<li>Plagiarism by any means will lead to immediate disqualification of the team.</li>"
+                            +"<li>Penalty of 10 Minutes will be charged for every incorrect submission.</li>"
+                        +"</ol>"
+                        +"<p>Prizes worth ₹ 15,000/- for grabs (only for the onsite Round) !!</p>"
+                    +"</p>",
+            judges: null,
+            query: "<p class='link-text'>"
+                        +"Vrinda Goel: +91-8003890410"
+                        +"<br>"
+                        +"Garvit Bhatia: +91-9414858869"
+                        +"<br>"
+                        +"Aditya Aggarwal: +91-8791636347"
+                        +"<br><br>"
+                        +"For any query, contact us at <a href='mailto:coding@plinth.in'>coding@plinth.in</a>"
+                    +"</p>",
+            sponsors: null,
+            otherURL: "https://skillenza.com/challenge/codeswaplnmiit",
+        },
 
         {
 
@@ -1484,6 +1542,10 @@ module.exports.competitionUrl = {
         {
             eventName: 'Enigma',
             eventUrl: '/enigma',
+        },
+        {
+            eventName: 'Codeswap',
+            eventUrl: '/codeswap',
         },
 
         {

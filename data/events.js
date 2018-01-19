@@ -65,7 +65,6 @@ module.exports.events = {
                                         +"<li>Aayat | Bajirao Mastani | 2015</li>"
                                         +"<li>Jeena Marna | Do Lafzon Ki Kahani | 2016</li>"
                                         +"<li>Awaara | Alone | 2014</li>"
-                                        +"<li>Awaara | Alone | 2014</li>"
                                         +"<li>Dil Mera Muft Ka | Agent Vinod | 2012</li>"
                                         +"<li>Mann Kunto Maula | Gunday | 2013</li>"
                                         +"<li>Darbadar | I, Me Aur Main | 2013</li>"
