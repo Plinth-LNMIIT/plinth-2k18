@@ -463,7 +463,8 @@ module.exports.competitions = {
                                     +"<b>P.S :</b> There is a special detail about the online round held on CodeChef that will be revealed soon! Stay tuned!"
                                 +"</p>"
                                 +"<b>Platform Partner:</b>"
-                                +"<p>CodeChef</p>",
+                                +"<p>Online: CodeChef</p>"
+                                +"<p>Onsite: GeeksForGeeks</p>",
             rules: "<p>"
                         +"<b>Key Details of Enigma – The Plinth CodeSprint'18</b>"
                         +"<ol>"
